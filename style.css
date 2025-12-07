@@ -44,3 +44,9 @@ button, .social-btn {
 .social-btn:hover {
     background-color:#0d8ddb;
 }
+.profile-img {
+    border-radius: 50%;
+    border: 3px solid #000;
+    width: 200px;
+    height: 200px;
+}
