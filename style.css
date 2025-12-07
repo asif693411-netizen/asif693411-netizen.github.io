@@ -1,82 +1,92 @@
-/* Black theme for site */
 body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #000; /* black background */
-  color: #fff;            /* white text */
-  text-align: center;
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-/* Header */
 header {
-  padding: 20px;
-  background: #000;
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
 }
 
-/* Profile image */
-.profile-img {
-  border-radius: 50%;
-  border: 3px solid #fff;
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  display: block;
-  margin: 16px auto;
+header h1 {
+    margin: 10px 0;
+    font-size: 28px;
 }
 
-/* Headings */
-h1 { font-size: 30px; margin: 6px 0; }
-h2 { font-size: 16px; color: #ccc; margin: 6px 0 12px; }
-
-/* Navigation */
-header nav a {
-  text-decoration: none;
-  color: #fff;
-  margin: 0 10px;
-  font-weight: bold;
-}
-header nav a:hover { color: #1da1f2; }
-
-/* Social buttons */
-.social-buttons { margin-top: 12px; }
-a.social-link {
-  display: inline-block;
-  margin: 8px 6px;
-  text-decoration: none;
-  color: #fff;
-  background: #1da1f2;
-  padding: 8px 12px;
-  border-radius: 6px;
-  font-size: 14px;
+header p {
+    margin: 5px 0;
+    font-size: 16px;
 }
 
-/* Article card */
-article {
-  width: 92%;
-  max-width: 800px;
-  margin: 28px auto;
-  background: #0f0f0f;
-  padding: 20px;
-  border-radius: 10px;
-  border: 1px solid #222;
-  color: #ddd;
-  line-height: 1.7;
+nav {
+    margin: 10px 0;
 }
 
-/* Footer */
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #1da1f2;
+}
+
+.profile-logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 15px auto;
+    border: 2px solid #000;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 40px 20px;
+}
+
+.social-buttons a {
+    margin: 10px;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #1da1f2;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.social-buttons a:hover {
+    background-color: #0d8ddb;
+}
+
 footer {
-  margin-top: 30px;
-  padding: 16px;
-  background: #0f0f0f;
-  color: #777;
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #555;
 }
 
-/* Responsive */
-@media screen and (max-width: 600px) {
-  .profile-img { width: 120px; height: 120px; }
-  h1 { font-size: 24px; }
-  h2 { font-size: 14px; }
-  a.social-link { padding: 6px 10px; font-size: 12px; }
-  header nav a { display: block; margin: 6px 0; }
+.intro, .about-me, .press-article, .contact-form {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.intro h2, .about-me h2, .press-article h2, .contact-form h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
 }
