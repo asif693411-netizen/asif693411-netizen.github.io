@@ -50,3 +50,12 @@ button, .social-btn {
     width: 200px;
     height: 200px;
 }
+.profile-img {
+    border-radius: 50%;
+    border: 3px solid #000;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+}
