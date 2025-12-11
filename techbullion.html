@@ -48,6 +48,13 @@
 <footer>
     <p>© 2025 Syed Asif Ali. All rights reserved.</p>
 </footer>
+<script>
+  const menuIcon = document.getElementById('menu-icon');
+  const navLinks = document.getElementById('nav-links');
 
+  menuIcon.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
 </body>
 </html>
