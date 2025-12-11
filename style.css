@@ -29,3 +29,13 @@
   margin: 20px auto;     /* Center align */
   border: 3px solid #00bcd4; /* Optional: nice border */
 }
+/* ✅ Profile Image Resize Fix (Strong Rules) */
+.profile-img {
+  width: 120px !important;        /* Force smaller width */
+  height: 120px !important;       /* Equal height for round shape */
+  border-radius: 50%;             /* Circle shape */
+  object-fit: cover;              /* Crop extra part */
+  display: block;
+  margin: 20px auto;              /* Center the image */
+  border: 3px solid #00bcd4;      /* Optional: border */
+}
