@@ -16,7 +16,7 @@ body{background:#000;color:#fff;overflow-x:hidden;}
   padding:10px 20px;position:fixed;top:0;left:0;z-index:1000;
   border-bottom:1px solid #222;
 }
-.logo{font-size:1.5rem;font-weight:bold;letter-spacing:1px;}
+.logo{font-size:1.5rem;font-weight:bold;}
 .menu-wrapper{display:flex;align-items:center;gap:4px;cursor:pointer;font-weight:bold;}
 .menu-icon{font-size:1.4rem;transition:.3s;}
 #menu-text{font-size:.9rem;transition:color .3s;}
@@ -45,27 +45,65 @@ body{background:#000;color:#fff;overflow-x:hidden;}
 main{
   padding:120px 20px 60px;max-width:800px;margin:auto;text-align:center;
 }
+
+/* ---------- Profile Image Neon Glow ---------- */
 .profile-img{
-  width:200px;height:200px;border-radius:50%;
-  object-fit:cover;border:3px solid #00ffff;margin-bottom:20px;
+  width:200px;
+  height:200px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid #00ffff;
+  margin-bottom:20px;
+  box-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff, 0 0 50px #0077ff, 0 0 80px #00ffff;
+  transition: 0.3s;
 }
+.profile-img:hover{
+  box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 70px #0077ff, 0 0 100px #00ffff;
+}
+
 h1{margin-bottom:15px;}
 .about-me{text-align:justify;line-height:1.6;color:#ccc;}
 
 /* ---------- Gradient Neon Moving Text ---------- */
 .moving-text{
-  width:100%;overflow:hidden;background:#000;font-weight:bold;
-  font-size:1.3rem;padding:6px 0;text-align:center;
-  border-top:2px solid #222;border-bottom:2px solid #222;
+  position:relative;
+  width:100%;
+  overflow:hidden;
+  background:#000;
+  font-weight:bold;
+  font-size:1.3rem;
+  padding:20px 0;
+  text-align:center;
+  border-top:2px solid #222;
+  border-bottom:2px solid #222;
 }
+.moving-text::before{
+  content:"";
+  position:absolute;
+  top:50%;
+  left:0;
+  width:100%;
+  height:18px;
+  background:radial-gradient(circle at center, rgba(0,255,255,0.4) 0%, rgba(0,255,255,0) 70%);
+  transform:translateY(-50%);
+  filter:blur(20px);
+  animation:barGlow 3s ease-in-out infinite alternate;
+}
+@keyframes barGlow{
+  from{opacity:.5;transform:translateY(-50%) scaleX(1);}
+  to{opacity:1;transform:translateY(-50%) scaleX(1.2);}
+}
+
 .moving-text span{
-  display:inline-block;white-space:nowrap;
+  position:relative;
+  display:inline-block;
+  white-space:nowrap;
   background:linear-gradient(90deg,#00ffff,#0077ff,#00ffff);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
   font-weight:bold;
   animation:moveText 10s linear infinite, gradientShift 3s ease-in-out infinite alternate;
-  text-shadow:0 0 10px rgba(0,255,255,0.7);
+  text-shadow:0 0 10px rgba(0,255,255,0.9);
 }
 @keyframes moveText{
   0%{transform:translateX(100%);}
@@ -80,6 +118,7 @@ h1{margin-bottom:15px;}
 footer{text-align:center;padding:10px;background:#111;border-top:1px solid #222;color:#888;font-size:.9rem;}
 </style>
 </head>
+
 <body>
 <!-- Navbar -->
 <nav class="navbar">
