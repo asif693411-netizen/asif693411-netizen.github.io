@@ -1,304 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Syed Asif Ali - Entrepreneur & Digital Creator</title>
-  <meta name="description" content="Syed Asif Ali — Entrepreneur, Digital Creator, Founder of Point Media" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Syed Asif Ali - Entrepreneur & Digital Creator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+/* 🌐 Global */
+body{margin:0;padding:0;font-family:'Poppins',sans-serif;background:#0f0f0f;color:#fff;line-height:1.6;}
+.container{width:90%;max-width:900px;margin:0 auto;text-align:center;padding:20px;}
 
-  <!-- JSON-LD Schema for Google Knowledge Panel -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Syed Asif Ali",
-    "alternateName": "Asif Ali",
-    "birthDate": "1997-01-23",
-    "jobTitle": "Entrepreneur, Digital Creator",
-    "image": "https://asif693411-netizen.github.io/profile.jpg",
-    "url": "https://asif693411-netizen.github.io/",
-    "sameAs": [
-      "https://www.instagram.com/boxer_01101",
-      "https://www.tiktok.com/@syed_asif_ali34",
-      "https://www.youtube.com/@AsifAli-Digital",
-      "https://medium.com/@asif693411",
-      "https://www.linkedin.com/in/syed-asif-ali-36b5623a0",
-      "https://x.com/Boxer_01101"
-    ],
-    "affiliation": {
-      "@type": "Organization",
-      "name": "Point Media"
-    }
-  }
-  </script>
+/* 🧭 Navbar */
+.navbar{background:#111;padding:10px 20px;border-radius:10px;position:relative;z-index:10;margin-bottom:30px;}
+.nav-container{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;}
+.logo{color:#00ffff;font-size:1.2rem;margin:0;}
+.nav-links{display:flex;gap:20px;transition:all .4s ease;}
+.nav-links a{color:white;text-decoration:none;font-weight:500;transition:color .3s;}
+.nav-links a:hover,.nav-links a.active{color:#00ffff;}
+.menu-icon{display:none;font-size:1.8rem;color:#fff;cursor:pointer;background:transparent;border:none;}
 
-  <style>
-    /* 🌐 Global Styles */
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #0f0f0f;
-      color: #ffffff;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-    }
+/* 🖼️ Profile Image Neon Glow */
+.profile-img{width:130px;height:130px;border-radius:50%;object-fit:cover;margin:20px auto;border:3px solid #00ffff;
+box-shadow:0 0 15px #00ffff,0 0 30px #00ffff,0 0 50px #0077ff,0 0 80px #00ffff;transition:transform .3s;}
+.profile-img:hover{transform:scale(1.05);box-shadow:0 0 20px #00ffff,0 0 40px #00ffff,0 0 70px #0077ff,0 0 100px #00ffff;}
 
-    .container {
-      width: 90%;
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: center;
-      padding: 20px;
-    }
+/* 📄 Content */
+header h1{font-size:1.8rem;margin:10px 0 5px;}
+.title{font-weight:300;color:#ccc;font-size:1rem;}
+section{margin:30px 0;}
+section h2{font-size:1.4rem;color:#00ffff;margin-bottom:10px;}
+.social-links a{display:inline-block;margin:6px;padding:10px 20px;border-radius:25px;background-color:#00ffff;color:#fff;text-decoration:none;font-weight:500;transition:background-color .3s, transform .2s;}
+.social-links a:hover{background-color:#0097a7;transform:translateY(-3px);}
+footer{margin-top:40px;padding:15px 0;font-size:.9rem;color:#aaa;border-top:1px solid #333;}
 
-    /* 🧭 Navbar */
-    .navbar {
-      background-color: #1a1a1a;
-      padding: 10px 20px;
-      border-radius: 10px;
-      margin-bottom: 30px;
-      position: relative;
-      z-index: 10;
-    }
+/* 📱 Responsive */
+@media(max-width:768px){
+.menu-icon{display:block;}
+.nav-links{display:none;flex-direction:column;background:#111;width:100%;border-radius:10px;margin-top:10px;padding:10px 0;opacity:0;transform:translateY(-20px);}
+.nav-links.show{display:flex;opacity:1;transform:translateY(0);animation:slideDown .3s ease forwards;}
+@keyframes slideDown{from{opacity:0;transform:translateY(-15px);}to{opacity:1;transform:translateY(0);}}
+.nav-links a{padding:10px 0;}
+.profile-img{width:110px;height:110px;}
+.social-links a{display:block;width:80%;margin:8px auto;}
+}
+@media(max-width:480px){.container{width:95%;}.profile-img{width:95px;height:95px;}section h2{font-size:1.2rem;}}
 
-    .nav-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-
-    .logo {
-      color: #00bcd4;
-      font-size: 1.2rem;
-      margin: 0;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 20px;
-      transition: all 0.4s ease;
-    }
-
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    .nav-links a:hover,
-    .nav-links a.active {
-      color: #00bcd4;
-    }
-
-    .menu-icon {
-      display: none;
-      font-size: 1.8rem;
-      color: #fff;
-      cursor: pointer;
-      background: transparent;
-      border: none;
-    }
-
-    /* 🖼️ Profile Image */
-    .profile-img {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      object-fit: cover;
-      display: block;
-      margin: 20px auto;
-      border: 3px solid #00bcd4;
-      box-shadow: 0 0 15px rgba(0, 188, 212, 0.3);
-      transition: transform 0.3s ease;
-    }
-
-    .profile-img:hover {
-      transform: scale(1.05);
-    }
-
-    /* 📄 Content */
-    header h1 {
-      font-size: 1.8rem;
-      margin: 10px 0 5px;
-    }
-
-    .title {
-      font-weight: 300;
-      color: #cccccc;
-      font-size: 1rem;
-    }
-
-    section {
-      margin: 30px 0;
-    }
-
-    section h2 {
-      font-size: 1.4rem;
-      color: #00bcd4;
-      margin-bottom: 10px;
-    }
-
-    .social-links a {
-      display: inline-block;
-      margin: 6px;
-      padding: 10px 20px;
-      border-radius: 25px;
-      background-color: #00bcd4;
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-      transition: background-color 0.3s ease, transform 0.2s;
-    }
-
-    .social-links a:hover {
-      background-color: #0097a7;
-      transform: translateY(-3px);
-    }
-
-    footer {
-      margin-top: 40px;
-      padding: 15px 0;
-      font-size: 0.9rem;
-      color: #aaa;
-      border-top: 1px solid #333;
-    }
-
-    /* 📱 Responsive */
-    @media (max-width: 768px) {
-      .menu-icon {
-        display: block;
-      }
-
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        background-color: #1a1a1a;
-        width: 100%;
-        border-radius: 10px;
-        margin-top: 10px;
-        padding: 10px 0;
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-
-      .nav-links.show {
-        display: flex;
-        opacity: 1;
-        transform: translateY(0);
-        animation: slideDown 0.3s ease forwards;
-      }
-
-      @keyframes slideDown {
-        from {
-          opacity: 0;
-          transform: translateY(-15px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .nav-links a {
-        padding: 10px 0;
-      }
-
-      .profile-img {
-        width: 110px;
-        height: 110px;
-      }
-
-      .social-links a {
-        display: block;
-        width: 80%;
-        margin: 8px auto;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .container {
-        width: 95%;
-      }
-
-      .profile-img {
-        width: 95px;
-        height: 95px;
-      }
-
-      section h2 {
-        font-size: 1.2rem;
-      }
-    }
-  </style>
+/* ---------- Neon Moving Text ---------- */
+.moving-text{position:relative;width:100%;overflow:hidden;background:#000;font-weight:bold;font-size:1.3rem;padding:20px 0;text-align:center;border-top:2px solid #222;border-bottom:2px solid #222;}
+.moving-text::before{content:"";position:absolute;top:50%;left:0;width:100%;height:18px;background:radial-gradient(circle at center, rgba(0,255,255,0.4) 0%, rgba(0,255,255,0) 70%);transform:translateY(-50%);filter:blur(20px);animation:barGlow 3s ease-in-out infinite alternate;}
+@keyframes barGlow{from{opacity:.5;transform:translateY(-50%) scaleX(1);}to{opacity:1;transform:translateY(-50%) scaleX(1.2);}}
+.moving-text span{position:relative;display:inline-block;white-space:nowrap;background:linear-gradient(90deg,#00ffff,#0077ff,#00ffff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:bold;animation:moveText 10s linear infinite, gradientShift 3s ease-in-out infinite alternate;text-shadow:0 0 10px rgba(0,255,255,0.9);}
+@keyframes moveText{0%{transform:translateX(100%);}100%{transform:translateX(-100%);}}
+@keyframes gradientShift{0%{background-position:0% 50%;}100%{background-position:100% 50%;}}
+</style>
 </head>
-
 <body>
-  <div class="container">
+<div class="container">
 
-    <!-- ✅ Responsive Navbar -->
-    <nav class="navbar">
-      <div class="nav-container">
-        <h2 class="logo">Syed Asif Ali</h2>
-        <button id="menu-icon" class="menu-icon" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation">☰</button>
-        <div class="nav-links" id="nav-links">
-          <a href="index.html" class="active" aria-current="page">Home</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
-          <a href="socials.html">Social</a>
-          <a href="press.html">Press</a>
-          <a href="techbullion.html">TechBullion</a>
-        </div>
+  <!-- ✅ Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <h2 class="logo">Syed Asif Ali</h2>
+      <button id="menu-icon" class="menu-icon" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html" class="active" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="socials.html">Social</a>
+        <a href="press.html">Press</a>
+        <a href="techbullion.html">TechBullion</a>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <header>
-      <img src="profile.jpg" class="profile-img" alt="Syed Asif Ali" loading="lazy" />
-      <h1>Syed Asif Ali</h1>
-      <p class="title">Entrepreneur • Digital Creator • Founder of Point Media</p>
-    </header>
+  <header>
+    <img src="profile.jpg" class="profile-img" alt="Syed Asif Ali" loading="lazy" />
+    <h1>Syed Asif Ali</h1>
+    <p class="title">Entrepreneur • Digital Creator • Founder of Point Media</p>
+  </header>
 
-    <section class="about">
-      <h2>About Me</h2>
-      <p>
-        I am an entrepreneur and digital creator with a vision to build strong online
-        presence and media influence. I create content, manage digital brands, and run
-        Point Media to help people grow digitally.
-      </p>
-    </section>
+  <section class="about">
+    <h2>About Me</h2>
+    <p>I am an entrepreneur and digital creator with a vision to build strong online presence and media influence. I create content, manage digital brands, and run Point Media to help people grow digitally.</p>
+  </section>
 
-    <section class="social-section">
-      <h2>Connect With Me</h2>
-      <div class="social-links">
-        <a href="https://www.instagram.com/boxer_01101" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="https://www.tiktok.com/@syed_asif_ali34" target="_blank" rel="noopener noreferrer">TikTok</a>
-        <a href="https://www.youtube.com/@AsifAli-Digital" target="_blank" rel="noopener noreferrer">YouTube</a>
-        <a href="https://medium.com/@asif693411" target="_blank" rel="noopener noreferrer">Medium</a>
-        <a href="https://www.linkedin.com/in/syed-asif-ali-36b5623a0" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="https://x.com/Boxer_01101" target="_blank" rel="noopener noreferrer">X / Twitter</a>
-        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>
-      </div>
-    </section>
+  <section class="social-section">
+    <h2>Connect With Me</h2>
+    <div class="social-links">
+      <a href="https://www.instagram.com/boxer_01101" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://www.tiktok.com/@syed_asif_ali34" target="_blank" rel="noopener noreferrer">TikTok</a>
+      <a href="https://www.youtube.com/@AsifAli-Digital" target="_blank" rel="noopener noreferrer">YouTube</a>
+      <a href="https://medium.com/@asif693411" target="_blank" rel="noopener noreferrer">Medium</a>
+      <a href="https://www.linkedin.com/in/syed-asif-ali-36b5623a0" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://x.com/Boxer_01101" target="_blank" rel="noopener noreferrer">X / Twitter</a>
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>
+    </div>
+  </section>
 
-    <footer>
-      © 2025 Syed Asif Ali — All Rights Reserved
-    </footer>
-
+  <!-- Neon Moving Text -->
+  <div class="moving-text">
+    <span>🐉 Gangster 🐉</span>
   </div>
 
-  <!-- ✅ Hamburger Menu Script -->
-  <script>
-    const menuIcon = document.getElementById('menu-icon');
-    const navLinks = document.getElementById('nav-links');
+  <footer>
+    © 2025 Syed Asif Ali — All Rights Reserved
+  </footer>
+</div>
 
-    menuIcon.addEventListener('click', () => {
-      const isOpen = navLinks.classList.toggle('show');
-      menuIcon.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    });
-  </script>
+<!-- ✅ Hamburger Menu Script -->
+<script>
+const menuIcon = document.getElementById('menu-icon');
+const navLinks = document.getElementById('nav-links');
+menuIcon.addEventListener('click', () => {
+  const isOpen = navLinks.classList.toggle('show');
+  menuIcon.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+});
+</script>
 </body>
 </html>
