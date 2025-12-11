@@ -3,68 +3,55 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Syed Asif Ali - Entrepreneur & Digital Creator</title>
+<title>Entrepreneur & Digital Creator</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
-/* 🌐 Global */
-body{margin:0;padding:0;font-family:'Poppins',sans-serif;background:#0f0f0f;color:#fff;line-height:1.6;}
+body{margin:0;padding:0;font-family:'Poppins',sans-serif;background:#0f0f0f;color:#fff;line-height:1.6;overflow-x:hidden;}
 .container{width:90%;max-width:900px;margin:0 auto;text-align:center;padding:20px;}
-
-/* 🧭 Navbar */
-.navbar{background:#111;padding:10px 20px;border-radius:10px;position:relative;z-index:10;margin-bottom:30px;}
+.navbar{background:#111;padding:10px 20px;border-radius:10px;position:relative;z-index:1000;margin-bottom:30px;}
 .nav-container{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;}
-.logo{color:#00ffff;font-size:1.2rem;margin:0;}
-.nav-links{display:flex;gap:20px;transition:all .4s ease;}
-.nav-links a{color:white;text-decoration:none;font-weight:500;transition:color .3s;}
+.logo{color:#fff;font-size:1.2rem;margin:0;}
+.menu-wrapper{display:flex;align-items:center;gap:6px;cursor:pointer;font-weight:bold;}
+.menu-icon{font-size:1.8rem;color:#fff;transition:.3s;}
+#menu-text{font-size:.9rem;color:#fff;transition:.3s;}
+.nav-links{position:fixed;top:-100%;left:0;width:100%;background:#111;display:flex;flex-direction:column;align-items:center;transition:top .5s ease;padding-top:80px;z-index:900;}
+.nav-links a{color:white;text-decoration:none;padding:15px;width:100%;text-align:center;font-size:1.1rem;border-bottom:1px solid #222;transition:.3s;}
 .nav-links a:hover,.nav-links a.active{color:#00ffff;}
-.menu-icon{display:none;font-size:1.8rem;color:#fff;cursor:pointer;background:transparent;border:none;}
-
-/* 🖼️ Profile Image Neon Glow */
+.nav-links.show{top:0;}
+.overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);display:none;z-index:800;}
+.overlay.show{display:block;}
 .profile-img{width:130px;height:130px;border-radius:50%;object-fit:cover;margin:20px auto;border:3px solid #00ffff;
 box-shadow:0 0 15px #00ffff,0 0 30px #00ffff,0 0 50px #0077ff,0 0 80px #00ffff;transition:transform .3s;}
 .profile-img:hover{transform:scale(1.05);box-shadow:0 0 20px #00ffff,0 0 40px #00ffff,0 0 70px #0077ff,0 0 100px #00ffff;}
-
-/* 📄 Content */
-header h1{font-size:1.8rem;margin:10px 0 5px;}
+header h1{display:none;} /* Syed Asif Ali text removed */
 .title{font-weight:300;color:#ccc;font-size:1rem;}
 section{margin:30px 0;}
 section h2{font-size:1.4rem;color:#00ffff;margin-bottom:10px;}
 .social-links a{display:inline-block;margin:6px;padding:10px 20px;border-radius:25px;background-color:#00ffff;color:#fff;text-decoration:none;font-weight:500;transition:background-color .3s, transform .2s;}
 .social-links a:hover{background-color:#0097a7;transform:translateY(-3px);}
 footer{margin-top:40px;padding:15px 0;font-size:.9rem;color:#aaa;border-top:1px solid #333;}
-
-/* 📱 Responsive */
-@media(max-width:768px){
-.menu-icon{display:block;}
-.nav-links{display:none;flex-direction:column;background:#111;width:100%;border-radius:10px;margin-top:10px;padding:10px 0;opacity:0;transform:translateY(-20px);}
-.nav-links.show{display:flex;opacity:1;transform:translateY(0);animation:slideDown .3s ease forwards;}
-@keyframes slideDown{from{opacity:0;transform:translateY(-15px);}to{opacity:1;transform:translateY(0);}}
-.nav-links a{padding:10px 0;}
-.profile-img{width:110px;height:110px;}
-.social-links a{display:block;width:80%;margin:8px auto;}
-}
-@media(max-width:480px){.container{width:95%;}.profile-img{width:95px;height:95px;}section h2{font-size:1.2rem;}}
-
-/* ---------- Neon Moving Text ---------- */
 .moving-text{position:relative;width:100%;overflow:hidden;background:#000;font-weight:bold;font-size:1.3rem;padding:20px 0;text-align:center;border-top:2px solid #222;border-bottom:2px solid #222;}
 .moving-text::before{content:"";position:absolute;top:50%;left:0;width:100%;height:18px;background:radial-gradient(circle at center, rgba(0,255,255,0.4) 0%, rgba(0,255,255,0) 70%);transform:translateY(-50%);filter:blur(20px);animation:barGlow 3s ease-in-out infinite alternate;}
 @keyframes barGlow{from{opacity:.5;transform:translateY(-50%) scaleX(1);}to{opacity:1;transform:translateY(-50%) scaleX(1.2);}}
 .moving-text span{position:relative;display:inline-block;white-space:nowrap;background:linear-gradient(90deg,#00ffff,#0077ff,#00ffff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:bold;animation:moveText 10s linear infinite, gradientShift 3s ease-in-out infinite alternate;text-shadow:0 0 10px rgba(0,255,255,0.9);}
 @keyframes moveText{0%{transform:translateX(100%);}100%{transform:translateX(-100%);}}
 @keyframes gradientShift{0%{background-position:0% 50%;}100%{background-position:100% 50%;}}
+@media(max-width:768px){.menu-icon{display:block;}.nav-links a{padding:10px 0;}}
+@media(max-width:480px){.container{width:95%;}section h2{font-size:1.2rem;}.profile-img{width:95px;height:95px;}}
 </style>
 </head>
 <body>
 <div class="container">
-
-  <!-- ✅ Navbar -->
   <nav class="navbar">
     <div class="nav-container">
-      <h2 class="logo">Syed Asif Ali</h2>
-      <button id="menu-icon" class="menu-icon" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+      <h2 class="logo"> </h2> <!-- Empty logo -->
+      <div class="menu-wrapper" id="menu-wrapper">
+        <span class="menu-icon" id="menu-icon">☰</span>
+        <span id="menu-text">Menu</span>
+      </div>
       <div class="nav-links" id="nav-links">
-        <a href="index.html" class="active" aria-current="page">Home</a>
+        <a href="index.html" class="active">Home</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
         <a href="socials.html">Social</a>
@@ -74,10 +61,10 @@ footer{margin-top:40px;padding:15px 0;font-size:.9rem;color:#aaa;border-top:1px 
     </div>
   </nav>
 
+  <div class="overlay" id="overlay"></div>
+
   <header>
     <img src="profile.jpg" class="profile-img" alt="Syed Asif Ali" loading="lazy" />
-    <h1>Syed Asif Ali</h1>
-    <p class="title">Entrepreneur • Digital Creator • Founder of Point Media</p>
   </header>
 
   <section class="about">
@@ -88,33 +75,44 @@ footer{margin-top:40px;padding:15px 0;font-size:.9rem;color:#aaa;border-top:1px 
   <section class="social-section">
     <h2>Connect With Me</h2>
     <div class="social-links">
-      <a href="https://www.instagram.com/boxer_01101" target="_blank" rel="noopener noreferrer">Instagram</a>
-      <a href="https://www.tiktok.com/@syed_asif_ali34" target="_blank" rel="noopener noreferrer">TikTok</a>
-      <a href="https://www.youtube.com/@AsifAli-Digital" target="_blank" rel="noopener noreferrer">YouTube</a>
-      <a href="https://medium.com/@asif693411" target="_blank" rel="noopener noreferrer">Medium</a>
-      <a href="https://www.linkedin.com/in/syed-asif-ali-36b5623a0" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="https://x.com/Boxer_01101" target="_blank" rel="noopener noreferrer">X / Twitter</a>
-      <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <a href="https://www.instagram.com/boxer_01101" target="_blank">Instagram</a>
+      <a href="https://www.tiktok.com/@syed_asif_ali34" target="_blank">TikTok</a>
+      <a href="https://www.youtube.com/@AsifAli-Digital" target="_blank">YouTube</a>
+      <a href="https://medium.com/@asif693411" target="_blank">Medium</a>
+      <a href="https://www.linkedin.com/in/syed-asif-ali-36b5623a0" target="_blank">LinkedIn</a>
+      <a href="https://x.com/Boxer_01101" target="_blank">X / Twitter</a>
+      <a href="https://www.facebook.com/" target="_blank">Facebook</a>
     </div>
   </section>
 
-  <!-- Neon Moving Text -->
-  <div class="moving-text">
-    <span>🐉 Gangster 🐉</span>
-  </div>
+  <div class="moving-text"><span>🐉 Gangster 🐉</span></div>
 
-  <footer>
-    © 2025 Syed Asif Ali — All Rights Reserved
-  </footer>
+  <footer>© 2025 Syed Asif Ali — All Rights Reserved</footer>
 </div>
 
-<!-- ✅ Hamburger Menu Script -->
 <script>
-const menuIcon = document.getElementById('menu-icon');
-const navLinks = document.getElementById('nav-links');
-menuIcon.addEventListener('click', () => {
-  const isOpen = navLinks.classList.toggle('show');
-  menuIcon.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+const menuWrapper=document.getElementById("menu-wrapper");
+const menuIcon=document.getElementById("menu-icon");
+const menuText=document.getElementById("menu-text");
+const navLinks=document.getElementById("nav-links");
+const overlay=document.getElementById("overlay");
+let isOpen=false;
+
+menuWrapper.addEventListener("click",()=>{
+  isOpen=!isOpen;
+  navLinks.classList.toggle("show");
+  overlay.classList.toggle("show");
+  if(isOpen){menuIcon.textContent="✖";menuText.textContent="Close";menuIcon.style.color="#00ffff";menuText.style.color="#00ffff";}
+  else{menuIcon.textContent="☰";menuText.textContent="Menu";menuIcon.style.color="#fff";menuText.style.color="#fff";}
+});
+overlay.addEventListener("click",()=>{
+  navLinks.classList.remove("show");
+  overlay.classList.remove("show");
+  isOpen=false;
+  menuIcon.textContent="☰";
+  menuText.textContent="Menu";
+  menuIcon.style.color="#fff";
+  menuText.style.color="#fff";
 });
 </script>
 </body>
