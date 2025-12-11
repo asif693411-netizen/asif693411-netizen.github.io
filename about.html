@@ -52,12 +52,12 @@
     }
 
     .menu-icon {
-      font-size: 1.4rem; /* smaller icon */
+      font-size: 1.4rem;
       transition: 0.3s ease;
     }
 
     #menu-text {
-      font-size: 0.9rem; /* smaller text */
+      font-size: 0.9rem;
       color: #fff;
       transition: color 0.3s ease;
     }
@@ -77,9 +77,7 @@
       z-index: 900;
     }
 
-    .nav-links.show {
-      top: 0;
-    }
+    .nav-links.show { top: 0; }
 
     .nav-links a {
       color: white;
@@ -92,9 +90,7 @@
       transition: background 0.3s;
     }
 
-    .nav-links a:hover {
-      background: #d14836;
-    }
+    .nav-links a:hover { background: #0ff; color:#000; }
 
     /* ---------- Overlay ---------- */
     .overlay {
@@ -108,9 +104,7 @@
       z-index: 800;
     }
 
-    .overlay.show {
-      display: block;
-    }
+    .overlay.show { display: block; }
 
     /* ---------- Main Content ---------- */
     main {
@@ -125,7 +119,7 @@
       height: 200px;
       border-radius: 50%;
       object-fit: cover;
-      border: 3px solid #d14836;
+      border: 3px solid #00ffff;
       margin-bottom: 20px;
     }
 
@@ -140,12 +134,12 @@
       color: #ccc;
     }
 
-    /* ---------- Neon Moving Text ---------- */
+    /* ---------- Cyan Neon Moving Text ---------- */
     .moving-text {
       width: 100%;
       overflow: hidden;
       background: #000;
-      color: #ff1a1a;
+      color: #00ffff; /* Cyan color */
       font-weight: bold;
       font-size: 1.3rem;
       padding: 6px 0;
@@ -153,10 +147,10 @@
       border-top: 2px solid #222;
       border-bottom: 2px solid #222;
       text-shadow:
-        0 0 5px #ff0000,
-        0 0 10px #ff0000,
-        0 0 20px #ff0000,
-        0 0 40px #ff1a1a;
+        0 0 5px #00ffff,
+        0 0 10px #00ffff,
+        0 0 20px #00ffff,
+        0 0 40px #00e6e6;
     }
 
     .moving-text span {
@@ -171,8 +165,8 @@
     }
 
     @keyframes glow {
-      from { text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000; }
-      to   { text-shadow: 0 0 25px #ff0000, 0 0 45px #ff1a1a; }
+      from { text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff; }
+      to   { text-shadow: 0 0 25px #00ffff, 0 0 45px #00e6e6; }
     }
 
     /* ---------- Footer ---------- */
@@ -220,7 +214,7 @@
     </section>
   </main>
 
-  <!-- Neon Moving Text -->
+  <!-- Cyan Neon Moving Text -->
   <div class="moving-text">
     <span>🐉 Gangster 🐉</span>
   </div>
@@ -246,8 +240,8 @@
       if (isOpen) {
         menuIcon.textContent = "✖";
         menuText.textContent = "Close";
-        menuIcon.style.color = "#ff1a1a";
-        menuText.style.color = "#ff1a1a";
+        menuIcon.style.color = "#00ffff";
+        menuText.style.color = "#00ffff";
       } else {
         menuIcon.textContent = "☰";
         menuText.textContent = "Menu";
