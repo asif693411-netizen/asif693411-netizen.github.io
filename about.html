@@ -7,11 +7,9 @@
 <style>
 body{margin:0;padding:0;font-family:'Poppins',sans-serif;background:#0f0f0f;color:#fff;line-height:1.6;overflow-x:hidden;}
 .container{width:90%;max-width:900px;margin:0 auto;text-align:center;padding:20px;}
-
-/* Navbar */
 .navbar{background:#111;padding:10px 20px;border-radius:10px;position:relative;z-index:1000;margin-bottom:30px;}
 .nav-container{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;}
-.logo{color:#00ffff;font-size:1.2rem;margin:0;}
+.logo{display:none;} /* Left logo removed */
 .menu-wrapper{display:flex;align-items:center;gap:6px;cursor:pointer;font-weight:bold;}
 .menu-icon{font-size:1.8rem;color:#fff;transition:.3s;}
 #menu-text{font-size:.9rem;color:#fff;transition:.3s;}
@@ -19,39 +17,30 @@ body{margin:0;padding:0;font-family:'Poppins',sans-serif;background:#0f0f0f;colo
 .nav-links a{color:white;text-decoration:none;padding:15px;width:100%;text-align:center;font-size:1.1rem;border-bottom:1px solid #222;transition:.3s;}
 .nav-links a:hover,.nav-links a.active{color:#00ffff;}
 .nav-links.show{top:0;}
-
-/* Overlay */
 .overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);display:none;z-index:800;}
 .overlay.show{display:block;}
-
-/* Profile Image Neon Glow */
-.profile-img{width:130px;height:130px;border-radius:50%;object-fit:cover;margin:20px auto;border:3px solid #00ffff;
-box-shadow:0 0 15px #00ffff,0 0 30px #00ffff,0 0 50px #0077ff,0 0 80px #00ffff;transition:transform .3s;}
+.profile-img{width:130px;height:130px;border-radius:50%;object-fit:cover;margin:20px auto;border:3px solid #00ffff;box-shadow:0 0 15px #00ffff,0 0 30px #00ffff,0 0 50px #0077ff,0 0 80px #00ffff;transition:transform .3s;}
 .profile-img:hover{transform:scale(1.05);box-shadow:0 0 20px #00ffff,0 0 40px #00ffff,0 0 70px #0077ff,0 0 100px #00ffff;}
-
-/* Content */
-header h1{font-size:1.8rem;margin:10px 0 5px;}
+header h1{font-size:1.8rem;margin:10px 0 5px;color:#fff;}
 .title{font-weight:300;color:#ccc;font-size:1rem;}
 section{margin:30px 0;}
 section h2{font-size:1.4rem;color:#00ffff;margin-bottom:10px;}
 footer{margin-top:40px;padding:15px 0;font-size:.9rem;color:#aaa;border-top:1px solid #333;}
-
-/* Neon Moving Text */
 .moving-text{position:relative;width:100%;overflow:hidden;background:#000;font-weight:bold;font-size:1.3rem;padding:20px 0;text-align:center;border-top:2px solid #222;border-bottom:2px solid #222;}
 .moving-text::before{content:"";position:absolute;top:50%;left:0;width:100%;height:18px;background:radial-gradient(circle at center, rgba(0,255,255,0.4) 0%, rgba(0,255,255,0) 70%);transform:translateY(-50%);filter:blur(20px);animation:barGlow 3s ease-in-out infinite alternate;}
 @keyframes barGlow{from{opacity:.5;transform:translateY(-50%) scaleX(1);}to{opacity:1;transform:translateY(-50%) scaleX(1.2);}}
 .moving-text span{position:relative;display:inline-block;white-space:nowrap;background:linear-gradient(90deg,#00ffff,#0077ff,#00ffff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:bold;animation:moveText 10s linear infinite, gradientShift 3s ease-in-out infinite alternate;text-shadow:0 0 10px rgba(0,255,255,0.9);}
 @keyframes moveText{0%{transform:translateX(100%);}100%{transform:translateX(-100%);}}
 @keyframes gradientShift{0%{background-position:0% 50%;}100%{background-position:100% 50%;}}
+@media(max-width:768px){.menu-icon{display:block;}.nav-links a{padding:10px 0;}}
+@media(max-width:480px){.container{width:95%;}section h2{font-size:1.2rem;}.profile-img{width:95px;height:95px;}}
 </style>
 </head>
 <body>
 <div class="container">
-
-  <!-- Navbar -->
   <nav class="navbar">
     <div class="nav-container">
-      <h2 class="logo">Syed Asif Ali</h2>
+      <h2 class="logo"></h2> <!-- removed -->
       <div class="menu-wrapper" id="menu-wrapper">
         <span class="menu-icon" id="menu-icon">☰</span>
         <span id="menu-text">Menu</span>
@@ -67,7 +56,6 @@ footer{margin-top:40px;padding:15px 0;font-size:.9rem;color:#aaa;border-top:1px 
     </div>
   </nav>
 
-  <!-- Overlay -->
   <div class="overlay" id="overlay"></div>
 
   <header>
@@ -83,17 +71,11 @@ footer{margin-top:40px;padding:15px 0;font-size:.9rem;color:#aaa;border-top:1px 
     </section>
   </main>
 
-  <!-- Neon Moving Text -->
-  <div class="moving-text">
-    <span>🐉 Gangster 🐉</span>
-  </div>
+  <div class="moving-text"><span>🐉 Gangster 🐉</span></div>
 
-  <footer>
-    © 2025 Syed Asif Ali — All Rights Reserved
-  </footer>
+  <footer>© 2025 Syed Asif Ali — All Rights Reserved</footer>
 </div>
 
-<!-- Hamburger Menu + Overlay Script -->
 <script>
 const menuWrapper=document.getElementById("menu-wrapper");
 const menuIcon=document.getElementById("menu-icon");
@@ -106,17 +88,8 @@ menuWrapper.addEventListener("click",()=>{
   isOpen=!isOpen;
   navLinks.classList.toggle("show");
   overlay.classList.toggle("show");
-  if(isOpen){
-    menuIcon.textContent="✖";
-    menuText.textContent="Close";
-    menuIcon.style.color="#00ffff";
-    menuText.style.color="#00ffff";
-  }else{
-    menuIcon.textContent="☰";
-    menuText.textContent="Menu";
-    menuIcon.style.color="#fff";
-    menuText.style.color="#fff";
-  }
+  if(isOpen){menuIcon.textContent="✖";menuText.textContent="Close";menuIcon.style.color="#00ffff";menuText.style.color="#00ffff";}
+  else{menuIcon.textContent="☰";menuText.textContent="Menu";menuIcon.style.color="#fff";menuText.style.color="#fff";}
 });
 overlay.addEventListener("click",()=>{
   navLinks.classList.remove("show");
