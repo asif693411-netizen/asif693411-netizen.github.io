@@ -17,28 +17,75 @@ body {
   padding: 20px;
 }
 
-/* 🧭 Navbar */
+/* 🧭 Navbar (Responsive Hamburger Version) */
 .navbar {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
   background-color: #1a1a1a;
-  padding: 15px;
+  padding: 10px 20px;
   border-radius: 10px;
   margin-bottom: 30px;
 }
 
-.navbar a {
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  color: #00bcd4;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
   color: white;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s;
 }
 
-.navbar a:hover,
-.navbar a.active {
+.nav-links a:hover,
+.nav-links a.active {
   color: #00bcd4;
+}
+
+/* 📱 Hamburger icon (mobile only) */
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* 📱 Responsive Navbar */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #1a1a1a;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 10px 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+  }
 }
 
 /* 🖼️ Profile Image */
