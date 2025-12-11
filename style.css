@@ -1,9 +1,29 @@
-/* Navbar Styling */
+/* 🌐 Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0f0f0f;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* 🌟 Container */
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+/* 🧭 Navbar */
 .navbar {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 20px;
-  background-color: #111;
+  background-color: #1a1a1a;
   padding: 15px;
   border-radius: 10px;
   margin-bottom: 30px;
@@ -16,26 +36,112 @@
   transition: color 0.3s;
 }
 
-.navbar a:hover {
+.navbar a:hover,
+.navbar a.active {
   color: #00bcd4;
 }
-/* ✅ Profile Image Size Fix */
+
+/* 🖼️ Profile Image */
 .profile-img {
-  width: 150px;          /* Image width set ki gayi */
-  height: 150px;         /* Same height for round shape */
-  border-radius: 50%;    /* Circular image */
-  object-fit: cover;     /* Extra part crop ho jayega */
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
   display: block;
-  margin: 20px auto;     /* Center align */
-  border: 3px solid #00bcd4; /* Optional: nice border */
+  margin: 20px auto;
+  border: 3px solid #00bcd4;
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.3);
+  transition: transform 0.3s ease;
 }
-/* ✅ Profile Image Resize Fix (Strong Rules) */
-.profile-img {
-  width: 120px !important;        /* Force smaller width */
-  height: 120px !important;       /* Equal height for round shape */
-  border-radius: 50%;             /* Circle shape */
-  object-fit: cover;              /* Crop extra part */
-  display: block;
-  margin: 20px auto;              /* Center the image */
-  border: 3px solid #00bcd4;      /* Optional: border */
+
+.profile-img:hover {
+  transform: scale(1.05);
+}
+
+/* 🧍 Header */
+header h1 {
+  font-size: 1.8rem;
+  margin: 10px 0 5px;
+}
+
+.title {
+  font-weight: 300;
+  color: #cccccc;
+  font-size: 1rem;
+}
+
+/* 📄 Sections */
+section {
+  margin: 30px 0;
+}
+
+section h2 {
+  font-size: 1.4rem;
+  color: #00bcd4;
+  margin-bottom: 10px;
+}
+
+/* 🔗 Social Links */
+.social-links a {
+  display: inline-block;
+  margin: 6px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background-color: #00bcd4;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.social-links a:hover {
+  background-color: #0097a7;
+  transform: translateY(-3px);
+}
+
+/* 🦶 Footer */
+footer {
+  margin-top: 40px;
+  padding: 15px 0;
+  font-size: 0.9rem;
+  color: #aaa;
+  border-top: 1px solid #333;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .profile-img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .social-links a {
+    display: block;
+    width: 80%;
+    margin: 8px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+  }
+
+  .profile-img {
+    width: 95px;
+    height: 95px;
+  }
+
+  section h2 {
+    font-size: 1.2rem;
+  }
 }
