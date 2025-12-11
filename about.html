@@ -31,6 +31,7 @@
       font-size: 1rem;
       gap: 5px;
       user-select: none;
+      z-index: 1001;
     }
 
     .menu-icon {
@@ -91,11 +92,28 @@
       }
     }
 
+    /* ---------- Overlay for outside click ---------- */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      display: none;
+      z-index: 999;
+    }
+
+    .overlay.show {
+      display: block;
+    }
+
     /* ---------- Main Content ---------- */
     body {
       background: #fff;
       color: #333;
       font-family: Arial, sans-serif;
+      position: relative;
     }
 
     main {
@@ -127,40 +145,40 @@
       line-height: 1.6;
     }
 
-    /* ---------- Footer ---------- */
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      padding: 10px;
-      background: #f2f2f2;
-      color: #333;
-      font-size: 0.9rem;
-      position: relative;
-    }
-
     /* ---------- Moving Text ---------- */
     .moving-text {
       width: 100%;
       overflow: hidden;
-      background: #222;
-      color: #d14836;
+      background: #111;
+      color: #ff0000;
       font-weight: bold;
-      font-size: 1.2rem;
-      padding: 5px 0;
-      margin-top: 10px;
+      font-size: 1.3rem;
+      padding: 6px 0;
+      text-align: center;
+      border-top: 2px solid #333;
+      border-bottom: 2px solid #333;
     }
 
     .moving-text span {
       display: inline-block;
-      padding-left: 100%;
+      white-space: nowrap;
       animation: moveText 10s linear infinite;
     }
 
     @keyframes moveText {
-      0% { transform: translateX(0%); }
+      0% { transform: translateX(100%); }
       100% { transform: translateX(-100%); }
     }
 
+    /* ---------- Footer ---------- */
+    footer {
+      text-align: center;
+      margin-top: 0;
+      padding: 10px;
+      background: #f2f2f2;
+      color: #333;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 
@@ -168,10 +186,12 @@
   <!-- Navbar -->
   <nav class="navbar">
     <h2 class="logo">Syed Asif Ali</h2>
+
     <div class="menu-wrapper" id="menu-wrapper">
       <span class="menu-icon" id="menu-icon">☰</span>
       <span id="menu-text">Menu</span>
     </div>
+
     <div class="nav-links" id="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -181,6 +201,9 @@
       <a href="techbullion.html">TechBullion</a>
     </div>
   </nav>
+
+  <!-- Transparent Overlay -->
+  <div class="overlay" id="overlay"></div>
 
   <!-- About Section -->
   <main>
@@ -194,7 +217,7 @@
 
   <!-- Moving Text -->
   <div class="moving-text">
-    <span>Father of Mafia</span>
+    <span>☠️ Father of Mafia ☠️</span>
   </div>
 
   <footer>
@@ -203,23 +226,41 @@
 
   <!-- JS for Menu Toggle -->
   <script>
+    const menuWrapper = document.getElementById("menu-wrapper");
     const menuIcon = document.getElementById("menu-icon");
     const menuText = document.getElementById("menu-text");
     const navLinks = document.getElementById("nav-links");
+    const overlay = document.getElementById("overlay");
     let isOpen = false;
 
-    menuIcon.parentElement.addEventListener("click", () => {
-      navLinks.classList.toggle("show");
+    // Open / Close Menu
+    menuWrapper.addEventListener("click", () => {
       isOpen = !isOpen;
+      navLinks.classList.toggle("show");
+      overlay.classList.toggle("show");
+
       if (isOpen) {
         menuIcon.textContent = "✖";
         menuText.textContent = "Close";
-        menuText.style.color = "#8B0000"; // Blood Red color
+        menuText.style.color = "#ff0000"; // Bright blood red
+        menuIcon.style.color = "#ff0000"; // Red cross visible
       } else {
         menuIcon.textContent = "☰";
         menuText.textContent = "Menu";
         menuText.style.color = "white";
+        menuIcon.style.color = "white";
       }
+    });
+
+    // Click outside menu to close
+    overlay.addEventListener("click", () => {
+      navLinks.classList.remove("show");
+      overlay.classList.remove("show");
+      isOpen = false;
+      menuIcon.textContent = "☰";
+      menuText.textContent = "Menu";
+      menuText.style.color = "white";
+      menuIcon.style.color = "white";
     });
   </script>
 </body>
