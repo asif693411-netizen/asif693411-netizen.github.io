@@ -15,6 +15,7 @@
       color: white;
       padding: 10px 20px;
       position: relative;
+      z-index: 100;
     }
 
     .logo {
@@ -27,6 +28,7 @@
       cursor: pointer;
       display: none;
       user-select: none;
+      transition: transform 0.3s ease;
     }
 
     .nav-links {
@@ -41,36 +43,31 @@
       font-weight: 500;
     }
 
-    /* ---------- Mobile View ---------- */
+    /* ---------- Mobile View (Slide Menu) ---------- */
     @media (max-width: 768px) {
       .menu-icon {
         display: block;
       }
 
       .nav-links {
-        display: flex;
         flex-direction: column;
         background: #333;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        width: 180px;
-        border-radius: 8px;
-        overflow: hidden;
-        max-height: 0;
-        opacity: 0;
-        visibility: hidden;
+        position: fixed;
+        top: 0;
+        right: -250px; /* off-screen initially */
+        width: 220px;
+        height: 100vh;
+        padding-top: 80px;
+        border-left: 2px solid #444;
+        transition: right 0.4s ease;
       }
 
       .nav-links.show {
-        max-height: 400px; /* enough space for all links */
-        opacity: 1;
-        visibility: visible;
-        transition: all 0.4s ease;
+        right: 0; /* slides in */
       }
 
       .nav-links a {
-        padding: 10px;
+        padding: 12px 20px;
         border-bottom: 1px solid #444;
       }
 
@@ -79,7 +76,12 @@
       }
     }
 
-    /* ---------- Profile Section ---------- */
+    /* ---------- About Section ---------- */
+    main {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
     .profile-img {
       max-width: 130px;
       width: 100%;
@@ -89,9 +91,16 @@
       margin-top: 20px;
     }
 
-    main {
-      text-align: center;
-      padding: 20px;
+    h1 {
+      margin-top: 15px;
+    }
+
+    .about-me {
+      max-width: 700px;
+      margin: 20px auto;
+      text-align: justify;
+      color: #333;
+      line-height: 1.6;
     }
 
     footer {
@@ -136,9 +145,12 @@
   <script>
     const menuIcon = document.getElementById("menu-icon");
     const navLinks = document.getElementById("nav-links");
+    let isOpen = false;
 
     menuIcon.addEventListener("click", () => {
       navLinks.classList.toggle("show");
+      isOpen = !isOpen;
+      menuIcon.textContent = isOpen ? "✖" : "☰"; // change icon
     });
   </script>
 </body>
