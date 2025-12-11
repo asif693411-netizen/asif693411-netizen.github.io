@@ -5,126 +5,139 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About - Syed Asif Ali</title>
   <style>
+    /* ---------- Global ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #000;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
     /* ---------- Navbar ---------- */
     .navbar {
+      width: 100%;
+      background: #111;
+      color: white;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: #111;
-      color: white;
-      padding: 10px 20px;
-      position: relative;
+      padding: 12px 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
       z-index: 1000;
+      border-bottom: 1px solid #222;
     }
 
     .logo {
       font-size: 1.5rem;
       font-weight: bold;
+      letter-spacing: 1px;
+      color: #fff;
     }
 
     .menu-wrapper {
       display: flex;
       align-items: center;
-      cursor: pointer;
-      font-weight: bold;
-      font-size: 1rem;
       gap: 5px;
+      cursor: pointer;
       user-select: none;
+      font-weight: bold;
     }
 
     .menu-icon {
       font-size: 1.8rem;
-      transition: transform 0.3s ease;
-      color: white;
+      transition: 0.3s ease;
     }
 
     #menu-text {
-      color: white;
-      transition: color 0.3s;
+      font-size: 1rem;
+      color: #fff;
+      transition: color 0.3s ease;
     }
 
     /* ---------- Drop-Down Menu ---------- */
     .nav-links {
-      display: none;
+      position: fixed;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      background: #111;
+      display: flex;
       flex-direction: column;
-      background: #222;
-      position: absolute;
-      top: 60px;
-      right: 20px;
-      width: 200px;
-      border-radius: 10px;
-      overflow: hidden;
-      opacity: 0;
-      transform: translateY(-20px);
-      transition: all 0.4s ease;
+      align-items: center;
+      transition: top 0.5s ease;
+      padding-top: 80px;
+      z-index: 900;
     }
 
     .nav-links.show {
-      display: flex;
-      opacity: 1;
-      transform: translateY(0);
+      top: 0;
     }
 
     .nav-links a {
       color: white;
       text-decoration: none;
-      font-weight: 500;
-      padding: 12px 15px;
-      border-bottom: 1px solid #444;
+      padding: 15px;
+      width: 100%;
+      text-align: center;
+      font-size: 1.1rem;
+      border-bottom: 1px solid #222;
+      transition: background 0.3s;
     }
 
     .nav-links a:hover {
       background: #d14836;
     }
 
-    /* ---------- Overlay (click outside) ---------- */
+    /* ---------- Overlay ---------- */
     .overlay {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: transparent;
+      background: rgba(0, 0, 0, 0.6);
       display: none;
-      z-index: 999;
-    }
-    .overlay.show { display: block; }
-
-    /* ---------- Main Content ---------- */
-    body {
-      background: #fff;
-      color: #333;
-      font-family: Arial, sans-serif;
-      position: relative;
+      z-index: 800;
     }
 
-    main {
-      text-align: center;
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .profile-img {
-      max-width: 130px;
-      width: 100%;
-      height: auto;
-      border-radius: 50%;
-      object-fit: cover;
-      margin: 20px auto;
+    .overlay.show {
       display: block;
     }
 
+    /* ---------- Main Content ---------- */
+    main {
+      padding: 120px 20px 60px;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .profile-img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #d14836;
+      margin-bottom: 20px;
+    }
+
     h1 {
-      margin-top: 15px;
-      color: #222;
+      color: #fff;
+      margin-bottom: 15px;
     }
 
     .about-me {
-      max-width: 700px;
-      margin: 20px auto;
       text-align: justify;
       line-height: 1.6;
+      color: #ccc;
     }
 
     /* ---------- Neon Moving Text ---------- */
@@ -134,8 +147,8 @@
       background: #000;
       color: #ff1a1a;
       font-weight: bold;
-      font-size: 1.4rem;
-      padding: 8px 0;
+      font-size: 1.3rem;
+      padding: 6px 0;
       text-align: center;
       border-top: 2px solid #222;
       border-bottom: 2px solid #222;
@@ -159,16 +172,16 @@
 
     @keyframes glow {
       from { text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000; }
-      to   { text-shadow: 0 0 20px #ff0000, 0 0 40px #ff1a1a; }
+      to   { text-shadow: 0 0 25px #ff0000, 0 0 45px #ff1a1a; }
     }
 
     /* ---------- Footer ---------- */
     footer {
       text-align: center;
-      margin-top: 0;
       padding: 10px;
-      background: #f2f2f2;
-      color: #333;
+      background: #111;
+      border-top: 1px solid #222;
+      color: #888;
       font-size: 0.9rem;
     }
   </style>
@@ -177,7 +190,7 @@
 <body>
   <!-- Navbar -->
   <nav class="navbar">
-    <h2 class="logo">Syed Asif Ali</h2>
+    <div class="logo">Syed Asif Ali</div>
 
     <div class="menu-wrapper" id="menu-wrapper">
       <span class="menu-icon" id="menu-icon">☰</span>
@@ -197,7 +210,7 @@
   <!-- Overlay -->
   <div class="overlay" id="overlay"></div>
 
-  <!-- About Section -->
+  <!-- Main Content -->
   <main>
     <img src="/profile.jpg" class="profile-img" alt="Syed Asif Ali" loading="lazy" />
     <h1>About Syed Asif Ali</h1>
@@ -233,13 +246,13 @@
       if (isOpen) {
         menuIcon.textContent = "✖";
         menuText.textContent = "Close";
-        menuText.style.color = "#ff1a1a";
         menuIcon.style.color = "#ff1a1a";
+        menuText.style.color = "#ff1a1a";
       } else {
         menuIcon.textContent = "☰";
         menuText.textContent = "Menu";
-        menuText.style.color = "white";
-        menuIcon.style.color = "white";
+        menuIcon.style.color = "#fff";
+        menuText.style.color = "#fff";
       }
     });
 
@@ -249,8 +262,8 @@
       isOpen = false;
       menuIcon.textContent = "☰";
       menuText.textContent = "Menu";
-      menuText.style.color = "white";
-      menuIcon.style.color = "white";
+      menuIcon.style.color = "#fff";
+      menuText.style.color = "#fff";
     });
   </script>
 </body>
