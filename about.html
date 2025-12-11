@@ -137,4 +137,42 @@
     <div class="nav-links" id="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="socials.html">Social</a>
+      <a href="press.html">Press</a>
+      <a href="techbullion.html">TechBullion</a>
+    </div>
+  </nav>
+
+  <!-- About Section -->
+  <main>
+    <img src="/profile.jpg" class="profile-img" alt="Syed Asif Ali" loading="lazy" />
+    <h1>About Syed Asif Ali</h1>
+    <section class="about-me">
+      <p>Syed Asif Ali is a young entrepreneur and digital creator from South Waziristan, UAE-based, focusing on social awareness and digital media projects. Born on 23 January 1997, he is the owner of Point Media and known for creating viral content across TikTok and Instagram.</p>
+      <p>His vision is to grow his digital media brand and contribute positively to the digital content community.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Syed Asif Ali. All rights reserved.</p>
+  </footer>
+
+  <!-- JS for Menu Toggle -->
+  <script>
+    const menuIcon = document.getElementById("menu-icon");
+    const navLinks = document.getElementById("nav-links");
+    let isOpen = false;
+
+    menuIcon.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+      isOpen = !isOpen;
+      menuIcon.textContent = isOpen ? "✖" : "☰"; // toggle icon
+    });
+  </script>
+</body>
+</html>
+    <div class="nav-links" id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
       <a
