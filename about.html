@@ -15,7 +15,7 @@
       color: white;
       padding: 10px 20px;
       position: relative;
-      z-index: 1000; /* ensure menu is above content */
+      z-index: 1000;
     }
 
     .logo {
@@ -23,14 +23,27 @@
       font-weight: bold;
     }
 
-    .menu-icon {
-      font-size: 1.8rem;
+    .menu-wrapper {
+      display: flex;
+      align-items: center;
       cursor: pointer;
+      font-weight: bold;
+      font-size: 1rem;
+      gap: 5px;
       user-select: none;
-      transition: transform 0.3s ease;
-      z-index: 1001; /* always above menu links */
     }
 
+    .menu-icon {
+      font-size: 1.8rem;
+      transition: transform 0.3s ease;
+    }
+
+    #menu-text {
+      color: white;
+      transition: color 0.3s;
+    }
+
+    /* ---------- Nav Links ---------- */
     .nav-links {
       display: flex;
       gap: 15px;
@@ -48,18 +61,14 @@
       color: #d14836;
     }
 
-    /* ---------- Mobile View (Slide Menu) ---------- */
+    /* ---------- Mobile View (Right-Slide Menu) ---------- */
     @media (max-width: 768px) {
-      .menu-icon {
-        display: block;
-      }
-
       .nav-links {
         flex-direction: column;
         background: #333;
         position: fixed;
         top: 0;
-        right: -250px; /* hidden initially */
+        right: -250px;
         width: 220px;
         height: 100vh;
         padding-top: 80px;
@@ -69,7 +78,7 @@
       }
 
       .nav-links.show {
-        right: 0; /* slide in */
+        right: 0;
       }
 
       .nav-links a {
@@ -84,7 +93,7 @@
 
     /* ---------- Main Content ---------- */
     body {
-      background: #fff; /* ensure white background for content */
+      background: #fff;
       color: #333;
       font-family: Arial, sans-serif;
     }
@@ -118,6 +127,7 @@
       line-height: 1.6;
     }
 
+    /* ---------- Footer ---------- */
     footer {
       text-align: center;
       margin-top: 40px;
@@ -125,7 +135,32 @@
       background: #f2f2f2;
       color: #333;
       font-size: 0.9rem;
+      position: relative;
     }
+
+    /* ---------- Moving Text ---------- */
+    .moving-text {
+      width: 100%;
+      overflow: hidden;
+      background: #222;
+      color: #d14836;
+      font-weight: bold;
+      font-size: 1.2rem;
+      padding: 5px 0;
+      margin-top: 10px;
+    }
+
+    .moving-text span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: moveText 10s linear infinite;
+    }
+
+    @keyframes moveText {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-100%); }
+    }
+
   </style>
 </head>
 
@@ -133,7 +168,10 @@
   <!-- Navbar -->
   <nav class="navbar">
     <h2 class="logo">Syed Asif Ali</h2>
-    <div class="menu-icon" id="menu-icon">☰</div>
+    <div class="menu-wrapper" id="menu-wrapper">
+      <span class="menu-icon" id="menu-icon">☰</span>
+      <span id="menu-text">Menu</span>
+    </div>
     <div class="nav-links" id="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -154,6 +192,11 @@
     </section>
   </main>
 
+  <!-- Moving Text -->
+  <div class="moving-text">
+    <span>Father of Mafia</span>
+  </div>
+
   <footer>
     <p>© 2025 Syed Asif Ali. All rights reserved.</p>
   </footer>
@@ -161,18 +204,23 @@
   <!-- JS for Menu Toggle -->
   <script>
     const menuIcon = document.getElementById("menu-icon");
+    const menuText = document.getElementById("menu-text");
     const navLinks = document.getElementById("nav-links");
     let isOpen = false;
 
-    menuIcon.addEventListener("click", () => {
+    menuIcon.parentElement.addEventListener("click", () => {
       navLinks.classList.toggle("show");
       isOpen = !isOpen;
-      menuIcon.textContent = isOpen ? "✖" : "☰"; // toggle icon
+      if (isOpen) {
+        menuIcon.textContent = "✖";
+        menuText.textContent = "Close";
+        menuText.style.color = "#8B0000"; // Blood Red color
+      } else {
+        menuIcon.textContent = "☰";
+        menuText.textContent = "Menu";
+        menuText.style.color = "white";
+      }
     });
   </script>
 </body>
 </html>
-    <div class="nav-links" id="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a
