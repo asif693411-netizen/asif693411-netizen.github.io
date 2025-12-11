@@ -1,9 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<header>
-    <!-- ✅ Responsive Navbar -->
-<nav class="navbar">
-  <div class="nav-container">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Syed Asif Ali</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ---------- Navbar ---------- */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #222;
+      color: white;
+      padding: 10px 20px;
+      position: relative;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .menu-icon {
+      font-size: 1.8rem;
+      cursor: pointer;
+      display: none;
+      user-select: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 15px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* ---------- Mobile View ---------- */
+    @media (max-width: 768px) {
+      .menu-icon {
+        display: block;
+      }
+
+      .nav-links {
+        display: flex;
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 180px;
+        border-radius: 8px;
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .nav-links.show {
+        max-height: 400px; /* enough space for all links */
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.4s ease;
+      }
+
+      .nav-links a {
+        padding: 10px;
+        border-bottom: 1px solid #444;
+      }
+
+      .nav-links a:last-child {
+        border-bottom: none;
+      }
+    }
+
+    /* ---------- Profile Section ---------- */
+    .profile-img {
+      max-width: 130px;
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-top: 20px;
+    }
+
+    main {
+      text-align: center;
+      padding: 20px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 10px;
+      background: #f2f2f2;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ✅ Navbar -->
+  <nav class="navbar">
     <h2 class="logo">Syed Asif Ali</h2>
     <div class="menu-icon" id="menu-icon">☰</div>
     <div class="nav-links" id="nav-links">
@@ -13,55 +115,31 @@
       <a href="socials.html">Social</a>
       <a href="press.html">Press</a>
       <a href="techbullion.html">TechBullion</a>
+    </div>
+  </nav>
 
-  <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Syed Asif Ali</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-</head>
-<head>
-  <style>
-    .profile-img {
-      max-width: 130px;
-      width: 100%;
-      height: auto;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-  </style>
-</head>
+  <!-- ✅ About Content -->
+  <main>
     <img src="/profile.jpg" class="profile-img" alt="Syed Asif Ali" loading="lazy" />
     <h1>About Syed Asif Ali</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="socials.html">Socials</a>
-        <a href="press.html">Press</a>
-        <a href="techbullion.html">TechBullion</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-
-<main>
     <section class="about-me">
-        <p>Syed Asif Ali is a young entrepreneur and digital creator from South Waziristan, UAE-based, focusing on social awareness and digital media projects. Born on 23 January 1997, he is the owner of Point Media and known for creating viral content across TikTok and Instagram.</p>
-        <p>His vision is to grow his digital media brand and contribute positively to the digital content community.</p>
+      <p>Syed Asif Ali is a young entrepreneur and digital creator from South Waziristan, UAE-based, focusing on social awareness and digital media projects. Born on 23 January 1997, he is the owner of Point Media and known for creating viral content across TikTok and Instagram.</p>
+      <p>His vision is to grow his digital media brand and contribute positively to the digital content community.</p>
     </section>
-</main>
+  </main>
 
-<footer>
+  <footer>
     <p>© 2025 Syed Asif Ali. All rights reserved.</p>
-</footer>
-<script>
-  const menuIcon = document.getElementById('menu-icon');
-  const navLinks = document.getElementById('nav-links');
+  </footer>
 
-  menuIcon.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-  });
-</script>
-    
+  <!-- ✅ JS for Menu Toggle -->
+  <script>
+    const menuIcon = document.getElementById("menu-icon");
+    const navLinks = document.getElementById("nav-links");
+
+    menuIcon.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+  </script>
 </body>
 </html>
