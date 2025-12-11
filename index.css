@@ -64,3 +64,13 @@
 
 </body>
 </html>
+/* ✅ Profile Image Size Fix */
+.profile-img {
+  width: 150px;          /* Image width set ki gayi */
+  height: 150px;         /* Same height for round shape */
+  border-radius: 50%;    /* Circular image */
+  object-fit: cover;     /* Extra part crop ho jayega */
+  display: block;
+  margin: 20px auto;     /* Center align */
+  border: 3px solid #00bcd4; /* Optional: nice border */
+    }
