@@ -4,14 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About - Syed Asif Ali</title>
-  <link rel="stylesheet" href="style.css" />
   <style>
     /* ---------- Navbar ---------- */
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: #222;
+      background: #111;
       color: white;
       padding: 10px 20px;
       position: relative;
@@ -31,12 +30,12 @@
       font-size: 1rem;
       gap: 5px;
       user-select: none;
-      z-index: 1001;
     }
 
     .menu-icon {
       font-size: 1.8rem;
       transition: transform 0.3s ease;
+      color: white;
     }
 
     #menu-text {
@@ -44,55 +43,41 @@
       transition: color 0.3s;
     }
 
-    /* ---------- Nav Links ---------- */
+    /* ---------- Drop-Down Menu ---------- */
     .nav-links {
+      display: none;
+      flex-direction: column;
+      background: #222;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      width: 200px;
+      border-radius: 10px;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(-20px);
+      transition: all 0.4s ease;
+    }
+
+    .nav-links.show {
       display: flex;
-      gap: 15px;
-      transition: all 0.3s ease;
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .nav-links a {
       color: white;
       text-decoration: none;
       font-weight: 500;
-      padding: 5px 0;
+      padding: 12px 15px;
+      border-bottom: 1px solid #444;
     }
 
     .nav-links a:hover {
-      color: #d14836;
+      background: #d14836;
     }
 
-    /* ---------- Mobile View (Right-Slide Menu) ---------- */
-    @media (max-width: 768px) {
-      .nav-links {
-        flex-direction: column;
-        background: #333;
-        position: fixed;
-        top: 0;
-        right: -250px;
-        width: 220px;
-        height: 100vh;
-        padding-top: 80px;
-        border-left: 2px solid #444;
-        transition: right 0.4s ease;
-        z-index: 1000;
-      }
-
-      .nav-links.show {
-        right: 0;
-      }
-
-      .nav-links a {
-        padding: 12px 20px;
-        border-bottom: 1px solid #444;
-      }
-
-      .nav-links a:last-child {
-        border-bottom: none;
-      }
-    }
-
-    /* ---------- Overlay for outside click ---------- */
+    /* ---------- Overlay (click outside) ---------- */
     .overlay {
       position: fixed;
       top: 0;
@@ -103,10 +88,7 @@
       display: none;
       z-index: 999;
     }
-
-    .overlay.show {
-      display: block;
-    }
+    .overlay.show { display: block; }
 
     /* ---------- Main Content ---------- */
     body {
@@ -145,29 +127,39 @@
       line-height: 1.6;
     }
 
-    /* ---------- Moving Text ---------- */
+    /* ---------- Neon Moving Text ---------- */
     .moving-text {
       width: 100%;
       overflow: hidden;
-      background: #111;
-      color: #ff0000;
+      background: #000;
+      color: #ff1a1a;
       font-weight: bold;
-      font-size: 1.3rem;
-      padding: 6px 0;
+      font-size: 1.4rem;
+      padding: 8px 0;
       text-align: center;
-      border-top: 2px solid #333;
-      border-bottom: 2px solid #333;
+      border-top: 2px solid #222;
+      border-bottom: 2px solid #222;
+      text-shadow:
+        0 0 5px #ff0000,
+        0 0 10px #ff0000,
+        0 0 20px #ff0000,
+        0 0 40px #ff1a1a;
     }
 
     .moving-text span {
       display: inline-block;
       white-space: nowrap;
-      animation: moveText 10s linear infinite;
+      animation: moveText 10s linear infinite, glow 1.5s ease-in-out infinite alternate;
     }
 
     @keyframes moveText {
       0% { transform: translateX(100%); }
       100% { transform: translateX(-100%); }
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000; }
+      to   { text-shadow: 0 0 20px #ff0000, 0 0 40px #ff1a1a; }
     }
 
     /* ---------- Footer ---------- */
@@ -202,7 +194,7 @@
     </div>
   </nav>
 
-  <!-- Transparent Overlay -->
+  <!-- Overlay -->
   <div class="overlay" id="overlay"></div>
 
   <!-- About Section -->
@@ -215,7 +207,7 @@
     </section>
   </main>
 
-  <!-- Moving Text -->
+  <!-- Neon Moving Text -->
   <div class="moving-text">
     <span>☠️ Father of Mafia ☠️</span>
   </div>
@@ -224,7 +216,7 @@
     <p>© 2025 Syed Asif Ali. All rights reserved.</p>
   </footer>
 
-  <!-- JS for Menu Toggle -->
+  <!-- JS -->
   <script>
     const menuWrapper = document.getElementById("menu-wrapper");
     const menuIcon = document.getElementById("menu-icon");
@@ -233,7 +225,6 @@
     const overlay = document.getElementById("overlay");
     let isOpen = false;
 
-    // Open / Close Menu
     menuWrapper.addEventListener("click", () => {
       isOpen = !isOpen;
       navLinks.classList.toggle("show");
@@ -242,8 +233,8 @@
       if (isOpen) {
         menuIcon.textContent = "✖";
         menuText.textContent = "Close";
-        menuText.style.color = "#ff0000"; // Bright blood red
-        menuIcon.style.color = "#ff0000"; // Red cross visible
+        menuText.style.color = "#ff1a1a";
+        menuIcon.style.color = "#ff1a1a";
       } else {
         menuIcon.textContent = "☰";
         menuText.textContent = "Menu";
@@ -252,7 +243,6 @@
       }
     });
 
-    // Click outside menu to close
     overlay.addEventListener("click", () => {
       navLinks.classList.remove("show");
       overlay.classList.remove("show");
