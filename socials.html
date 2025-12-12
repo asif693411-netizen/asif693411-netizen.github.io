@@ -1,51 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Social Links - Syed Asif Ali</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Social Links - Syed Asif Ali</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
+<div class="container">
 
-    <nav class="navbar">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="socials.html" class="active">Social</a>
-      <a href="press.html">Press</a>
-      <a href="techbullion.html">TechBullion</a>
-    </nav>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="menu-wrapper" id="menu-wrapper">
+        <span id="menu-text">Menu</span>
+        <span class="menu-icon" id="menu-icon">☰</span>
+      </div>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="socials.html" class="active">Social</a>
+        <a href="press.html">Press</a>
+        <a href="techbullion.html">TechBullion</a>
+      </div>
+    </div>
+  </nav>
 
-    <header>
-      <h1>Connect With Me</h1>
-      <p>Follow me on my official social media profiles:</p>
-    </header>
+  <div class="overlay" id="overlay"></div>
 
-    <section class="social-links">
-      <a href="https://www.instagram.com/boxer_01101" target="_blank">Instagram</a><br>
-      <a href="https://www.tiktok.com/@syed_asif_ali34" target="_blank">TikTok</a><br>
-      <a href="https://www.youtube.com/@AsifAli-Digital" target="_blank">YouTube</a><br>
-      <a href="https://medium.com/@asif693411" target="_blank">Medium</a><br>
-      <a href="https://www.linkedin.com/in/syed-asif-ali-36b5623a0" target="_blank">LinkedIn</a><br>
-      <a href="https://x.com/Boxer_01101" target="_blank">Twitter / X</a><br>
-      <a href="https://www.facebook.com/share/1GuHo3vpwF/" target="_blank">Facebook</a>
-    </section>
+  <!-- Header -->
+  <header>
+    <h1>
+      Syed Asif Ali
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="Verified Badge">
+    </h1>
+    <p>Follow me on my official social media profiles:</p>
+  </header>
 
-    <footer>
-      © 2025 Syed Asif Ali — All Rights Reserved
-    </footer>
+  <!-- Social Links Section -->
+  <section class="social-links">
+    <a href="https://www.instagram.com/boxer_01101" target="_blank">Instagram</a>
+    <a href="https://www.tiktok.com/@syed_asif_ali34" target="_blank">TikTok</a>
+    <a href="https://www.youtube.com/@AsifAli-Digital" target="_blank">YouTube</a>
+    <a href="https://medium.com/@asif693411" target="_blank">Medium</a>
+    <a href="https://www.linkedin.com/in/syed-asif-ali-36b5623a0" target="_blank">LinkedIn</a>
+    <a href="https://x.com/Boxer_01101" target="_blank">Twitter / X</a>
+    <a href="https://www.facebook.com/share/1GuHo3vpwF/" target="_blank">Facebook</a>
+  </section>
 
-  </div>
-  <script>
-  const menuIcon = document.getElementById('menu-icon');
-  const navLinks = document.getElementById('nav-links');
+  <!-- Moving Text -->
+  <div class="moving-text"><span>🐉 Gangster 🐉</span></div>
 
-  menuIcon.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-  });
-  </script>
-  
+  <footer>
+    © 2025 Syed Asif Ali — All Rights Reserved
+  </footer>
+
+</div>
+
+<!-- Menu Script -->
+<script>
+const menuWrapper=document.getElementById("menu-wrapper");
+const menuIcon=document.getElementById("menu-icon");
+const menuText=document.getElementById("menu-text");
+const navLinks=document.getElementById("nav-links");
+const overlay=document.getElementById("overlay");
+let isOpen=false;
+
+menuWrapper.addEventListener("click",()=>{
+  isOpen=!isOpen;
+  navLinks.classList.toggle("show");
+  overlay.classList.toggle("show");
+  if(isOpen){
+    menuIcon.textContent="✖";
+    menuText.textContent="Close";
+    menuIcon.style.color="#00ffff";
+    menuText.style.color="#00ffff";
+  } else {
+    menuIcon.textContent="☰";
+    menuText.textContent="Menu";
+    menuIcon.style.color="#fff";
+    menuText.style.color="#fff";
+  }
+});
+
+overlay.addEventListener("click",()=>{
+  navLinks.classList.remove("show");
+  overlay.classList.remove("show");
+  isOpen=false;
+  menuIcon.textContent="☰";
+  menuText.textContent="Menu";
+  menuIcon.style.color="#fff";
+  menuText.style.color="#fff";
+});
+</script>
 </body>
 </html>
