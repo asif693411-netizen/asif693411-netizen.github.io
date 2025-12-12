@@ -1,44 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Press - Syed Asif Ali</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Press - Syed Asif Ali</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="container">
 
-<header>
-    <h1>Press Coverage</h1>
-    <nav>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="menu-wrapper" id="menu-wrapper">
+        <span id="menu-text">Menu</span>
+        <span class="menu-icon" id="menu-icon">☰</span>
+      </div>
+      <div class="nav-links" id="nav-links">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="socials.html">Socials</a>
-        <a href="press.html">Press</a>
+        <a href="socials.html">Social</a>
+        <a href="press.html" class="active">Press</a>
         <a href="techbullion.html">TechBullion</a>
         <a href="contact.html">Contact</a>
-    </nav>
-</header>
+      </div>
+    </div>
+  </nav>
 
-<main>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Header -->
+  <header>
+    <h1>
+      Syed Asif Ali
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="Verified Badge">
+    </h1>
+    <p>Press Coverage & Featured Articles</p>
+  </header>
+
+  <!-- Press Section -->
+  <main>
     <section class="press-article">
-        <h2>Featured on TechBullion</h2>
-        <p>Read the full article about Syed Asif Ali, Founder of Point Media:</p>
-        <a href="https://techbullion.com/syed-asif-ali-founder-of-fastest-growing-digital-media-company-point-media/" target="_blank">Read on TechBullion</a>
+      <h2>Featured on TechBullion</h2>
+      <p>Read the full article about Syed Asif Ali, Founder of Point Media:</p>
+      <a href="https://techbullion.com/syed-asif-ali-founder-of-fastest-growing-digital-media-company-point-media/" target="_blank">Read on TechBullion</a>
     </section>
-</main>
+  </main>
 
-<footer>
-    <p>© 2025 Syed Asif Ali. All rights reserved.</p>
-</footer>
+  <!-- Moving Text -->
+  <div class="moving-text"><span>🐉 Gangster 🐉</span></div>
+
+  <footer>
+    © 2025 Syed Asif Ali. All Rights Reserved
+  </footer>
+
+</div>
+
+<!-- Menu Script -->
 <script>
-  const menuIcon = document.getElementById('menu-icon');
-  const navLinks = document.getElementById('nav-links');
+const menuWrapper=document.getElementById("menu-wrapper");
+const menuIcon=document.getElementById("menu-icon");
+const menuText=document.getElementById("menu-text");
+const navLinks=document.getElementById("nav-links");
+const overlay=document.getElementById("overlay");
+let isOpen=false;
 
-  menuIcon.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-  });
+menuWrapper.addEventListener("click",()=>{
+  isOpen=!isOpen;
+  navLinks.classList.toggle("show");
+  overlay.classList.toggle("show");
+  if(isOpen){
+    menuIcon.textContent="✖";
+    menuText.textContent="Close";
+    menuIcon.style.color="#00ffff";
+    menuText.style.color="#00ffff";
+  } else {
+    menuIcon.textContent="☰";
+    menuText.textContent="Menu";
+    menuIcon.style.color="#fff";
+    menuText.style.color="#fff";
+  }
+});
+
+overlay.addEventListener("click",()=>{
+  navLinks.classList.remove("show");
+  overlay.classList.remove("show");
+  isOpen=false;
+  menuIcon.textContent="☰";
+  menuText.textContent="Menu";
+  menuIcon.style.color="#fff";
+  menuText.style.color="#fff";
+});
 </script>
-    
 </body>
 </html>
