@@ -9,10 +9,10 @@
 <style>
 body{margin:0;padding:0;font-family:'Poppins',sans-serif;background:#0f0f0f;color:#fff;line-height:1.6;overflow-x:hidden;}
 .container{width:90%;max-width:900px;margin:0 auto;text-align:center;padding:20px;}
-/* Navbar 30% smaller */
+
+/* Navbar */
 .navbar{background:#111;padding:7px 14px;border-radius:10px;position:relative;z-index:1000;margin-bottom:30px;}
 .nav-container{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;}
-.logo{display:none;}
 .menu-wrapper{display:flex;align-items:center;gap:6px;cursor:pointer;font-weight:bold;}
 .menu-icon{font-size:1.4rem;color:#fff;transition:.3s;}
 #menu-text{font-size:0.8rem;color:#fff;transition:.3s;}
@@ -22,21 +22,30 @@ body{margin:0;padding:0;font-family:'Poppins',sans-serif;background:#0f0f0f;colo
 .nav-links.show{top:0;}
 .overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);display:none;z-index:800;}
 .overlay.show{display:block;}
+
+/* Profile Image */
 .profile-img{width:160px;height:160px;border-radius:50%;object-fit:cover;margin:20px auto;border:3px solid #00ffff;box-shadow:0 0 20px #00ffff,0 0 40px #00ffff,0 0 60px #0077ff,0 0 100px #00ffff;transition:transform .3s;}
 .profile-img:hover{transform:scale(1.05);box-shadow:0 0 25px #00ffff,0 0 45px #00ffff,0 0 80px #0077ff,0 0 120px #00ffff;}
+
+/* Header */
 header h1{font-size:1.8rem;margin:10px 0 5px;color:#fff;}
 header h1 img{width:24px;height:24px;vertical-align:middle;margin-left:5px;}
 .title{font-weight:300;color:#ccc;font-size:1rem;}
+
+/* Sections */
 section{margin:30px 0;}
 section h2{font-size:1.4rem;color:#00ffff;margin-bottom:10px;}
 .social-links a{display:inline-block;margin:6px;padding:10px 20px;border-radius:25px;background-color:#00ffff;color:#fff;text-decoration:none;font-weight:500;transition:background-color .3s, transform .2s;}
 .social-links a:hover{background-color:#0097a7;transform:translateY(-3px);}
 footer{margin-top:40px;padding:15px 0;font-size:.9rem;color:#aaa;border-top:1px solid #333;}
+
+/* Moving text */
 .moving-text{position:relative;width:100%;overflow:hidden;background:#000;font-weight:bold;font-size:1.3rem;padding:20px 0;text-align:center;border-top:2px solid #222;border-bottom:2px solid #222;margin-top:30px;}
 .moving-text span{display:inline-block;white-space:nowrap;background:linear-gradient(90deg,#00ffff,#0077ff,#00ffff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:bold;
-animation:moveText 15s linear infinite, gradientShift 3s ease-in-out infinite alternate;padding-left:0;}
+animation:moveText 15s linear infinite, gradientShift 3s ease-in-out infinite alternate;}
 @keyframes moveText{0%{transform:translateX(100%);opacity:0;}1%{opacity:1;}99%{opacity:1;}100%{transform:translateX(-100%);opacity:0;}}
 @keyframes gradientShift{0%{background-position:0% 50%;}100%{background-position:100% 50%;}}
+
 @media(max-width:768px){.menu-icon{display:block;}.nav-links a{padding:10px 0;}}
 @media(max-width:480px){.container{width:95%;}section h2{font-size:1.2rem;}.profile-img{width:120px;height:120px;}}
 </style>
@@ -45,7 +54,6 @@ animation:moveText 15s linear infinite, gradientShift 3s ease-in-out infinite al
 <div class="container">
   <nav class="navbar">
     <div class="nav-container">
-      <h2 class="logo"></h2>
       <div class="menu-wrapper" id="menu-wrapper">
         <span id="menu-text">Menu</span>
         <span class="menu-icon" id="menu-icon">☰</span>
@@ -67,8 +75,7 @@ animation:moveText 15s linear infinite, gradientShift 3s ease-in-out infinite al
     <img src="profile.jpg" class="profile-img" alt="Syed Asif Ali" loading="lazy" />
     <h1>
       Syed Asif Ali
-      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" 
-           alt="Verified Badge">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="Verified Badge">
     </h1>
     <p class="title">Entrepreneur • Digital Creator • Founder of Point Media</p>
   </header>
@@ -91,4 +98,6 @@ animation:moveText 15s linear infinite, gradientShift 3s ease-in-out infinite al
     </div>
   </section>
 
-  <div class="moving-text"><span>🐉 Gangster 🐉</span></
+  <div class="moving-text"><span>🐉 Gangster 🐉</span></div>
+
+  <footer>© 2025
