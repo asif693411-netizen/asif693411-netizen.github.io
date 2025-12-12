@@ -9,13 +9,14 @@
 <style>
 body{margin:0;padding:0;font-family:'Poppins',sans-serif;background:#0f0f0f;color:#fff;line-height:1.6;overflow-x:hidden;}
 .container{width:90%;max-width:900px;margin:0 auto;text-align:center;padding:20px;}
-.navbar{background:#111;padding:10px 20px;border-radius:10px;position:relative;z-index:1000;margin-bottom:30px;}
+/* Navbar 30% smaller */
+.navbar{background:#111;padding:7px 14px;border-radius:10px;position:relative;z-index:1000;margin-bottom:30px;}
 .nav-container{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;}
-.logo{display:none;} /* top-left text removed */
+.logo{display:none;}
 .menu-wrapper{display:flex;align-items:center;gap:6px;cursor:pointer;font-weight:bold;}
-.menu-icon{font-size:1.8rem;color:#fff;transition:.3s;}
-#menu-text{font-size:.9rem;color:#fff;transition:.3s;}
-.nav-links{position:fixed;top:-100%;left:0;width:100%;background:#111;display:flex;flex-direction:column;align-items:center;transition:top .5s ease;padding-top:80px;z-index:900;}
+.menu-icon{font-size:1.4rem;color:#fff;transition:.3s;}
+#menu-text{font-size:0.8rem;color:#fff;transition:.3s;}
+.nav-links{position:fixed;top:-100%;left:0;width:100%;background:#111;display:flex;flex-direction:column;align-items:center;transition:top .5s ease;padding-top:56px;z-index:900;}
 .nav-links a{color:white;text-decoration:none;padding:15px;width:100%;text-align:center;font-size:1.1rem;border-bottom:1px solid #222;transition:.3s;}
 .nav-links a:hover,.nav-links a.active{color:#00ffff;}
 .nav-links.show{top:0;}
@@ -31,19 +32,10 @@ section h2{font-size:1.4rem;color:#00ffff;margin-bottom:10px;}
 .social-links a{display:inline-block;margin:6px;padding:10px 20px;border-radius:25px;background-color:#00ffff;color:#fff;text-decoration:none;font-weight:500;transition:background-color .3s, transform .2s;}
 .social-links a:hover{background-color:#0097a7;transform:translateY(-3px);}
 footer{margin-top:40px;padding:15px 0;font-size:.9rem;color:#aaa;border-top:1px solid #333;}
-
-/* Moving text with fast reappear */
 .moving-text{position:relative;width:100%;overflow:hidden;background:#000;font-weight:bold;font-size:1.3rem;padding:20px 0;text-align:center;border-top:2px solid #222;border-bottom:2px solid #222;margin-top:30px;}
 .moving-text span{display:inline-block;white-space:nowrap;background:linear-gradient(90deg,#00ffff,#0077ff,#00ffff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:bold;
-animation:moveText 15s linear infinite, gradientShift 3s ease-in-out infinite alternate;
-padding-left:0;
-}
-@keyframes moveText{
-0%{transform:translateX(100%);opacity:0;}
-1%{opacity:1;}
-99%{opacity:1;}
-100%{transform:translateX(-100%);opacity:0;}
-}
+animation:moveText 15s linear infinite, gradientShift 3s ease-in-out infinite alternate;padding-left:0;}
+@keyframes moveText{0%{transform:translateX(100%);opacity:0;}1%{opacity:1;}99%{opacity:1;}100%{transform:translateX(-100%);opacity:0;}}
 @keyframes gradientShift{0%{background-position:0% 50%;}100%{background-position:100% 50%;}}
 @media(max-width:768px){.menu-icon{display:block;}.nav-links a{padding:10px 0;}}
 @media(max-width:480px){.container{width:95%;}section h2{font-size:1.2rem;}.profile-img{width:120px;height:120px;}}
@@ -99,35 +91,4 @@ padding-left:0;
     </div>
   </section>
 
-  <div class="moving-text"><span>🐉 Gangster 🐉</span></div>
-
-  <footer>© 2025 Syed Asif Ali — All Rights Reserved</footer>
-</div>
-
-<script>
-const menuWrapper=document.getElementById("menu-wrapper");
-const menuIcon=document.getElementById("menu-icon");
-const menuText=document.getElementById("menu-text");
-const navLinks=document.getElementById("nav-links");
-const overlay=document.getElementById("overlay");
-let isOpen=false;
-
-menuWrapper.addEventListener("click",()=>{
-  isOpen=!isOpen;
-  navLinks.classList.toggle("show");
-  overlay.classList.toggle("show");
-  if(isOpen){menuIcon.textContent="✖";menuText.textContent="Close";menuIcon.style.color="#00ffff";menuText.style.color="#00ffff";}
-  else{menuIcon.textContent="☰";menuText.textContent="Menu";menuIcon.style.color="#fff";menuText.style.color="#fff";}
-});
-overlay.addEventListener("click",()=>{
-  navLinks.classList.remove("show");
-  overlay.classList.remove("show");
-  isOpen=false;
-  menuIcon.textContent="☰";
-  menuText.textContent="Menu";
-  menuIcon.style.color="#fff";
-  menuText.style.color="#fff";
-});
-</script>
-</body>
-</html>
+  <div class="moving-text"><span>🐉 Gangster 🐉</span></
