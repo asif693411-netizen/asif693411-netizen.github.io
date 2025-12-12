@@ -1,152 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact - Syed Asif Ali</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    /* ---------- Navbar ---------- */
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #222;
-      color: white;
-      padding: 10px 20px;
-      position: relative;
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    .menu-icon {
-      font-size: 1.8rem;
-      cursor: pointer;
-      display: none;
-      user-select: none;
-      transition: transform 0.3s ease;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 15px;
-      transition: all 0.3s ease;
-    }
-
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    /* ---------- Mobile View ---------- */
-    @media (max-width: 768px) {
-      .menu-icon {
-        display: block;
-      }
-
-      .nav-links {
-        display: flex;
-        flex-direction: column;
-        background: #333;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        width: 180px;
-        border-radius: 8px;
-        overflow: hidden;
-        max-height: 0;
-        opacity: 0;
-        visibility: hidden;
-      }
-
-      .nav-links.show {
-        max-height: 400px;
-        opacity: 1;
-        visibility: visible;
-        transition: all 0.4s ease;
-      }
-
-      .nav-links a {
-        padding: 10px;
-        border-bottom: 1px solid #444;
-      }
-
-      .nav-links a:last-child {
-        border-bottom: none;
-      }
-    }
-
-    /* ---------- Contact Section ---------- */
-    main {
-      text-align: center;
-      padding: 40px 20px;
-    }
-
-    h1 {
-      margin-bottom: 10px;
-    }
-
-    .contact-form p {
-      font-size: 1.1rem;
-      color: #333;
-    }
-
-    .contact-form a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      color: #d14836; /* Gmail red */
-      font-size: 1.1rem;
-      text-decoration: none;
-      font-weight: 600;
-      background: #f8f8f8;
-      padding: 10px 15px;
-      border-radius: 8px;
-      transition: background 0.3s;
-    }
-
-    .contact-form a:hover {
-      background: #f1f1f1;
-    }
-
-    .contact-form img {
-      width: 22px;
-      height: 22px;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      padding: 10px;
-      background: #f2f2f2;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact - Syed Asif Ali</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <!-- ✅ Navbar -->
+<div class="container">
+
+  <!-- Navbar -->
   <nav class="navbar">
-    <h2 class="logo">Syed Asif Ali</h2>
-    <div class="menu-icon" id="menu-icon">☰</div>
-    <div class="nav-links" id="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="socials.html">Social</a>
-      <a href="press.html">Press</a>
-      <a href="techbullion.html">TechBullion</a>
+    <div class="nav-container">
+      <div class="menu-wrapper" id="menu-wrapper">
+        <span id="menu-text">Menu</span>
+        <span class="menu-icon" id="menu-icon">☰</span>
+      </div>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="socials.html">Social</a>
+        <a href="press.html">Press</a>
+        <a href="techbullion.html">TechBullion</a>
+      </div>
     </div>
   </nav>
 
-  <!-- ✅ Contact Section -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Header -->
+  <header>
+    <h1>
+      Syed Asif Ali
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="Verified Badge">
+    </h1>
+    <p>Get in touch via email:</p>
+  </header>
+
+  <!-- Contact Section -->
   <main>
-    <h1>Contact Syed Asif Ali</h1>
     <section class="contact-form">
       <p>Email me at:</p>
       <a href="mailto:asif693411@gmail.com" target="_blank">
-        <img src="https://www.gstatic.com/images/icons/material/system/2x/mail_outline_black_24dp.png"
+        <img src="https://www.gstatic.com/images/icons/material/system/2x/mail_outline_black_24dp.png" alt="Gmail Icon">
+        asif693411@gmail.com
+      </a>
+    </section>
+  </main>
+
+  <!-- Moving Text -->
+  <div class="moving-text"><span>🐉 Gangster 🐉</span></div>
+
+  <footer>
+    © 2025 Syed Asif Ali — All Rights Reserved
+  </footer>
+
+</div>
+
+<!-- Menu Script -->
+<script>
+const menuWrapper=document.getElementById("menu-wrapper");
+const menuIcon=document.getElementById("menu-icon");
+const menuText=document.getElementById("menu-text");
+const navLinks=document.getElementById("nav-links");
+const overlay=document.getElementById("overlay");
+let isOpen=false;
+
+menuWrapper.addEventListener("click",()=>{
+  isOpen=!isOpen;
+  navLinks.classList.toggle("show");
+  overlay.classList.toggle("show");
+  if(isOpen){
+    menuIcon.textContent="✖";
+    menuText.textContent="Close";
+    menuIcon.style.color="#00ffff";
+    menuText.style.color="#00ffff";
+  } else {
+    menuIcon.textContent="☰";
+    menuText.textContent="Menu";
+    menuIcon.style.color="#fff";
+    menuText.style.color="#fff";
+  }
+});
+
+overlay.addEventListener("click",()=>{
+  navLinks.classList.remove("show");
+  overlay.classList.remove("show");
+  isOpen=false;
+  menuIcon.textContent="☰";
+  menuText.textContent="Menu";
+  menuIcon.style.color="#fff";
+  menuText.style.color="#fff";
+});
+</script>
+</body>
+</html>
