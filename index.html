@@ -31,16 +31,16 @@ section h2{font-size:1.4rem;color:#00ffff;margin-bottom:10px;}
 .social-links a:hover{background-color:#0097a7;transform:translateY(-3px);}
 footer{margin-top:40px;padding:15px 0;font-size:.9rem;color:#aaa;border-top:1px solid #333;}
 
-/* Moving text with smooth fade start/end */
-.moving-text{position:relative;width:100%;overflow:hidden;background:#000;font-weight:bold;font-size:1.3rem;padding:20px 0;text-align:center;border-top:2px solid #222;border-bottom:2px solid #222;}
+/* Moving text with fast reappear */
+.moving-text{position:relative;width:100%;overflow:hidden;background:#000;font-weight:bold;font-size:1.3rem;padding:20px 0;text-align:center;border-top:2px solid #222;border-bottom:2px solid #222;margin-top:30px;}
 .moving-text span{display:inline-block;white-space:nowrap;background:linear-gradient(90deg,#00ffff,#0077ff,#00ffff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:bold;
 animation:moveText 15s linear infinite, gradientShift 3s ease-in-out infinite alternate;
-padding-left:100%; /* start outside screen */
+padding-left:0;
 }
 @keyframes moveText{
 0%{transform:translateX(100%);opacity:0;}
-5%{opacity:1;}
-95%{opacity:1;}
+1%{opacity:1;}
+99%{opacity:1;}
 100%{transform:translateX(-100%);opacity:0;}
 }
 @keyframes gradientShift{0%{background-position:0% 50%;}100%{background-position:100% 50%;}}
@@ -55,7 +55,7 @@ padding-left:100%; /* start outside screen */
       <h2 class="logo"></h2>
       <div class="menu-wrapper" id="menu-wrapper">
         <span id="menu-text">Menu</span>
-        <span class="menu-icon" id="menu-icon">☰</span> <!-- icon right side -->
+        <span class="menu-icon" id="menu-icon">☰</span>
       </div>
       <div class="nav-links" id="nav-links">
         <a href="index.html" class="active">Home</a>
