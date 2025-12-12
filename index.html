@@ -100,4 +100,33 @@ animation:moveText 15s linear infinite, gradientShift 3s ease-in-out infinite al
 
   <div class="moving-text"><span>🐉 Gangster 🐉</span></div>
 
-  <footer>© 2025
+  <footer>© 2025 Syed Asif Ali — All Rights Reserved</footer>
+</div>
+
+<script>
+const menuWrapper=document.getElementById("menu-wrapper");
+const menuIcon=document.getElementById("menu-icon");
+const menuText=document.getElementById("menu-text");
+const navLinks=document.getElementById("nav-links");
+const overlay=document.getElementById("overlay");
+let isOpen=false;
+
+menuWrapper.addEventListener("click",()=>{
+  isOpen=!isOpen;
+  navLinks.classList.toggle("show");
+  overlay.classList.toggle("show");
+  if(isOpen){menuIcon.textContent="✖";menuText.textContent="Close";menuIcon.style.color="#00ffff";menuText.style.color="#00ffff";}
+  else{menuIcon.textContent="☰";menuText.textContent="Menu";menuIcon.style.color="#fff";menuText.style.color="#fff";}
+});
+overlay.addEventListener("click",()=>{
+  navLinks.classList.remove("show");
+  overlay.classList.remove("show");
+  isOpen=false;
+  menuIcon.textContent="☰";
+  menuText.textContent="Menu";
+  menuIcon.style.color="#fff";
+  menuText.style.color="#fff";
+});
+</script>
+</body>
+</html>
