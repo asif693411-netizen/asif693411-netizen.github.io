@@ -11,7 +11,7 @@ body{margin:0;padding:0;font-family:'Poppins',sans-serif;background:#0f0f0f;colo
 .container{width:90%;max-width:900px;margin:0 auto;text-align:center;padding:20px;}
 .navbar{background:#111;padding:10px 20px;border-radius:10px;position:relative;z-index:1000;margin-bottom:30px;}
 .nav-container{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;}
-.logo{display:none;} /* left text removed */
+.logo{display:none;} /* top-left text removed */
 .menu-wrapper{display:flex;align-items:center;gap:6px;cursor:pointer;font-weight:bold;}
 .menu-icon{font-size:1.8rem;color:#fff;transition:.3s;}
 #menu-text{font-size:.9rem;color:#fff;transition:.3s;}
@@ -24,6 +24,7 @@ body{margin:0;padding:0;font-family:'Poppins',sans-serif;background:#0f0f0f;colo
 .profile-img{width:160px;height:160px;border-radius:50%;object-fit:cover;margin:20px auto;border:3px solid #00ffff;box-shadow:0 0 20px #00ffff,0 0 40px #00ffff,0 0 60px #0077ff,0 0 100px #00ffff;transition:transform .3s;}
 .profile-img:hover{transform:scale(1.05);box-shadow:0 0 25px #00ffff,0 0 45px #00ffff,0 0 80px #0077ff,0 0 120px #00ffff;}
 header h1{font-size:1.8rem;margin:10px 0 5px;color:#fff;}
+header h1 img{width:24px;height:24px;vertical-align:middle;margin-left:5px;}
 .title{font-weight:300;color:#ccc;font-size:1rem;}
 section{margin:30px 0;}
 section h2{font-size:1.4rem;color:#00ffff;margin-bottom:10px;}
@@ -72,7 +73,12 @@ padding-left:0;
 
   <header>
     <img src="profile.jpg" class="profile-img" alt="Syed Asif Ali" loading="lazy" />
-    <h1>Entrepreneur • Digital Creator • Founder of Point Media</h1>
+    <h1>
+      Syed Asif Ali
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" 
+           alt="Verified Badge">
+    </h1>
+    <p class="title">Entrepreneur • Digital Creator • Founder of Point Media</p>
   </header>
 
   <section class="about">
