@@ -39,6 +39,15 @@ section h2{font-size:1.4rem;color:#00ffff;margin-bottom:10px;}
 .social-links a:hover{background-color:#0097a7;transform:translateY(-3px);}
 footer{margin-top:40px;padding:15px 0;font-size:.9rem;color:#aaa;border-top:1px solid #333;}
 
+/* Blogs Grid */
+.blogs-grid{display:flex;flex-wrap:wrap;gap:15px;justify-content:center;margin-top:30px;}
+.blog-item{background:#111;padding:20px;border-radius:15px;flex:1 1 250px;max-width:250px;text-align:left;transition:transform .3s;}
+.blog-item:hover{transform:translateY(-5px);box-shadow:0 0 20px #00ffff;}
+.blog-item h3{color:#00ffff;font-size:1.1rem;margin-bottom:10px;}
+.blog-item p{color:#ccc;font-size:0.95rem;line-height:1.4;}
+.blog-item a{color:#00ffff;text-decoration:none;font-weight:600;}
+.blog-item a:hover{text-decoration:underline;}
+
 /* Moving text */
 .moving-text{position:relative;width:100%;overflow:hidden;background:#000;font-weight:bold;font-size:1.3rem;padding:20px 0;text-align:center;border-top:2px solid #222;border-bottom:2px solid #222;margin-top:30px;}
 .moving-text span{display:inline-block;white-space:nowrap;background:linear-gradient(90deg,#00ffff,#0077ff,#00ffff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:bold;
@@ -66,7 +75,6 @@ animation:moveText 15s linear infinite, gradientShift 3s ease-in-out infinite al
         <a href="socials.html">Social</a>
         <a href="press.html">Press</a>
         <a href="techbullion.html">TechBullion</a>
-        <a href="#" id="blogs-menu">Blogs</a>
       </div>
     </div>
   </nav>
@@ -103,15 +111,14 @@ animation:moveText 15s linear infinite, gradientShift 3s ease-in-out infinite al
     </div>
   </section>
 
+  <!-- Blogs Section -->
+  <section class="blogs-section">
+    <h2>Blogs</h2>
+    <div class="blogs-grid" id="blogs-grid"></div>
+  </section>
+
   <!-- Moving Text -->
   <div class="moving-text"><span>🐉 Gangster 🐉</span></div>
-
-  <!-- Blogs Section -->
-  <section id="blog-section" style="display:none; max-width:900px; margin:20px auto; background:#111; border-radius:15px; padding:20px; text-align:left;">
-    <h2>Blogs</h2>
-    <ul id="blog-list" style="list-style:none; padding:0; margin:0;"></ul>
-    <div id="blog-content" style="margin-top:20px;"></div>
-  </section>
 
   <!-- Footer -->
   <footer>© 2025 Syed Asif Ali — All Rights Reserved</footer>
@@ -152,39 +159,20 @@ overlay.addEventListener("click",()=>{
   menuText.style.color="#fff";
 });
 
-// Blogs functionality
+// Blogs data
 const blogs = [
-  { title:"Build Your Digital Brand", content:"<p>Learn how to grow your online presence and build a personal brand...</p>" },
-  { title:"Social Media Tips", content:"<p>Top tips for engaging your audience and growing followers...</p>" },
-  { title:"Marketing Strategies", content:"<p>Effective marketing techniques for small businesses...</p>" }
+  { title:"Build Your Digital Brand", content:"Learn how to grow your online presence and build a personal brand.", link:"blogs/blog1.html" },
+  { title:"Social Media Tips", content:"Top tips for engaging your audience and growing followers.", link:"blogs/blog2.html" },
+  { title:"Marketing Strategies", content:"Effective marketing techniques for small businesses.", link:"blogs/blog3.html" }
 ];
 
-const blogsMenu = document.getElementById("blogs-menu");
-const blogSection = document.getElementById("blog-section");
-const blogList = document.getElementById("blog-list");
-const blogContent = document.getElementById("blog-content");
-
-blogsMenu.addEventListener("click", e => {
-  e.preventDefault();
-  blogSection.style.display = blogSection.style.display === "none" ? "block" : "none";
-
-  blogList.innerHTML = "";
-  blogs.forEach(blog => {
-    const li = document.createElement("li");
-    li.style.padding = "10px 0";
-    li.style.borderBottom = "1px solid #222";
-    const a = document.createElement("a");
-    a.href = "#";
-    a.textContent = blog.title;
-    a.style.color = "#00ffff";
-    a.addEventListener("click", e => {
-      e.preventDefault();
-      blogContent.innerHTML = `<h3>${blog.title}</h3>${blog.content}`;
-      blogContent.scrollIntoView({ behavior: "smooth" });
-    });
-    li.appendChild(a);
-    blogList.appendChild(li);
-  });
+// Show blogs in row
+const blogsGrid = document.getElementById("blogs-grid");
+blogs.forEach(blog => {
+  const div = document.createElement("div");
+  div.className = "blog-item";
+  div.innerHTML = `<h3>${blog.title}</h3><p>${blog.content}</p><a href="${blog.link}" target="_blank">Read More</a>`;
+  blogsGrid.appendChild(div);
 });
 </script>
 </body>
