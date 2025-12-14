@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
 body{margin:0;padding:0;font-family:'Poppins',sans-serif;background:#0f0f0f;color:#fff;line-height:1.6;overflow-x:hidden;}
-.container{width:90%;max-width:900px;margin:0 auto;text-align:center;padding:20px;}
+.container{width:90%;max-width:1200px;margin:0 auto;text-align:center;padding:20px;}
 
 /* Navbar */
 .navbar{background:#111;padding:7px 14px;border-radius:10px;position:relative;z-index:1000;margin-bottom:30px;}
@@ -39,21 +39,34 @@ section h2{font-size:1.4rem;color:#00ffff;margin-bottom:10px;}
 .social-links a:hover{background-color:#0097a7;transform:translateY(-3px);}
 footer{margin-top:40px;padding:15px 0;font-size:.9rem;color:#aaa;border-top:1px solid #333;}
 
-/* Blogs Grid */
-.blogs-grid{display:flex;flex-wrap:wrap;gap:15px;justify-content:center;margin-top:30px;}
-.blog-item{background:#111;padding:20px;border-radius:15px;flex:1 1 250px;max-width:250px;text-align:left;transition:transform .3s;}
-.blog-item:hover{transform:translateY(-5px);box-shadow:0 0 20px #00ffff;}
-.blog-item h3{color:#00ffff;font-size:1.1rem;margin-bottom:10px;}
-.blog-item p{color:#ccc;font-size:0.95rem;line-height:1.4;}
-.blog-item a{color:#00ffff;text-decoration:none;font-weight:600;}
-.blog-item a:hover{text-decoration:underline;}
-
 /* Moving text */
 .moving-text{position:relative;width:100%;overflow:hidden;background:#000;font-weight:bold;font-size:1.3rem;padding:20px 0;text-align:center;border-top:2px solid #222;border-bottom:2px solid #222;margin-top:30px;}
 .moving-text span{display:inline-block;white-space:nowrap;background:linear-gradient(90deg,#00ffff,#0077ff,#00ffff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:bold;
 animation:moveText 15s linear infinite, gradientShift 3s ease-in-out infinite alternate;}
 @keyframes moveText{0%{transform:translateX(100%);opacity:0;}1%{opacity:1;}99%{opacity:1;}100%{transform:translateX(-100%);opacity:0;}}
 @keyframes gradientShift{0%{background-position:0% 50%;}100%{background-position:100% 50%;}}
+
+/* Blogs Section */
+.blogs-section{margin:40px 0;}
+.blogs-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.blog-item {
+  flex: 1 1 250px;
+  background:#111;
+  padding:20px;
+  border-radius:15px;
+  text-align:left;
+  transition:transform .3s;
+}
+.blog-item:hover {transform:translateY(-5px);box-shadow:0 0 20px #00ffff;}
+.blog-item h3 {color:#00ffff;font-size:1.1rem;margin-bottom:10px;}
+.blog-item p {color:#ccc;font-size:0.95rem;line-height:1.4;}
+.blog-item a {color:#00ffff;text-decoration:none;font-weight:600;}
+.blog-item a:hover {text-decoration:underline;}
 
 @media(max-width:768px){.menu-icon{display:block;}.nav-links a{padding:10px 0;}}
 @media(max-width:480px){.container{width:95%;}section h2{font-size:1.2rem;}.profile-img{width:120px;height:120px;}}
@@ -111,14 +124,14 @@ animation:moveText 15s linear infinite, gradientShift 3s ease-in-out infinite al
     </div>
   </section>
 
+  <!-- Moving Text -->
+  <div class="moving-text"><span>🐉 Gangster 🐉</span></div>
+
   <!-- Blogs Section -->
   <section class="blogs-section">
     <h2>Blogs</h2>
-    <div class="blogs-grid" id="blogs-grid"></div>
+    <div class="blogs-row" id="blogs-row"></div>
   </section>
-
-  <!-- Moving Text -->
-  <div class="moving-text"><span>🐉 Gangster 🐉</span></div>
 
   <!-- Footer -->
   <footer>© 2025 Syed Asif Ali — All Rights Reserved</footer>
@@ -163,16 +176,18 @@ overlay.addEventListener("click",()=>{
 const blogs = [
   { title:"Build Your Digital Brand", content:"Learn how to grow your online presence and build a personal brand.", link:"blogs/blog1.html" },
   { title:"Social Media Tips", content:"Top tips for engaging your audience and growing followers.", link:"blogs/blog2.html" },
-  { title:"Marketing Strategies", content:"Effective marketing techniques for small businesses.", link:"blogs/blog3.html" }
+  { title:"Marketing Strategies", content:"Effective marketing techniques for small businesses.", link:"blogs/blog3.html" },
+  { title:"Content Creation Ideas", content:"Creative ideas for daily content that engage audiences.", link:"blogs/blog4.html" },
+  { title:"SEO Basics", content:"How to optimize your website and blogs for search engines.", link:"blogs/blog5.html" }
 ];
 
-// Show blogs in row
-const blogsGrid = document.getElementById("blogs-grid");
+// Populate blogs
+const blogsRow = document.getElementById("blogs-row");
 blogs.forEach(blog => {
   const div = document.createElement("div");
   div.className = "blog-item";
   div.innerHTML = `<h3>${blog.title}</h3><p>${blog.content}</p><a href="${blog.link}" target="_blank">Read More</a>`;
-  blogsGrid.appendChild(div);
+  blogsRow.appendChild(div);
 });
 </script>
 </body>
