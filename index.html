@@ -2,15 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Syed Asif Ali - Entrepreneur & Digital Creator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Point Media Blog</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
 body{margin:0;padding:0;font-family:'Poppins',sans-serif;background:#0f0f0f;color:#fff;line-height:1.6;overflow-x:hidden;}
-.container{width:90%;max-width:1200px;margin:0 auto;text-align:center;padding:20px;}
-
-/* Navbar */
+.container{width:90%;max-width:900px;margin:0 auto;text-align:center;padding:20px;}
 .navbar{background:#111;padding:7px 14px;border-radius:10px;position:relative;z-index:1000;margin-bottom:30px;}
 .nav-container{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;}
 .menu-wrapper{display:flex;align-items:center;gap:6px;cursor:pointer;font-weight:bold;}
@@ -22,59 +20,28 @@ body{margin:0;padding:0;font-family:'Poppins',sans-serif;background:#0f0f0f;colo
 .nav-links.show{top:0;}
 .overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);display:none;z-index:800;}
 .overlay.show{display:block;}
-
-/* Profile Image */
-.profile-img{width:160px;height:160px;border-radius:50%;object-fit:cover;margin:20px auto;border:3px solid #00ffff;box-shadow:0 0 20px #00ffff,0 0 40px #00ffff,0 0 60px #0077ff,0 0 100px #00ffff;transition:transform .3s;}
-.profile-img:hover{transform:scale(1.05);box-shadow:0 0 25px #00ffff,0 0 45px #00ffff,0 0 80px #0077ff,0 0 120px #00ffff;}
-
-/* Header */
-header h1{font-size:1.8rem;margin:10px 0 5px;color:#fff;}
-header h1 img{width:24px;height:24px;vertical-align:middle;margin-left:5px;}
-.title{font-weight:300;color:#ccc;font-size:1rem;}
-
-/* Sections */
-section{margin:30px 0;}
-section h2{font-size:1.4rem;color:#00ffff;margin-bottom:10px;}
-.social-links a{display:inline-block;margin:6px;padding:10px 20px;border-radius:25px;background-color:#00ffff;color:#fff;text-decoration:none;font-weight:500;transition:background-color .3s, transform .2s;}
-.social-links a:hover{background-color:#0097a7;transform:translateY(-3px);}
-footer{margin-top:40px;padding:15px 0;font-size:.9rem;color:#aaa;border-top:1px solid #333;}
-
-/* Moving text */
+header{text-align:center;padding:50px 15px 20px 15px;background:radial-gradient(circle at center,#00e0ff,#000 70%);}
+header h1{font-size:28px;color:#00e0ff;margin-bottom:10px;}
+header p{color:#ccc;font-size:16px;}
+.blog-container{max-width:900px;margin:30px auto;background:#111;border-radius:15px;padding:25px;box-shadow:0 0 15px rgba(0,224,255,0.1);text-align:left;}
+.blog-container h2{color:#00e0ff;font-size:22px;margin-top:20px;}
+.blog-container p{font-size:16px;color:#ddd;}
+.blog-container a{color:#00e0ff;text-decoration:none;}
+.blog-container a:hover{text-decoration:underline;}
+.button{display:inline-block;background:#00e0ff;color:#000;padding:10px 20px;border-radius:30px;font-weight:600;transition:all 0.3s ease;margin-top:10px;}
+.button:hover{background:#00b8d9;transform:translateY(-2px);}
+footer{background:#000;text-align:center;color:#00e0ff;padding:20px 10px;margin-top:40px;border-top:1px solid #00e0ff33;}
 .moving-text{position:relative;width:100%;overflow:hidden;background:#000;font-weight:bold;font-size:1.3rem;padding:20px 0;text-align:center;border-top:2px solid #222;border-bottom:2px solid #222;margin-top:30px;}
-.moving-text span{display:inline-block;white-space:nowrap;background:linear-gradient(90deg,#00ffff,#0077ff,#00ffff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:bold;
-animation:moveText 15s linear infinite, gradientShift 3s ease-in-out infinite alternate;}
+.moving-text span{display:inline-block;white-space:nowrap;background:linear-gradient(90deg,#00ffff,#0077ff,#00ffff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:bold;animation:moveText 15s linear infinite, gradientShift 3s ease-in-out infinite alternate;}
 @keyframes moveText{0%{transform:translateX(100%);opacity:0;}1%{opacity:1;}99%{opacity:1;}100%{transform:translateX(-100%);opacity:0;}}
 @keyframes gradientShift{0%{background-position:0% 50%;}100%{background-position:100% 50%;}}
-
-/* Blogs Section */
-.blogs-section{margin:40px 0;}
-.blogs-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-.blog-item {
-  flex: 1 1 250px;
-  background:#111;
-  padding:20px;
-  border-radius:15px;
-  text-align:left;
-  transition:transform .3s;
-}
-.blog-item:hover {transform:translateY(-5px);box-shadow:0 0 20px #00ffff;}
-.blog-item h3 {color:#00ffff;font-size:1.1rem;margin-bottom:10px;}
-.blog-item p {color:#ccc;font-size:0.95rem;line-height:1.4;}
-.blog-item a {color:#00ffff;text-decoration:none;font-weight:600;}
-.blog-item a:hover {text-decoration:underline;}
-
 @media(max-width:768px){.menu-icon{display:block;}.nav-links a{padding:10px 0;}}
-@media(max-width:480px){.container{width:95%;}section h2{font-size:1.2rem;}.profile-img{width:120px;height:120px;}}
+@media(max-width:480px){.container,.blog-container{width:95%;}header h1{font-size:24px;}header p{font-size:14px;} .blog-container h2{font-size:20px;}}
 </style>
 </head>
 <body>
+
 <div class="container">
-  <!-- Navbar -->
   <nav class="navbar">
     <div class="nav-container">
       <div class="menu-wrapper" id="menu-wrapper">
@@ -94,73 +61,38 @@ animation:moveText 15s linear infinite, gradientShift 3s ease-in-out infinite al
 
   <div class="overlay" id="overlay"></div>
 
-  <!-- Profile Section -->
   <header>
-    <img src="profile.jpg" class="profile-img" alt="Syed Asif Ali" loading="lazy" />
-    <h1>
-      Syed Asif Ali
-      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="Verified Badge">
-    </h1>
-    <p class="title">Entrepreneur • Digital Creator • Founder of Point Media</p>
+    <h1>Point Media Blog</h1>
+    <p>By <strong>Syed Asif Ali</strong> • Founder of Point Media</p>
   </header>
 
-  <!-- About Section -->
-  <section class="about">
-    <h2>About Me</h2>
-    <p>I am an entrepreneur and digital creator with a vision to build strong online presence and media influence. I create content, manage digital brands, and run Point Media to help people grow digitally.</p>
-  </section>
+  <div class="blog-container" id="blog-container">
+    <h2>Welcome to the Blog</h2>
+    <p>All blog posts are listed below. Click on any title to read the full blog.</p>
+    <ul id="blog-list" style="list-style:none; padding:0; margin:0;"></ul>
+  </div>
 
-  <!-- Social Section -->
-  <section class="social-section">
-    <h2>Connect With Me</h2>
-    <div class="social-links">
-      <a href="https://www.instagram.com/boxer_01101" target="_blank">Instagram</a>
-      <a href="https://www.tiktok.com/@syed_asif_ali34" target="_blank">TikTok</a>
-      <a href="https://www.youtube.com/@AsifAli-Digital" target="_blank">YouTube</a>
-      <a href="https://medium.com/@asif693411" target="_blank">Medium</a>
-      <a href="https://www.linkedin.com/in/syed-asif-ali-36b5623a0" target="_blank">LinkedIn</a>
-      <a href="https://x.com/Boxer_01101" target="_blank">X / Twitter</a>
-      <a href="https://www.facebook.com/" target="_blank">Facebook</a>
-    </div>
-  </section>
-
-  <!-- Moving Text -->
   <div class="moving-text"><span>🐉 Gangster 🐉</span></div>
 
-  <!-- Blogs Section -->
-  <section class="blogs-section">
-    <h2>Blogs</h2>
-    <div class="blogs-row" id="blogs-row"></div>
-  </section>
-
-  <!-- Footer -->
-  <footer>© 2025 Syed Asif Ali — All Rights Reserved</footer>
+  <footer>
+    <p>© 2025 Point Media | Designed by Syed Asif Ali</p>
+  </footer>
 </div>
 
 <script>
 // Navbar toggle
-const menuWrapper=document.getElementById("menu-wrapper");
-const menuIcon=document.getElementById("menu-icon");
-const menuText=document.getElementById("menu-text");
-const navLinks=document.getElementById("nav-links");
-const overlay=document.getElementById("overlay");
-let isOpen=false;
-
+const menuWrapper = document.getElementById("menu-wrapper");
+const menuIcon = document.getElementById("menu-icon");
+const menuText = document.getElementById("menu-text");
+const navLinks = document.getElementById("nav-links");
+const overlay = document.getElementById("overlay");
+let isOpen = false;
 menuWrapper.addEventListener("click",()=>{
   isOpen=!isOpen;
   navLinks.classList.toggle("show");
   overlay.classList.toggle("show");
-  if(isOpen){
-    menuIcon.textContent="✖";
-    menuText.textContent="Close";
-    menuIcon.style.color="#00ffff";
-    menuText.style.color="#00ffff";
-  } else {
-    menuIcon.textContent="☰";
-    menuText.textContent="Menu";
-    menuIcon.style.color="#fff";
-    menuText.style.color="#fff";
-  }
+  if(isOpen){menuIcon.textContent="✖";menuText.textContent="Close";menuIcon.style.color="#00ffff";menuText.style.color="#00ffff";}
+  else{menuIcon.textContent="☰";menuText.textContent="Menu";menuIcon.style.color="#fff";menuText.style.color="#fff";}
 });
 overlay.addEventListener("click",()=>{
   navLinks.classList.remove("show");
@@ -172,22 +104,35 @@ overlay.addEventListener("click",()=>{
   menuText.style.color="#fff";
 });
 
-// Blogs data
+// Automatic blog loader
+const blogList = document.getElementById("blog-list");
+const blogContainer = document.getElementById("blog-container");
+
+// List your blogs here
 const blogs = [
-  { title:"Build Your Digital Brand", content:"Learn how to grow your online presence and build a personal brand.", link:"blogs/blog1.html" },
-  { title:"Social Media Tips", content:"Top tips for engaging your audience and growing followers.", link:"blogs/blog2.html" },
-  { title:"Marketing Strategies", content:"Effective marketing techniques for small businesses.", link:"blogs/blog3.html" },
-  { title:"Content Creation Ideas", content:"Creative ideas for daily content that engage audiences.", link:"blogs/blog4.html" },
-  { title:"SEO Basics", content:"How to optimize your website and blogs for search engines.", link:"blogs/blog5.html" }
+  { title:"Build Your Digital Brand", file:"blogs/blog1.html" },
+  { title:"Social Media Tips", file:"blogs/blog2.html" },
+  { title:"Marketing Strategies", file:"blogs/blog3.html" }
 ];
 
-// Populate blogs
-const blogsRow = document.getElementById("blogs-row");
-blogs.forEach(blog => {
-  const div = document.createElement("div");
-  div.className = "blog-item";
-  div.innerHTML = `<h3>${blog.title}</h3><p>${blog.content}</p><a href="${blog.link}" target="_blank">Read More</a>`;
-  blogsRow.appendChild(div);
+// Populate blog list
+blogs.forEach(blog=>{
+  const li = document.createElement("li");
+  li.style.padding="10px 0";
+  li.style.borderBottom="1px solid #222";
+  const a = document.createElement("a");
+  a.href="#";
+  a.textContent=blog.title;
+  a.style.color="#00ffff";
+  a.addEventListener("click", async (e)=>{
+    e.preventDefault();
+    const response = await fetch(blog.file);
+    const content = await response.text();
+    blogContainer.innerHTML = content + `<a class="button" href="#blog-container">↑ Back to Top</a>`;
+    window.scrollTo({top:0, behavior:"smooth"});
+  });
+  li.appendChild(a);
+  blogList.appendChild(li);
 });
 </script>
 </body>
