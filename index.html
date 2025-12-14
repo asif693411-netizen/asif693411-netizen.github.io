@@ -8,15 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
 body{margin:0;padding:0;font-family:'Poppins',sans-serif;background:#fff;color:#000;line-height:1.6;overflow-x:hidden;}
-
-/* Container */
-.container {
-  width:100%;
-  max-width:800px;
-  margin:0 auto;
-  text-align:center;
-  padding:20px;
-}
+.container{width:100%;max-width:850px;margin:0 auto;text-align:center;padding:20px;}
 
 /* Navbar */
 .navbar{background:#111;padding:7px 14px;border-radius:10px;position:relative;z-index:1000;margin-bottom:30px;}
@@ -30,62 +22,51 @@ body{margin:0;padding:0;font-family:'Poppins',sans-serif;background:#fff;color:#
 .nav-links.show{top:0;}
 .overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);display:none;z-index:800;}
 
-/* Profile Image (Dark Red + Black Glow) */
-.profile-img {
-  width:150px;
-  height:auto;
+/* Profile Image */
+.profile-img{
+  width:130px;
+  height:130px;
   border-radius:50%;
   object-fit:cover;
   margin:20px auto;
-  border:3px solid #8B0000; /* Dark red border */
-  box-shadow:
-    0 0 20px #8B0000,
-    0 0 40px #B22222,
-    0 0 60px #000,
-    0 0 100px #400000;
+  border:3px solid #8B0000;
+  box-shadow:0 0 20px #8B0000,0 0 40px #B22222,0 0 60px #000,0 0 100px #400000;
   transition:transform .3s;
 }
-.profile-img:hover {
+.profile-img:hover{
   transform:scale(1.05);
-  box-shadow:
-    0 0 25px #B22222,
-    0 0 45px #8B0000,
-    0 0 80px #400000,
-    0 0 120px #000;
+  box-shadow:0 0 25px #B22222,0 0 45px #8B0000,0 0 80px #400000,0 0 120px #000;
 }
 
 /* Header */
 header h1{font-size:1.6rem;margin:10px 0 5px;color:#000;}
-header h1 img{width:24px;height:24px;vertical-align:middle;margin-left:5px;}
+header h1 img{width:22px;height:22px;vertical-align:middle;margin-left:5px;}
 .title{font-weight:300;color:#555;font-size:0.95rem;}
 
 /* Sections */
 section{margin:30px 0;}
 section h2{font-size:1.4rem;color:#00ffff;margin-bottom:10px;}
 
-/* === SOCIAL LINKS === */
-.social-links a {
+/* Social Links Buttons */
+.social-links a{
   display:inline-block;
   margin:6px;
   padding:10px 20px;
   border-radius:25px;
-  background-color:#000;       /* Black background */
-  color:#00ffff;               /* Cyan text */
-  border:1px solid #00ffff;    /* Cyan border */
+  background-color:#000;
+  color:#00ffff;
+  border:1px solid #00ffff;
   text-decoration:none;
   font-weight:500;
   transition:all .3s ease;
   box-shadow:0 0 10px rgba(0,255,255,0.2);
 }
-.social-links a:hover {
-  background-color:#00ffff;    /* Glow cyan on hover */
-  color:#000;                  /* Text turns black */
-  box-shadow:0 0 20px #00ffff, 0 0 40px #00ffff;
+.social-links a:hover{
+  background-color:#00ffff;
+  color:#000;
+  box-shadow:0 0 20px #00ffff,0 0 40px #00ffff;
   transform:translateY(-3px);
 }
-
-/* Footer */
-footer{margin-top:40px;padding:15px 0;font-size:.9rem;color:#555;border-top:1px solid #333;}
 
 /* Blogs Grid */
 .blogs-grid{display:flex;flex-wrap:wrap;gap:15px;justify-content:center;margin-top:30px;}
@@ -96,17 +77,40 @@ footer{margin-top:40px;padding:15px 0;font-size:.9rem;color:#555;border-top:1px 
 .blog-item a{color:#00ffff;text-decoration:none;font-weight:600;}
 .blog-item a:hover{text-decoration:underline;}
 
-/* Moving text */
-.moving-text{position:relative;width:100%;overflow:hidden;background:#fff;font-weight:bold;font-size:1.3rem;padding:20px 0;text-align:center;border-top:2px solid #222;border-bottom:2px solid #222;margin-top:30px;}
-.moving-text span{display:inline-block;white-space:nowrap;background:linear-gradient(90deg,#ff0000,#660000,#ff0000);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:bold;
-animation:moveText 15s linear infinite, gradientShift 3s ease-in-out infinite alternate;}
-@keyframes moveText{0%{transform:translateX(100%);opacity:0;}1%{opacity:1;}99%{opacity:1;}100%{transform:translateX(-100%);opacity:0;}}
-@keyframes gradientShift{0%{background-position:0% 50%;}100%{background-position:100% 50%;}}
+/* Moving Text */
+.moving-text{
+  position:relative;
+  width:100%;
+  overflow:hidden;
+  background:#fff;
+  font-weight:bold;
+  font-size:1.4rem;
+  padding:20px 0;
+  text-align:center;
+  border-top:2px solid #222;
+  border-bottom:2px solid #222;
+  margin-top:30px;
+}
+.moving-text span{
+  display:inline-block;
+  white-space:nowrap;
+  background:linear-gradient(90deg,#ff0000,#660000,#ff0000);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:moveText 10s linear infinite;
+}
+@keyframes moveText{
+  0%{transform:translateX(100%);}
+  100%{transform:translateX(-100%);}
+}
 
-@media(max-width:1200px){.profile-img{width:140px;} header h1{font-size:1.5rem;}}
-@media(max-width:992px){.profile-img{width:130px;} header h1{font-size:1.4rem;}}
-@media(max-width:768px){.profile-img{width:120px;} header h1{font-size:1.3rem;}}
-@media(max-width:480px){.container{width:95%;}section h2{font-size:1.2rem;}}
+/* Footer */
+footer{margin-top:40px;padding:15px 0;font-size:.9rem;color:#555;border-top:1px solid #333;}
+
+/* Responsive Fixes */
+@media(max-width:1024px){.profile-img{width:120px;height:120px;}header h1{font-size:1.4rem;}}
+@media(max-width:768px){.profile-img{width:110px;height:110px;}header h1{font-size:1.3rem;}}
+@media(max-width:480px){.container{width:95%;}.profile-img{width:100px;height:100px;}section h2{font-size:1.2rem;}}
 </style>
 </head>
 <body>
@@ -131,7 +135,7 @@ animation:moveText 15s linear infinite, gradientShift 3s ease-in-out infinite al
 
   <div class="overlay" id="overlay"></div>
 
-  <!-- Profile Section -->
+  <!-- Profile -->
   <header>
     <img src="profile.jpg" class="profile-img" alt="Syed Asif Ali" loading="lazy" />
     <h1>
@@ -141,13 +145,13 @@ animation:moveText 15s linear infinite, gradientShift 3s ease-in-out infinite al
     <p class="title">Entrepreneur • Digital Creator • Founder of Point Media</p>
   </header>
 
-  <!-- About Section -->
+  <!-- About -->
   <section class="about">
     <h2>About Me</h2>
     <p>I am an entrepreneur and digital creator with a vision to build strong online presence and media influence. I create content, manage digital brands, and run Point Media to help people grow digitally.</p>
   </section>
 
-  <!-- Social Section -->
+  <!-- Socials -->
   <section class="social-section">
     <h2>Connect With Me</h2>
     <div class="social-links">
@@ -161,21 +165,20 @@ animation:moveText 15s linear infinite, gradientShift 3s ease-in-out infinite al
     </div>
   </section>
 
-  <!-- Blogs Section -->
+  <!-- Blogs -->
   <section class="blogs-section">
     <h2>Blogs</h2>
     <div class="blogs-grid" id="blogs-grid"></div>
   </section>
 
   <!-- Moving Text -->
-  <div class="moving-text"><span>🔥 Red Dragon Mode 🐉</span></div>
+  <div class="moving-text"><span>🐉 Dragon 🐉</span></div>
 
   <!-- Footer -->
   <footer>© 2025 Syed Asif Ali — All Rights Reserved</footer>
 </div>
 
 <script>
-// Navbar toggle
 const menuWrapper=document.getElementById("menu-wrapper");
 const menuIcon=document.getElementById("menu-icon");
 const menuText=document.getElementById("menu-text");
@@ -192,7 +195,7 @@ menuWrapper.addEventListener("click",()=>{
     menuText.textContent="Close";
     menuIcon.style.color="#00ffff";
     menuText.style.color="#00ffff";
-  } else {
+  }else{
     menuIcon.textContent="☰";
     menuText.textContent="Menu";
     menuIcon.style.color="#fff";
@@ -209,20 +212,18 @@ overlay.addEventListener("click",()=>{
   menuText.style.color="#fff";
 });
 
-// Blogs data
-const blogs = [
+const blogs=[
   { title:"Build Your Digital Brand", content:"Learn how to grow your online presence and build a personal brand.", link:"blogs/blog1.html" },
   { title:"Social Media Tips", content:"Top tips for engaging your audience and growing followers.", link:"blogs/blog2.html" },
   { title:"Marketing Strategies", content:"Effective marketing techniques for small businesses.", link:"blogs/blog3.html" },
   { title:"Point Media Overview", content:"Discover the mission, services, and impact of Point Media in the digital world.", link:"blogs/blog4.html" }
 ];
 
-// Show blogs in row
-const blogsGrid = document.getElementById("blogs-grid");
-blogs.forEach(blog => {
-  const div = document.createElement("div");
-  div.className = "blog-item";
-  div.innerHTML = `<h3>${blog.title}</h3><p>${blog.content}</p><a href="${blog.link}" target="_blank">Read More</a>`;
+const blogsGrid=document.getElementById("blogs-grid");
+blogs.forEach(blog=>{
+  const div=document.createElement("div");
+  div.className="blog-item";
+  div.innerHTML=`<h3>${blog.title}</h3><p>${blog.content}</p><a href="${blog.link}" target="_blank">Read More</a>`;
   blogsGrid.appendChild(div);
 });
 </script>
