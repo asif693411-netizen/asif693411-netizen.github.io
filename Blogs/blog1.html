@@ -3,133 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Point Media Blog</title>
+<title>Build Your Digital Brand - Syed Asif Ali | Point Media</title>
+<meta name="description" content="Learn how to build your digital brand with tips from Syed Asif Ali, entrepreneur and digital creator. Step-by-step guide for personal branding and online presence.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
-body{margin:0;padding:0;font-family:'Poppins',sans-serif;background:#0f0f0f;color:#fff;line-height:1.6;overflow-x:hidden;}
-.container{width:90%;max-width:900px;margin:0 auto;text-align:center;padding:20px;}
-.navbar{background:#111;padding:7px 14px;border-radius:10px;position:relative;z-index:1000;margin-bottom:30px;}
-.nav-container{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;}
-.menu-wrapper{display:flex;align-items:center;gap:6px;cursor:pointer;font-weight:bold;}
-.menu-icon{font-size:1.4rem;color:#fff;transition:.3s;}
-#menu-text{font-size:0.8rem;color:#fff;transition:.3s;}
-.nav-links{position:fixed;top:-100%;left:0;width:100%;background:#111;display:flex;flex-direction:column;align-items:center;transition:top .5s ease;padding-top:56px;z-index:900;}
-.nav-links a{color:white;text-decoration:none;padding:15px;width:100%;text-align:center;font-size:1.1rem;border-bottom:1px solid #222;transition:.3s;}
-.nav-links a:hover,.nav-links a.active{color:#00ffff;}
-.nav-links.show{top:0;}
-.overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);display:none;z-index:800;}
-.overlay.show{display:block;}
-header{text-align:center;padding:50px 15px 20px 15px;background:radial-gradient(circle at center,#00e0ff,#000 70%);}
-header h1{font-size:28px;color:#00e0ff;margin-bottom:10px;}
-header p{color:#ccc;font-size:16px;}
-.blog-row{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;margin:30px 0;}
-.blog-card{background:#111;border-radius:15px;padding:20px;width:280px;box-shadow:0 0 15px rgba(0,224,255,0.1);cursor:pointer;transition:transform .3s;}
-.blog-card:hover{transform:translateY(-5px);}
-.blog-card h3{color:#00e0ff;font-size:20px;margin-bottom:10px;}
-.blog-card p{color:#ddd;font-size:14px;}
-.blog-content{max-width:900px;margin:20px auto;background:#111;border-radius:15px;padding:25px;box-shadow:0 0 15px rgba(0,224,255,0.1);text-align:left;display:none;}
-.blog-content h2{color:#00e0ff;font-size:22px;margin-bottom:15px;}
-.blog-content p{color:#ddd;font-size:16px;}
-.button{display:inline-block;background:#00e0ff;color:#000;padding:10px 20px;border-radius:30px;font-weight:600;transition:all 0.3s ease;margin-top:10px;}
-.button:hover{background:#00b8d9;transform:translateY(-2px);}
-footer{background:#000;text-align:center;color:#00e0ff;padding:20px 10px;margin-top:40px;border-top:1px solid #00e0ff33;}
-.moving-text{position:relative;width:100%;overflow:hidden;background:#000;font-weight:bold;font-size:1.3rem;padding:20px 0;text-align:center;border-top:2px solid #222;border-bottom:2px solid #222;margin-top:30px;}
-.moving-text span{display:inline-block;white-space:nowrap;background:linear-gradient(90deg,#00ffff,#0077ff,#00ffff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:bold;animation:moveText 15s linear infinite, gradientShift 3s ease-in-out infinite alternate;}
-@keyframes moveText{0%{transform:translateX(100%);opacity:0;}1%{opacity:1;}99%{opacity:1;}100%{transform:translateX(-100%);opacity:0;}}
-@keyframes gradientShift{0%{background-position:0% 50%;}100%{background-position:100% 50%;}}
-@media(max-width:768px){.menu-icon{display:block;}.nav-links a{padding:10px 0;}.blog-row{flex-direction:column;align-items:center;}}
-@media(max-width:480px){.container{width:95%;}.blog-card{width:90%;}header h1{font-size:24px;}header p{font-size:14px;}}
+body {margin:0;padding:0;font-family:'Poppins',sans-serif;background:#0f0f0f;color:#fff;line-height:1.6;}
+.container {width:90%;max-width:900px;margin:0 auto;padding:20px;}
+header, footer {text-align:center;}
+header h1 {color:#00ffff;font-size:28px;margin-bottom:10px;}
+header p {color:#ccc;font-size:16px;}
+.blog-content {background:#111;padding:25px;border-radius:15px;margin-top:20px;}
+.blog-content h2 {color:#00ffff;}
+.blog-content p {color:#ddd;margin-bottom:15px;}
+.blog-content a {color:#00ffff;text-decoration:none;font-weight:600;}
+.blog-content a:hover {text-decoration:underline;}
+footer {margin-top:40px;color:#aaa;font-size:0.9rem;border-top:1px solid #333;padding-top:15px;}
 </style>
 </head>
 <body>
 
 <div class="container">
-  <nav class="navbar">
-    <div class="nav-container">
-      <div class="menu-wrapper" id="menu-wrapper">
-        <span id="menu-text">Menu</span>
-        <span class="menu-icon" id="menu-icon">☰</span>
-      </div>
-      <div class="nav-links" id="nav-links">
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="socials.html">Social</a>
-        <a href="press.html">Press</a>
-        <a href="techbullion.html">TechBullion</a>
-      </div>
-    </div>
-  </nav>
-
-  <div class="overlay" id="overlay"></div>
-
   <header>
-    <h1>Point Media Blog</h1>
-    <p>By <strong>Syed Asif Ali</strong> • Founder of Point Media</p>
+    <h1>Build Your Digital Brand</h1>
+    <p>By <strong>Syed Asif Ali</strong> | Founder of Point Media</p>
   </header>
 
-  <!-- Blog Cards Row -->
-  <div class="blog-row" id="blog-row"></div>
+  <div class="blog-content">
+    <h2>Why Building a Digital Brand is Important</h2>
+    <p>In today’s online world, having a strong digital presence is crucial. Your digital brand helps you establish credibility, reach a wider audience, and create opportunities for collaborations and business growth.</p>
 
-  <!-- Blog Content Display -->
-  <div class="blog-content" id="blog-content"></div>
+    <h2>Step 1: Define Your Personal Brand</h2>
+    <p>Start by understanding your strengths, niche, and the message you want to communicate. Decide what makes you unique and how you want your audience to perceive you online.</p>
 
-  <div class="moving-text"><span>🐉 Gangster 🐉</span></div>
+    <h2>Step 2: Create Quality Content</h2>
+    <p>Consistently post valuable content on platforms like Instagram, TikTok, YouTube, and LinkedIn. Focus on quality, engagement, and authenticity to build trust with your audience.</p>
+
+    <h2>Step 3: Engage With Your Audience</h2>
+    <p>Respond to comments, messages, and collaborate with other creators. Interaction builds loyalty and encourages followers to share your content.</p>
+
+    <h2>Step 4: Use Multiple Platforms</h2>
+    <p>Don’t rely on a single platform. Diversify your presence across multiple social media and blogging platforms to reach a broader audience.</p>
+
+    <h2>Step 5: Monitor and Improve</h2>
+    <p>Track analytics to understand what works and refine your strategy. Continuous improvement helps you grow efficiently and maintain your audience’s interest.</p>
+
+    <p><a href="../index.html">← Back to Home</a></p>
+  </div>
 
   <footer>
-    <p>© 2025 Point Media | Designed by Syed Asif Ali</p>
+    <p>© 2025 Syed Asif Ali | Point Media</p>
   </footer>
 </div>
 
-<script>
-// Navbar toggle
-const menuWrapper = document.getElementById("menu-wrapper");
-const menuIcon = document.getElementById("menu-icon");
-const menuText = document.getElementById("menu-text");
-const navLinks = document.getElementById("nav-links");
-const overlay = document.getElementById("overlay");
-let isOpen=false;
-
-menuWrapper.addEventListener("click",()=>{
-  isOpen=!isOpen;
-  navLinks.classList.toggle("show");
-  overlay.classList.toggle("show");
-  if(isOpen){menuIcon.textContent="✖";menuText.textContent="Close";menuIcon.style.color="#00ffff";menuText.style.color="#00ffff";}
-  else{menuIcon.textContent="☰";menuText.textContent="Menu";menuIcon.style.color="#fff";menuText.style.color="#fff";}
-});
-overlay.addEventListener("click",()=>{
-  navLinks.classList.remove("show");
-  overlay.classList.remove("show");
-  isOpen=false;
-  menuIcon.textContent="☰";
-  menuText.textContent="Menu";
-  menuIcon.style.color="#fff";
-  menuText.style.color="#fff";
-});
-
-// Blogs Data
-const blogs = [
-  { title:"Build Your Digital Brand", content:"<p>Learn how to grow your online presence and build a personal brand...</p>" },
-  { title:"Social Media Tips", content:"<p>Top tips for engaging your audience and growing followers...</p>" },
-  { title:"Marketing Strategies", content:"<p>Effective marketing techniques for small businesses...</p>" }
-];
-
-// Display all blogs in row
-const blogRow = document.getElementById("blog-row");
-const blogContent = document.getElementById("blog-content");
-
-blogs.forEach(blog=>{
-  const div = document.createElement("div");
-  div.classList.add("blog-card");
-  div.innerHTML=`<h3>${blog.title}</h3><p>${blog.content.substring(0,50)}...</p>`;
-  div.addEventListener("click",()=>{
-    blogContent.innerHTML=`<h2>${blog.title}</h2>${blog.content}<a class="button" href="#blog-row">↑ Back to Blogs</a>`;
-    blogContent.style.display="block";
-    window.scrollTo({top:blogContent.offsetTop-20, behavior:"smooth"});
-  });
-  blogRow.appendChild(div);
-});
-</script>
 </body>
 </html>
