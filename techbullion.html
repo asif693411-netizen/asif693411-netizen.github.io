@@ -21,6 +21,7 @@ body{margin:0;padding:0;font-family:'Poppins',sans-serif;background:#0f0f0f;colo
 .nav-links a:hover,.nav-links a.active{color:#00ffff;}
 .nav-links.show{top:0;}
 .overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);display:none;z-index:800;}
+.overlay.show{display:block;}
 
 /* Header */
 header h1{font-size:1.8rem;margin:10px 0 5px;color:#fff;}
@@ -99,28 +100,45 @@ animation:moveText 15s linear infinite, gradientShift 3s ease-in-out infinite al
 </div>
 
 <script>
-const menuWrapper=document.getElementById("menu-wrapper");
-const menuIcon=document.getElementById("menu-icon");
-const menuText=document.getElementById("menu-text");
-const navLinks=document.getElementById("nav-links");
-const overlay=document.getElementById("overlay");
-let isOpen=false;
+const menuWrapper = document.getElementById("menu-wrapper");
+const menuIcon = document.getElementById("menu-icon");
+const menuText = document.getElementById("menu-text");
+const navLinks = document.getElementById("nav-links");
+const overlay = document.getElementById("overlay");
 
-menuWrapper.addEventListener("click",()=>{
-  isOpen=!isOpen;
-  navLinks.classList.toggle("show");
-  overlay.classList.toggle("show");
-  if(isOpen){menuIcon.textContent="✖";menuText.textContent="Close";menuIcon.style.color="#00ffff";menuText.style.color="#00ffff";}
-  else{menuIcon.textContent="☰";menuText.textContent="Menu";menuIcon.style.color="#fff";menuText.style.color="#fff";}
-});
-overlay.addEventListener("click",()=>{
+let isOpen = false;
+
+function openMenu() {
+  navLinks.classList.add("show");
+  overlay.classList.add("show");
+  menuIcon.textContent = "✖";
+  menuText.textContent = "Close";
+  menuIcon.style.color = "#00ffff";
+  menuText.style.color = "#00ffff";
+  isOpen = true;
+}
+
+function closeMenu() {
   navLinks.classList.remove("show");
   overlay.classList.remove("show");
-  isOpen=false;
-  menuIcon.textContent="☰";
-  menuText.textContent="Menu";
-  menuIcon.style.color="#fff";
-  menuText.style.color="#fff";
+  menuIcon.textContent = "☰";
+  menuText.textContent = "Menu";
+  menuIcon.style.color = "#fff";
+  menuText.style.color = "#fff";
+  isOpen = false;
+}
+
+menuWrapper.addEventListener("click", (e) => {
+  e.stopPropagation();
+  isOpen ? closeMenu() : openMenu();
+});
+
+overlay.addEventListener("click", closeMenu);
+
+document.addEventListener("click", (e) => {
+  if (isOpen && !navLinks.contains(e.target) && e.target !== menuWrapper && e.target !== menuIcon && e.target !== menuText) {
+    closeMenu();
+  }
 });
 </script>
 </body>
