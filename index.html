@@ -52,6 +52,7 @@ animation:moveText 15s linear infinite, gradientShift 3s ease-in-out infinite al
 </head>
 <body>
 <div class="container">
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="nav-container">
       <div class="menu-wrapper" id="menu-wrapper">
@@ -65,12 +66,14 @@ animation:moveText 15s linear infinite, gradientShift 3s ease-in-out infinite al
         <a href="socials.html">Social</a>
         <a href="press.html">Press</a>
         <a href="techbullion.html">TechBullion</a>
+        <a href="#" id="blogs-menu">Blogs</a>
       </div>
     </div>
   </nav>
 
   <div class="overlay" id="overlay"></div>
 
+  <!-- Profile Section -->
   <header>
     <img src="profile.jpg" class="profile-img" alt="Syed Asif Ali" loading="lazy" />
     <h1>
@@ -80,11 +83,13 @@ animation:moveText 15s linear infinite, gradientShift 3s ease-in-out infinite al
     <p class="title">Entrepreneur • Digital Creator • Founder of Point Media</p>
   </header>
 
+  <!-- About Section -->
   <section class="about">
     <h2>About Me</h2>
     <p>I am an entrepreneur and digital creator with a vision to build strong online presence and media influence. I create content, manage digital brands, and run Point Media to help people grow digitally.</p>
   </section>
 
+  <!-- Social Section -->
   <section class="social-section">
     <h2>Connect With Me</h2>
     <div class="social-links">
@@ -98,12 +103,22 @@ animation:moveText 15s linear infinite, gradientShift 3s ease-in-out infinite al
     </div>
   </section>
 
+  <!-- Moving Text -->
   <div class="moving-text"><span>🐉 Gangster 🐉</span></div>
 
+  <!-- Blogs Section -->
+  <section id="blog-section" style="display:none; max-width:900px; margin:20px auto; background:#111; border-radius:15px; padding:20px; text-align:left;">
+    <h2>Blogs</h2>
+    <ul id="blog-list" style="list-style:none; padding:0; margin:0;"></ul>
+    <div id="blog-content" style="margin-top:20px;"></div>
+  </section>
+
+  <!-- Footer -->
   <footer>© 2025 Syed Asif Ali — All Rights Reserved</footer>
 </div>
 
 <script>
+// Navbar toggle
 const menuWrapper=document.getElementById("menu-wrapper");
 const menuIcon=document.getElementById("menu-icon");
 const menuText=document.getElementById("menu-text");
@@ -115,8 +130,17 @@ menuWrapper.addEventListener("click",()=>{
   isOpen=!isOpen;
   navLinks.classList.toggle("show");
   overlay.classList.toggle("show");
-  if(isOpen){menuIcon.textContent="✖";menuText.textContent="Close";menuIcon.style.color="#00ffff";menuText.style.color="#00ffff";}
-  else{menuIcon.textContent="☰";menuText.textContent="Menu";menuIcon.style.color="#fff";menuText.style.color="#fff";}
+  if(isOpen){
+    menuIcon.textContent="✖";
+    menuText.textContent="Close";
+    menuIcon.style.color="#00ffff";
+    menuText.style.color="#00ffff";
+  } else {
+    menuIcon.textContent="☰";
+    menuText.textContent="Menu";
+    menuIcon.style.color="#fff";
+    menuText.style.color="#fff";
+  }
 });
 overlay.addEventListener("click",()=>{
   navLinks.classList.remove("show");
@@ -126,6 +150,41 @@ overlay.addEventListener("click",()=>{
   menuText.textContent="Menu";
   menuIcon.style.color="#fff";
   menuText.style.color="#fff";
+});
+
+// Blogs functionality
+const blogs = [
+  { title:"Build Your Digital Brand", content:"<p>Learn how to grow your online presence and build a personal brand...</p>" },
+  { title:"Social Media Tips", content:"<p>Top tips for engaging your audience and growing followers...</p>" },
+  { title:"Marketing Strategies", content:"<p>Effective marketing techniques for small businesses...</p>" }
+];
+
+const blogsMenu = document.getElementById("blogs-menu");
+const blogSection = document.getElementById("blog-section");
+const blogList = document.getElementById("blog-list");
+const blogContent = document.getElementById("blog-content");
+
+blogsMenu.addEventListener("click", e => {
+  e.preventDefault();
+  blogSection.style.display = blogSection.style.display === "none" ? "block" : "none";
+
+  blogList.innerHTML = "";
+  blogs.forEach(blog => {
+    const li = document.createElement("li");
+    li.style.padding = "10px 0";
+    li.style.borderBottom = "1px solid #222";
+    const a = document.createElement("a");
+    a.href = "#";
+    a.textContent = blog.title;
+    a.style.color = "#00ffff";
+    a.addEventListener("click", e => {
+      e.preventDefault();
+      blogContent.innerHTML = `<h3>${blog.title}</h3>${blog.content}`;
+      blogContent.scrollIntoView({ behavior: "smooth" });
+    });
+    li.appendChild(a);
+    blogList.appendChild(li);
+  });
 });
 </script>
 </body>
