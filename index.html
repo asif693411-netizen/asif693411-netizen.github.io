@@ -7,59 +7,105 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
-body{margin:0;padding:0;font-family:'Poppins',sans-serif;background:#0f0f0f;color:#fff;line-height:1.6;overflow-x:hidden;}
-.container{width:90%;max-width:900px;margin:0 auto;text-align:center;padding:20px;}
+/* ===== Base Styles ===== */
+body {
+  margin:0; padding:0; font-family:'Poppins',sans-serif; background:#0f0f0f; color:#fff; line-height:1.6; overflow-x:hidden;
+}
+.container {
+  width:90%; max-width:1200px; margin:0 auto; text-align:center; padding:20px;
+}
 
-/* Navbar */
-.navbar{background:#111;padding:7px 14px;border-radius:10px;position:relative;z-index:1000;margin-bottom:30px;}
-.nav-container{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;}
-.menu-wrapper{display:flex;align-items:center;gap:6px;cursor:pointer;font-weight:bold;}
-.menu-icon{font-size:1.4rem;color:#fff;transition:.3s;}
-#menu-text{font-size:0.8rem;color:#fff;transition:.3s;}
-.nav-links{position:fixed;top:-100%;left:0;width:100%;background:#111;display:flex;flex-direction:column;align-items:center;transition:top .5s ease;padding-top:56px;z-index:900;}
-.nav-links a{color:white;text-decoration:none;padding:15px;width:100%;text-align:center;font-size:1.1rem;border-bottom:1px solid #222;transition:.3s;}
-.nav-links a:hover,.nav-links a.active{color:#00ffff;}
-.nav-links.show{top:0;}
-.overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);display:none;z-index:800;}
+/* ===== Navbar ===== */
+.navbar {
+  background:#111; padding:7px 14px; border-radius:10px; position:relative; z-index:1000; margin-bottom:30px;
+}
+.nav-container { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; }
+.menu-wrapper { display:flex; align-items:center; gap:6px; cursor:pointer; font-weight:bold; }
+.menu-icon { font-size:1.4rem; color:#fff; transition:.3s; }
+#menu-text { font-size:0.8rem; color:#fff; transition:.3s; }
+.nav-links {
+  position:fixed; top:-100%; left:0; width:100%; background:#111;
+  display:flex; flex-direction:column; align-items:center; transition:top .5s ease; padding-top:56px; z-index:900;
+}
+.nav-links a {
+  color:white; text-decoration:none; padding:15px; width:100%; text-align:center;
+  font-size:1.1rem; border-bottom:1px solid #222; transition:.3s;
+}
+.nav-links a:hover,.nav-links a.active { color:#00ffff; }
+.nav-links.show { top:0; }
+.overlay { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,.6); display:none; z-index:800; }
+.overlay.show { display:block; }
 
-/* Profile Image */
-.profile-img{width:160px;height:160px;border-radius:50%;object-fit:cover;margin:20px auto;border:3px solid #00ffff;box-shadow:0 0 20px #00ffff,0 0 40px #00ffff,0 0 60px #0077ff,0 0 100px #00ffff;transition:transform .3s;}
-.profile-img:hover{transform:scale(1.05);box-shadow:0 0 25px #00ffff,0 0 45px #00ffff,0 0 80px #0077ff,0 0 120px #00ffff;}
+/* ===== Profile ===== */
+.profile-img {
+  width:160px; max-width:25%; height:auto; border-radius:50%; object-fit:cover;
+  margin:20px auto; border:3px solid #00ffff;
+  box-shadow:0 0 20px #00ffff,0 0 40px #00ffff,0 0 60px #0077ff,0 0 100px #00ffff;
+  transition:transform .3s;
+}
+.profile-img:hover {
+  transform:scale(1.05);
+  box-shadow:0 0 25px #00ffff,0 0 45px #00ffff,0 0 80px #0077ff,0 0 120px #00ffff;
+}
 
-/* Header */
-header h1{font-size:1.8rem;margin:10px 0 5px;color:#fff;}
-header h1 img{width:24px;height:24px;vertical-align:middle;margin-left:5px;}
-.title{font-weight:300;color:#ccc;font-size:1rem;}
+/* ===== Headers & Titles ===== */
+header h1 { font-size: clamp(24px,2.5vw,36px); margin:10px 0 5px; color:#fff; }
+header h1 img { width:24px; height:24px; vertical-align:middle; margin-left:5px; }
+.title { font-weight:300; color:#ccc; font-size: clamp(14px,1vw,18px); }
 
-/* Sections */
-section{margin:30px 0;}
-section h2{font-size:1.4rem;color:#00ffff;margin-bottom:10px;}
-.social-links a{display:inline-block;margin:6px;padding:10px 20px;border-radius:25px;background-color:#00ffff;color:#fff;text-decoration:none;font-weight:500;transition:background-color .3s, transform .2s;}
-.social-links a:hover{background-color:#0097a7;transform:translateY(-3px);}
-footer{margin-top:40px;padding:15px 0;font-size:.9rem;color:#aaa;border-top:1px solid #333;}
+/* ===== Sections ===== */
+section { margin:30px 0; text-align:left; }
+section h2 { font-size: clamp(20px,2vw,28px); color:#00ffff; margin-bottom:10px; }
 
-/* Blogs Grid */
-.blogs-grid{display:flex;flex-wrap:wrap;gap:15px;justify-content:center;margin-top:30px;}
-.blog-item{background:#111;padding:20px;border-radius:15px;flex:1 1 250px;max-width:250px;text-align:left;transition:transform .3s;}
-.blog-item:hover{transform:translateY(-5px);box-shadow:0 0 20px #00ffff;}
-.blog-item h3{color:#00ffff;font-size:1.1rem;margin-bottom:10px;}
-.blog-item p{color:#ccc;font-size:0.95rem;line-height:1.4;}
-.blog-item a{color:#00ffff;text-decoration:none;font-weight:600;}
-.blog-item a:hover{text-decoration:underline;}
+/* ===== Social Links ===== */
+.social-links a {
+  display:inline-block; margin:6px; padding:10px 20px; border-radius:25px;
+  background-color:#00ffff; color:#fff; text-decoration:none; font-weight:500;
+  transition:background-color .3s, transform .2s;
+}
+.social-links a:hover { background-color:#0097a7; transform:translateY(-3px); }
 
-/* Moving text */
-.moving-text{position:relative;width:100%;overflow:hidden;background:#000;font-weight:bold;font-size:1.3rem;padding:20px 0;text-align:center;border-top:2px solid #222;border-bottom:2px solid #222;margin-top:30px;}
-.moving-text span{display:inline-block;white-space:nowrap;background:linear-gradient(90deg,#00ffff,#0077ff,#00ffff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:bold;
-animation:moveText 15s linear infinite, gradientShift 3s ease-in-out infinite alternate;}
+/* ===== Footer ===== */
+footer { margin-top:40px; padding:15px 0; font-size:.9rem; color:#aaa; border-top:1px solid #333; text-align:center; }
+
+/* ===== Blogs Grid ===== */
+.blogs-grid {
+  display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:20px;
+}
+.blog-item {
+  background:#111; padding:20px; border-radius:15px; flex:1 1 250px; max-width:300px; text-align:left;
+  transition:transform .3s;
+}
+.blog-item:hover { transform:translateY(-5px); box-shadow:0 0 20px #00ffff; }
+.blog-item h3 { color:#00ffff; font-size: clamp(18px,1.8vw,22px); margin-bottom:10px; }
+.blog-item p { color:#ccc; font-size: clamp(14px,1.2vw,16px); line-height:1.4; }
+.blog-item a { color:#00ffff; text-decoration:none; font-weight:600; }
+.blog-item a:hover { text-decoration:underline; }
+
+/* ===== Moving text ===== */
+.moving-text {
+  position:relative; width:100%; overflow:hidden; background:#000;
+  font-weight:bold; font-size:1.3rem; padding:20px 0; text-align:center; border-top:2px solid #222; border-bottom:2px solid #222; margin-top:30px;
+}
+.moving-text span {
+  display:inline-block; white-space:nowrap;
+  background:linear-gradient(90deg,#00ffff,#0077ff,#00ffff);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; font-weight:bold;
+  animation:moveText 15s linear infinite, gradientShift 3s ease-in-out infinite alternate;
+}
 @keyframes moveText{0%{transform:translateX(100%);opacity:0;}1%{opacity:1;}99%{opacity:1;}100%{transform:translateX(-100%);opacity:0;}}
 @keyframes gradientShift{0%{background-position:0% 50%;}100%{background-position:100% 50%;}}
 
-@media(max-width:768px){.menu-icon{display:block;}.nav-links a{padding:10px 0;}}
-@media(max-width:480px){.container{width:95%;}section h2{font-size:1.2rem;}.profile-img{width:120px;height:120px;}}
+/* ===== Responsive ===== */
+@media(max-width:768px){ .menu-icon{display:block;} .nav-links a{padding:10px 0;} }
+@media(max-width:480px){
+  .container{width:95%;} section h2{font-size:1.2rem;} .profile-img{width:120px;height:120px;}
+}
 </style>
 </head>
 <body>
 <div class="container">
+
   <!-- Navbar -->
   <nav class="navbar">
     <div class="nav-container">
@@ -83,17 +129,14 @@ animation:moveText 15s linear infinite, gradientShift 3s ease-in-out infinite al
   <!-- Profile Section -->
   <header>
     <img src="profile.jpg" class="profile-img" alt="Syed Asif Ali" loading="lazy" />
-    <h1>
-      Syed Asif Ali
-      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="Verified Badge">
-    </h1>
+    <h1>Syed Asif Ali <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="Verified Badge"></h1>
     <p class="title">Entrepreneur • Digital Creator • Founder of Point Media</p>
   </header>
 
   <!-- About Section -->
   <section class="about">
     <h2>About Me</h2>
-    <p>I am an entrepreneur and digital creator with a vision to build strong online presence and media influence. I create content, manage digital brands, and run Point Media to help people grow digitally.</p>
+    <p>I am an entrepreneur and digital creator building strong online presence and media influence. I create content, manage digital brands, and run Point Media to help people grow digitally.</p>
   </section>
 
   <!-- Social Section -->
@@ -163,7 +206,7 @@ const blogs = [
   { title:"Build Your Digital Brand", content:"Learn how to grow your online presence and build a personal brand.", link:"Blogs/blog1.html" },
   { title:"Social Media Tips", content:"Top tips for engaging your audience and growing followers.", link:"Blogs/blog2.html" },
   { title:"Marketing Strategies", content:"Effective marketing techniques for small businesses.", link:"Blogs/blog3.html" },
-  { title:"About Point Media", content:"Point Media is a digital marketing agency founded by Syed Asif Ali, providing social media management, branding, and digital growth solutions.", link:"Blogs/pointmedia.html" }
+  { title:"About Point Media", content:"Discover how Point Media helps businesses and creators grow their digital presence.", link:"Blogs/blog4.html" }
 ];
 
 // Show blogs in row
