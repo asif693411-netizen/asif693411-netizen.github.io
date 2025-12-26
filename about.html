@@ -3,148 +3,141 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>About - Syed Asif Ali | Pointika</title>
-<meta name="description" content="Syed Asif Ali — Entrepreneur & Digital Creator, Founder of Point Media & Pointika. Learn about his journey from South Waziristan to UAE & Pakistan digital media success.">
+<title>About - Syed Asif Ali</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 <style>
 body{margin:0;padding:0;font-family:'Poppins',sans-serif;background:#0f0f0f;color:#fff;line-height:1.6;overflow-x:hidden;}
-.container{width:90%;max-width:1000px;margin:0 auto;text-align:center;padding:20px;}
-header h1{font-size:2rem;color:#00ffff;margin-bottom:10px;}
-header p{color:#ccc;font-size:1rem;margin-bottom:20px;}
-.profile-img{width:160px;height:160px;border-radius:50%;object-fit:cover;margin:20px auto;border:3px solid #00ffff;box-shadow:0 0 20px #00ffff,0 0 40px #00ffff;}
-.hero{padding:80px 20px;text-align:center;}
-section{margin:40px 0;padding:20px;}
-h2{color:#00ffff;margin-bottom:20px;}
-h3{color:#7c9cff;margin-bottom:10px;}
-.card{background:#111;border:1px solid #00ffff;border-radius:12px;padding:20px;margin-bottom:20px;text-align:left;}
-.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
-.grid-2 .card{text-align:left;}
-.social a{display:inline-block;margin:8px;padding:10px;border-radius:25px;background:#00ffff;color:#000;text-decoration:none;font-weight:500;transition:0.3s;}
-.social a:hover{background:#0077ff;color:#fff;}
-footer{margin-top:40px;padding:15px 0;font-size:0.9rem;color:#aaa;border-top:1px solid #333;text-align:center;}
+.container{width:90%;max-width:900px;margin:0 auto;text-align:center;padding:20px;}
 
-/* Timeline */
-.timeline-container{position:relative;margin:40px 0;}
-.timeline-container::before{content:'';position:absolute;top:0;left:50%;width:4px;height:100%;background:#00ffff;transform:translateX(-50%);}
-.timeline-item{position:relative;width:50%;padding:20px 40px;box-sizing:border-box;}
-.timeline-item:nth-child(odd){left:0;text-align:right;}
-.timeline-item:nth-child(even){left:50%;text-align:left;}
-.timeline-item::before{content:'';position:absolute;top:20px;width:15px;height:15px;background:#0f0f0f;border:4px solid #00ffff;border-radius:50%;z-index:1;}
-.timeline-item:nth-child(odd)::before{right:-10px;}
-.timeline-item:nth-child(even)::before{left:-10px;}
-.timeline-date{font-weight:700;color:#00ffff;margin-bottom:8px;font-size:0.95rem;}
-.timeline-content{background:#111;border:1px solid #00ffff;border-radius:12px;padding:15px;}
-.timeline-content h4{margin:0 0 5px;color:#00ffff;font-size:1.1rem;}
-.timeline-content p{margin:0;font-size:0.95rem;color:#ccc;}
-@media(max-width:768px){
-  .grid-2{grid-template-columns:1fr;}
-  .timeline-item{width:100%;padding-left:60px;padding-right:30px;text-align:left;margin-bottom:20px;}
-  .timeline-item:nth-child(even){left:0;}
-  .timeline-item::before{left:20px;}
-  .timeline-container::before{left:20px;}
-}
+/* Navbar */
+.navbar{background:#111;padding:10px 15px;border-radius:10px;position:sticky;top:0;z-index:1000;margin-bottom:30px;}
+.nav-container{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;}
+.menu-wrapper{display:flex;align-items:center;gap:6px;cursor:pointer;font-weight:bold;}
+.menu-icon{font-size:1.4rem;color:#fff;transition:.3s;}
+#menu-text{font-size:0.9rem;color:#fff;transition:.3s;}
+.nav-links{position:fixed;top:-100%;left:0;width:100%;background:#111;display:flex;flex-direction:column;align-items:center;transition:top .5s ease;padding-top:56px;z-index:900;}
+.nav-links a{color:white;text-decoration:none;padding:15px;width:100%;text-align:center;font-size:1.1rem;border-bottom:1px solid #222;transition:.3s;}
+.nav-links a:hover,.nav-links a.active{color:#00ffff;}
+.nav-links.show{top:0;}
+.overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);display:none;z-index:800;}
+.overlay.show{display:block;}
+
+/* Profile Image */
+.profile-img{width:160px;height:160px;border-radius:50%;object-fit:cover;margin:20px auto;border:3px solid #00ffff;box-shadow:0 0 20px #00ffff,0 0 40px #00ffff,0 0 60px #0077ff,0 0 100px #00ffff;transition:transform .3s;}
+.profile-img:hover{transform:scale(1.05);box-shadow:0 0 25px #00ffff,0 0 45px #00ffff,0 0 80px #0077ff,0 0 120px #00ffff;}
+
+/* Header */
+header h1{font-size:1.8rem;margin:10px 0 5px;color:#fff;}
+header h1 img{width:24px;height:24px;vertical-align:middle;margin-left:5px;}
+.title{font-weight:300;color:#ccc;font-size:1rem;}
+
+/* Sections */
+section{margin:30px 0;}
+section h2{font-size:1.4rem;color:#00ffff;margin-bottom:10px;}
+section p{color:#ccc;}
+.social-links a{display:inline-block;margin:6px;padding:10px 20px;border-radius:25px;background-color:#00ffff;color:#fff;text-decoration:none;font-weight:500;transition:background-color .3s, transform .2s;}
+.social-links a:hover{background-color:#0097a7;transform:translateY(-3px);}
+footer{margin-top:40px;padding:15px 0;font-size:.9rem;color:#aaa;border-top:1px solid #333;}
+
+/* Moving text */
+.moving-text{position:relative;width:100%;overflow:hidden;background:#000;font-weight:bold;font-size:1.3rem;padding:20px 0;text-align:center;border-top:2px solid #222;border-bottom:2px solid #222;margin-top:30px;}
+.moving-text span{display:inline-block;white-space:nowrap;background:linear-gradient(90deg,#00ffff,#0077ff,#00ffff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:bold;
+animation:moveText 15s linear infinite, gradientShift 3s ease-in-out infinite alternate;}
+@keyframes moveText{0%{transform:translateX(100%);opacity:0;}1%{opacity:1;}99%{opacity:1;}100%{transform:translateX(-100%);opacity:0;}}
+@keyframes gradientShift{0%{background-position:0% 50%;}100%{background-position:100% 50%;}}
+
+@media(max-width:768px){.menu-icon{display:block;}.nav-links a{padding:10px 0;}}
+@media(max-width:480px){.container{width:95%;}section h2{font-size:1.2rem;}.profile-img{width:120px;height:120px;}}
 </style>
 </head>
 <body>
-
 <div class="container">
-  <header class="hero">
-    <img src="profile.jpg" alt="Syed Asif Ali" class="profile-img">
-    <h1>Syed Asif Ali</h1>
-    <p>Entrepreneur • Digital Creator • Founder of Point Media & Pointika</p>
-  </header>
 
-  <section>
-    <h2>My Story</h2>
-    <div class="card">
-      <p>
-      I was born on <strong>23 January 1997</strong> in South Waziristan Agency, Pakistan, into a humble family. Despite facing educational and regional challenges due to conflict, I pursued learning and digital opportunities.
-      Over the years, I moved to UAE and Pakistan, building a career in digital media, content creation, and strategic branding. 
-      Today, I lead <strong>Point Media</strong> and <strong>Pointika</strong>, helping brands and individuals establish their digital presence.
-      </p>
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="menu-wrapper" id="menu-wrapper">
+      <span id="menu-text">Menu</span>
+      <span class="menu-icon" id="menu-icon">☰</span>
     </div>
-  </section>
-
-  <section>
-    <h2>Q&A</h2>
-    <div class="grid-2">
-      <div class="card"><h3>Who is Syed Asif Ali?</h3><p>Entrepreneur & Founder of Point Media & Pointika, focused on digital content & media visibility.</p></div>
-      <div class="card"><h3>What is Pointika?</h3><p>A digital media & communications platform offering content, branding, and online presence solutions.</p></div>
-      <div class="card"><h3>Is Syed Asif Ali linked with Point Media?</h3><p>Yes, founder and driving force behind Point Media initiative.</p></div>
-      <div class="card"><h3>Where do you operate?</h3><p>Based in UAE, working across Pakistan & UAE markets for digital media and branding services.</p></div>
+    <div class="nav-links" id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="socials.html">Social</a>
+      <a href="press.html">Press</a>
+      <a href="techbullion.html">TechBullion</a>
     </div>
-  </section>
+  </div>
+</nav>
 
-  <section>
-    <h2>My Journey Timeline</h2>
-    <div class="timeline-container">
-      <div class="timeline-item">
-        <div class="timeline-date">1997</div>
-        <div class="timeline-content">
-          <h4>Birth</h4>
-          <p>Born on 23 January 1997 in South Waziristan Agency, Pakistan.</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">2010</div>
-        <div class="timeline-content">
-          <h4>Early Education Challenges</h4>
-          <p>Limited access to educational resources due to regional conflict.</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">2015</div>
-        <div class="timeline-content">
-          <h4>First Digital Projects</h4>
-          <p>Started experimenting with digital content and building online presence.</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">2019</div>
-        <div class="timeline-content">
-          <h4>Founded Point Media</h4>
-          <p>Launched platform for digital content, media stories, and visibility.</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">2023</div>
-        <div class="timeline-content">
-          <h4>Launched Pointika</h4>
-          <p>Expanded services to include branding & communications solutions.</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">2025</div>
-        <div class="timeline-content">
-          <h4>Recognition & Growth</h4>
-          <p>Featured in press, strengthened personal & brand visibility.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<div class="overlay" id="overlay"></div>
 
-  <section>
-    <h2>Connect with Me</h2>
-    <div class="social">
-      <a href="https://www.instagram.com/boxer_01101" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.tiktok.com/@syed_asif_ali34" target="_blank"><i class="fab fa-tiktok"></i></a>
-      <a href="https://www.youtube.com/@AsifAli" target="_blank"><i class="fab fa-youtube"></i></a>
-      <a href="https://www.linkedin.com/in/pointmedia" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://x.com/Boxer_01101" target="_blank"><i class="fab fa-x-twitter"></i></a>
-      <a href="https://medium.com/@asif693411" target="_blank"><i class="fab fa-medium"></i></a>
-      <a href="https://www.facebook.com/share/1DokMS7GB9/" target="_blank"><i class="fab fa-facebook"></i></a>
-    </div>
-    <p style="margin-top:20px;">Contact: <strong>info@syedasifali.link</strong></p>
-    <p>Personal Website: <a href="https://syedasifali.link" target="_blank" style="color:#00ffff;">syedasifali.link</a></p>
-  </section>
+<!-- Header / Profile -->
+<header>
+  <img src="profile.jpg" class="profile-img" alt="Syed Asif Ali" loading="lazy" />
+  <h1>Syed Asif Ali <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="Verified Badge"></h1>
+  <p class="title">Entrepreneur • Digital Creator • Founder of Point Media</p>
+</header>
 
-  <footer>
-    © 2025 Syed Asif Ali · Point Media & Pointika
-  </footer>
+<!-- About Story -->
+<section>
+  <h2>My Journey</h2>
+  <p>
+    I was born on 23 January 1997 in a humble family in South Waziristan Agency. 
+    Growing up in an area affected by conflict and limited educational resources, I 
+    faced numerous challenges. Through persistence, learning, and creativity, I became 
+    a digital entrepreneur and founder of Point Media and Pointika, focusing on 
+    content, branding, and online presence across UAE and Pakistan.
+  </p>
+</section>
+
+<!-- Connect -->
+<section>
+  <h2>Connect</h2>
+  <div class="social-links">
+    <a href="https://www.instagram.com/boxer_01101" target="_blank">Instagram</a>
+    <a href="https://www.tiktok.com/@syed_asif_ali34" target="_blank">TikTok</a>
+    <a href="https://www.youtube.com/@AsifAli" target="_blank">YouTube</a>
+    <a href="https://www.linkedin.com/in/pointmedia" target="_blank">LinkedIn</a>
+    <a href="https://x.com/Boxer_01101" target="_blank">X / Twitter</a>
+    <a href="https://medium.com/@asif693411" target="_blank">Medium</a>
+    <a href="https://www.facebook.com/share/1DokMS7GB9/" target="_blank">Facebook</a>
+  </div>
+</section>
+
+<footer>
+© 2025 Syed Asif Ali · Digital Creator & Entrepreneur
+</footer>
+
 </div>
+
+<script>
+// Mobile menu toggle
+const menuWrapper = document.getElementById('menu-wrapper');
+const menuIcon = document.getElementById('menu-icon');
+const navLinks = document.getElementById('nav-links');
+const overlay = document.getElementById('overlay');
+
+menuWrapper.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+  overlay.classList.toggle('show');
+});
+
+overlay.addEventListener('click', () => {
+  navLinks.classList.remove('show');
+  overlay.classList.remove('show');
+});
+
+// Click outside nav-links also hides menu
+document.addEventListener('click', (e) => {
+  if(!navLinks.contains(e.target) && !menuWrapper.contains(e.target)){
+    navLinks.classList.remove('show');
+    overlay.classList.remove('show');
+  }
+});
+</script>
 
 </body>
 </html>
