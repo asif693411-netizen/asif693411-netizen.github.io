@@ -5,7 +5,52 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <title>Syed Asif Ali - Entrepreneur & Digital Creator</title>
 
-<!-- Structured Data for Google -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+/* === Keep your original CSS exactly the same === */
+body{margin:0;padding:0;font-family:'Poppins',sans-serif;background:#fff;color:#000;line-height:1.6;overflow-x:hidden;}
+.container {width:100%;max-width:900px;margin:0 auto;text-align:center;padding:20px;}
+.navbar{background:#111;padding:7px 14px;border-radius:10px;position:relative;z-index:1000;margin-bottom:30px;}
+.nav-container{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;}
+.menu-wrapper{display:flex;align-items:center;gap:6px;cursor:pointer;font-weight:bold;}
+.menu-icon{font-size:1.4rem;color:#fff;transition:.3s;}
+#menu-text{font-size:0.8rem;color:#fff;transition:.3s;}
+.nav-links{position:fixed;top:-100%;left:0;width:100%;background:#111;display:flex;flex-direction:column;align-items:center;transition:top .5s ease;padding-top:56px;z-index:900;}
+.nav-links a{color:white;text-decoration:none;padding:15px;width:100%;text-align:center;font-size:1.1rem;border-bottom:1px solid #222;transition:.3s;}
+.nav-links a:hover,.nav-links a.active{color:#00ffff;}
+.nav-links.show{top:0;}
+.overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);display:none;z-index:800;}
+.profile-img{width:150px;height:auto;border-radius:50%;object-fit:cover;margin:20px auto;border:3px solid #00ffff;box-shadow:0 0 20px #00ffff,0 0 40px #00ffff,0 0 60px #0077ff,0 0 100px #00ffff;transition:transform .3s;}
+.profile-img:hover{transform:scale(1.05);box-shadow:0 0 25px #00ffff,0 0 45px #00ffff,0 0 80px #0077ff,0 0 120px #00ffff;}
+header h1{font-size:1.6rem;margin:10px 0 5px;color:#000;}
+header h1 img{width:24px;height:24px;vertical-align:middle;margin-left:5px;}
+.title{font-weight:300;color:#555;font-size:0.95rem;}
+section{margin:30px 0;}
+section h2{font-size:1.4rem;color:#00ffff;margin-bottom:10px;}
+.social-links a{display:inline-block;margin:6px;padding:10px 20px;border-radius:25px;background-color:#000;color:#00ffff;border:1px solid #00ffff;text-decoration:none;font-weight:500;transition:all .3s ease;}
+.social-links a:hover{background-color:#00ffff;color:#000;transform:translateY(-3px);}
+footer{margin-top:40px;padding:15px 0;font-size:.9rem;color:#555;border-top:1px solid #333;}
+.blogs-grid{display:flex;flex-wrap:wrap;gap:15px;justify-content:center;margin-top:30px;}
+.blog-item{background:#111;padding:20px;border-radius:15px;flex:1 1 240px;max-width:240px;text-align:left;transition:transform .3s;}
+.blog-item:hover{transform:translateY(-5px);box-shadow:0 0 20px #00ffff;}
+.blog-item h3{color:#00ffff;font-size:1.1rem;margin-bottom:10px;}
+.blog-item p{color:#ccc;font-size:0.95rem;line-height:1.4;}
+.blog-item a{color:#00ffff;text-decoration:none;font-weight:600;}
+.blog-item a:hover{text-decoration:underline;}
+.moving-text{position:relative;width:100%;overflow:hidden;background:#fff;font-weight:bold;font-size:1.3rem;padding:20px 0;text-align:center;border-top:2px solid #222;border-bottom:2px solid #222;margin-top:30px;}
+.moving-text span{display:inline-block;white-space:nowrap;background:linear-gradient(90deg,#00ffff,#0077ff,#00ffff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:bold;
+animation:moveText 15s linear infinite, gradientShift 3s ease-in-out infinite alternate;}
+@keyframes moveText{0%{transform:translateX(100%);opacity:0;}1%{opacity:1;}99%{opacity:1;}100%{transform:translateX(-100%);opacity:0;}}
+@keyframes gradientShift{0%{background-position:0% 50%;}100%{background-position:100% 50%;}}
+@media(max-width:1200px){.profile-img{width:140px;} header h1{font-size:1.5rem;}}
+@media(max-width:992px){.profile-img{width:130px;} header h1{font-size:1.4rem;}}
+@media(max-width:768px){.profile-img{width:120px;} header h1{font-size:1.3rem;}}
+@media(max-width:480px){.container{width:95%;}section h2{font-size:1.2rem;}}
+</style>
+
+<!-- JSON-LD Schema for Pointika -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -19,27 +64,41 @@
     "url": "https://syedasifali.link"
   },
   "sameAs": [
+    "https://www.crunchbase.com/organization/pointika",
     "https://www.instagram.com/boxer_01101",
     "https://www.tiktok.com/@pointika.media",
     "https://www.youtube.com/@AsifAli-Digital",
     "https://www.linkedin.com/in/pointmedia",
     "https://x.com/Boxer_01101",
     "https://medium.com/@asif693411",
-    "https://www.facebook.com/share/1DokMS7GB9/",
-    "https://www.crunchbase.com/organization/pointika"
+    "https://www.facebook.com/"
   ]
 }
 </script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<style>
-/* ... Existing CSS unchanged ... */
-</style>
 </head>
 <body>
 <div class="container">
-  <!-- Navbar & Overlay (same as before) -->
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="menu-wrapper" id="menu-wrapper">
+        <span id="menu-text">Menu</span>
+        <span class="menu-icon" id="menu-icon">☰</span>
+      </div>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="socials.html">Social</a>
+        <a href="press.html">Press</a>
+        <a href="techbullion.html">TechBullion</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="overlay" id="overlay"></div>
 
   <!-- Profile Section -->
   <header>
@@ -48,15 +107,18 @@
       Syed Asif Ali
       <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="Verified Badge">
     </h1>
-    <p class="title">Entrepreneur • Digital Creator • Founder of Point Media & Pointika</p>
+    <p class="title">Entrepreneur • Digital Creator • Founder of Pointika</p>
   </header>
 
   <!-- About Section -->
   <section class="about">
-    <h2>About Me & Pointika</h2>
-    <p>I am an entrepreneur and digital creator. I founded <strong>Point Media</strong> and recently launched <strong>Pointika</strong>, a digital media and communications brand focused on visibility, strategic storytelling, and building credible online presence for individuals and brands.</p>
-    <p>Official Website: <a href="https://pointika.link" target="_blank">pointika.link</a><br>
-    Founder Website: <a href="https://syedasifali.link" target="_blank">syedasifali.link</a></p>
+    <h2>About Me</h2>
+    <p>I am an entrepreneur and digital creator with a vision to build strong online presence and media influence. I run Point Media and recently launched <strong>Pointika</strong>, a digital media & communications brand to help individuals and brands grow online.</p>
+    <p>
+      Official Brand Website: <a href="https://pointika.link" target="_blank">pointika.link</a><br>
+      Founder Personal Website: <a href="https://syedasifali.link" target="_blank">syedasifali.link</a><br>
+      Crunchbase Profile: <a href="https://www.crunchbase.com/organization/pointika" target="_blank">View Profile</a>
+    </p>
   </section>
 
   <!-- Social Section -->
@@ -73,12 +135,70 @@
     </div>
   </section>
 
-  <!-- Blogs Section & Moving Text unchanged -->
+  <!-- Blogs Section -->
+  <section class="blogs-section">
+    <h2>Blogs</h2>
+    <div class="blogs-grid" id="blogs-grid"></div>
+  </section>
+
+  <!-- Moving Text -->
+  <div class="moving-text"><span>🐉 Gangster 🐉</span></div>
 
   <!-- Footer -->
-  <footer>© 2025 Syed Asif Ali — Founder of Pointika & Point Media</footer>
+  <footer>© 2025 Syed Asif Ali — All Rights Reserved</footer>
 </div>
 
-<!-- JS unchanged -->
+<script>
+// Navbar toggle
+const menuWrapper=document.getElementById("menu-wrapper");
+const menuIcon=document.getElementById("menu-icon");
+const menuText=document.getElementById("menu-text");
+const navLinks=document.getElementById("nav-links");
+const overlay=document.getElementById("overlay");
+let isOpen=false;
+menuWrapper.addEventListener("click",()=>{
+  isOpen=!isOpen;
+  navLinks.classList.toggle("show");
+  overlay.classList.toggle("show");
+  if(isOpen){
+    menuIcon.textContent="✖";
+    menuText.textContent="Close";
+    menuIcon.style.color="#00ffff";
+    menuText.style.color="#00ffff";
+  } else {
+    menuIcon.textContent="☰";
+    menuText.textContent="Menu";
+    menuIcon.style.color="#fff";
+    menuText.style.color="#fff";
+  }
+});
+overlay.addEventListener("click",()=>{
+  navLinks.classList.remove("show");
+  overlay.classList.remove("show");
+  isOpen=false;
+  menuIcon.textContent="☰";
+  menuText.textContent="Menu";
+  menuIcon.style.color="#fff";
+  menuText.style.color="#fff";
+});
+
+// Blogs data
+const blogs = [
+  { title:"Build Your Digital Brand", content:"Learn how to grow your online presence and build a personal brand.", link:"Blogs/blog1.html" },
+  { title:"Social Media Tips", content:"Top tips for engaging your audience and growing followers.", link:"Blogs/blog2.html" },
+  { title:"Marketing Strategies", content:"Effective marketing techniques for small businesses.", link:"Blogs/blog3.html" },
+  { title:"Point Media Overview", content:"Discover the mission, services, and impact of Point Media in the digital world.", link:"Blogs/pointmedia.html" }
+];
+
+// Show blogs in row
+const blogsGrid = document.getElementById("blogs-grid");
+blogs.forEach(blog => {
+  const div = document.createElement("div");
+  div.className = "blog-item";
+  div.innerHTML = `<h3>${blog.title}</h3><p>${blog.content}</p><a href="${blog.link}" target="_blank">Read More</a>`;
+  blogsGrid.appendChild(div);
+});
+</script>
+
 </body>
 </html>
