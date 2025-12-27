@@ -4,12 +4,27 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <title>Syed Asif Ali - Entrepreneur & Digital Creator</title>
+<meta name="description" content="Syed Asif Ali is a digital media creator, entrepreneur, and founder of Point Media. He specializes in content creation, strategic storytelling, and building credible online presence for individuals and brands.">
 
+<!-- Open Graph / Social Sharing -->
+<meta property="og:title" content="Syed Asif Ali - Entrepreneur & Digital Creator">
+<meta property="og:description" content="Digital media creator and founder of Point Media, focused on strategic storytelling and building online credibility.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://syedasifali.link">
+<meta property="og:image" content="https://syedasifali.link/profile.jpg">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Syed Asif Ali - Entrepreneur & Digital Creator">
+<meta name="twitter:description" content="Digital media creator and founder of Point Media, focused on strategic storytelling and building online credibility.">
+<meta name="twitter:image" content="https://syedasifali.link/profile.jpg">
+
+<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-/* === Keep your original CSS exactly the same === */
+/* --- EXISTING STYLES KEEPOUT --- */
 body{margin:0;padding:0;font-family:'Poppins',sans-serif;background:#fff;color:#000;line-height:1.6;overflow-x:hidden;}
 .container {width:100%;max-width:900px;margin:0 auto;text-align:center;padding:20px;}
 .navbar{background:#111;padding:7px 14px;border-radius:10px;position:relative;z-index:1000;margin-bottom:30px;}
@@ -40,8 +55,7 @@ footer{margin-top:40px;padding:15px 0;font-size:.9rem;color:#555;border-top:1px 
 .blog-item a{color:#00ffff;text-decoration:none;font-weight:600;}
 .blog-item a:hover{text-decoration:underline;}
 .moving-text{position:relative;width:100%;overflow:hidden;background:#fff;font-weight:bold;font-size:1.3rem;padding:20px 0;text-align:center;border-top:2px solid #222;border-bottom:2px solid #222;margin-top:30px;}
-.moving-text span{display:inline-block;white-space:nowrap;background:linear-gradient(90deg,#00ffff,#0077ff,#00ffff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:bold;
-animation:moveText 15s linear infinite, gradientShift 3s ease-in-out infinite alternate;}
+.moving-text span{display:inline-block;white-space:nowrap;background:linear-gradient(90deg,#00ffff,#0077ff,#00ffff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:bold;animation:moveText 15s linear infinite, gradientShift 3s ease-in-out infinite alternate;}
 @keyframes moveText{0%{transform:translateX(100%);opacity:0;}1%{opacity:1;}99%{opacity:1;}100%{transform:translateX(-100%);opacity:0;}}
 @keyframes gradientShift{0%{background-position:0% 50%;}100%{background-position:100% 50%;}}
 @media(max-width:1200px){.profile-img{width:140px;} header h1{font-size:1.5rem;}}
@@ -50,36 +64,35 @@ animation:moveText 15s linear infinite, gradientShift 3s ease-in-out infinite al
 @media(max-width:480px){.container{width:95%;}section h2{font-size:1.2rem;}}
 </style>
 
-<!-- JSON-LD Schema for Pointika -->
+<!-- Structured Data -->
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Pointika",
-  "url": "https://pointika.link",
-  "logo": "https://pointika.link/logo.png",
-  "founder": {
-    "@type": "Person",
-    "name": "Syed Asif Ali",
-    "url": "https://syedasifali.link"
-  },
-  "sameAs": [
-    "https://www.crunchbase.com/organization/pointika",
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Syed Asif Ali",
+  "url":"https://syedasifali.link",
+  "image":"https://syedasifali.link/profile.jpg",
+  "sameAs":[
+    "https://www.linkedin.com/in/pointmedia",
     "https://www.instagram.com/boxer_01101",
     "https://www.tiktok.com/@pointika.media",
     "https://www.youtube.com/@AsifAli-Digital",
-    "https://www.linkedin.com/in/pointmedia",
-    "https://x.com/Boxer_01101",
     "https://medium.com/@asif693411",
+    "https://x.com/Boxer_01101",
     "https://www.facebook.com/"
-  ]
+  ],
+  "jobTitle":"Entrepreneur & Digital Creator",
+  "worksFor":{
+    "@type":"Organization",
+    "name":"Point Media",
+    "url":"https://pointmedia.link"
+  }
 }
 </script>
 
 </head>
 <body>
 <div class="container">
-
   <!-- Navbar -->
   <nav class="navbar">
     <div class="nav-container">
@@ -97,7 +110,6 @@ animation:moveText 15s linear infinite, gradientShift 3s ease-in-out infinite al
       </div>
     </div>
   </nav>
-
   <div class="overlay" id="overlay"></div>
 
   <!-- Profile Section -->
@@ -107,18 +119,14 @@ animation:moveText 15s linear infinite, gradientShift 3s ease-in-out infinite al
       Syed Asif Ali
       <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="Verified Badge">
     </h1>
-    <p class="title">Entrepreneur • Digital Creator • Founder of Pointika</p>
+    <p class="title">Entrepreneur • Digital Creator • Founder of Point Media</p>
   </header>
 
   <!-- About Section -->
   <section class="about">
     <h2>About Me</h2>
-    <p>I am an entrepreneur and digital creator with a vision to build strong online presence and media influence. I run Point Media and recently launched <strong>Pointika</strong>, a digital media & communications brand to help individuals and brands grow online.</p>
-    <p>
-      Official Brand Website: <a href="https://pointika.link" target="_blank">pointika.link</a><br>
-      Founder Personal Website: <a href="https://syedasifali.link" target="_blank">syedasifali.link</a><br>
-      Crunchbase Profile: <a href="https://www.crunchbase.com/organization/pointika" target="_blank">View Profile</a>
-    </p>
+    <p>I am an entrepreneur and digital creator with a vision to build strong online presence and media influence. I create content, manage digital brands, and run Point Media to help people grow digitally.</p>
+    <p><strong>Media References:</strong> <a href="https://www.crunchbase.com/person/syed-asif-ali" target="_blank">Crunchbase</a>, <a href="https://www.techbullion.com/syed-asif-ali-founder-of-fastest-growing-digital-media-company-point-media/" target="_blank">TechBullion</a>, <a href="https://medium.com/@asif693411" target="_blank">Medium</a></p>
   </section>
 
   <!-- Social Section -->
@@ -156,6 +164,7 @@ const menuText=document.getElementById("menu-text");
 const navLinks=document.getElementById("nav-links");
 const overlay=document.getElementById("overlay");
 let isOpen=false;
+
 menuWrapper.addEventListener("click",()=>{
   isOpen=!isOpen;
   navLinks.classList.toggle("show");
@@ -199,6 +208,5 @@ blogs.forEach(blog => {
   blogsGrid.appendChild(div);
 });
 </script>
-
 </body>
 </html>
