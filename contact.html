@@ -4,12 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact - Syed Asif Ali</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
 body{margin:0;font-family:'Poppins',sans-serif;background:#0f172a;color:#e5e7eb;line-height:1.7;overflow-x:hidden;}
 .container{max-width:1000px;margin:0 auto;padding:20px;text-align:center;}
-/* Navbar */
+
+/* NAVBAR */
 nav{position:fixed;top:0;left:0;width:100%;background:#020617;z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,0.5);}
 .nav-container{max-width:1200px;margin:auto;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;}
 .logo-wrap{display:flex;align-items:center;gap:10px;}
@@ -19,67 +22,77 @@ nav{position:fixed;top:0;left:0;width:100%;background:#020617;z-index:1000;box-s
 .menu a{color:#e5e7eb;text-decoration:none;font-size:15px;}
 .menu a:hover,.menu a.active{color:#60a5fa;}
 .menu-btn{display:none;font-size:24px;cursor:pointer;}
-@media(max-width:768px){.menu{position:fixed;top:64px;right:-100%;background:#020617;flex-direction:column;width:240px;padding:20px;height:100vh;transition:0.3s;}.menu.show{right:0;}.menu-btn{display:block;}}
-/* Header */
+
+@media(max-width:768px){
+  .menu{position:fixed;top:64px;right:-100%;background:#020617;flex-direction:column;width:240px;padding:20px;height:100vh;transition:.3s;}
+  .menu.show{right:0;}
+  .menu-btn{display:block;}
+}
+
+/* HEADER */
 header{background:linear-gradient(135deg,#1e3a8a,#0f172a);padding:140px 20px 80px;text-align:center;}
 header h1{margin:0;font-size:38px;color:#fff;}
-header h1 img{width:24px;height:24px;vertical-align:middle;margin-left:5px;}
+header h1 img{width:24px;vertical-align:middle;margin-left:6px;}
 header p{max-width:800px;margin:15px auto 0;color:#cbd5f5;font-size:17px;}
-/* Sections */
+
 section{max-width:900px;margin:auto;padding:60px 20px;}
-.card{background:#020617;padding:30px;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,0.4);margin-bottom:40px;}
-.social-btn{display:inline-flex;align-items:center;gap:10px;padding:10px 20px;background:#111;border:1px solid #00ffff;border-radius:12px;color:#00ffff;text-decoration:none;font-weight:500;transition:all .3s;}
+.card{background:#020617;padding:30px;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.4);}
+.social-btn{display:inline-flex;align-items:center;gap:10px;padding:10px 20px;background:#111;border:1px solid #00ffff;border-radius:12px;color:#00ffff;text-decoration:none;font-weight:500;}
 .social-btn:hover{background:#00ffff;color:#000;}
-/* Moving text */
-.moving-text{width:100%;overflow:hidden;white-space:nowrap;background:#000;color:#00ffff;padding:5px 0;font-weight:bold;font-size:1.2rem;position:fixed;bottom:10px;z-index:10;}
+
+.moving-text{width:100%;overflow:hidden;white-space:nowrap;background:#000;color:#00ffff;padding:5px 0;font-weight:bold;font-size:1.2rem;position:fixed;bottom:10px;}
 .moving-text span{display:inline-block;padding-left:100%;animation:marquee 10s linear infinite;}
-@keyframes marquee{0%{transform:translateX(0%);}100%{transform:translateX(-100%);}}
-footer{background:#020617;text-align:center;padding:30px;color:#94a3b8;font-size:14px;margin-top:50px;}
+@keyframes marquee{to{transform:translateX(-100%);}}
+
+footer{background:#020617;text-align:center;padding:30px;color:#94a3b8;font-size:14px;margin-top:60px;}
 </style>
 </head>
+
 <body>
 <div class="container">
 
-<!-- Navbar -->
+<!-- NAVBAR -->
 <nav>
   <div class="nav-container">
     <div class="logo-wrap">
-      <img src="profile.jpg" alt="Syed Asif Ali">
+      <img src="/profile.jpg" alt="Syed Asif Ali">
       <div class="logo-text">Syed Asif Ali</div>
     </div>
-    <div class="menu-btn" id="menu-btn">☰</div>
+
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
     <div class="menu" id="menu">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html" class="active">Contact</a>
-      <a href="Blogs/pointmedia.html">Point Media</a>
-      <a href="Blogs/pointika.html">Pointika</a>
-      <a href="socials.html">Social</a>
-      <a href="press.html">Press</a>
+      <a href="/index.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html" class="active">Contact</a>
+      <a href="/Blogs/pointmedia.html">Point Media</a>
+      <a href="/Blogs/pointika.html">Pointika</a>
+      <a href="/socials.html">Social</a>
+      <a href="/press.html">Press</a>
     </div>
   </div>
 </nav>
 
-<div class="overlay" id="overlay"></div>
-
-<!-- Header -->
+<!-- HEADER -->
 <header>
-  <h1>Syed Asif Ali <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="Verified Badge"></h1>
+  <h1>Syed Asif Ali
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="Verified">
+  </h1>
   <p>Get in touch via email</p>
 </header>
 
-<!-- Contact Section -->
+<!-- CONTACT -->
 <section>
   <div class="card">
     <h2>Contact Me</h2>
     <p>Email me at:</p>
-    <a href="mailto:asif693411@gmail.com" target="_blank" class="social-btn">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Gmail Icon" style="width:30px;height:30px;"> asif693411@gmail.com
+    <a href="mailto:asif693411@gmail.com" class="social-btn">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" width="28">
+      asif693411@gmail.com
     </a>
   </div>
 </section>
 
-<!-- Moving Text -->
 <div class="moving-text"><span>🐉 Gangster 🐉</span></div>
 
 <footer>© 2025 Syed Asif Ali — All Rights Reserved</footer>
@@ -87,22 +100,10 @@ footer{background:#020617;text-align:center;padding:30px;color:#94a3b8;font-size
 </div>
 
 <script>
-const menuBtn=document.getElementById('menu-btn');
-const menu=document.getElementById('menu');
-const overlay=document.getElementById('overlay');
-let isOpen=false;
-
-menuBtn.addEventListener('click',()=>{
-  isOpen=!isOpen;
-  menu.classList.toggle('show');
-  overlay.style.display=isOpen?'block':'none';
-});
-
-overlay.addEventListener('click',()=>{
-  menu.classList.remove('show');
-  overlay.style.display='none';
-  isOpen=false;
-});
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("show");
+}
 </script>
+
 </body>
 </html>
