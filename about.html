@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About - Syed Asif Ali | Pointika</title>
 <meta name="description" content="Syed Asif Ali — Entrepreneur & Digital Creator, Founder of Point Media & Pointika. Learn about his journey from South Waziristan to UAE & Pakistan digital media success.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +23,6 @@ body{margin:0;padding:0;font-family:'Poppins',sans-serif;background:#0f0f0f;colo
 .nav-links a:hover,.nav-links a.active{color:#00ffff;}
 .nav-links.show{top:0;}
 .overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);display:none;z-index:800;}
-.overlay.show{display:block;}
 
 /* Profile Image */
 .profile-img{width:160px;height:160px;border-radius:50%;object-fit:cover;margin:20px auto;border:3px solid #00ffff;box-shadow:0 0 20px #00ffff,0 0 40px #00ffff,0 0 60px #0077ff,0 0 100px #00ffff;transition:transform .3s;}
@@ -84,6 +83,8 @@ footer{margin-top:40px;padding:15px 0;font-size:0.9rem;color:#aaa;border-top:1px
       <a href="socials.html">Social</a>
       <a href="press.html">Press</a>
       <a href="techbullion.html">TechBullion</a>
+      <a href="Blogs/pointmedia.html">Point Media</a>
+      <a href="Blogs/pointika.html">Pointika</a>
     </div>
   </div>
 </nav>
@@ -95,6 +96,7 @@ footer{margin-top:40px;padding:15px 0;font-size:0.9rem;color:#aaa;border-top:1px
   <p class="title">Entrepreneur • Digital Creator • Founder of Point Media & Pointika</p>
 </header>
 
+<!-- My Story -->
 <section>
 <h2>My Story</h2>
 <div class="card">
@@ -104,16 +106,18 @@ I was born on <strong>23 January 1997</strong> in South Waziristan Agency, Pakis
 </div>
 </section>
 
+<!-- Q&A -->
 <section>
 <h2>Q&A</h2>
 <div class="grid-2">
 <div class="card"><h3>Who is Syed Asif Ali?</h3><p>Entrepreneur & Founder of Point Media & Pointika, focused on digital content & media visibility.</p></div>
 <div class="card"><h3>What is Pointika?</h3><p>A digital media & communications platform offering content, branding, and online presence solutions.</p></div>
-<div class="card"><h3>Is Syed Asif Ali linked with Point Media?</h3><p>Yes, founder and driving force behind Point Media initiative.</p></div>
+<div class="card"><h3>Is Syed Ali linked with Point Media?</h3><p>Yes, founder and driving force behind Point Media initiative.</p></div>
 <div class="card"><h3>Where do you operate?</h3><p>Based in UAE, working across Pakistan & UAE markets for digital media and branding services.</p></div>
 </div>
 </section>
 
+<!-- Timeline -->
 <section>
 <h2>My Journey Timeline</h2>
 <div class="timeline-container">
@@ -162,6 +166,7 @@ I was born on <strong>23 January 1997</strong> in South Waziristan Agency, Pakis
 </div>
 </section>
 
+<!-- Social Links -->
 <section>
 <h2>Connect with Me</h2>
 <div class="social">
@@ -180,23 +185,43 @@ I was born on <strong>23 January 1997</strong> in South Waziristan Agency, Pakis
 <footer>
 © 2025 Syed Asif Ali · Point Media & Pointika
 </footer>
+
 </div>
 
 <script>
-// Toggle menu
+// Toggle mobile menu
 const menuWrapper = document.getElementById('menu-wrapper');
 const menuIcon = document.getElementById('menu-icon');
+const menuText = document.getElementById('menu-text');
 const navLinks = document.getElementById('nav-links');
 const overlay = document.getElementById('overlay');
+let isOpen = false;
 
 menuWrapper.addEventListener('click', () => {
+  isOpen = !isOpen;
   navLinks.classList.toggle('show');
-  overlay.classList.toggle('show');
+  overlay.style.display = isOpen ? 'block' : 'none';
+  menuIcon.textContent = isOpen ? '✖' : '☰';
+  menuText.textContent = isOpen ? 'Close' : 'Menu';
 });
 
 overlay.addEventListener('click', () => {
   navLinks.classList.remove('show');
-  overlay.classList.remove('show');
+  overlay.style.display = 'none';
+  isOpen = false;
+  menuIcon.textContent = '☰';
+  menuText.textContent = 'Menu';
+});
+
+// Highlight current page
+const links = navLinks.querySelectorAll('a');
+const currentPage = window.location.pathname.split('/').pop();
+links.forEach(link => {
+  if (link.getAttribute('href') === currentPage) {
+    link.classList.add('active');
+  } else {
+    link.classList.remove('active');
+  }
 });
 </script>
 
