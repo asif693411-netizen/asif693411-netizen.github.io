@@ -41,16 +41,15 @@ footer{margin-top:40px;text-align:center;color:#aaa;border-top:1px solid #333;pa
       <span class="menu-icon">☰</span>
     </div>
     <div class="nav-links" id="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="Blogs/point-media.html">Point Media</a>
-      <a href="Blogs/pointika.html">Pointika</a>
-      <a href="services.html">Services</a>
-      <a href="press.html">Press</a>
-      <a href="blog.html">Blog</a>
-      <a href="techbullion.html">TechBullion</a>
-      <a href="socials.html">Social</a>
-      <a href="contact.html">Contact</a>
+      <a href="/index.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/pointmedia.html" class="active">Point Media</a>
+      <a href="/Pointika.html">Pointika</a>
+      <a href="/services.html">Services</a>
+      <a href="/press.html">Press</a>
+      <a href="/founder.html">Founder</a>
+      <a href="/socials.html">Social</a>
+      <a href="/contact.html">Contact</a>
     </div>
   </div>
 </nav>
@@ -72,18 +71,31 @@ footer{margin-top:40px;text-align:center;color:#aaa;border-top:1px solid #333;pa
 </div>
 
 <script>
-const menuWrapper=document.getElementById('menu-wrapper');  
-const navLinks=document.getElementById('nav-links');  
-const overlay=document.getElementById('overlay');  
+const menuWrapper = document.getElementById('menu-wrapper');  
+const navLinks = document.getElementById('nav-links');  
+const overlay = document.getElementById('overlay');  
+let isOpen = false;
 
-menuWrapper.addEventListener('click',()=>{
+menuWrapper.addEventListener('click', () => {
+  isOpen = !isOpen;
   navLinks.classList.toggle('show');
   overlay.classList.toggle('show');
 });
 
-overlay.addEventListener('click',()=>{
+// Close menu when clicking outside overlay
+overlay.addEventListener('click', () => {
   navLinks.classList.remove('show');
   overlay.classList.remove('show');
+  isOpen = false;
+});
+
+// Close menu when clicking a link (mobile)
+document.querySelectorAll('#nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('show');
+    overlay.classList.remove('show');
+    isOpen = false;
+  });
 });
 
 // auto-active menu
