@@ -8,52 +8,50 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-body{margin:0;padding:0;font-family:'Poppins',sans-serif;background:#0f0f0f;color:#fff;line-height:1.6;overflow-x:hidden;}
-.navbar{background:#111;padding:8px 14px;border-radius:10px;margin:15px;position:relative;z-index:1000;}
-.nav-container{display:flex;justify-content:space-between;align-items:center;}
-.menu-wrapper{display:flex;align-items:center;gap:6px;cursor:pointer;font-weight:600;}
-.menu-icon{font-size:1.4rem;}
-#menu-text{font-size:0.85rem;}
-.nav-links{position:fixed;top:-100%;left:0;width:100%;background:#111;display:flex;flex-direction:column;align-items:center;transition:top .5s ease;padding-top:60px;z-index:900;}
-.nav-links a{color:#fff;text-decoration:none;padding:14px;width:100%;text-align:center;border-bottom:1px solid #222;font-size:1.05rem;}
-.nav-links a:hover,.nav-links a.active{color:#00ffff;}
-.nav-links.show{top:0;}
-.overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);display:none;z-index:800;}
-.overlay.show{display:block;}
-.container{width:90%;max-width:900px;margin:0 auto;padding:20px;}
+body{margin:0;font-family:'Poppins',sans-serif;background:#0f172a;color:#e5e7eb;line-height:1.7;}
+.nav{position:fixed;top:0;width:100%;background:#020617;z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,.5);}
+.nav-container{max-width:1200px;margin:auto;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;}
+.logo{font-size:18px;font-weight:600;color:#60a5fa;}
+.menu{display:flex;gap:25px;}
+.menu a{color:#e5e7eb;text-decoration:none;font-size:15px;}
+.menu a.active,.menu a:hover{color:#00ffff;}
+.menu-btn{display:none;font-size:24px;cursor:pointer;}
+@media(max-width:768px){
+  .menu{position:fixed;top:64px;right:-100%;background:#020617;flex-direction:column;width:240px;padding:20px;height:100vh;transition:.3s;}
+  .menu.show{right:0;}
+  .menu-btn{display:block;}
+}
+.container{max-width:900px;margin:auto;padding:80px 20px 20px;}
 header{text-align:center;margin-bottom:30px;}
-h1{color:#00ffff;font-size:2rem;}
-p{color:#ccc;margin-bottom:15px;}
+header h1{color:#00ffff;font-size:2rem;}
+header p{color:#ccc;}
 .brand-link{display:inline-flex;align-items:center;gap:8px;background:#111;padding:10px 16px;border:1px solid #00ffff55;border-radius:8px;color:#00ffff;text-decoration:none;font-weight:600;}
 footer{margin-top:40px;text-align:center;color:#aaa;border-top:1px solid #333;padding:12px;}
+#overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);display:none;z-index:900;}
 </style>
 </head>
-<body>
 
-<!-- NAVIGATION -->
-<nav class="navbar">
+<body>
+<nav class="nav">
   <div class="nav-container">
-    <div class="menu-wrapper" id="menu-wrapper">
-      <span id="menu-text">Menu</span>
-      <span class="menu-icon">☰</span>
-    </div>
-    <div class="nav-links" id="nav-links">
+    <div class="logo">Point Media</div>
+    <div class="menu-btn" id="menu-btn">☰</div>
+    <div class="menu" id="menu">
       <a href="/index.html">Home</a>
       <a href="/about.html">About</a>
-      <a href="/pointmedia.html" class="active">Point Media</a>
-      <a href="/Pointika.html">Pointika</a>
-      <a href="/services.html">Services</a>
-      <a href="/press.html">Press</a>
       <a href="/founder.html">Founder</a>
-      <a href="/socials.html">Social</a>
+      <a href="/pointmedia.html" class="active">Point Media</a>
+      <a href="/pointika.html">Pointika</a>
       <a href="/contact.html">Contact</a>
+      <a href="/socials.html">Social</a>
+      <a href="/press.html">Press</a>
     </div>
   </div>
 </nav>
-<div class="overlay" id="overlay"></div>
+
+<div id="overlay"></div>
 
 <div class="container">
 <header>
@@ -67,44 +65,22 @@ footer{margin-top:40px;text-align:center;color:#aaa;border-top:1px solid #333;pa
 <p><a class="brand-link" href="https://point-media.link" target="_blank">🌐 Visit Official Point Media Website</a></p>
 </section>
 
-<footer>© 2025 Point Media | Designed by Syed Asif Ali</footer>
-</div>
+<footer>© 2025 Point Media — Designed by Syed Asif Ali</footer>
 
 <script>
-const menuWrapper = document.getElementById('menu-wrapper');  
-const navLinks = document.getElementById('nav-links');  
-const overlay = document.getElementById('overlay');  
-let isOpen = false;
+const menuBtn=document.getElementById("menu-btn");
+const menu=document.getElementById("menu");
+const overlay=document.getElementById("overlay");
 
-menuWrapper.addEventListener('click', () => {
-  isOpen = !isOpen;
-  navLinks.classList.toggle('show');
-  overlay.classList.toggle('show');
+menuBtn.addEventListener("click",()=>{
+  menu.classList.toggle("show");
+  overlay.style.display = menu.classList.contains("show") ? "block" : "none";
 });
 
-// Close menu when clicking outside overlay
-overlay.addEventListener('click', () => {
-  navLinks.classList.remove('show');
-  overlay.classList.remove('show');
-  isOpen = false;
-});
-
-// Close menu when clicking a link (mobile)
-document.querySelectorAll('#nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('show');
-    overlay.classList.remove('show');
-    isOpen = false;
-  });
-});
-
-// auto-active menu
-const currentPage = location.pathname.split('/').pop() || 'index.html';
-document.querySelectorAll('.nav-links a').forEach(link=>{
-  const linkPath = link.getAttribute('href').split('/').pop();
-  if(linkPath===currentPage){link.classList.add('active');}
+overlay.addEventListener("click",()=>{
+  menu.classList.remove("show");
+  overlay.style.display="none";
 });
 </script>
-
 </body>
 </html>
