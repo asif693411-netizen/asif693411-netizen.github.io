@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About Point Media | Syed Asif Ali</title>
-
 <meta name="description" content="Point Media is a digital marketing agency founded by Syed Asif Ali, providing branding, social media management and digital growth solutions.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,204 +11,78 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-body{
-  margin:0;
-  padding:0;
-  font-family:'Poppins',sans-serif;
-  background:#0f0f0f;
-  color:#fff;
-  line-height:1.6;
-  overflow-x:hidden;
-}
-
-/* NAVIGATION */
-.navbar{
-  background:#111;
-  padding:8px 14px;
-  border-radius:10px;
-  margin:15px;
-  position:relative;
-  z-index:1000;
-}
-.nav-container{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-.menu-wrapper{
-  display:flex;
-  align-items:center;
-  gap:6px;
-  cursor:pointer;
-  font-weight:600;
-}
+body{margin:0;padding:0;font-family:'Poppins',sans-serif;background:#0f0f0f;color:#fff;line-height:1.6;overflow-x:hidden;}
+.navbar{background:#111;padding:8px 14px;border-radius:10px;margin:15px;position:relative;z-index:1000;}
+.nav-container{display:flex;justify-content:space-between;align-items:center;}
+.menu-wrapper{display:flex;align-items:center;gap:6px;cursor:pointer;font-weight:600;}
 .menu-icon{font-size:1.4rem;}
 #menu-text{font-size:0.85rem;}
-
-.nav-links{
-  position:fixed;
-  top:-100%;
-  left:0;
-  width:100%;
-  background:#111;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  transition:top .5s ease;
-  padding-top:60px;
-  z-index:900;
-}
-.nav-links a{
-  color:#fff;
-  text-decoration:none;
-  padding:14px;
-  width:100%;
-  text-align:center;
-  border-bottom:1px solid #222;
-  font-size:1.05rem;
-}
-.nav-links a:hover,
-.nav-links a.active{color:#00ffff;}
+.nav-links{position:fixed;top:-100%;left:0;width:100%;background:#111;display:flex;flex-direction:column;align-items:center;transition:top .5s ease;padding-top:60px;z-index:900;}
+.nav-links a{color:#fff;text-decoration:none;padding:14px;width:100%;text-align:center;border-bottom:1px solid #222;font-size:1.05rem;}
+.nav-links a:hover,.nav-links a.active{color:#00ffff;}
 .nav-links.show{top:0;}
-
-.overlay{
-  position:fixed;
-  top:0;left:0;
-  width:100%;height:100%;
-  background:rgba(0,0,0,.6);
-  display:none;
-  z-index:800;
-}
+.overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);display:none;z-index:800;}
 .overlay.show{display:block;}
-
-.container{
-  width:90%;
-  max-width:900px;
-  margin:0 auto;
-  padding:20px;
-}
+.container{width:90%;max-width:900px;margin:0 auto;padding:20px;}
 header{text-align:center;margin-bottom:30px;}
 h1{color:#00ffff;font-size:2rem;}
 p{color:#ccc;margin-bottom:15px;}
-
-.brand-link{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  background:#111;
-  padding:10px 16px;
-  border:1px solid #00ffff55;
-  border-radius:8px;
-  color:#00ffff;
-  text-decoration:none;
-  font-weight:600;
-}
-
-footer{
-  margin-top:40px;
-  text-align:center;
-  color:#aaa;
-  border-top:1px solid #333;
-  padding:12px;
-}
+.brand-link{display:inline-flex;align-items:center;gap:8px;background:#111;padding:10px 16px;border:1px solid #00ffff55;border-radius:8px;color:#00ffff;text-decoration:none;font-weight:600;}
+footer{margin-top:40px;text-align:center;color:#aaa;border-top:1px solid #333;padding:12px;}
 </style>
 </head>
-
 <body>
 
-<!-- NAV -->
-<nav>
+<!-- NAVIGATION -->
+<nav class="navbar">
   <div class="nav-container">
-    <div class="logo">Pointika</div>
-    <div class="menu-btn" onclick="toggleMenu()">☰</div>
-    <div class="menu" id="menu">
+    <div class="menu-wrapper" id="menu-wrapper">
+      <span id="menu-text">Menu</span>
+      <span class="menu-icon">☰</span>
+    </div>
+    <div class="nav-links" id="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
+      <a href="point-media.html">Point Media</a>
+      <a href="pointika.html">Pointika</a>
       <a href="services.html">Services</a>
       <a href="press.html">Press</a>
-      <a href="founder.html">Founder</a>
-      <a href="story.html">Story</a>
+      <a href="blog.html">Blog</a>
+      <a href="techbullion.html">TechBullion</a>
+      <a href="socials.html">Social</a>
       <a href="contact.html">Contact</a>
     </div>
   </div>
 </nav>
-
 <div class="overlay" id="overlay"></div>
-  <header>
-    <h1>About Point Media</h1>
-    <p>By <strong>Syed Asif Ali</strong> • Founder</p>
-  </header>
 
-  <section>
-    <p>
-      Point Media is a digital marketing agency founded by Syed Asif Ali.
-      We help brands grow their online presence through strategic branding,
-      content creation, and social media management.
-    </p>
+<div class="container">
+<header>
+<h1>About Point Media</h1>
+<p>By <strong>Syed Asif Ali</strong> • Founder</p>
+</header>
 
-    <p>
-      Our focus is transparency, creativity, and measurable digital growth
-      for businesses across UAE and Pakistan.
-    </p>
+<section>
+<p>Point Media is a digital marketing agency founded by Syed Asif Ali. We help brands grow their online presence through strategic branding, content creation, and social media management.</p>
+<p>Our focus is transparency, creativity, and measurable digital growth for businesses across UAE and Pakistan.</p>
+<p><a class="brand-link" href="https://point-media.link" target="_blank">🌐 Visit Official Point Media Website</a></p>
+</section>
 
-    <p>
-      <a class="brand-link" href="https://point-media.link" target="_blank">
-        🌐 Visit Official Point Media Website
-      </a>
-    </p>
-  </section>
-
-  <footer>
-    © 2025 Point Media | Designed by Syed Asif Ali
-  </footer>
+<footer>© 2025 Point Media | Designed by Syed Asif Ali</footer>
 </div>
 
-<!-- JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Point Media",
-  "url": "https://point-media.link",
-  "founder": {
-    "@type": "Person",
-    "name": "Syed Asif Ali"
-  },
-  "sameAs": [
-    "https://point-media.link",
-    "https://www.instagram.com/boxer_01101",
-    "https://www.tiktok.com/@syed_asif_ali34",
-    "https://www.youtube.com/@AsifAli-Digital",
-    "https://medium.com/@asif693411",
-    "https://www.linkedin.com/in/syed-asif-ali-36b5623a0",
-    "https://x.com/Boxer_01101",
-    "https://www.facebook.com/"
-  ]
-}
-</script>
-
-<!-- NAV JS (AUTO CONNECT + ACTIVE PAGE) -->
 <script>
-const menuWrapper = document.getElementById('menu-wrapper');
-const navLinks = document.getElementById('nav-links');
-const overlay = document.getElementById('overlay');
+const menuWrapper=document.getElementById('menu-wrapper');
+const navLinks=document.getElementById('nav-links');
+const overlay=document.getElementById('overlay');
+menuWrapper.addEventListener('click',()=>{navLinks.classList.toggle('show');overlay.classList.toggle('show');});
+overlay.addEventListener('click',()=>{navLinks.classList.remove('show');overlay.classList.remove('show');});
 
-menuWrapper.addEventListener('click', () => {
-  navLinks.classList.toggle('show');
-  overlay.classList.toggle('show');
-});
-
-overlay.addEventListener('click', () => {
-  navLinks.classList.remove('show');
-  overlay.classList.remove('show');
-});
-
-// auto active menu
+// auto-active menu
 const currentPage = location.pathname.split('/').pop() || 'index.html';
-document.querySelectorAll('.nav-links a').forEach(link => {
-  if (link.getAttribute('href') === currentPage) {
-    link.classList.add('active');
-  }
+document.querySelectorAll('.nav-links a').forEach(link=>{
+  const linkPath = link.getAttribute('href').split('/').pop();
+  if(linkPath===currentPage){link.classList.add('active');}
 });
 </script>
 
