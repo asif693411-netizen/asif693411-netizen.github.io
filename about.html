@@ -3,13 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>About - Syed Asif Ali | Pointika</title>
 <meta name="description" content="Syed Asif Ali — Entrepreneur & Digital Creator, Founder of Point Media & Pointika. Learn about his journey from South Waziristan to UAE & Pakistan digital media success.">
 
-<!-- Fonts & Icons -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 body{
@@ -19,15 +18,15 @@ body{
   color:#e5e7eb;
   line-height:1.7;
 }
-/* NAVIGATION */
+
+/* NAV */
 nav{
   position:fixed;
-  top:0;
-  left:0;
+  top:0; left:0;
   width:100%;
   background:#020617;
   z-index:1000;
-  box-shadow:0 4px 20px rgba(0,0,0,0.5);
+  box-shadow:0 4px 20px rgba(0,0,0,.5);
 }
 .nav-container{
   max-width:1200px;
@@ -42,9 +41,7 @@ nav{
   align-items:center;
   gap:10px;
 }
-.logo-wrap img{
-  height:38px;
-}
+.logo-wrap img{height:38px;}
 .logo-text{
   font-size:18px;
   font-weight:bold;
@@ -52,21 +49,23 @@ nav{
 }
 .menu{
   display:flex;
-  gap:25px;
+  gap:22px;
 }
 .menu a{
   color:#e5e7eb;
   text-decoration:none;
   font-size:15px;
 }
-.menu a:hover,.menu a.active{color:#60a5fa;}
+.menu a.active,
+.menu a:hover{color:#00ffff;}
 .menu-btn{
   display:none;
-  font-size:24px;
+  font-size:26px;
   cursor:pointer;
+  color:#60a5fa;
 }
 
-/* MOBILE MENU */
+/* MOBILE */
 @media(max-width:768px){
   .menu{
     position:fixed;
@@ -77,7 +76,7 @@ nav{
     width:240px;
     padding:20px;
     height:100vh;
-    transition:0.3s;
+    transition:.3s;
   }
   .menu.show{right:0;}
   .menu-btn{display:block;}
@@ -108,21 +107,18 @@ header p{
   font-size:17px;
 }
 
-/* SECTIONS */
+/* CONTENT */
 section{
   max-width:1100px;
   margin:auto;
   padding:60px 20px;
 }
-h2{
-  color:#60a5fa;
-  margin-bottom:20px;
-}
+h2{color:#60a5fa;}
 .card{
   background:#020617;
   padding:30px;
   border-radius:14px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.4);
+  box-shadow:0 10px 30px rgba(0,0,0,.4);
   margin-bottom:40px;
 }
 .grid{
@@ -136,6 +132,7 @@ h2{
   border-radius:12px;
   border:1px solid #1e293b;
 }
+
 footer{
   background:#020617;
   text-align:center;
@@ -143,11 +140,12 @@ footer{
   color:#94a3b8;
   font-size:14px;
 }
-a{color:#60a5fa;text-decoration:none;}
+
+a{color:#60a5fa;}
 a:hover{text-decoration:underline;}
 </style>
 
-<!-- JSON-LD (unchanged as requested) -->
+<!-- JSON-LD (UNCHANGED AS REQUESTED) -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -172,6 +170,7 @@ a:hover{text-decoration:underline;}
 }
 </script>
 </head>
+
 <body>
 
 <!-- NAV -->
@@ -181,15 +180,18 @@ a:hover{text-decoration:underline;}
       <img src="profile.jpg" alt="Syed Asif Ali">
       <div class="logo-text">Syed Asif Ali</div>
     </div>
+
     <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
     <div class="menu" id="menu">
       <a href="index.html">Home</a>
       <a href="about.html" class="active">About</a>
-      <a href="Blogs/pointmedia.html">Point Media</a>
-      <a href="Blogs/pointika.html">Pointika</a>
-      <a href="contact.html">Contact</a>
-      <a href="socials.html">Social</a>
+      <a href="founder.html">Founder</a>
+      <a href="pointmedia.html">Point Media</a>
+      <a href="pointika.html">Pointika</a>
       <a href="press.html">Press</a>
+      <a href="socials.html">Social</a>
+      <a href="contact.html">Contact</a>
     </div>
   </div>
 </nav>
@@ -201,34 +203,43 @@ a:hover{text-decoration:underline;}
   <p>Entrepreneur • Digital Creator • Founder of Point Media & Pointika</p>
 </header>
 
-<!-- ABOUT SECTION -->
+<!-- ABOUT -->
 <section>
   <div class="card">
     <h2>About Me</h2>
-    <p>I am an entrepreneur and digital creator from a humble background, building Point Media and Pointika despite challenges, inspiring young creators globally.</p>
+    <p>
+      I am an entrepreneur and digital creator from a humble background,
+      building Point Media and Pointika with focus on credibility, storytelling
+      and long-term digital reputation.
+    </p>
   </div>
+
   <div class="grid">
     <div>
       <h3>Who is Syed Asif Ali?</h3>
-      <p>Entrepreneur & Founder of Point Media & Pointika, focused on digital content & media visibility.</p>
+      <p>Founder of Point Media & Pointika, digital branding and media strategist.</p>
     </div>
     <div>
       <h3>What is Pointika?</h3>
-      <p>A digital media & communications platform offering content, branding, and online presence solutions.</p>
+      <p>Creative storytelling & influencer content platform under Point Media.</p>
     </div>
     <div>
       <h3>Where do you operate?</h3>
-      <p>Based in UAE, working across Pakistan & UAE markets for digital media and branding services.</p>
+      <p>UAE & Pakistan — serving MENA and global markets.</p>
     </div>
     <div>
       <h3>Media References</h3>
-      <p><a href="https://www.crunchbase.com/person/syed-asif-ali" target="_blank">Crunchbase</a>, <a href="https://www.techbullion.com/syed-asif-ali-founder-of-fastest-growing-digital-media-company-point-media/" target="_blank">TechBullion</a></p>
+      <p>
+        <a href="https://www.crunchbase.com/person/syed-asif-ali" target="_blank">Crunchbase</a>,
+        <a href="https://www.techbullion.com/syed-asif-ali-founder-of-fastest-growing-digital-media-company-point-media/" target="_blank">TechBullion</a>
+      </p>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer>© 2025 Syed Asif Ali — All Rights Reserved</footer>
+<footer>
+© 2025 Syed Asif Ali — All Rights Reserved
+</footer>
 
 <script>
 function toggleMenu(){
