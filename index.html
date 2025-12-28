@@ -45,7 +45,6 @@ footer{margin-top:40px;padding:15px 0;font-size:.9rem;color:#555;border-top:1px 
 @media(max-width:480px){.container{width:95%;}section h2{font-size:1.2rem;}}
 </style>
 
-<!-- Structured Data -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -64,24 +63,16 @@ footer{margin-top:40px;padding:15px 0;font-size:.9rem;color:#555;border-top:1px 
   ],
   "jobTitle":"Entrepreneur & Digital Creator",
   "worksFor":[
-    {
-      "@type":"Organization",
-      "name":"Point Media",
-      "url":"https://pointmedia.link"
-    },
-    {
-      "@type":"Organization",
-      "name":"Pointika",
-      "url":"Blogs/pointika.html",
-      "parentOrganization":"Point Media"
-    }
+    {"@type":"Organization","name":"Point Media","url":"https://point-media.link"},
+    {"@type":"Organization","name":"Pointika","url":"Blogs/pointika.html","parentOrganization":"Point Media"}
   ]
 }
 </script>
-
 </head>
 <body>
+
 <div class="container">
+  <!-- NAVIGATION -->
   <nav class="navbar">
     <div class="nav-container">
       <div class="menu-wrapper" id="menu-wrapper">
@@ -89,7 +80,7 @@ footer{margin-top:40px;padding:15px 0;font-size:.9rem;color:#555;border-top:1px 
         <span class="menu-icon" id="menu-icon">☰</span>
       </div>
       <div class="nav-links" id="nav-links">
-        <a href="index.html" class="active">Home</a>
+        <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
         <a href="socials.html">Social</a>
@@ -101,6 +92,7 @@ footer{margin-top:40px;padding:15px 0;font-size:.9rem;color:#555;border-top:1px 
   </nav>
   <div class="overlay" id="overlay"></div>
 
+  <!-- Header -->
   <header>
     <img src="profile.jpg" class="profile-img" alt="Syed Asif Ali" loading="lazy" />
     <h1>Syed Asif Ali</h1>
@@ -146,6 +138,15 @@ menuWrapper.addEventListener("click",()=>{
   overlay.style.display = isOpen ? "block" : "none";
   menuIcon.textContent = isOpen ? "✖" : "☰";
   menuText.textContent = isOpen ? "Close" : "Menu";
+
+  // Active link highlight
+  const links = navLinks.querySelectorAll("a");
+  links.forEach(link => {
+    link.classList.remove("active");
+    if(link.getAttribute("href") === window.location.pathname.split("/").pop()){
+      link.classList.add("active");
+    }
+  });
 });
 
 overlay.addEventListener("click",()=>{
