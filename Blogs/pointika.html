@@ -6,60 +6,124 @@
 
 <title>Pointika Story — Digital Media & Storytelling</title>
 <meta name="description" content="The story of Pointika, a digital media and storytelling sub-brand of Point Media, founded by Syed Asif Ali.">
-
 <link rel="canonical" href="https://pointika.link/story.html">
 
-<style>
-body{margin:0;font-family:Arial;background:#0b0d12;color:#fff;line-height:1.7}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-/* NAVIGATION */
+<style>
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#0f172a;
+  color:#e5e7eb;
+  line-height:1.7;
+}
+
+/* NAV */
 nav{
-  position:fixed;top:0;width:100%;
-  background:#020617;z-index:1000;
-  box-shadow:0 4px 20px rgba(0,0,0,.5)
+  position:fixed;
+  top:0;
+  width:100%;
+  background:#020617;
+  z-index:1000;
+  box-shadow:0 4px 20px rgba(0,0,0,.5);
 }
 .nav-container{
-  max-width:1200px;margin:auto;
-  padding:15px 20px;
-  display:flex;justify-content:space-between;align-items:center
+  max-width:1200px;
+  margin:auto;
+  padding:12px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
-.logo{font-size:20px;font-weight:bold;color:#60a5fa}
-.menu{display:flex;gap:25px}
-.menu a{color:#e5e7eb;text-decoration:none;font-weight:bold}
-.menu a:hover{color:#60a5fa}
-.menu-btn{display:none;font-size:22px;cursor:pointer}
-
-/* MOBILE */
-@media(max-width:768px){
+.logo{
+  font-size:18px;
+  font-weight:600;
+  color:#60a5fa;
+}
 .menu{
-  position:fixed;top:60px;right:-100%;
-  background:#020617;flex-direction:column;
-  width:240px;padding:20px;height:100vh;
-  transition:.3s
+  display:flex;
+  gap:25px;
 }
-.menu.show{right:0}
-.menu-btn{display:block}
+.menu a{
+  color:#e5e7eb;
+  text-decoration:none;
+  font-size:15px;
+}
+.menu a.active,
+.menu a:hover{color:#00ffff;}
+.menu-btn{
+  display:none;
+  font-size:24px;
+  cursor:pointer;
 }
 
+/* MOBILE MENU */
+@media(max-width:768px){
+  .menu{
+    position:fixed;
+    top:64px;
+    right:-100%;
+    background:#020617;
+    flex-direction:column;
+    width:240px;
+    padding:20px;
+    height:100vh;
+    transition:.3s;
+  }
+  .menu.show{right:0;}
+  .menu-btn{display:block;}
+}
+
+/* HEADER */
 header{
-  background:linear-gradient(135deg,#4f46e5,#22d3ee);
-  padding:120px 20px 60px;
-  text-align:center
+  background:linear-gradient(135deg,#1e3a8a,#0f172a);
+  padding:140px 20px 70px;
+  text-align:center;
 }
-header h1{margin:0;font-size:36px}
-header p{max-width:800px;margin:15px auto 0;color:#e0f2fe}
+header h1{
+  margin:0;
+  font-size:36px;
+  color:#fff;
+}
+header p{
+  max-width:800px;
+  margin:12px auto 0;
+  color:#cbd5f5;
+}
 
-section{max-width:1100px;margin:auto;padding:60px 20px}
+/* SECTION */
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:60px 20px;
+}
 .card{
-  background:#121826;
-  padding:30px;border-radius:16px;
+  background:#020617;
+  padding:35px;
+  border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,.4);
   margin-bottom:40px;
-  box-shadow:0 10px 30px rgba(0,0,0,.4)
+}
+.card h2{
+  color:#60a5fa;
+  margin-top:0;
+}
+.card ul{
+  padding-left:18px;
+}
+.card li{
+  margin-bottom:8px;
 }
 
+/* FOOTER */
 footer{
-  text-align:center;padding:30px;
-  background:#020617;color:#aaa
+  background:#020617;
+  text-align:center;
+  padding:30px;
+  color:#94a3b8;
+  font-size:14px;
 }
 </style>
 </head>
@@ -70,19 +134,22 @@ footer{
 <nav>
   <div class="nav-container">
     <div class="logo">Pointika</div>
+
     <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
     <div class="menu" id="menu">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
       <a href="press.html">Press</a>
       <a href="founder.html">Founder</a>
-      <a href="story.html">Story</a>
+      <a href="story.html" class="active">Story</a>
       <a href="contact.html">Contact</a>
     </div>
   </div>
 </nav>
 
+<!-- HEADER -->
 <header>
   <h1>Pointika Story</h1>
   <p>Digital Media & Storytelling Sub-Brand of Point Media</p>
