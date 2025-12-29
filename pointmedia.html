@@ -3,10 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>About Point Media | Syed Asif Ali</title>
 <meta name="description" content="Point Media is a digital marketing agency founded by Syed Asif Ali, providing branding, social media management and digital growth solutions.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- ✅ GOOGLE BRAND LOGO SCHEMA (DO NOT EDIT) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Point Media",
+  "url": "https://point-media.link",
+  "logo": "https://point-media.link/logo.png",
+  "image": "https://point-media.link/logo.png",
+  "description": "Point Media is a digital marketing and branding agency founded by Syed Asif Ali.",
+  "founder": {
+    "@type": "Person",
+    "name": "Syed Asif Ali"
+  },
+  "sameAs": [
+    "https://www.instagram.com/boxer_01101",
+    "https://www.linkedin.com/in/pointmedia",
+    "https://x.com/Boxer_01101"
+  ]
+}
+</script>
+<!-- ✅ END SCHEMA -->
+
 <style>
 body{margin:0;font-family:'Poppins',sans-serif;background:#0f172a;color:#e5e7eb;line-height:1.7;overflow-x:hidden;}
 .container{max-width:1000px;margin:0 auto;padding:20px;text-align:center;}
@@ -40,17 +66,16 @@ section{max-width:900px;margin:auto;padding:60px 20px;}
 .card{background:#020617;padding:30px;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.4);margin-bottom:40px;}
 .brand-link{display:inline-flex;align-items:center;gap:8px;background:#111;padding:10px 16px;border:1px solid #00ffff55;border-radius:8px;color:#00ffff;text-decoration:none;font-weight:600;}
 
-/* Overlay */
 #overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);display:none;z-index:900;}
 
 footer{background:#020617;text-align:center;padding:30px;color:#94a3b8;font-size:14px;margin-top:50px;}
 </style>
 </head>
+
 <body>
 
 <div class="container">
 
-<!-- Navbar -->
 <nav>
   <div class="nav-container">
     <div class="logo-wrap">
@@ -75,14 +100,12 @@ footer{background:#020617;text-align:center;padding:30px;color:#94a3b8;font-size
 
 <div id="overlay"></div>
 
-<!-- Header -->
 <header>
   <img src="/logo.png" alt="Point Media Logo">
   <h1>About Point Media</h1>
   <p>By <strong>Syed Asif Ali</strong> • Founder</p>
 </header>
 
-<!-- Content Section -->
 <section>
   <div class="card">
     <p>Point Media is a digital marketing agency founded by Syed Asif Ali. We help brands grow their online presence through strategic branding, content creation, and social media management.</p>
@@ -111,15 +134,6 @@ overlay.addEventListener('click',()=>{
   menu.classList.remove('show');
   overlay.style.display='none';
   isOpen=false;
-});
-
-// Close menu when clicking outside
-document.addEventListener('click', function(e){
-  if(!menu.contains(e.target) && !menuBtn.contains(e.target)){
-    menu.classList.remove('show');
-    overlay.style.display='none';
-    isOpen=false;
-  }
 });
 </script>
 
