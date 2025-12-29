@@ -13,86 +13,114 @@
 <style>
 body{margin:0;font-family:'Poppins',sans-serif;background:#0f172a;color:#e5e7eb;line-height:1.7;overflow-x:hidden;}
 .container{max-width:1000px;margin:0 auto;padding:20px;text-align:center;}
-
-/* NAVBAR */
-nav{
-  position:fixed;top:0;left:0;width:100%;
-  background:#020617;z-index:1000;
-  box-shadow:0 4px 20px rgba(0,0,0,.5);
-}
-.nav-container{
-  max-width:1200px;margin:auto;
-  padding:12px 20px;
-  display:flex;justify-content:space-between;align-items:center;
-}
+nav{position:fixed;top:0;left:0;width:100%;background:#020617;z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,.5);}
+.nav-container{max-width:1200px;margin:auto;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;}
 .logo-wrap{display:flex;align-items:center;gap:10px;}
 .logo-wrap img{height:38px;border-radius:6px;}
 .logo-text{font-size:18px;font-weight:bold;color:#60a5fa;}
-
 .menu{display:flex;gap:25px;}
 .menu a{color:#e5e7eb;text-decoration:none;font-size:15px;}
 .menu a:hover,.menu a.active{color:#00ffff;}
 .menu-btn{display:none;font-size:24px;cursor:pointer;}
-
 @media(max-width:768px){
-  .menu{
-    position:fixed;top:64px;right:-100%;
-    background:#020617;flex-direction:column;
-    width:240px;padding:20px;height:100vh;transition:.3s;
-  }
-  .menu.show{right:0;}
-  .menu-btn{display:block;}
+.menu{position:fixed;top:64px;right:-100%;background:#020617;flex-direction:column;width:240px;padding:20px;height:100vh;transition:.3s}
+.menu.show{right:0}
+.menu-btn{display:block}
 }
-
-/* HEADER */
-header{
-  background:linear-gradient(135deg,#1e3a8a,#0f172a);
-  padding:140px 20px 80px;
-  text-align:center;
-}
-header img{
-  height:80px;
-  margin-bottom:15px;
-  border-radius:8px;
-}
+header{background:linear-gradient(135deg,#1e3a8a,#0f172a);padding:140px 20px 80px;text-align:center;}
+header img{height:80px;margin-bottom:15px;border-radius:8px;}
 header h1{margin:0;font-size:38px;color:#fff;}
-header p{
-  max-width:800px;margin:15px auto 0;
-  color:#cbd5f5;font-size:17px;
-}
-
-/* CONTENT */
+header p{max-width:800px;margin:15px auto 0;color:#cbd5f5;font-size:17px;}
 section{max-width:900px;margin:auto;padding:60px 20px;}
-.card{
-  background:#020617;
-  padding:30px;border-radius:14px;
-  box-shadow:0 10px 30px rgba(0,0,0,.4);
-  margin-bottom:40px;
-}
-.brand-link{
-  display:inline-flex;align-items:center;gap:8px;
-  background:#111;padding:10px 16px;
-  border:1px solid #00ffff55;border-radius:8px;
-  color:#00ffff;text-decoration:none;font-weight:600;
-}
-
-/* OVERLAY */
-#overlay{
-  position:fixed;top:0;left:0;width:100%;height:100%;
-  background:rgba(0,0,0,.6);display:none;z-index:900;
-}
-
-footer{
-  background:#020617;text-align:center;
-  padding:30px;color:#94a3b8;font-size:14px;margin-top:50px;
-}
+.card{background:#020617;padding:30px;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.4);margin-bottom:40px;}
+.brand-link{display:inline-flex;align-items:center;gap:8px;background:#111;padding:10px 16px;border:1px solid #00ffff55;border-radius:8px;color:#00ffff;text-decoration:none;font-weight:600;}
+#overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);display:none;z-index:900;}
+footer{background:#020617;text-align:center;padding:30px;color:#94a3b8;font-size:14px;margin-top:50px;}
 </style>
+
+<!-- ================= STRONG JSON-LD SCHEMA ================= -->
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@graph":[
+
+  {
+   "@type":"Organization",
+   "@id":"https://pointika.link/#organization",
+   "name":"Pointika",
+   "url":"https://pointika.link",
+   "logo":"https://pointika.link/logo1.png",
+   "brand":{"@id":"https://pointika.link/#brand"},
+   "parentOrganization":{"@id":"https://pointmedia.link/#organization"},
+   "founder":{"@id":"https://syedasifali.link/#person"},
+   "sameAs":[
+     "https://www.instagram.com/boxer_01101",
+     "https://www.facebook.com/pointmedia"
+   ]
+  },
+
+  {
+   "@type":"Brand",
+   "@id":"https://pointika.link/#brand",
+   "name":"Pointika",
+   "logo":"https://pointika.link/logo1.png",
+   "url":"https://pointika.link",
+   "parentOrganization":{"@id":"https://pointmedia.link/#organization"}
+  },
+
+  {
+   "@type":"Organization",
+   "@id":"https://pointmedia.link/#organization",
+   "name":"Point Media",
+   "url":"https://pointmedia.link",
+   "logo":"https://pointmedia.link/logo.png",
+   "founder":{"@id":"https://syedasifali.link/#person"}
+  },
+
+  {
+   "@type":"Person",
+   "@id":"https://syedasifali.link/#person",
+   "name":"Syed Asif Ali",
+   "jobTitle":"Founder & Digital Creator",
+   "url":"https://syedasifali.link",
+   "image":"https://pointmedia.link/profile.jpg",
+   "knowsAbout":[
+     "Digital Storytelling",
+     "Creative Media",
+     "Brand Visibility",
+     "Influencer Marketing"
+   ]
+  },
+
+  {
+   "@type":"BreadcrumbList",
+   "@id":"https://pointika.link/#breadcrumbs",
+   "itemListElement":[
+     {
+      "@type":"ListItem",
+      "position":1,
+      "name":"Home",
+      "item":"https://pointmedia.link"
+     },
+     {
+      "@type":"ListItem",
+      "position":2,
+      "name":"Pointika",
+      "item":"https://pointika.link/pointika.html"
+     }
+   ]
+  }
+
+ ]
+}
+</script>
+<!-- ======================================================== -->
+
 </head>
 
 <body>
 <div class="container">
 
-<!-- NAVBAR -->
 <nav>
   <div class="nav-container">
     <div class="logo-wrap">
@@ -117,14 +145,12 @@ footer{
 
 <div id="overlay"></div>
 
-<!-- HEADER -->
 <header>
   <img src="/logo1.png" alt="Pointika Logo">
   <h1>About Pointika</h1>
   <p>Storytelling & Creative Media Brand by <strong>Syed Asif Ali</strong></p>
 </header>
 
-<!-- CONTENT -->
 <section>
   <div class="card">
     <p>
@@ -159,23 +185,23 @@ const overlay=document.getElementById('overlay');
 let isOpen=false;
 
 menuBtn.addEventListener('click',()=>{
-  isOpen=!isOpen;
-  menu.classList.toggle('show');
-  overlay.style.display=isOpen?'block':'none';
+ isOpen=!isOpen;
+ menu.classList.toggle('show');
+ overlay.style.display=isOpen?'block':'none';
 });
 
 overlay.addEventListener('click',()=>{
-  menu.classList.remove('show');
-  overlay.style.display='none';
-  isOpen=false;
+ menu.classList.remove('show');
+ overlay.style.display='none';
+ isOpen=false;
 });
 
 document.addEventListener('click',function(e){
-  if(!menu.contains(e.target) && !menuBtn.contains(e.target)){
-    menu.classList.remove('show');
-    overlay.style.display='none';
-    isOpen=false;
-  }
+ if(!menu.contains(e.target) && !menuBtn.contains(e.target)){
+  menu.classList.remove('show');
+  overlay.style.display='none';
+  isOpen=false;
+ }
 });
 </script>
 
