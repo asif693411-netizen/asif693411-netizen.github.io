@@ -3,75 +3,54 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Pointika Story — Digital Media & Storytelling</title>
 <meta name="description" content="The story of Pointika, a digital media and storytelling sub-brand of Point Media, founded by Syed Asif Ali.">
-
-<!-- Favicon -->
-<link rel="icon" type="image/png" href="logo1.png">
-
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
 <style>
-body{margin:0;font-family:'Poppins',sans-serif;background:#0f172a;color:#e5e7eb;line-height:1.7;}
-.container{max-width:1000px;margin:0 auto;padding:20px;text-align:center;}
-
-/* Navbar */
-nav{position:fixed;top:0;width:100%;background:#020617;z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,.5);}
+body{margin:0;font-family:'Poppins',sans-serif;background:#0f172a;color:#e5e7eb;line-height:1.7;overflow-x:hidden;}
+a{color:#60a5fa;text-decoration:none;}
+a:hover{text-decoration:underline;}
+.container{max-width:1100px;margin:auto;padding:20px;}
+nav{position:fixed;top:0;left:0;width:100%;background:#020617;z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,.5);}
 .nav-container{max-width:1200px;margin:auto;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;}
-.logo{display:flex;align-items:center;gap:10px;}
-.logo img{height:38px;}
-.logo-text{font-size:18px;font-weight:600;color:#60a5fa;}
-.menu{display:flex;gap:25px;}
-.menu a{color:#e5e7eb;text-decoration:none;font-size:15px;}
+.logo-wrap{display:flex;align-items:center;gap:10px;}
+.logo-wrap img{height:38px;}
+.logo-text{font-size:18px;font-weight:bold;color:#60a5fa;}
+.menu{display:flex;gap:22px;}
+.menu a{color:#e5e7eb;font-size:15px;}
 .menu a.active,.menu a:hover{color:#00ffff;}
-.menu-btn{display:none;font-size:24px;cursor:pointer;}
-
-/* Mobile menu */
-@media(max-width:768px){
-  .menu{position:fixed;top:64px;right:-100%;background:#020617;flex-direction:column;width:240px;padding:20px;height:100vh;transition:.3s;}
-  .menu.show{right:0;}
-  .menu-btn{display:block;}
-}
-
-/* Header */
-header{background:linear-gradient(135deg,#1e3a8a,#0f172a);padding:140px 20px 70px;text-align:center;}
-header h1{margin:0;font-size:36px;color:#fff;}
+.menu-btn{display:none;font-size:26px;cursor:pointer;color:#60a5fa;}
+@media(max-width:768px){.menu{position:fixed;top:64px;right:-100%;background:#020617;flex-direction:column;width:240px;padding:20px;height:100vh;transition:.3s;}.menu.show{right:0;}.menu-btn{display:block;}}
+header{background:linear-gradient(135deg,#1e3a8a,#0f172a);padding:140px 20px 80px;text-align:center;}
+header h1{margin:0;font-size:2.5rem;color:#fff;}
 header p{max-width:800px;margin:12px auto 0;color:#cbd5f5;}
-
-/* Sections */
-section{max-width:1100px;margin:auto;padding:60px 20px;}
-.card{background:#020617;padding:35px;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.4);margin-bottom:40px;}
+section{padding:60px 0;}
+.card{background:#020617;padding:30px;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.4);margin-bottom:40px;}
 .card h2{color:#60a5fa;margin-top:0;}
 .card a{color:#00ffff;text-decoration:none;font-weight:500;}
 .card a:hover{text-decoration:underline;}
 .card ul{padding-left:18px;}
 .card li{margin-bottom:8px;}
-
-/* Footer */
 footer{background:#020617;text-align:center;padding:30px;color:#94a3b8;font-size:14px;}
 </style>
 </head>
-
 <body>
 
 <!-- NAVIGATION -->
 <nav>
   <div class="nav-container">
-    <div class="logo">
+    <div class="logo-wrap">
       <img src="logo1.png" alt="Pointika Logo">
       <div class="logo-text">Pointika</div>
     </div>
-    <div class="menu-btn" id="menu-btn">☰</div>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
     <div class="menu" id="menu">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="services.html">Services</a>
+      <a href="pointmedia.html">Point Media</a>
+      <a href="pointika.html" class="active">Pointika</a>
       <a href="press.html">Press</a>
-      <a href="founder.html">Founder</a>
-      <a href="pointika.html" class="active">Story</a>
+      <a href="socials.html">Social</a>
       <a href="contact.html">Contact</a>
     </div>
   </div>
@@ -83,22 +62,16 @@ footer{background:#020617;text-align:center;padding:30px;color:#94a3b8;font-size
   <p>Digital Media & Storytelling Sub-Brand of Point Media</p>
 </header>
 
-<section>
+<div class="container">
+
 <div class="card">
 <h2>How Pointika Started</h2>
-<p>
-Pointika was created as the creative storytelling arm of <strong>Point Media</strong>.
-Its mission is to transform ideas into impactful digital stories that connect
-brands, influencers, and audiences across platforms.
-</p>
+<p>Pointika was created as the creative storytelling arm of <strong>Point Media</strong>. Its mission is to transform ideas into impactful digital stories that connect brands, influencers, and audiences.</p>
 </div>
 
 <div class="card">
 <h2>The Vision</h2>
-<p>
-Founded by <strong>Syed Asif Ali</strong>, Pointika focuses on ethical storytelling,
-content authenticity, and sustainable digital growth rather than fake hype.
-</p>
+<p>Founded by <strong>Syed Asif Ali</strong>, Pointika focuses on ethical storytelling, content authenticity, and sustainable digital growth rather than fake hype.</p>
 </div>
 
 <div class="card">
@@ -114,42 +87,29 @@ content authenticity, and sustainable digital growth rather than fake hype.
 
 <div class="card">
 <h2>Connection With Point Media</h2>
-<p>
-Pointika operates as a sub-brand under <strong>Point Media</strong>,
-handling creative storytelling, influencer content, and social campaigns,
-while Point Media manages strategy, consulting, and digital reputation.
-</p>
+<p>Pointika operates as a sub-brand under <strong>Point Media</strong>, handling creative storytelling, influencer content, and social campaigns, while Point Media manages strategy, consulting, and digital reputation.</p>
 </div>
 
-<!-- Official Website Card -->
 <div class="card">
 <h2>Visit Our Official Website 🌐</h2>
-<p>
-Check out all our projects and updates on our official website:
-</p>
 <p><a href="https://pointika.link" target="_blank">https://pointika.link</a></p>
 </div>
 
-</section>
+</div>
 
 <footer>
 © 2025 Pointika · A Sub-Brand of Point Media
 </footer>
 
 <script>
-const menuBtn = document.getElementById('menu-btn');
-const menu = document.getElementById('menu');
-let isOpen = false;
-
-menuBtn.addEventListener('click', ()=>{
-  isOpen = !isOpen;
-  menu.classList.toggle('show');
-});
-
-document.addEventListener('click', function(e){
-  if(!menu.contains(e.target) && !menuBtn.contains(e.target)){
-    menu.classList.remove('show');
-    isOpen = false;
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("show");
+}
+document.addEventListener("click",function(e){
+  const menu=document.getElementById("menu");
+  const btn=document.querySelector(".menu-btn");
+  if(!menu.contains(e.target) && !btn.contains(e.target)){
+    menu.classList.remove("show");
   }
 });
 </script>
