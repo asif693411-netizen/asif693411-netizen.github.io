@@ -1,14 +1,18 @@
-<!DOCTYPE html>  <html lang="en">  
-<head>  
-<meta charset="UTF-8">  
-<meta name="viewport" content="width=device-width, initial-scale=1.0">  
-<title>About Point Media | Syed Asif Ali</title>  
-<meta name="description" content="Point Media is a digital marketing agency founded by Syed Asif Ali, providing branding, social media management and digital growth solutions.">  
-<link rel="preconnect" href="https://fonts.googleapis.com">  
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">  
-<style>  
-body{margin:0;font-family:'Poppins',sans-serif;background:#0f172a;color:#e5e7eb;line-height:1.7;overflow-x:hidden;}  
-.container{max-width:1000px;margin:0 auto;padding:20px;text-align:center;}  /* Navbar */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Point Media | Syed Asif Ali</title>
+<meta name="description" content="Point Media is a digital marketing agency founded by Syed Asif Ali, providing branding, social media management and digital growth solutions.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;background:#0f172a;color:#e5e7eb;line-height:1.7;overflow-x:hidden;}
+.container{max-width:1000px;margin:0 auto;padding:20px;text-align:center;}
 nav{position:fixed;top:0;left:0;width:100%;background:#020617;z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,0.5);}
 .nav-container{max-width:1200px;margin:auto;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;}
 .logo-wrap{display:flex;align-items:center;gap:10px;}
@@ -18,86 +22,162 @@ nav{position:fixed;top:0;left:0;width:100%;background:#020617;z-index:1000;box-s
 .menu a{color:#e5e7eb;text-decoration:none;font-size:15px;}
 .menu a:hover,.menu a.active{color:#00ffff;}
 .menu-btn{display:none;font-size:24px;cursor:pointer;}
-
-/* Mobile menu */
 @media(max-width:768px){
 .menu{position:fixed;top:64px;right:-100%;background:#020617;flex-direction:column;width:240px;padding:20px;height:100vh;transition:.3s;}
 .menu.show{right:0;}
 .menu-btn{display:block;}
 }
-
-/* Header */
 header{background:linear-gradient(135deg,#1e3a8a,#0f172a);padding:140px 20px 80px;text-align:center;}
 header img{height:80px;margin-bottom:15px;border-radius:8px;}
 header h1{margin:0;font-size:38px;color:#fff;}
 header p{max-width:800px;margin:15px auto 0;color:#cbd5f5;font-size:17px;}
-
-/* Sections */
 section{max-width:900px;margin:auto;padding:60px 20px;}
 .card{background:#020617;padding:30px;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.4);margin-bottom:40px;}
 .brand-link{display:inline-flex;align-items:center;gap:8px;background:#111;padding:10px 16px;border:1px solid #00ffff55;border-radius:8px;color:#00ffff;text-decoration:none;font-weight:600;}
-
-/* Overlay */
 #overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);display:none;z-index:900;}
-
 footer{background:#020617;text-align:center;padding:30px;color:#94a3b8;font-size:14px;margin-top:50px;}
 </style>
 
-</head>  
-<body>  <div class="container">  <!-- Navbar -->  <nav>  
-  <div class="nav-container">  
-    <div class="logo-wrap">  
-      <img src="/logo.png" alt="Point Media Logo">  
-      <div class="logo-text">Point Media</div>  
-    </div>  <div class="menu-btn" id="menu-btn">☰</div>  
+<!-- ================= STRONG JSON-LD SCHEMA ================= -->
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@graph":[
 
-<div class="menu" id="menu">  
-  <a href="/index.html">Home</a>  
-  <a href="/about.html">About</a>  
-  <a href="/pointmedia.html" class="active">Point Media</a>  
-  <a href="/pointika.html">Pointika</a>  
-  <a href="/press.html">Press</a>  
-  <a href="/techbullion.html">TechBullion</a>  
-  <a href="/socials.html">Social</a>  
-  <a href="/contact.html">Contact</a>  
+  {
+   "@type":"Organization",
+   "@id":"https://point-media.link/#organization",
+   "name":"Point Media",
+   "url":"https://point-media.link",
+   "logo":"https://point-media.link/logo.png",
+   "brand":{"@id":"https://point-media.link/#brand"},
+   "founder":{"@id":"https://syedasifali.link/#person"},
+   "sameAs":[
+     "https://www.facebook.com/pointmedia",
+     "https://www.linkedin.com/in/pointmedia"
+   ]
+  },
+
+  {
+   "@type":"Brand",
+   "@id":"https://point-media.link/#brand",
+   "name":"Point Media",
+   "logo":"https://point-media.link/logo.png",
+   "url":"https://point-media.link"
+  },
+
+  {
+   "@type":"Person",
+   "@id":"https://syedasifali.link/#person",
+   "name":"Syed Asif Ali",
+   "jobTitle":"Founder & Digital Creator",
+   "url":"https://syedasifali.link",
+   "image":"https://point-media.link/profile.jpg",
+   "knowsAbout":[
+     "Digital Branding",
+     "Social Media Management",
+     "Content Creation",
+     "Media Visibility"
+   ]
+  },
+
+  {
+   "@type":"BreadcrumbList",
+   "@id":"https://point-media.link/#breadcrumbs",
+   "itemListElement":[
+     {
+      "@type":"ListItem",
+      "position":1,
+      "name":"Home",
+      "item":"https://point-media.link"
+     },
+     {
+      "@type":"ListItem",
+      "position":2,
+      "name":"Point Media",
+      "item":"https://point-media.link/pointmedia.html"
+     }
+   ]
+  }
+
+ ]
+}
+</script>
+<!-- ======================================================== -->
+
+</head>
+
+<body>
+<div class="container">
+
+<nav>
+  <div class="nav-container">
+    <div class="logo-wrap">
+      <img src="/logo.png" alt="Point Media Logo">
+      <div class="logo-text">Point Media</div>
+    </div>
+
+    <div class="menu-btn" id="menu-btn">☰</div>
+
+    <div class="menu" id="menu">
+      <a href="/index.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/pointmedia.html" class="active">Point Media</a>
+      <a href="/pointika.html">Pointika</a>
+      <a href="/press.html">Press</a>
+      <a href="/techbullion.html">TechBullion</a>
+      <a href="/socials.html">Social</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div id="overlay"></div>
+
+<header>
+  <img src="/logo.png" alt="Point Media Logo">
+  <h1>About Point Media</h1>
+  <p>By <strong>Syed Asif Ali</strong> • Founder</p>
+</header>
+
+<section>
+  <div class="card">
+    <p>Point Media is a digital marketing agency founded by Syed Asif Ali. We help brands grow their online presence through strategic branding, content creation, and social media management.</p>
+    <p>Our focus is transparency, creativity, and measurable digital growth for businesses across UAE and Pakistan.</p>
+    <p><a class="brand-link" href="https://point-media.link" target="_blank">🌐 Visit Official Point Media Website</a></p>
+  </div>
+</section>
+
+<footer>© 2025 Point Media | Designed by Syed Asif Ali</footer>
+
 </div>
 
-  </div>  
-</nav>  <div id="overlay"></div>  <!-- Header -->  <header>  
-  <img src="/logo.png" alt="Point Media Logo">  
-  <h1>About Point Media</h1>  
-  <p>By <strong>Syed Asif Ali</strong> • Founder</p>  
-</header>  <!-- Content Section -->  <section>  
-  <div class="card">  
-    <p>Point Media is a digital marketing agency founded by Syed Asif Ali. We help brands grow their online presence through strategic branding, content creation, and social media management.</p>  
-    <p>Our focus is transparency, creativity, and measurable digital growth for businesses across UAE and Pakistan.</p>  
-    <p><a class="brand-link" href="https://point-media.link" target="_blank">🌐 Visit Official Point Media Website</a></p>  
-  </div>  
-</section>  <footer>© 2025 Point Media | Designed by Syed Asif Ali</footer>  </div>  <script>  
-const menuBtn=document.getElementById('menu-btn');  
-const menu=document.getElementById('menu');  
-const overlay=document.getElementById('overlay');  
-let isOpen=false;  
-  
-menuBtn.addEventListener('click',()=>{  
-  isOpen=!isOpen;  
-  menu.classList.toggle('show');  
-  overlay.style.display=isOpen?'block':'none';  
-});  
-  
-overlay.addEventListener('click',()=>{  
-  menu.classList.remove('show');  
-  overlay.style.display='none';  
-  isOpen=false;  
-});  
-  
-// Close menu when clicking outside  
-document.addEventListener('click', function(e){  
-  if(!menu.contains(e.target) && !menuBtn.contains(e.target)){  
-    menu.classList.remove('show');  
-    overlay.style.display='none';  
-    isOpen=false;  
-  }  
-});  
-</script>  </body>  
+<script>
+const menuBtn=document.getElementById('menu-btn');
+const menu=document.getElementById('menu');
+const overlay=document.getElementById('overlay');
+let isOpen=false;
+
+menuBtn.addEventListener('click',()=>{
+ isOpen=!isOpen;
+ menu.classList.toggle('show');
+ overlay.style.display=isOpen?'block':'none';
+});
+
+overlay.addEventListener('click',()=>{
+ menu.classList.remove('show');
+ overlay.style.display='none';
+ isOpen=false;
+});
+
+document.addEventListener('click',function(e){
+ if(!menu.contains(e.target) && !menuBtn.contains(e.target)){
+  menu.classList.remove('show');
+  overlay.style.display='none';
+  isOpen=false;
+ }
+});
+</script>
+
+</body>
 </html>
