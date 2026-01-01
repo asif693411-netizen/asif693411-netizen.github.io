@@ -1,0 +1,14 @@
+# robots.txt for syedasifali.link
+User-agent: *
+Disallow: /CNAME  # prevents crawling of CNAME file, which is unnecessary
+Allow: /about.html
+Allow: /contact.html
+Allow: /index.html
+Allow: /index.css
+Allow: /pointika.html
+Allow: /pointmedia.html
+Allow: /press.html
+Allow: /socials.html
+Allow: /techbullion.html
+
+Sitemap: https://syedasifali.link/sitemap.xml
