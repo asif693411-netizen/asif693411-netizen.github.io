@@ -4,170 +4,287 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Syed Asif Ali | Digital Creator & Entrepreneur</title>
-<meta name="description" content="Syed Asif Ali — Digital Creator, Entrepreneur, Founder of Point Media & Pointika. Featured on Big News Network, TechBullion, and Crunchbase. Knowledge Panel Ready.">
+<title>About - Syed Asif Ali | Pointika</title>
+<meta name="description" content="Syed Asif Ali — Entrepreneur, Digital Creator, Founder of Point Media & Pointika. Learn about his journey from South Waziristan to UAE & Pakistan digital media success.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-body{margin:0;font-family:'Poppins',sans-serif;background:#0f172a;color:#e5e7eb;line-height:1.7}
-nav{position:fixed;top:0;left:0;width:100%;background:#020617;z-index:1000}
-.nav-container{max-width:1200px;margin:auto;padding:12px 20px;display:flex;justify-content:space-between;align-items:center}
-.logo-wrap{display:flex;align-items:center;gap:10px}
-.logo-wrap img{height:38px;border-radius:50%}
-.logo-text{font-size:18px;font-weight:bold;color:#60a5fa}
-.menu{display:flex;gap:22px}
-.menu a{color:#e5e7eb;text-decoration:none;font-size:15px}
-.menu a.active,.menu a:hover{color:#00ffff}
-.menu-btn{display:none;font-size:26px;cursor:pointer;color:#60a5fa}
-@media(max-width:768px){
-.menu{position:fixed;top:64px;right:-100%;background:#020617;flex-direction:column;width:240px;padding:20px;height:100vh;transition:.3s}
-.menu.show{right:0}
-.menu-btn{display:block}
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#0f172a;
+  color:#e5e7eb;
+  line-height:1.7;
 }
-header{background:linear-gradient(135deg,#1e3a8a,#0f172a);padding:140px 20px 80px;text-align:center}
-header img{width:120px;border-radius:50%;border:3px solid #60a5fa;margin-bottom:20px;box-shadow:0 0 20px #60a5fa,0 0 40px #0077ff}
-header h1{margin:0;font-size:38px;color:#fff}
-header p{max-width:800px;margin:15px auto 0;color:#cbd5f5;font-size:17px}
-section{max-width:1100px;margin:auto;padding:60px 20px}
-h2{color:#60a5fa}
-.card{background:#020617;padding:30px;border-radius:14px;margin-bottom:40px;box-shadow:0 10px 30px rgba(0,0,0,.4)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px}
-.grid div{background:#020617;padding:25px;border-radius:12px;border:1px solid #1e293b}
-.icon{width:18px;vertical-align:middle;margin-right:6px}
-.faq{margin-top:40px}
-.faq h3{color:#60a5fa;margin-bottom:12px;font-size:18px}
-.faq p{color:#cbd5f5;margin-bottom:15px}
-footer{background:#020617;text-align:center;padding:30px;color:#94a3b8;font-size:14px}
-a{color:#60a5fa}
+
+/* NAV */
+nav{
+  position:fixed;
+  top:0; left:0;
+  width:100%;
+  background:#020617;
+  z-index:1000;
+  box-shadow:0 4px 20px rgba(0,0,0,.5);
+}
+.nav-container{
+  max-width:1200px;
+  margin:auto;
+  padding:12px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.logo-wrap{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.logo-wrap img{height:38px;}
+.logo-text{
+  font-size:18px;
+  font-weight:bold;
+  color:#60a5fa;
+}
+.menu{
+  display:flex;
+  gap:22px;
+}
+.menu a{
+  color:#e5e7eb;
+  text-decoration:none;
+  font-size:15px;
+}
+.menu a.active,
+.menu a:hover{color:#00ffff;}
+.menu-btn{
+  display:none;
+  font-size:26px;
+  cursor:pointer;
+  color:#60a5fa;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .menu{
+    position:fixed;
+    top:64px;
+    right:-100%;
+    background:#020617;
+    flex-direction:column;
+    width:240px;
+    padding:20px;
+    height:100vh;
+    transition:.3s;
+  }
+  .menu.show{right:0;}
+  .menu-btn{display:block;}
+}
+
+/* HEADER */
+header{
+  background:linear-gradient(135deg,#1e3a8a,#0f172a);
+  padding:140px 20px 80px;
+  text-align:center;
+}
+header img{
+  width:120px;
+  border-radius:50%;
+  border:3px solid #60a5fa;
+  box-shadow:0 0 20px #60a5fa,0 0 40px #0077ff;
+  margin-bottom:20px;
+}
+header h1{
+  margin:0;
+  font-size:38px;
+  color:#fff;
+}
+header p{
+  max-width:800px;
+  margin:15px auto 0;
+  color:#cbd5f5;
+  font-size:17px;
+}
+
+/* CONTENT */
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:60px 20px;
+}
+h2{color:#60a5fa;}
+.card{
+  background:#020617;
+  padding:30px;
+  border-radius:14px;
+  box-shadow:0 10px 30px rgba(0,0,0,.4);
+  margin-bottom:40px;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+.grid div{
+  background:#020617;
+  padding:25px;
+  border-radius:12px;
+  border:1px solid #1e293b;
+}
+
+footer{
+  background:#020617;
+  text-align:center;
+  padding:30px;
+  color:#94a3b8;
+  font-size:14px;
+}
+
+a{color:#60a5fa;}
+a:hover{text-decoration:underline;}
+.qna{
+  margin-top:50px;
+}
+.qna h3{color:#00ffff; margin-bottom:10px;}
+.qna p{color:#cbd5f5; margin-bottom:20px;}
+.qna a{color:#60a5fa;}
 </style>
 
-<!-- JSON-LD: Full KP Booster -->
+<!-- JSON-LD -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
   "@graph":[
     {
       "@type":"Person",
-      "@id":"https://syedasifali.link/#person",
       "name":"Syed Asif Ali",
-      "alternateName":["Syed Asif Ali Digital Creator","Syed Asif Ali Entrepreneur"],
       "url":"https://syedasifali.link",
       "image":"https://syedasifali.link/profile.jpg",
-      "birthDate":"1992-01-23",
-      "birthPlace":{"@type":"Place","name":"South Waziristan, Pakistan"},
-      "jobTitle":"Digital Creator & Entrepreneur",
-      "description":"Syed Asif Ali is a digital creator and entrepreneur, founder of Point Media and Pointika.",
-      "knowsAbout":["Digital Media","Strategic Storytelling","Online Reputation","Influencer Marketing"],
       "sameAs":[
-        "https://www.linkedin.com/in/syed-asif-ali-36b5623a0",
-        "https://www.bignewsnetwork.com/news/278783898/syed-asif-ali-entrepreneur-digital-creator-and-strategic-storyteller",
-        "https://techbullion.com/syed-asif-ali-founder-of-fastest-growing-digital-media-company-point-media/",
-        "https://www.crunchbase.com/person/syed-asif-ali",
+        "https://www.linkedin.com/in/pointmedia",
+        "https://www.instagram.com/boxer_01101",
+        "https://www.tiktok.com/@pointika.media",
+        "https://www.youtube.com/@AsifAli-Digital",
         "https://medium.com/@asif693411",
         "https://x.com/Boxer_01101",
-        "https://www.facebook.com/profile.php?id=61585238064571"
-      ]
-    },
-    {
-      "@type":"Organization",
-      "@id":"https://point-media.link/#organization",
-      "name":"Point Media",
-      "url":"https://point-media.link",
-      "founder":{"@id":"https://syedasifali.link/#person"},
-      "brand":{"@id":"https://pointika.link/#brand"}
-    },
-    {
-      "@type":"Brand",
-      "@id":"https://pointika.link/#brand",
-      "name":"Pointika",
-      "url":"https://pointika.link",
-      "parentOrganization":{"@id":"https://point-media.link/#organization"}
-    },
-    {
-      "@type":"FAQPage",
-      "mainEntity":[
-        {"@type":"Question","name":"Who is Syed Asif Ali?","acceptedAnswer":{"@type":"Answer","text":"Syed Asif Ali is a digital creator and entrepreneur, founder of Point Media and Pointika, serving UAE & Pakistan."}},
-        {"@type":"Question","name":"What is Point Media?","acceptedAnswer":{"@type":"Answer","text":"Point Media is a founder-led digital media company focused on ethical storytelling, credibility, and strategic digital visibility."}},
-        {"@type":"Question","name":"What is Pointika?","acceptedAnswer":{"@type":"Answer","text":"Pointika is a creative content and influencer storytelling platform under Point Media, delivering global digital campaigns."}},
-        {"@type":"Question","name":"Where does Syed Asif Ali operate?","acceptedAnswer":{"@type":"Answer","text":"Syed Asif Ali operates from UAE & Pakistan, serving MENA and global markets."}},
-        {"@type":"Question","name":"Has Syed Asif Ali been featured in the media?","acceptedAnswer":{"@type":"Answer","text":"Yes, he has been featured on Big News Network, TechBullion, and Crunchbase."}}
-      ]
+        "https://www.facebook.com/"
+      ],
+      "jobTitle":"Entrepreneur & Digital Creator",
+      "birthDate":"1992-01-23",
+      "birthPlace":"South Waziristan, Pakistan",
+      "worksFor":[
+        {
+          "@type":"Organization",
+          "name":"Point Media",
+          "url":"https://point-media.link"
+        },
+        {
+          "@type":"Organization",
+          "name":"Pointika",
+          "url":"https://pointika.link"
+        }
+      ],
+      "description":"Syed Asif Ali is an entrepreneur and digital creator, founder of Point Media and Pointika, with expertise in digital branding, storytelling, and strategic media innovation. Originating from South Waziristan, Pakistan, he has built a global presence from UAE and Pakistan.",
+      "disambiguatingDescription":"Syed Asif Ali (Entrepreneur, Digital Creator, Founder of Point Media & Pointika) — not to be confused with other professionals of the same name."
     }
   ]
 }
 </script>
+
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
   <div class="nav-container">
     <div class="logo-wrap">
       <img src="profile.jpg" alt="Syed Asif Ali">
       <div class="logo-text">Syed Asif Ali</div>
     </div>
+
     <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
     <div class="menu" id="menu">
       <a href="index.html">Home</a>
       <a href="about.html" class="active">About</a>
       <a href="pointmedia.html">Point Media</a>
       <a href="pointika.html">Pointika</a>
       <a href="press.html">Press</a>
+      <a href="https://techbullion.com/syed-asif-ali-founder-of-fastest-growing-digital-media-company-point-media/" target="_blank">TechBullion</a>
+      <a href="https://www.bignewsnetwork.com/news/278783898/syed-asif-ali-entrepreneur-digital-creator-and-strategic-storyteller" target="_blank">
+        <img src="bignews-icon.png" alt="Big News Network" style="height:20px; vertical-align:middle;"> Big News
+      </a>
+      <a href="socials.html">Social</a>
       <a href="contact.html">Contact</a>
     </div>
   </div>
 </nav>
 
+<!-- HEADER -->
 <header>
   <img src="profile.jpg" alt="Syed Asif Ali">
   <h1>Syed Asif Ali</h1>
-  <p>Digital Creator • Entrepreneur • Founder of Point Media & Pointika</p>
+  <p>Entrepreneur • Digital Creator • Founder of Point Media & Pointika</p>
 </header>
 
+<!-- ABOUT -->
 <section>
   <div class="card">
-    <h2>About Me</h2>
+    <h2>About Syed Asif Ali</h2>
     <p>
-      Syed Asif Ali is a digital creator and entrepreneur from a humble background,
-      building Point Media and Pointika with focus on credibility, storytelling,
-      and long-term digital reputation.
+      Syed Asif Ali is an entrepreneur and digital creator from a humble background, building Point Media and Pointika with a focus on credibility, strategic storytelling, and long-term digital reputation. Operating from UAE and Pakistan, he empowers brands and individuals globally through creative media campaigns and digital strategy.
     </p>
   </div>
 
   <div class="grid">
     <div>
-      <h3>Founder</h3>
-      <p>Founder of Point Media & Pointika</p>
+      <h3>Who is Syed Asif Ali?</h3>
+      <p>Founder of Point Media & Pointika, a digital branding and media strategist.</p>
     </div>
     <div>
-      <h3>Operations</h3>
-      <p>UAE & Pakistan — serving global markets</p>
+      <h3>What is Pointika?</h3>
+      <p>Creative storytelling & influencer content platform under Point Media.</p>
     </div>
     <div>
-      <h3>Media Coverage</h3>
+      <h3>Where does he operate?</h3>
+      <p>UAE & Pakistan — serving MENA and global markets.</p>
+    </div>
+    <div>
+      <h3>Media References</h3>
       <p>
-        <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Newspaper_icon.svg">
-        <a href="https://www.bignewsnetwork.com/news/278783898/syed-asif-ali-entrepreneur-digital-creator-and-strategic-storyteller" target="_blank">Big News Network</a><br>
-        <a href="https://techbullion.com/syed-asif-ali-founder-of-fastest-growing-digital-media-company-point-media/" target="_blank">TechBullion</a><br>
-        <a href="https://www.crunchbase.com/person/syed-asif-ali" target="_blank">Crunchbase</a>
+        <a href="https://www.crunchbase.com/person/syed-asif-ali" target="_blank">Crunchbase</a>,
+        <a href="https://techbullion.com/syed-asif-ali-founder-of-fastest-growing-digital-media-company-point-media/" target="_blank">TechBullion</a>,
+        <a href="https://www.bignewsnetwork.com/news/278783898/syed-asif-ali-entrepreneur-digital-creator-and-strategic-storyteller" target="_blank">
+          Big News Network
+        </a>
       </p>
     </div>
   </div>
 
-  <div class="faq">
+  <!-- Q&A Section -->
+  <div class="qna">
     <h2>Frequently Asked Questions</h2>
-    <h3>Who is Syed Asif Ali?</h3>
-    <p>Syed Asif Ali is a digital creator and entrepreneur, founder of Point Media and Pointika, serving UAE & Pakistan.</p>
-    <h3>What is Point Media?</h3>
-    <p>Point Media is a founder-led digital media company focused on ethical storytelling, credibility, and strategic digital visibility.</p>
-    <h3>What is Pointika?</h3>
-    <p>Pointika is a creative content and influencer storytelling platform under Point Media, delivering global digital campaigns.</p>
-    <h3>Where does Syed Asif Ali operate?</h3>
-    <p>Syed Asif Ali operates from UAE & Pakistan, serving MENA and global markets.</p>
-    <h3>Has Syed Asif Ali been featured in the media?</h3>
-    <p>Yes, he has been featured on Big News Network, TechBullion, and Crunchbase.</p>
+    <h3>What is Syed Asif Ali known for?</h3>
+    <p>He is known as the founder of Point Media and Pointika, and a digital creator specializing in strategic storytelling and digital brand visibility.</p>
+    
+    <h3>When and where was he born?</h3>
+    <p>Born on 23 January 1992, in South Waziristan, Pakistan.</p>
+    
+    <h3>What markets does he serve?</h3>
+    <p>UAE, Pakistan, MENA region, and global markets.</p>
+    
+    <h3>What brands has he founded?</h3>
+    <p>Point Media and Pointika.</p>
+    
+    <h3>Where can I read more about him?</h3>
+    <p>
+      Articles and profiles are available on 
+      <a href="https://www.crunchbase.com/person/syed-asif-ali" target="_blank">Crunchbase</a>, 
+      <a href="https://techbullion.com/syed-asif-ali-founder-of-fastest-growing-digital-media-company-point-media/" target="_blank">TechBullion</a>, and 
+      <a href="https://www.bignewsnetwork.com/news/278783898/syed-asif-ali-entrepreneur-digital-creator-and-strategic-storyteller" target="_blank">Big News Network</a>.
+    </p>
   </div>
 </section>
 
@@ -179,6 +296,13 @@ a{color:#60a5fa}
 function toggleMenu(){
   document.getElementById("menu").classList.toggle("show");
 }
+document.addEventListener("click",function(e){
+  const menu=document.getElementById("menu");
+  const btn=document.querySelector(".menu-btn");
+  if(!menu.contains(e.target) && !btn.contains(e.target)){
+    menu.classList.remove("show");
+  }
+});
 </script>
 
 </body>
