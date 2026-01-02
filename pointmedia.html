@@ -4,38 +4,65 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>About Point Media | Syed Asif Ali</title>
-<meta name="description" content="Point Media is a digital marketing agency founded by Syed Asif Ali, providing branding, social media management and digital growth solutions.">
+<title>About Point Media | Strategic Communications by Syed Asif Ali</title>
+<meta name="description" content="Point Media is a premier digital communications and branding agency founded by Syed Asif Ali. Specializing in global reputation and media growth.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-body{margin:0;font-family:'Poppins',sans-serif;background:#0f172a;color:#e5e7eb;line-height:1.7;overflow-x:hidden;}
+:root { --brand: #60a5fa; --neon: #00ffff; --bg: #0f172a; --card: #020617; }
+body{margin:0;font-family:'Poppins',sans-serif;background:var(--bg);color:#e5e7eb;line-height:1.7;overflow-x:hidden;}
 .container{max-width:1000px;margin:0 auto;padding:20px;text-align:center;}
-nav{position:fixed;top:0;left:0;width:100%;background:#020617;z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,0.5);}
+
+/* Navbar */
+nav{position:fixed;top:0;left:0;width:100%;background:var(--card);z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,0.5); border-bottom: 1px solid #1e293b;}
 .nav-container{max-width:1200px;margin:auto;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;}
 .logo-wrap{display:flex;align-items:center;gap:10px;}
 .logo-wrap img{height:38px;border-radius:6px;}
-.logo-text{font-size:18px;font-weight:bold;color:#60a5fa;}
-.menu{display:flex;gap:25px;}
-.menu a{color:#e5e7eb;text-decoration:none;font-size:15px;}
-.menu a:hover,.menu a.active{color:#00ffff;}
-.menu-btn{display:none;font-size:24px;cursor:pointer;}
+.logo-text{font-size:18px;font-weight:bold;color:var(--brand);}
+.menu{display:flex;gap:22px;}
+.menu a{color:#e5e7eb;text-decoration:none;font-size:14px; font-weight: 500;}
+.menu a:hover,.menu a.active{color:var(--neon);}
+.menu-btn{display:none;font-size:24px;cursor:pointer; color: var(--brand);}
+
 @media(max-width:768px){
-.menu{position:fixed;top:64px;right:-100%;background:#020617;flex-direction:column;width:240px;padding:20px;height:100vh;transition:.3s;}
+.menu{position:fixed;top:64px;right:-100%;background:var(--card);flex-direction:column;width:240px;padding:20px;height:100vh;transition:.3s; border-left: 1px solid #1e293b;}
 .menu.show{right:0;}
 .menu-btn{display:block;}
 }
-header{background:linear-gradient(135deg,#1e3a8a,#0f172a);padding:140px 20px 80px;text-align:center;}
-header img{height:80px;margin-bottom:15px;border-radius:8px;}
-header h1{margin:0;font-size:38px;color:#fff;}
-header p{max-width:800px;margin:15px auto 0;color:#cbd5f5;font-size:17px;}
+
+/* Header */
+header{background:radial-gradient(circle at top, #1e3a8a 0%, #0f172a 100%);padding:140px 20px 80px;text-align:center;}
+header img{height:90px;margin-bottom:20px; filter: drop-shadow(0 0 10px var(--brand));}
+header h1{margin:0;font-size:42px;color:#fff; letter-spacing: -1px;}
+header p{max-width:800px;margin:15px auto 0;color:#cbd5f5;font-size:18px;}
+
+/* Section Styles */
 section{max-width:900px;margin:auto;padding:60px 20px;}
-.card{background:#020617;padding:30px;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.4);margin-bottom:40px;}
-.brand-link{display:inline-flex;align-items:center;gap:8px;background:#111;padding:10px 16px;border:1px solid #00ffff55;border-radius:8px;color:#00ffff;text-decoration:none;font-weight:600;}
+.card{background:var(--card);padding:40px;border-radius:20px;box-shadow:0 10px 40px rgba(0,0,0,0.4);margin-bottom:40px; border: 1px solid #1e293b; text-align: left;}
+h2 {color: var(--brand); margin-top: 0;}
+
+.btn-main {
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:var(--brand);
+    padding:14px 28px;
+    border-radius:30px;
+    color:#020617;
+    text-decoration:none;
+    font-weight:bold;
+    font-size: 16px;
+    transition:.3s;
+    margin-top: 20px;
+}
+.btn-main:hover {background:var(--neon); transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,255,255,0.2);}
+
+.sub-link { color: var(--neon); font-weight: bold; text-decoration: none; border-bottom: 1px dashed var(--neon); }
+
 #overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);display:none;z-index:900;}
-footer{background:#020617;text-align:center;padding:30px;color:#94a3b8;font-size:14px;margin-top:50px;}
+footer{background:var(--card);text-align:center;padding:40px;color:#94a3b8;font-size:14px; border-top: 1px solid #1e293b;}
 </style>
 
 <script type="application/ld+json">
@@ -44,27 +71,12 @@ footer{background:#020617;text-align:center;padding:30px;color:#94a3b8;font-size
  "@graph":[
   {
    "@type":"Organization",
-   "@id":"https://syedasifali.link/pointmedia.html#organization",
+   "@id":"https://point-media.link/#organization",
    "name":"Point Media",
-   "url":"https://syedasifali.link/pointmedia.html",
-   "logo":"https://syedasifali.link/logo.png",
+   "url":"https://point-media.link",
+   "logo":"https://point-media.link/logo.png",
    "founder":{"@id":"https://syedasifali.link/#person"},
-   "description": "Point Media is a leading digital marketing agency providing strategic branding and media solutions.",
-   "sameAs":[
-     "https://www.facebook.com/share/1GuHo3vpwF/",
-     "https://www.linkedin.com/in/syed-asif-ali-36b5623a0"
-   ]
-  },
-  {
-   "@type":"Person",
-   "@id":"https://syedasifali.link/#person",
-   "name":"Syed Asif Ali",
-   "url":"https://syedasifali.link/",
-   "jobTitle": "Founder of Point Media",
-   "sameAs": [
-     "https://techbullion.com/syed-asif-ali-from-techbullion-feature-to-global-digital-media-growth/",
-     "https://www.bignewsnetwork.com/news/278783898/syed-asif-ali-entrepreneur-digital-creator-and-strategic-storyteller"
-   ]
+   "description": "Point Media is a global digital media and reputation management agency."
   }
  ]
 }
@@ -78,7 +90,7 @@ footer{background:#020617;text-align:center;padding:30px;color:#94a3b8;font-size
   <div class="nav-container">
     <div class="logo-wrap">
       <img src="logo.png" alt="Point Media Logo">
-      <div class="logo-text">Point Media</div>
+      <div class="logo-text">POINT MEDIA</div>
     </div>
     <div class="menu-btn" id="menu-btn">☰</div>
     <div class="menu" id="menu">
@@ -96,20 +108,38 @@ footer{background:#020617;text-align:center;padding:30px;color:#94a3b8;font-size
 <div id="overlay"></div>
 
 <header>
-  <img src="logo.png" alt="Point Media Logo">
-  <h1>About Point Media</h1>
-  <p>By <strong>Syed Asif Ali</strong> • Founder</p>
+  <img src="logo.png" alt="Point Media Official">
+  <h1>Point Media</h1>
+  <p>Strategic Global Communications by <strong>Syed Asif Ali</strong></p>
 </header>
 
 <section>
   <div class="card">
-    <p>Point Media is a digital marketing agency founded by Syed Asif Ali. We help brands grow their online presence through strategic branding, content creation, and social media management.</p>
-    <p>Our focus is transparency, creativity, and measurable digital growth for businesses across UAE and Pakistan.</p>
-    <p><a class="brand-link" href="https://syedasifali.link/pointmedia.html">🌐 Official Business Presence</a></p>
+    <h2>Global Branding & Authority</h2>
+    <p>
+      Point Media is a premier digital agency founded by <strong>Syed Asif Ali</strong>. We specialize in building high-authority digital footprints for public figures, brands, and entrepreneurs.
+    </p>
+    <p>
+      Our core focus includes digital reputation management, strategic press placement, and media consulting across UAE, Pakistan, and global markets. Under its umbrella, we also operate our creative arm, 
+      <a href="https://pointika.link" class="sub-link" target="_blank">Pointika</a>.
+    </p>
+    
+    <div style="text-align: center;">
+        <a class="btn-main" href="https://point-media.link" target="_blank">
+          Visit Official Point Media Site ↗
+        </a>
+    </div>
+  </div>
+
+  <div class="card" style="background: rgba(0,255,255,0.02);">
+    <h3>Agency Vision</h3>
+    <p>We believe in the power of ethical storytelling and credible media growth. Through <strong>Point Media</strong>, we ensure that our clients don't just exist online, but dominate their niche with authority.</p>
   </div>
 </section>
 
-<footer>© 2026 Point Media | Designed by Syed Asif Ali</footer>
+<footer>
+© 2026 Point Media · Founded by <a href="index.html" style="color:#94a3b8;">Syed Asif Ali</a> · <a href="https://point-media.link" style="color:#94a3b8;">point-media.link</a>
+</footer>
 
 </div>
 
@@ -117,18 +147,15 @@ footer{background:#020617;text-align:center;padding:30px;color:#94a3b8;font-size
 const menuBtn=document.getElementById('menu-btn');
 const menu=document.getElementById('menu');
 const overlay=document.getElementById('overlay');
-let isOpen=false;
 
 menuBtn.addEventListener('click',()=>{
- isOpen=!isOpen;
  menu.classList.toggle('show');
- overlay.style.display=isOpen?'block':'none';
+ overlay.style.display=menu.classList.contains('show')?'block':'none';
 });
 
 overlay.addEventListener('click',()=>{
  menu.classList.remove('show');
  overlay.style.display='none';
- isOpen=false;
 });
 </script>
 
