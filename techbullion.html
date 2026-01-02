@@ -4,66 +4,51 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Syed Asif Ali Featured on TechBullion | Point Media Founder</title>
-<meta name="description" content="Syed Asif Ali, founder of Point Media, featured on TechBullion for his vision and achievements in the digital media industry.">
+<meta name="description" content="Official highlight of Syed Asif Ali's features on TechBullion. Discover the journey of the founder of Point Media and Pointika.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Syed Asif Ali Featured on TechBullion",
-  "mainEntity": {
-    "@type": "Person",
-    "@id": "https://syedasifali.link/#person",
-    "name": "Syed Asif Ali",
-    "sameAs": [
-      "https://techbullion.com/syed-asif-ali-from-techbullion-feature-to-global-digital-media-growth/",
-      "https://techbullion.com/syed-asif-ali-founder-of-fastest-growing-digital-media-company-point-media/"
-    ]
-  }
-}
-</script>
-
 <style>
-body{margin:0;font-family:'Poppins',sans-serif;background:#0f172a;color:#e5e7eb;line-height:1.7;overflow-x:hidden;}
+:root { --brand: #60a5fa; --neon: #00ffff; --bg: #0f172a; --card: #020617; }
+body{margin:0;font-family:'Poppins',sans-serif;background:var(--bg);color:#e5e7eb;line-height:1.7;overflow-x:hidden;}
 .container{max-width:1000px;margin:0 auto;padding:20px;text-align:center;}
 
-/* Navigation Bar - Pointika Style */
-nav{position:fixed;top:0;left:0;width:100%;background:#020617;z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,.5);}
+/* Navigation Bar */
+nav{position:fixed;top:0;left:0;width:100%;background:var(--card);z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,.5); border-bottom: 1px solid #1e293b;}
 .nav-container{max-width:1200px;margin:auto;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;}
-.logo-wrap{display:flex;align-items:center;gap:10px;}
-.logo-text{font-size:18px;font-weight:bold;color:#60a5fa;}
-.menu{display:flex;gap:25px;}
-.menu a{color:#e5e7eb;text-decoration:none;font-size:15px;}
-.menu a:hover,.menu a.active{color:#00ffff;}
-.menu-btn{display:none;font-size:24px;cursor:pointer;color:#fff;}
+.logo-text{font-size:18px;font-weight:bold;color:var(--brand);}
+.menu{display:flex;gap:22px;}
+.menu a{color:#e5e7eb;text-decoration:none;font-size:14px; font-weight: 500;}
+.menu a:hover,.menu a.active{color:var(--neon);}
+.menu-btn{display:none;font-size:24px;cursor:pointer;color:var(--brand);}
 
 @media(max-width:768px){
-.menu{position:fixed;top:64px;right:-100%;background:#020617;flex-direction:column;width:240px;padding:20px;height:100vh;transition:.3s;z-index:1001;}
+.menu{position:fixed;top:64px;right:-100%;background:var(--card);flex-direction:column;width:240px;padding:20px;height:100vh;transition:.3s; border-left: 1px solid #1e293b;}
 .menu.show{right:0;}
 .menu-btn{display:block;}
 }
 
-/* Overlay */
-#overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);display:none;z-index:900;}
+/* Header */
+header{background:radial-gradient(circle at top, #1e3a8a 0%, #0f172a 100%);padding:150px 20px 80px;text-align:center;}
+header h1{margin:0;font-size:36px;color:#fff; letter-spacing: -1px;}
+header h1 img{width:28px;vertical-align:middle;margin-left:10px; filter: drop-shadow(0 0 5px var(--neon));}
+header p{max-width:800px;margin:15px auto 0;color:#cbd5f5;font-size:18px;}
 
-/* Header & Content */
-header{background:linear-gradient(135deg,#1e3a8a,#0f172a);padding:140px 20px 80px;text-align:center;}
-header h1{margin:0;font-size:32px;color:#fff;}
-header h1 img{width:24px;vertical-align:middle;margin-left:8px;}
-header p{max-width:800px;margin:15px auto 0;color:#cbd5f5;font-size:17px;}
-
+/* Content */
 section{max-width:900px;margin:auto;padding:60px 20px;}
-.card{background:#020617;padding:30px;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.4);margin-bottom:40px;border:1px solid #1e293b; text-align: left;}
-.brand-link{display:inline-flex;align-items:center;gap:8px;background:#111;padding:10px 16px;border:1px solid #00ffff55;border-radius:8px;color:#00ffff;text-decoration:none;font-weight:600; margin-top: 10px;}
+.card{background:var(--card);padding:35px;border-radius:20px;box-shadow:0 10px 40px rgba(0,0,0,.4);margin-bottom:40px;border:1px solid #1e293b; text-align: left; transition: 0.3s;}
+.card:hover { border-color: var(--neon); transform: translateY(-5px); }
 
-.moving-text{width:100%;overflow:hidden;background:#000;padding:20px 0;border-top:2px solid #222;border-bottom:2px solid #222;margin-top:30px;}
-.moving-text span{display:inline-block;white-space:nowrap;background:linear-gradient(90deg,#00ffff,#0077ff,#00ffff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:bold;animation:moveText 12s linear infinite;}
+.brand-link{display:inline-flex;align-items:center;gap:8px;background:rgba(0,255,255,0.1);padding:12px 20px;border:1px solid var(--neon);border-radius:30px;color:var(--neon);text-decoration:none;font-weight:600; margin-top: 15px; font-size: 14px; transition: 0.3s;}
+.brand-link:hover { background: var(--neon); color: #000; }
+
+.moving-text{width:100%;overflow:hidden;background:#000;padding:15px 0;border-top:1px solid #1e293b;border-bottom:1px solid #1e293b;margin-top:30px;}
+.moving-text span{display:inline-block;white-space:nowrap;color:var(--neon);font-weight:bold;animation:moveText 20s linear infinite;}
 @keyframes moveText{0%{transform:translateX(100%);}100%{transform:translateX(-100%);}}
 
-footer{background:#020617;text-align:center;padding:30px;color:#94a3b8;font-size:14px;margin-top:50px;}
+footer{background:var(--card);text-align:center;padding:40px;color:#94a3b8;font-size:13px; border-top: 1px solid #1e293b;}
+#overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);display:none;z-index:900;}
 </style>
 </head>
 
@@ -71,9 +56,7 @@ footer{background:#020617;text-align:center;padding:30px;color:#94a3b8;font-size
 
 <nav>
   <div class="nav-container">
-    <div class="logo-wrap">
-      <div class="logo-text">Syed Asif Ali</div>
-    </div>
+    <div class="logo-text">Syed Asif Ali</div>
     <div class="menu-btn" id="menu-btn">☰</div>
     <div class="menu" id="menu">
       <a href="index.html">Home</a>
@@ -92,65 +75,64 @@ footer{background:#020617;text-align:center;padding:30px;color:#94a3b8;font-size
 
 <header>
   <h1>
-    Syed Asif Ali
-    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="Verified Badge">
+    Media Spotlight: TechBullion
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="Verified">
   </h1>
-  <p>Entrepreneur • Digital Creator • Founder of Point Media</p>
+  <p>Recognized for Global Digital Leadership and Strategic Vision</p>
 </header>
 
 <div class="container">
   <section>
     <div class="card">
-      <span style="color: #00ffff; font-size: 12px; font-weight: bold; text-transform: uppercase;">Latest Feature</span>
-      <h2 style="margin-top: 10px;">Syed Asif Ali: From TechBullion Feature to Global Digital Media Growth</h2>
-      <p>In this latest feature, Syed Asif Ali discusses the expansion of Point Media and his strategic vision for the future of digital storytelling on a global scale.</p>
+      <span style="color: var(--neon); font-size: 12px; font-weight: bold; letter-spacing: 2px;">LATEST FEATURE (2026)</span>
+      <h2 style="margin-top: 10px; color: var(--brand);">Syed Asif Ali: Global Digital Media Growth</h2>
+      <p>This feature highlights the expansion of <strong>Point Media</strong> into global markets and Syed's strategy for building sustainable digital authority in the age of rapid media evolution.</p>
       <a class="brand-link" href="https://techbullion.com/syed-asif-ali-from-techbullion-feature-to-global-digital-media-growth/" target="_blank">
-        🌐 Read Latest Article ↗
+        Read Full TechBullion Feature ↗
       </a>
     </div>
 
-    <div class="card">
-      <span style="color: #94a3b8; font-size: 12px; font-weight: bold; text-transform: uppercase;">Previous Feature</span>
-      <h2 style="margin-top: 10px;">Syed Asif Ali: Founder of Fastest Growing Digital Media Company</h2>
-      <p>The initial highlight on TechBullion that introduced Point Media's rapid growth and Syed's entry into the entrepreneurial world.</p>
+    <div class="card" style="opacity: 0.8;">
+      <span style="color: #94a3b8; font-size: 12px; font-weight: bold; letter-spacing: 2px;">ARCHIVED FEATURE (2022)</span>
+      <h2 style="margin-top: 10px;">The Founding of Point Media</h2>
+      <p>A look back at the initial recognition of Syed Asif Ali as the founder of one of the fastest-growing digital media companies in the region.</p>
       <a class="brand-link" href="https://techbullion.com/syed-asif-ali-founder-of-fastest-growing-digital-media-company-point-media/" target="_blank">
-        🌐 Read Archive Article ↗
+        View Archived Article ↗
       </a>
+    </div>
+
+    <div class="card" style="background: rgba(96,165,250,0.05); text-align: center; border-style: dashed;">
+        <h3>Explore the Ecosystem</h3>
+        <p>Learn more about the brands mentioned in these features.</p>
+        <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+            <a href="https://point-media.link" target="_blank" style="color: var(--brand); font-weight: bold; text-decoration: none;">Point Media Official</a>
+            <span style="color: #444;">|</span>
+            <a href="https://pointika.link" target="_blank" style="color: var(--neon); font-weight: bold; text-decoration: none;">Visit Pointika</a>
+        </div>
     </div>
   </section>
 
-  <div class="moving-text"><span>🔥 Vision · Strategy · Growth · Global Media 🔥</span></div>
+  <div class="moving-text">
+    <span>🔥 FEATURED ON TECHBULLION · STRATEGIC GROWTH · <a href="https://point-media.link" style="color: #fff; text-decoration: none;">POINT MEDIA</a> · <a href="https://pointika.link" style="color: #fff; text-decoration: none;">POINTIKA</a> · GLOBAL REACH 🔥</span>
+  </div>
 </div>
 
 <footer>
-© 2026 Syed Asif Ali · All Rights Reserved
+© 2026 Syed Asif Ali · Founder of Point Media Ecosystem · All Rights Reserved
 </footer>
 
 <script>
 const menuBtn = document.getElementById('menu-btn');
 const menu = document.getElementById('menu');
 const overlay = document.getElementById('overlay');
-let isOpen = false;
 
 function toggleMenu() {
-  isOpen = !isOpen;
   menu.classList.toggle('show');
-  overlay.style.display = isOpen ? 'block' : 'none';
-  menuBtn.textContent = isOpen ? '✖' : '☰';
+  overlay.style.display = menu.classList.contains('show') ? 'block' : 'none';
 }
 
-menuBtn.addEventListener('click', (e) => {
-  e.stopPropagation();
-  toggleMenu();
-});
-
+menuBtn.addEventListener('click', toggleMenu);
 overlay.addEventListener('click', toggleMenu);
-
-document.addEventListener('click', (e) => {
-  if (isOpen && !menu.contains(e.target) && e.target !== menuBtn) {
-    toggleMenu();
-  }
-});
 </script>
 
 </body>
