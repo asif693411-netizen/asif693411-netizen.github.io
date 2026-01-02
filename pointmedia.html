@@ -38,73 +38,37 @@ section{max-width:900px;margin:auto;padding:60px 20px;}
 footer{background:#020617;text-align:center;padding:30px;color:#94a3b8;font-size:14px;margin-top:50px;}
 </style>
 
-<!-- ================= STRONG JSON-LD SCHEMA ================= -->
 <script type="application/ld+json">
 {
  "@context":"https://schema.org",
  "@graph":[
-
   {
    "@type":"Organization",
-   "@id":"https://point-media.link/#organization",
+   "@id":"https://syedasifali.link/pointmedia.html#organization",
    "name":"Point Media",
-   "url":"https://point-media.link",
-   "logo":"https://point-media.link/logo.png",
-   "brand":{"@id":"https://point-media.link/#brand"},
+   "url":"https://syedasifali.link/pointmedia.html",
+   "logo":"https://syedasifali.link/logo.png",
    "founder":{"@id":"https://syedasifali.link/#person"},
+   "description": "Point Media is a leading digital marketing agency providing strategic branding and media solutions.",
    "sameAs":[
-     "https://www.facebook.com/pointmedia",
-     "https://www.linkedin.com/in/pointmedia"
+     "https://www.facebook.com/share/1GuHo3vpwF/",
+     "https://www.linkedin.com/in/syed-asif-ali-36b5623a0"
    ]
   },
-
-  {
-   "@type":"Brand",
-   "@id":"https://point-media.link/#brand",
-   "name":"Point Media",
-   "logo":"https://point-media.link/logo.png",
-   "url":"https://point-media.link"
-  },
-
   {
    "@type":"Person",
    "@id":"https://syedasifali.link/#person",
    "name":"Syed Asif Ali",
-   "jobTitle":"Founder & Digital Creator",
-   "url":"https://syedasifali.link",
-   "image":"https://point-media.link/profile.jpg",
-   "knowsAbout":[
-     "Digital Branding",
-     "Social Media Management",
-     "Content Creation",
-     "Media Visibility"
-   ]
-  },
-
-  {
-   "@type":"BreadcrumbList",
-   "@id":"https://point-media.link/#breadcrumbs",
-   "itemListElement":[
-     {
-      "@type":"ListItem",
-      "position":1,
-      "name":"Home",
-      "item":"https://point-media.link"
-     },
-     {
-      "@type":"ListItem",
-      "position":2,
-      "name":"Point Media",
-      "item":"https://point-media.link/pointmedia.html"
-     }
+   "url":"https://syedasifali.link/",
+   "jobTitle": "Founder of Point Media",
+   "sameAs": [
+     "https://techbullion.com/syed-asif-ali-from-techbullion-feature-to-global-digital-media-growth/",
+     "https://www.bignewsnetwork.com/news/278783898/syed-asif-ali-entrepreneur-digital-creator-and-strategic-storyteller"
    ]
   }
-
  ]
 }
 </script>
-<!-- ======================================================== -->
-
 </head>
 
 <body>
@@ -113,21 +77,18 @@ footer{background:#020617;text-align:center;padding:30px;color:#94a3b8;font-size
 <nav>
   <div class="nav-container">
     <div class="logo-wrap">
-      <img src="/logo.png" alt="Point Media Logo">
+      <img src="logo.png" alt="Point Media Logo">
       <div class="logo-text">Point Media</div>
     </div>
-
     <div class="menu-btn" id="menu-btn">☰</div>
-
     <div class="menu" id="menu">
-      <a href="/index.html">Home</a>
-      <a href="/about.html">About</a>
-      <a href="/pointmedia.html" class="active">Point Media</a>
-      <a href="/pointika.html">Pointika</a>
-      <a href="/press.html">Press</a>
-      <a href="/techbullion.html">TechBullion</a>
-      <a href="/socials.html">Social</a>
-      <a href="/contact.html">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="pointmedia.html" class="active">Point Media</a>
+      <a href="pointika.html">Pointika</a>
+      <a href="press.html">Press</a>
+      <a href="socials.html">Social</a>
+      <a href="contact.html">Contact</a>
     </div>
   </div>
 </nav>
@@ -135,7 +96,7 @@ footer{background:#020617;text-align:center;padding:30px;color:#94a3b8;font-size
 <div id="overlay"></div>
 
 <header>
-  <img src="/logo.png" alt="Point Media Logo">
+  <img src="logo.png" alt="Point Media Logo">
   <h1>About Point Media</h1>
   <p>By <strong>Syed Asif Ali</strong> • Founder</p>
 </header>
@@ -144,11 +105,11 @@ footer{background:#020617;text-align:center;padding:30px;color:#94a3b8;font-size
   <div class="card">
     <p>Point Media is a digital marketing agency founded by Syed Asif Ali. We help brands grow their online presence through strategic branding, content creation, and social media management.</p>
     <p>Our focus is transparency, creativity, and measurable digital growth for businesses across UAE and Pakistan.</p>
-    <p><a class="brand-link" href="https://point-media.link" target="_blank">🌐 Visit Official Point Media Website</a></p>
+    <p><a class="brand-link" href="https://syedasifali.link/pointmedia.html">🌐 Official Business Presence</a></p>
   </div>
 </section>
 
-<footer>© 2025 Point Media | Designed by Syed Asif Ali</footer>
+<footer>© 2026 Point Media | Designed by Syed Asif Ali</footer>
 
 </div>
 
@@ -168,14 +129,6 @@ overlay.addEventListener('click',()=>{
  menu.classList.remove('show');
  overlay.style.display='none';
  isOpen=false;
-});
-
-document.addEventListener('click',function(e){
- if(!menu.contains(e.target) && !menuBtn.contains(e.target)){
-  menu.classList.remove('show');
-  overlay.style.display='none';
-  isOpen=false;
- }
 });
 </script>
 
