@@ -1,14 +1,21 @@
-# robots.txt for syedasifali.link
+# Robots.txt for Syed Asif Ali (Official Personal Website)
 User-agent: *
-Disallow: /CNAME  # prevents crawling of CNAME file, which is unnecessary
-Allow: /about.html
-Allow: /contact.html
-Allow: /index.html
-Allow: /index.css
-Allow: /pointika.html
-Allow: /pointmedia.html
-Allow: /press.html
-Allow: /socials.html
-Allow: /techbullion.html
+Disallow: /CNAME
+Disallow: /private/
+Disallow: /tmp/
 
+# Is se saare internal pages automatically allow ho jayenge
+Allow: /
+
+# Images aur Icons ko lazmi allow karein taake Knowledge Panel mein photo aaye
+Allow: /profile.jpg
+Allow: /logo.png
+Allow: /favicon.ico
+
+# Sitemap location
 Sitemap: https://syedasifali.link/sitemap.xml
+
+# Special instructions for Googlebot to prioritize your Press & Socials
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
