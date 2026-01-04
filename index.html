@@ -3,17 +3,49 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Syed Asif Ali — Official Website | Founder of Point Media</title>
+
+<meta name="description" content="Official website of Syed Asif Ali, Digital Media Entrepreneur and founder of Point Media and Pointika, specializing in strategic storytelling and brand authority.">
+
+<link rel="canonical" href="https://syedasifali.link/">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Syed Asif Ali",
+  "url": "https://syedasifali.link",
+  "image": "https://syedasifali.link/profile.jpg",
+  "jobTitle": "Digital Media Entrepreneur",
+  "worksFor": [
+    {
+      "@type": "Organization",
+      "name": "Point Media",
+      "url": "https://point-media.link"
+    },
+    {
+      "@type": "Organization",
+      "name": "Pointika",
+      "url": "https://pointika.link"
+    }
+  ],
+  "sameAs": [
+    "https://www.linkedin.com/in/YOUR-REAL-PROFILE",
+    "https://twitter.com/YOUR-REAL-PROFILE"
+  ],
+  "description": "Syed Asif Ali is a Digital Media Entrepreneur and founder of Point Media and Pointika, known for strategic storytelling and digital brand authority."
+}
+</script>
 
 <style>
 :root { --brand: #60a5fa; --neon: #00ffff; --bg: #0f172a; --card: #020617; --border: #1e293b; }
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 body{background:var(--bg);color:#e5e7eb;line-height:1.7;overflow-x:hidden;}
 
-/* NAVIGATION FIX */
 nav{position:fixed;top:0;left:0;width:100%;background:var(--card);z-index:2000;border-bottom: 1px solid var(--border);height:70px;display:flex;align-items:center;}
 .nav-container{max-width:1200px;margin:auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center;width:100%;}
 .logo-text{font-size:18px;font-weight:bold;color:var(--brand);text-transform:uppercase;letter-spacing:1px;}
@@ -23,7 +55,6 @@ nav{position:fixed;top:0;left:0;width:100%;background:var(--card);z-index:2000;b
 .menu a:hover, .menu a.active{color:var(--neon);}
 .menu-btn{display:none;font-size:24px;cursor:pointer;color:var(--brand);}
 
-/* MOBILE VIEW FIX */
 @media(max-width:768px){
     .menu-btn{display:block;}
     .menu{
@@ -35,7 +66,6 @@ nav{position:fixed;top:0;left:0;width:100%;background:var(--card);z-index:2000;b
     .menu a{margin-bottom:20px; font-size:16px;}
 }
 
-/* HEADER & CONTENT */
 header{background:radial-gradient(circle at top, #1e3a8a 0%, #0f172a 100%);padding:150px 20px 80px;text-align:center;}
 header img{width:140px; height:140px; border-radius:50%;border:3px solid var(--neon);box-shadow:0 0 20px var(--neon); object-fit: cover; margin-bottom:20px;}
 header h1{font-size:2.8rem;color:#fff;margin-bottom:10px;}
@@ -49,6 +79,7 @@ header h1{font-size:2.8rem;color:#fff;margin-bottom:10px;}
 footer{text-align:center;padding:40px;color:#94a3b8;font-size:14px; border-top: 1px solid var(--border); margin-top:50px;}
 </style>
 </head>
+
 <body>
 
 <nav>
@@ -73,7 +104,11 @@ footer{text-align:center;padding:40px;color:#94a3b8;font-size:14px; border-top: 
 
   <div class="disclaimer-box">
       <h4><i class="fas fa-user-shield"></i> Official Identity & Legal Representation</h4>
-      <p>Syed Asif Ali is a registered professional Digital Media Entrepreneur and the sole founder of Point Media and Pointika. He is a distinct entity and maintains no affiliation with any other public figures sharing the same name.</p>
+      <p>
+        Syed Asif Ali is a Digital Media Entrepreneur and founder of Point Media and Pointika.
+        This website represents his official digital identity and professional work.
+        He is a distinct individual and is not affiliated with other public figures sharing a similar name.
+      </p>
   </div>
 </header>
 
@@ -86,7 +121,6 @@ footer{text-align:center;padding:40px;color:#94a3b8;font-size:14px; border-top: 
   const menu = document.getElementById("menu");
   const icon = menuBtn.querySelector("i");
 
-  // Click to toggle
   menuBtn.addEventListener("click", (e) => {
     e.stopPropagation();
     menu.classList.toggle("show");
@@ -94,7 +128,6 @@ footer{text-align:center;padding:40px;color:#94a3b8;font-size:14px; border-top: 
     icon.classList.toggle("fa-times");
   });
 
-  // Hide when clicking outside
   document.addEventListener("click", (e) => {
     if (!menu.contains(e.target) && !menuBtn.contains(e.target)) {
       menu.classList.remove("show");
@@ -103,5 +136,6 @@ footer{text-align:center;padding:40px;color:#94a3b8;font-size:14px; border-top: 
     }
   });
 </script>
+
 </body>
 </html>
