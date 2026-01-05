@@ -77,7 +77,7 @@ body { background: var(--bg); color: #fff; font-family: 'Space Grotesk', sans-se
 100% { text-shadow: -3px 0px 0 red, 3px 0px 0 blue; transform: translate(-1px, -2px); }
 }
 
-/* ROTATING PICTURE PORTAL (STAYS ACTIVE) */
+/* ROTATING PICTURE PORTAL */
 .profile-portal {
     position: relative; width: clamp(180px, 45vw, 210px); height: clamp(180px, 45vw, 210px);
     margin-bottom: 30px; display: flex; align-items: center; justify-content: center;
@@ -170,8 +170,6 @@ function splitText(selector) {
 }
 splitText('#name-glitch');
 splitText('#main-content');
-
-// Applying hover effects to menu items
 document.querySelectorAll('.menu a').forEach(link => { link.innerHTML = `<span>${link.innerText}</span>`; });
 
 window.oncontextmenu = e => { e.preventDefault(); return false; };
@@ -188,14 +186,7 @@ menuTrigger.addEventListener('click', toggleMenu);
 overlay.addEventListener('click', toggleMenu);
 
 particlesJS('particles-js', {
-  particles: { 
-      number: { value:70, density:{enable:true,value_area:800} }, 
-      color:{value:"#00f2fe"}, 
-      opacity:{value:0.5}, 
-      size:{value:2}, 
-      line_linked:{enable:true,distance:150,color:"#00f2fe",opacity:0.3,width:1}, 
-      move:{enable:true,speed:2} 
-  }
+  particles: { number: { value:70, density:{enable:true,value_area:800} }, color:{value:"#00f2fe"}, opacity:{value:0.5}, size:{value:2}, line_linked:{enable:true,distance:150,color:"#00f2fe",opacity:0.3,width:1}, move:{enable:true,speed:2} }
 });
 </script>
 </body>
