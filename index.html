@@ -13,60 +13,75 @@
 <style>
 :root { --neon: #00f2fe; --bg: #000; --pink: #f100ff; }
 
-* { margin:0; padding:0; box-sizing:border-box; -webkit-user-select:none; user-select:none; -webkit-tap-highlight-color:transparent; }
+/* SELECTION PREVENTION */
+* { 
+    margin: 0; padding: 0; box-sizing: border-box; 
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+    -webkit-tap-highlight-color: transparent;
+}
 
-body { background: var(--bg); color: #fff; font-family: 'Space Grotesk', sans-serif; overflow-x:hidden; width:100%; }
+body { background: var(--bg); color: #fff; font-family: 'Space Grotesk', sans-serif; overflow-x: hidden; width: 100%; }
 
-#particles-js { position: fixed; top:0; left:0; width:100%; height:100%; z-index:1; }
+#particles-js { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
 
 /* HEADER & MENU */
 .header-nav {
     position: fixed; top: 0; width: 100%; z-index: 5000;
-    background: rgba(0,0,0,0.9); border-bottom:1px solid var(--neon); backdrop-filter: blur(20px); height:70px; display:flex; align-items:center;
+    background: rgba(0,0,0,0.9); border-bottom: 1px solid var(--neon); backdrop-filter: blur(20px); height: 70px; display: flex; align-items: center;
 }
-.nav-container { max-width:1200px; margin:0 auto; width:100%; display:flex; align-items:center; justify-content:space-between; padding:0 20px; }
-.logo-text { font-family:'Orbitron',sans-serif; font-size:1rem; font-weight:900; color:var(--neon); letter-spacing:2px; text-decoration:none; }
+.nav-container { max-width: 1200px; margin: 0 auto; width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; }
+.logo-text { font-family: 'Orbitron', sans-serif; font-size: 1rem; font-weight: 900; color: var(--neon); letter-spacing: 2px; text-decoration: none; }
 
-.menu { display:flex; gap:20px; }
-.menu a { text-decoration:none; color:#fff; font-family:'Orbitron',sans-serif; font-size:10px; letter-spacing:1px; transition:0.3s; opacity:0.6; }
-.menu a span { display:inline-block; transition: all 0.3s ease; pointer-events:none; }
-.menu a:hover span { color:var(--neon); text-shadow:0 0 10px var(--neon); transform:translateY(-2px); opacity:1; }
-.menu a.active { opacity:1; color:var(--neon); }
+.menu { display: flex; gap: 20px; }
+.menu a { text-decoration: none; color: #fff; font-family: 'Orbitron', sans-serif; font-size: 10px; letter-spacing: 1px; transition: 0.3s; opacity: 0.6; }
+.menu a span { display: inline-block; transition: all 0.3s ease; pointer-events: none; }
+.menu a:hover span { color: var(--neon); text-shadow: 0 0 10px var(--neon); transform: translateY(-2px); opacity: 1; }
+.menu a.active { opacity: 1; color: var(--neon); }
 
-.menu-btn { display:none; font-size:24px; color:var(--neon); cursor:pointer; }
-#overlay { position:fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.8); display:none; z-index:4500; }
+.menu-btn { display: none; font-size: 24px; color: var(--neon); cursor: pointer; }
+#overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); display: none; z-index: 4500; }
 
 /* UI LAYER */
-.ui-layer { position:relative; z-index:10; min-height:100vh; width:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:120px 20px 60px; }
+.ui-layer { position: relative; z-index: 10; min-height: 100vh; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 120px 20px 60px; }
 
-/* HIGHLIGHT EFFECT */
-.highlight-text span { display:inline-block; transition: all 0.3s ease; cursor:default; margin-right:5px; pointer-events:auto; }
-.highlight-text span:hover { color:var(--neon); text-shadow:0 0 15px var(--neon); transform:scale(1.1) translateY(-2px); }
+/* WORDS HIGHLIGHT EFFECT */
+.highlight-text span { display: inline-block; transition: all 0.3s ease; cursor: default; margin-right: 5px; pointer-events: auto; }
+.highlight-text span:hover { color: var(--neon); text-shadow: 0 0 15px var(--neon); transform: scale(1.1) translateY(-2px); }
 
-.glitch { font-family:'Syncopate',sans-serif; font-size:clamp(1.8rem,8vw,4rem); font-weight:700; text-transform:uppercase; text-align:center; line-height:1.1; margin-bottom:10px; animation:glitch-anim 0.2s infinite linear alternate-reverse; }
+.glitch { font-family: 'Syncopate', sans-serif; font-size: clamp(1.8rem, 8vw, 4rem); font-weight: 700; text-transform: uppercase; text-align: center; line-height: 1.1; margin-bottom: 10px; animation: glitch-anim 0.2s infinite linear alternate-reverse; }
 @keyframes glitch-anim {
-0% { text-shadow:3px 2px 0 red, -3px -2px 0 blue; transform:translate(1px,1px);}
-20% { text-shadow:-3px -2px 0 red, 3px 2px 0 blue; transform:translate(-1px,-1px);}
-40% { text-shadow:2px -3px 0 red, -2px 3px 0 blue; transform:translate(2px,-1px);}
-60% { text-shadow:-2px 3px 0 red, 2px -3px 0 blue; transform:translate(-2px,1px);}
-80% { text-shadow:3px 0 0 red, -3px 0 0 blue; transform:translate(1px,2px);}
-100% { text-shadow:-3px 0 0 red, 3px 0 0 blue; transform:translate(-1px,-2px);}
+0% { text-shadow: 3px 2px 0 red, -3px -2px 0 blue; transform: translate(1px, 1px); }
+100% { text-shadow: -3px 0px 0 red, 3px 0px 0 blue; transform: translate(-1px, -2px); }
 }
 
-.profile-img-container { width:150px; height:150px; border-radius:50%; overflow:hidden; border:2px solid var(--neon); box-shadow:0 0 20px var(--neon); margin-bottom:25px; }
-.profile-img-container img { width:100%; height:100%; object-fit:cover; }
+.profile-img-container { width: 150px; height: 150px; border-radius: 50%; overflow: hidden; border: 2px solid var(--neon); box-shadow: 0 0 20px var(--neon); margin-bottom: 25px; }
+.profile-img-container img { width: 100%; height: 100%; object-fit: cover; }
 
-.glass-card { background: rgba(255,255,255,0.05); backdrop-filter: blur(15px); border:1px solid rgba(255,255,255,0.1); border-radius:20px; padding:30px; max-width:700px; width:100%; margin-top:30px; }
-.glass-card h4 { color:var(--neon); text-transform:uppercase; letter-spacing:3px; font-size:0.8rem; margin-bottom:15px; font-family:'Orbitron'; }
-.glass-card p { color:#ccc; line-height:1.8; font-size:1.1rem; font-weight:300; margin-bottom:20px; }
+/* FULL TRANSPARENT BOX */
+.glass-card { 
+    background: transparent; 
+    backdrop-filter: none; 
+    border: 1px solid rgba(255,255,255,0.1); 
+    border-radius: 20px; 
+    padding: 30px; 
+    max-width: 700px; 
+    width: 100%; 
+    margin-top: 30px; 
+}
+.glass-card h4 { color: var(--neon); text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; margin-bottom: 15px; font-family: 'Orbitron'; }
+.glass-card p { color: #ccc; line-height: 1.8; font-size: 1.1rem; font-weight: 300; margin-bottom: 20px; }
 
-footer { margin-top:40px; font-size:9px; color:#444; letter-spacing:4px; text-align:center; font-family:'Orbitron'; }
+footer { margin-top: 40px; font-size: 9px; color: #444; letter-spacing: 4px; text-align: center; font-family: 'Orbitron'; }
 
-@media(max-width:768px){
-.menu-btn{display:block;}
-.menu{position:fixed; top:70px; right:-100%; background:rgba(0,0,0,0.95); flex-direction:column; width:260px; padding:40px; height:100vh; transition:0.4s; border-left:1px solid var(--neon);}
-.menu.show{right:0;}
-.menu a{font-size:14px;margin-bottom:20px;}
+@media (max-width: 768px) {
+.menu-btn { display: block; }
+.menu { position: fixed; top: 70px; right: -100%; background: rgba(0,0,0,0.95); flex-direction: column; width: 260px; padding: 40px; height: 100vh; transition: 0.4s; border-left: 1px solid var(--neon); }
+.menu.show { right: 0; }
 }
 </style>
 
@@ -91,22 +106,11 @@ footer { margin-top:40px; font-size:9px; color:#444; letter-spacing:4px; text-al
         "https://entrepreneursbreak.com/syed-asif-ali-building-credible-digital-media-through-vision-strategy-and-ethical-storytelling.html",
         "https://www.digitaljournal.com/pr/news/vehement-media/syed-asif-ali-digital-media-148099701.html"
       ]
-    },
-    {
-      "@type":"NewsArticle",
-      "@id":"https://www.digitaljournal.com/pr/news/vehement-media/syed-asif-ali-digital-media-148099701.html#article",
-      "headline":"Syed Asif Ali: Digital Media Entrepreneur and Strategic Storyteller",
-      "datePublished":"2025-01-02",
-      "dateModified":"2025-01-02",
-      "author":{"@type":"Person","@id":"https://syedasifali.link/#person","name":"Syed Asif Ali"},
-      "publisher":{"@type":"Organization","name":"Digital Journal","logo":{"@type":"ImageObject","url":"https://www.digitaljournal.com/favicon.ico"}},
-      "mainEntityOfPage":{"@type":"WebPage","@id":"https://www.digitaljournal.com/pr/news/vehement-media/syed-asif-ali-digital-media-148099701.html"}
     }
   ]
 }
 </script>
 </head>
-
 <body>
 
 <div id="particles-js"></div>
@@ -161,7 +165,6 @@ document.querySelectorAll('.menu a').forEach(link => { link.innerHTML = `<span>$
 
 window.oncontextmenu = e => { e.preventDefault(); return false; };
 
-// MOBILE MENU
 const menuTrigger = document.getElementById('menu-trigger');
 const mainMenu = document.getElementById('main-menu');
 const overlay = document.getElementById('overlay');
@@ -175,13 +178,10 @@ function toggleMenu() {
 }
 menuTrigger.addEventListener('click', toggleMenu);
 overlay.addEventListener('click', toggleMenu);
-document.querySelectorAll('#main-menu a').forEach(link => { link.addEventListener('click', () => { if(mainMenu.classList.contains('show')) toggleMenu(); }); });
 
-// PARTICLES
 particlesJS('particles-js', {
   particles: { number: { value:70, density:{enable:true,value_area:800} }, color:{value:"#00f2fe"}, opacity:{value:0.5}, size:{value:2}, line_linked:{enable:true,distance:150,color:"#00f2fe",opacity:0.3,width:1}, move:{enable:true,speed:2} }
 });
 </script>
-
 </body>
 </html>
