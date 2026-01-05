@@ -2,67 +2,122 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <title>About Point Media | Strategic Communications by Syed Asif Ali</title>
 <meta name="description" content="Point Media is a premier digital communications and branding agency founded by Syed Asif Ali. Specializing in global reputation and media growth.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Grotesk:wght@300;500;700&family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
-:root { --brand: #60a5fa; --neon: #00ffff; --bg: #0f172a; --card: #020617; }
-body{margin:0;font-family:'Poppins',sans-serif;background:var(--bg);color:#e5e7eb;line-height:1.7;overflow-x:hidden;}
-.container{max-width:1000px;margin:0 auto;padding:20px;text-align:center;}
+:root { --neon: #00f2fe; --bg: #000; --pink: #f100ff; --brand-blue: #60a5fa; }
 
-/* Navbar */
-nav{position:fixed;top:0;left:0;width:100%;background:var(--card);z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,0.5); border-bottom: 1px solid #1e293b;}
-.nav-container{max-width:1200px;margin:auto;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;}
-.logo-wrap{display:flex;align-items:center;gap:10px;}
-.logo-wrap img{height:38px;border-radius:6px;}
-.logo-text{font-size:18px;font-weight:bold;color:var(--brand);}
-.menu{display:flex;gap:22px;}
-.menu a{color:#e5e7eb;text-decoration:none;font-size:14px; font-weight: 500;}
-.menu a:hover,.menu a.active{color:var(--neon);}
-.menu-btn{display:none;font-size:24px;cursor:pointer; color: var(--brand);}
-
-@media(max-width:768px){
-.menu{position:fixed;top:64px;right:-100%;background:var(--card);flex-direction:column;width:240px;padding:20px;height:100vh;transition:.3s; border-left: 1px solid #1e293b;}
-.menu.show{right:0;}
-.menu-btn{display:block;}
+/* SELECTION PREVENTION */
+* { 
+    margin: 0; padding: 0; box-sizing: border-box; 
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+    -webkit-tap-highlight-color: transparent;
 }
 
-/* Header */
-header{background:radial-gradient(circle at top, #1e3a8a 0%, #0f172a 100%);padding:140px 20px 80px;text-align:center;}
-header img{height:90px;margin-bottom:20px; filter: drop-shadow(0 0 10px var(--brand));}
-header h1{margin:0;font-size:42px;color:#fff; letter-spacing: -1px;}
-header p{max-width:800px;margin:15px auto 0;color:#cbd5f5;font-size:18px;}
+body { 
+    background: var(--bg); 
+    color: #fff; 
+    font-family: 'Space Grotesk', sans-serif; 
+    overflow-x: hidden;
+    width: 100%;
+}
 
-/* Section Styles */
-section{max-width:900px;margin:auto;padding:60px 20px;}
-.card{background:var(--card);padding:40px;border-radius:20px;box-shadow:0 10px 40px rgba(0,0,0,0.4);margin-bottom:40px; border: 1px solid #1e293b; text-align: left;}
-h2 {color: var(--brand); margin-top: 0;}
+#particles-js { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+
+/* NAVIGATION */
+.header-nav {
+    position: fixed; top: 0; width: 100%; z-index: 5000;
+    background: rgba(0, 0, 0, 0.9); border-bottom: 1px solid var(--neon);
+    backdrop-filter: blur(20px); height: 70px; display: flex; align-items: center;
+}
+.nav-container {
+    max-width: 1200px; margin: 0 auto; width: 100%;
+    display: flex; align-items: center; justify-content: space-between; padding: 0 20px;
+}
+.logo-wrap { display: flex; align-items: center; gap: 10px; }
+.logo-wrap img { height: 35px; border-radius: 5px; filter: drop-shadow(0 0 5px var(--brand-blue)); }
+.logo-text { font-family: 'Orbitron', sans-serif; font-size: 1rem; font-weight: 900; color: var(--brand-blue); letter-spacing: 2px; text-decoration: none; }
+
+.menu { display: flex; gap: 20px; }
+.menu a { 
+    text-decoration: none; color: #fff; font-family: 'Orbitron', sans-serif; 
+    font-size: 10px; letter-spacing: 1px; transition: 0.3s; opacity: 0.6;
+}
+.menu a span { display: inline-block; transition: all 0.3s ease; pointer-events: none; }
+.menu a:hover span { color: var(--neon); text-shadow: 0 0 10px var(--neon); transform: translateY(-2px); opacity: 1; }
+.menu a.active { opacity: 1; color: var(--neon); }
+
+.menu-btn { display: none; font-size: 24px; color: var(--brand-blue); cursor: pointer; }
+#overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); display: none; z-index: 4500; }
+
+/* UI LAYER */
+.ui-layer {
+    position: relative; z-index: 10; min-height: 100vh; width: 100%;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 120px 20px 60px;
+}
+
+/* WORDS HIGHLIGHT EFFECT */
+.highlight-text span { display: inline-block; transition: all 0.3s ease; cursor: default; margin-right: 5px; pointer-events: auto; }
+.highlight-text span:hover { color: var(--neon); text-shadow: 0 0 15px var(--neon); transform: scale(1.1) translateY(-2px); }
+
+.glitch {
+    font-family: 'Syncopate', sans-serif; font-size: clamp(2.2rem, 8vw, 4.5rem);
+    font-weight: 700; text-transform: uppercase; text-align: center;
+    line-height: 1.1; margin-bottom: 10px;
+    animation: glitch-anim 0.2s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+  0% { text-shadow: 3px 2px 0 red, -3px -2px 0 blue; transform: translate(1px, 1px); }
+  100% { text-shadow: -3px 0px 0 red, 3px 0px 0 blue; transform: translate(-1px, -2px); }
+}
+
+.brand-header-img { height: 90px; margin-bottom: 25px; filter: drop-shadow(0 0 15px var(--brand-blue)); }
+
+/* FULL TRANSPARENT BOXES */
+.glass-card {
+    background: transparent;
+    backdrop-filter: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 35px; 
+    max-width: 900px; 
+    width: 100%; 
+    margin-bottom: 30px;
+}
+
+.glass-card h2, .glass-card h3 { color: var(--brand-blue); text-transform: uppercase; letter-spacing: 2px; font-size: 1.2rem; margin-bottom: 20px; font-family: 'Orbitron'; }
+.glass-card p { color: #ccc; line-height: 1.8; font-size: 1.1rem; font-weight: 300; margin-bottom: 20px; }
 
 .btn-main {
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-    background:var(--brand);
-    padding:14px 28px;
-    border-radius:30px;
-    color:#020617;
-    text-decoration:none;
-    font-weight:bold;
-    font-size: 16px;
-    transition:.3s;
-    margin-top: 20px;
+    display: inline-flex; align-items: center; gap: 12px; padding: 15px 35px;
+    background: var(--brand-blue); border: none; border-radius: 40px;
+    color: #000; text-decoration: none; font-family: 'Orbitron';
+    font-size: 13px; font-weight: 900; transition: 0.3s; margin-top: 10px;
 }
-.btn-main:hover {background:var(--neon); transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,255,255,0.2);}
+.btn-main:hover { background: var(--neon); transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,255,255,0.3); }
 
 .sub-link { color: var(--neon); font-weight: bold; text-decoration: none; border-bottom: 1px dashed var(--neon); }
 
-#overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);display:none;z-index:900;}
-footer{background:var(--card);text-align:center;padding:40px;color:#94a3b8;font-size:14px; border-top: 1px solid #1e293b;}
+footer { margin-top: 40px; font-size: 9px; color: #444; letter-spacing: 4px; text-align: center; font-family: 'Orbitron'; }
+
+@media (max-width: 768px) {
+    .menu-btn { display: block; }
+    .menu { position: fixed; top: 70px; right: -100%; background: rgba(0,0,0,0.95); flex-direction: column; width: 260px; padding: 40px; height: 100vh; transition: 0.4s; border-left: 1px solid var(--brand-blue); }
+    .menu.show { right: 0; }
+}
 </style>
 
 <script type="application/ld+json">
@@ -82,18 +137,19 @@ footer{background:var(--card);text-align:center;padding:40px;color:#94a3b8;font-
 }
 </script>
 </head>
-
 <body>
-<div class="container">
 
-<nav>
+<div id="particles-js"></div>
+<div id="overlay"></div>
+
+<nav class="header-nav">
   <div class="nav-container">
     <div class="logo-wrap">
       <img src="logo.png" alt="Point Media Logo">
       <div class="logo-text">POINT MEDIA</div>
     </div>
-    <div class="menu-btn" id="menu-btn">☰</div>
-    <div class="menu" id="menu">
+    <div class="menu-btn" id="menu-trigger"><i class="fas fa-bars"></i></div>
+    <div class="menu" id="main-menu">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="pointmedia.html" class="active">Point Media</a>
@@ -105,58 +161,89 @@ footer{background:var(--card);text-align:center;padding:40px;color:#94a3b8;font-
   </div>
 </nav>
 
-<div id="overlay"></div>
+<div class="ui-layer">
+    <img src="logo.png" alt="Point Media Logo" class="brand-header-img">
+    <h1 class="glitch highlight-text">Point Media</h1>
+    <p class="highlight-text" style="letter-spacing: 4px; color: var(--neon); font-size: 0.8rem; font-family: 'Orbitron'; font-weight: 900; text-align: center;">STRATEGIC GLOBAL COMMUNICATIONS BY SYED ASIF ALI</p>
 
-<header>
-  <img src="logo.png" alt="Point Media Official">
-  <h1>Point Media</h1>
-  <p>Strategic Global Communications by <strong>Syed Asif Ali</strong></p>
-</header>
+    <div class="glass-card" style="margin-top: 40px;">
+        <h2 class="highlight-text">Global Branding & Authority</h2>
+        <p class="highlight-text">
+            Point Media is a premier digital agency founded by <strong>Syed Asif Ali</strong>. We specialize in building high-authority digital footprints for public figures, brands, and entrepreneurs.
+        </p>
+        <p class="highlight-text">
+            Our core focus includes digital reputation management, strategic press placement, and media consulting across UAE, Pakistan, and global markets. Under its umbrella, we also operate our creative arm, 
+            <a href="https://pointika.link" class="sub-link" target="_blank">Pointika</a>.
+        </p>
 
-<section>
-  <div class="card">
-    <h2>Global Branding & Authority</h2>
-    <p>
-      Point Media is a premier digital agency founded by <strong>Syed Asif Ali</strong>. We specialize in building high-authority digital footprints for public figures, brands, and entrepreneurs.
-    </p>
-    <p>
-      Our core focus includes digital reputation management, strategic press placement, and media consulting across UAE, Pakistan, and global markets. Under its umbrella, we also operate our creative arm, 
-      <a href="https://pointika.link" class="sub-link" target="_blank">Pointika</a>.
-    </p>
-    
-    <div style="text-align: center;">
-        <a class="btn-main" href="https://point-media.link" target="_blank">
-          Visit Official Point Media Site ↗
-        </a>
+        <div style="text-align: center; margin-top: 20px;">
+            <a class="btn-main" href="https://point-media.link" target="_blank">
+              Visit Official Point Media Site ↗
+            </a>
+        </div>
     </div>
-  </div>
 
-  <div class="card" style="background: rgba(0,255,255,0.02);">
-    <h3>Agency Vision</h3>
-    <p>We believe in the power of ethical storytelling and credible media growth. Through <strong>Point Media</strong>, we ensure that our clients don't just exist online, but dominate their niche with authority.</p>
-  </div>
-</section>
+    <div class="glass-card" style="border-style: dashed; border-color: var(--brand-blue);">
+        <h3 class="highlight-text">Agency Vision</h3>
+        <p class="highlight-text" style="margin-bottom: 0;">We believe in the power of ethical storytelling and credible media growth. Through <strong>Point Media</strong>, we ensure that our clients don't just exist online, but dominate their niche with authority.</p>
+    </div>
 
-<footer>
-© 2026 Point Media · Founded by <a href="index.html" style="color:#94a3b8;">Syed Asif Ali</a> · <a href="https://point-media.link" style="color:#94a3b8;">point-media.link</a>
-</footer>
-
+    <footer>© 2026 POINT MEDIA · FOUNDED BY SYED ASIF ALI</footer>
 </div>
 
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
-const menuBtn=document.getElementById('menu-btn');
-const menu=document.getElementById('menu');
-const overlay=document.getElementById('overlay');
+    function splitText(selector) {
+        document.querySelectorAll(selector).forEach(el => {
+            el.innerHTML = el.innerText.split(' ').map(w => `<span>${w}</span>`).join(' ');
+        });
+    }
 
-menuBtn.addEventListener('click',()=>{
- menu.classList.toggle('show');
- overlay.style.display=menu.classList.contains('show')?'block':'none';
-});
+    splitText('.highlight-text');
+    document.querySelectorAll('.menu a').forEach(link => { link.innerHTML = `<span>${link.innerText}</span>`; });
 
-overlay.addEventListener('click',()=>{
- menu.classList.remove('show');
- overlay.style.display='none';
-});
+    window.oncontextmenu = function(e) { e.preventDefault(); return false; };
+
+    const menuTrigger = document.getElementById('menu-trigger');
+    const mainMenu = document.getElementById('main-menu');
+    const menuIcon = menuTrigger.querySelector('i');
+    const overlay = document.getElementById('overlay');
+
+    // Toggle menu
+    menuTrigger.addEventListener('click', () => {
+        mainMenu.classList.toggle('show');
+        overlay.style.display = mainMenu.classList.contains('show') ? 'block' : 'none';
+        menuIcon.className = mainMenu.classList.contains('show') ? 'fas fa-times' : 'fas fa-bars';
+    });
+
+    // Close menu when clicking overlay
+    overlay.addEventListener('click', () => {
+        mainMenu.classList.remove('show');
+        overlay.style.display = 'none';
+        menuIcon.className = 'fas fa-bars';
+    });
+
+    // Close menu when clicking a menu link (mobile)
+    document.querySelectorAll('.menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            if(mainMenu.classList.contains('show')){
+                mainMenu.classList.remove('show');
+                overlay.style.display = 'none';
+                menuIcon.className = 'fas fa-bars';
+            }
+        });
+    });
+
+    // Initialize particles
+    particlesJS('particles-js', {
+        "particles": { 
+            "number": { "value": 60 }, 
+            "color": { "value": "#00f2fe" }, 
+            "size": { "value": 2 }, 
+            "line_linked": { "enable": true, "distance": 150, "color": "#00f2fe", "opacity": 0.2 }, 
+            "move": { "enable": true, "speed": 1.5 } 
+        }
+    });
 </script>
 
 </body>
