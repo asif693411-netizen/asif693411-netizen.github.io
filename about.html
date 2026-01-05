@@ -88,10 +88,16 @@ body {
 }
 .profile-img-container img { width: 100%; height: 100%; object-fit: cover; }
 
+/* 100% TRANSPARENT BOX */
 .glass-card {
-    background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px;
-    padding: 30px; max-width: 800px; width: 100%; margin-top: 30px;
+    background: transparent;
+    backdrop-filter: none;
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    border-radius: 20px;
+    padding: 30px; 
+    max-width: 800px; 
+    width: 100%; 
+    margin-top: 30px;
 }
 .glass-card h2, .glass-card h3 { color: var(--neon); text-transform: uppercase; letter-spacing: 2px; font-size: 1.2rem; margin-bottom: 15px; font-family: 'Orbitron'; }
 .glass-card p { color: #ccc; line-height: 1.8; font-size: 1rem; font-weight: 300; margin-bottom: 20px; }
@@ -179,14 +185,14 @@ footer { margin-top: 40px; font-size: 9px; color: #444; letter-spacing: 4px; tex
 
     <div class="glass-card">
         <h2 class="highlight-text">Biography</h2>
-        <p class="highlight-text" id="bio-text">
+        <p class="highlight-text">
             Born in South Waziristan, Pakistan, and currently based in the UAE, Syed Asif Ali is a visionary entrepreneur who has spent years perfecting the art of digital influence. He is the founder of Point Media, a premier communications brand, and Pointika, a creative sub-brand dedicated to the future of storytelling.
         </p>
-        
+
         <h2 class="highlight-text">Ecosystem Overview</h2>
         <h3 class="highlight-text">Point Media</h3>
         <p class="highlight-text">The core agency focused on strategic communications, reputation management, and building high-authority digital entities for public figures and global businesses.</p>
-        
+
         <h3 class="highlight-text">Pointika</h3>
         <p class="highlight-text">A specialized sub-brand under Point Media that handles creative storytelling, influencer collaborations, and engaging social media content ecosystems.</p>
 
@@ -218,7 +224,6 @@ footer { margin-top: 40px; font-size: 9px; color: #444; letter-spacing: 4px; tex
 
     window.oncontextmenu = function(e) { e.preventDefault(); return false; };
 
-    // MOBILE MENU TOGGLE FIX
     const menuTrigger = document.getElementById('menu-trigger');
     const mainMenu = document.getElementById('main-menu');
     const overlay = document.getElementById('overlay');
@@ -234,7 +239,6 @@ footer { margin-top: 40px; font-size: 9px; color: #444; letter-spacing: 4px; tex
     menuTrigger.addEventListener('click', toggleMenu);
     overlay.addEventListener('click', toggleMenu);
 
-    // Close menu on link click (mobile)
     document.querySelectorAll('#main-menu a').forEach(link => {
         link.addEventListener('click', () => {
             if(mainMenu.classList.contains('show')) toggleMenu();
