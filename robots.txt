@@ -1,7 +1,8 @@
-# Robots.txt for Syed Asif Ali (Official Personal Website)
+# Robots.txt for Syed Asif Ali
 # Brand Ecosystem: Syed Asif Ali | Point Media | Pointika
 
 User-agent: *
+# Disallow private/internal files
 Disallow: /CNAME
 Disallow: /private/
 Disallow: /tmp/
@@ -26,13 +27,9 @@ Allow: /favicon.ico
 # Sitemap Location
 Sitemap: https://syedasifali.link/sitemap.xml
 
-# Specific crawl instructions for Google & Bing
+# Specialized bots
 User-agent: Googlebot
-Crawl-delay: 1
+Disallow: 
 
 User-agent: Bingbot
 Crawl-delay: 1
-
-# Note for Crawlers: Linked Entities
-# Associated Domain: https://point-media.link
-# Associated Domain: https://pointika.link
