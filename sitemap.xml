@@ -3,14 +3,14 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <url>
-    <loc>https://syedasifali.link/</loc>
+    <loc>https://syedasifali.link/index.html</loc>
     <lastmod>2026-01-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://syedasifali.link/profile.jpg</image:loc>
-      <image:title>Syed Asif Ali - Digital Media Entrepreneur</image:title>
-      <image:caption>Syed Asif Ali, Founder of Point Media and Pointika</image:caption>
+      <image:title>Syed Asif Ali Official Profile</image:title>
+      <image:caption>Syed Asif Ali - Founder of Point Media and Digital Media Entrepreneur</image:caption>
     </image:image>
   </url>
 
@@ -22,20 +22,13 @@
   </url>
 
   <url>
-    <loc>https://syedasifali.link/about.html</loc>
-    <lastmod>2026-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
     <loc>https://syedasifali.link/pointmedia.html</loc>
     <lastmod>2026-01-06</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
     <image:image>
       <image:loc>https://syedasifali.link/logo.png</image:loc>
-      <image:caption>Point Media - Digital Media Agency</image:caption>
+      <image:caption>Point Media - Global Strategic Communications Agency</image:caption>
     </image:image>
   </url>
 
@@ -43,21 +36,27 @@
     <loc>https://syedasifali.link/pointika.html</loc>
     <lastmod>2026-01-06</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://syedasifali.link/about.html</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
   </url>
 
   <url>
     <loc>https://syedasifali.link/socials.html</loc>
     <lastmod>2026-01-06</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.75</priority>
   </url>
 
   <url>
     <loc>https://syedasifali.link/contact.html</loc>
     <lastmod>2026-01-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.60</priority>
   </url>
-
 </urlset>
