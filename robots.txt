@@ -10,5 +10,6 @@ Disallow: /style.css
 Disallow: /css.html
 Disallow: /techbullion.html
 Disallow: /CNAME
+Disallow: /googled6bd60c49596eaa5.html
 
 Sitemap: https://syedasifali.link/sitemap.xml
