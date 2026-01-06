@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
-:root { --neon: #00f2fe; --bg: #000; --pink: #f100ff; --brand-blue: #60a5fa; }
+:root { --neon: #00f2fe; --bg: #000; --pink: #f100ff; --brand-blue: #60a5fa; --gold: #ffd700; }
 
 /* SELECTION PREVENTION */
 * { 
@@ -49,7 +49,6 @@ body {
 
 .menu { display: flex; gap: 20px; z-index: 5001; }
 .menu a { text-decoration: none; color: #fff; font-family: 'Orbitron', sans-serif; font-size: 10px; letter-spacing: 1px; transition: 0.3s; opacity: 0.6; }
-.menu a span { display: inline-block; transition: all 0.3s ease; pointer-events: none; }
 .menu a:hover span { color: var(--neon); text-shadow: 0 0 10px var(--neon); transform: translateY(-2px); opacity: 1; }
 .menu a.active { opacity: 1; color: var(--neon); }
 
@@ -83,8 +82,10 @@ body {
     background: transparent; border: 1px solid rgba(255,255,255,0.1); border-left: 4px solid var(--brand-blue); border-radius: 14px;
     padding: 30px; max-width: 900px; width: 100%; margin-bottom: 30px; transition: 0.3s;
 }
+.press-card.latest { border-left-color: var(--gold); background: rgba(255, 215, 0, 0.05); }
 .press-card:hover { border-left-color: var(--neon); background: rgba(0,242,254,0.05); transform: translateX(5px); }
 .press-card h2 { color: var(--brand-blue); font-family: 'Orbitron'; font-size: 1.1rem; margin-bottom: 12px; }
+.press-card.latest h2 { color: var(--gold); }
 .press-card p { color: #ccc; line-height: 1.7; font-size: 1rem; font-weight: 300; margin-bottom: 15px; }
 .press-card a { color: var(--neon); text-decoration: none; font-family: 'Orbitron'; font-size: 10px; font-weight: 900; letter-spacing: 2px; }
 
@@ -136,37 +137,48 @@ footer { margin-top: 40px; font-size: 9px; color: #444; letter-spacing: 4px; tex
       </p>
     </header>
 
-    <!-- Press Cards -->
+    <div class="press-card latest">
+      <h2 class="highlight-text">IPS News (Featured Transformation 2026)</h2>
+      <p class="highlight-text">Syed Asif Ali: Redefining Brand Storytelling in Digital Transformation. An in-depth look at how Asif is leading modern branding through ethical digital growth.</p>
+      <a href="https://ipsnews.net/business/2026/01/06/syed-asif-ali-redefining-brand-storytelling-in-digital-transformation/" target="_blank">Read Latest Feature (Jan 6, 2026) →</a>
+    </div>
+
     <div class="press-card">
       <h2 class="highlight-text">International Press Syndicate (IPS News)</h2>
       <p class="highlight-text">Featured for building credible digital media through vision and ethical storytelling. This article highlights the 2026 growth of Point Media and Pointika.</p>
       <a href="https://ipsnews.net/business/2026/01/01/syed-asif-ali-on-building-credible-digital-media-through-vision-strategy-and-ethical-storytelling/" target="_blank">View Official Release →</a>
     </div>
+
     <div class="press-card">
       <h2 class="highlight-text">TechBullion (Latest 2026)</h2>
       <p class="highlight-text">A deep dive into how Syed Asif Ali evolved Point Media from a regional brand to a global digital media giant.</p>
       <a href="https://techbullion.com/syed-asif-ali-from-techbullion-feature-to-global-digital-media-growth/" target="_blank">Read Full Article →</a>
     </div>
+
     <div class="press-card">
       <h2 class="highlight-text">CoinPRWire</h2>
       <p class="highlight-text">Syed Asif Ali on building credible online brands through strategic storytelling and digital creation for the modern era.</p>
       <a href="https://www.coinprwire.com/newsroom/syed-asif-ali-digital-media-entrepreneur-digital-creator-and-strategic-storyteller-on-building-credible-online-brands-18442" target="_blank">Read Newsroom Feature →</a>
     </div>
+
     <div class="press-card">
       <h2 class="highlight-text">MEXC News</h2>
       <p class="highlight-text">Official media coverage regarding Syed Asif Ali's influence in the digital ecosystem and strategic media development.</p>
       <a href="https://www.mexc.co/news/387587" target="_blank">View MEXC Report →</a>
     </div>
+
     <div class="press-card">
       <h2 class="highlight-text">TechBullion (Founder Spotlight 2022)</h2>
       <p class="highlight-text">The original 2022 feature recognizing Syed Asif Ali as the founder of one of the fastest-growing digital media companies, Point Media.</p>
       <a href="https://techbullion.com/syed-asif-ali-founder-of-fastest-growing-digital-media-company-point-media/" target="_blank">View 2022 Feature →</a>
     </div>
+
     <div class="press-card">
       <h2 class="highlight-text">Big News Network</h2>
       <p class="highlight-text">Recognized as a strategic storyteller, Syed Asif Ali discusses the future of digital influence and the role of Pointika.</p>
       <a href="https://www.bignewsnetwork.com/news/278783898/syed-asif-ali-entrepreneur-digital-creator-and-strategic-storyteller" target="_blank">Read Story →</a>
     </div>
+
     <div class="press-card">
       <h2 class="highlight-text">Entrepreneurs Break</h2>
       <p class="highlight-text">Coverage on the founding principles of Point Media and its commitment to ethical digital growth in the MENA region.</p>
@@ -191,7 +203,6 @@ function splitText(selector){
 }
 splitText('.highlight-text');
 
-// Menu toggle
 const menuTrigger = document.getElementById('menu-trigger');
 const mainMenu = document.getElementById('main-menu');
 const overlay = document.getElementById('overlay');
@@ -203,23 +214,12 @@ menuTrigger.addEventListener('click', ()=>{
     menuIcon.className = mainMenu.classList.contains('show') ? 'fas fa-times' : 'fas fa-bars';
 });
 
-// Close menu when clicking overlay
 overlay.addEventListener('click', ()=>{
     mainMenu.classList.remove('show');
     overlay.style.display = 'none';
     menuIcon.className = 'fas fa-bars';
 });
 
-// Close menu when clicking a menu link
-document.querySelectorAll('.menu a').forEach(link=>{
-    link.addEventListener('click', ()=>{
-        mainMenu.classList.remove('show');
-        overlay.style.display='none';
-        menuIcon.className = 'fas fa-bars';
-    });
-});
-
-// Particles
 particlesJS('particles-js',{
     "particles": { 
         "number": { "value": 60 }, 
@@ -230,6 +230,5 @@ particlesJS('particles-js',{
     }
 });
 </script>
-
 </body>
 </html>
