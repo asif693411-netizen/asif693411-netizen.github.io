@@ -1,12 +1,9 @@
-# Robots.txt for Syed Asif Ali
+# ==========================================================
+# Robots.txt for Syed Asif Ali (Official Identity Hub)
 # Brand Ecosystem: Syed Asif Ali | Point Media | Pointika
+# ==========================================================
 
 User-agent: *
-# Disallow private/internal files
-Disallow: /CNAME
-Disallow: /private/
-Disallow: /tmp/
-Disallow: /404.html
 
 # Allow all public content for indexing
 Allow: /
@@ -16,9 +13,19 @@ Allow: /press.html
 Allow: /pointmedia.html
 Allow: /pointika.html
 Allow: /socials.html
-Allow: /techbullion.html
+Allow: /contact.html
 
-# Ensure Media/Identity files are crawled for Google Knowledge Panel
+# Block deleted/internal files to clean Google Search Console
+Disallow: /CNAME
+Disallow: /techbullion.html
+Disallow: /css.html
+Disallow: /style.css
+Disallow: /index.css
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /404.html
+
+# Ensure Identity Assets are crawled for Knowledge Panel
 Allow: /profile.jpg
 Allow: /logo.png
 Allow: /logo1.png
@@ -27,9 +34,9 @@ Allow: /favicon.ico
 # Sitemap Location
 Sitemap: https://syedasifali.link/sitemap.xml
 
-# Specialized bots
+# Specialized bots optimization
 User-agent: Googlebot
-Disallow: 
+Disallow: /techbullion.html
 
 User-agent: Bingbot
 Crawl-delay: 1
