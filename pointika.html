@@ -7,8 +7,37 @@
 <title>Pointika | Creative Media & Storytelling by Syed Asif Ali</title>
 <meta name="description" content="Pointika is the creative media arm of Point Media, founded by Syed Asif Ali. Discover how we reshape digital storytelling and influencer impact.">
 
+<link rel="canonical" href="https://syedasifali.link/pointika.html">
+
 <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Grotesk:wght@300;500;700&family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://syedasifali.link/pointika.html",
+      "url": "https://syedasifali.link/pointika.html",
+      "name": "Pointika - Creative Hub",
+      "isPartOf": { "@id": "https://syedasifali.link/#website" }
+    },
+    {
+      "@type": "Organization",
+      "name": "Pointika",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Point Media",
+        "url": "https://point-media.link"
+      },
+      "founder": {
+        "@id": "https://syedasifali.link/#person"
+      }
+    }
+  ]
+}
+</script>
 
 <style>
 :root { --neon: #00f2fe; --bg: #000; --pink: #f100ff; --brand-blue: #60a5fa; }
@@ -65,7 +94,7 @@ footer { margin-top:40px; font-size:9px; color:#444; letter-spacing:4px; text-al
     <div class="menu" id="main-menu">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="pointmedia.html">Point Media</a>
+      <a href="https://point-media.link">Point Media</a>
       <a href="pointika.html" class="active">Pointika</a>
       <a href="press.html">Press</a>
       <a href="socials.html">Social</a>
@@ -126,10 +155,7 @@ menuTrigger.addEventListener('click', ()=>{
     menuIcon.className = mainMenu.classList.contains('show') ? 'fas fa-times' : 'fas fa-bars';
 });
 
-// Close menu when tapping overlay
 overlay.addEventListener('click', closeMenu);
-
-// Close menu when tapping main content
 document.querySelector('.ui-layer').addEventListener('click', ()=>{ if(mainMenu.classList.contains('show')) closeMenu(); });
 
 particlesJS('particles-js', {
