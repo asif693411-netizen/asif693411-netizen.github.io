@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <title>Syed Asif Ali | Digital Media Entrepreneur & Strategic Storyteller</title>
-<meta name="description" content="Official website of Syed Asif Ali, UAE-based Digital Media Entrepreneur and Founder of Point Media & Pointika, featured in global publications for digital transformation and brand storytelling.">
+<meta name="description" content="Official website of Syed Asif Ali, UAE-based Digital Media Entrepreneur and Founder of Point Media & Pointika, specializing in digital transformation and brand storytelling.">
 
 <link rel="canonical" href="https://asif693411-netizen.github.io/" />
 
 <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Grotesk:wght@300;500;700&family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<!-- ===== ENTITY / KNOWLEDGE GRAPH SCHEMA ===== -->
+<!-- ✅ FIXED & SAFE JSON-LD SCHEMA -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -23,25 +23,35 @@
       "name": "Syed Asif Ali",
       "url": "https://asif693411-netizen.github.io/",
       "image": "https://asif693411-netizen.github.io/profile.jpg",
-      "jobTitle": "Digital Media Entrepreneur",
-      "description": "Syed Asif Ali is a UAE-based digital media entrepreneur and founder of Point Media and Pointika, specializing in ethical brand storytelling and digital transformation.",
+      "jobTitle": "Digital Media Entrepreneur & Founder",
+      "description": "Syed Asif Ali is a globally recognized digital media entrepreneur, founder of Point Media and Pointika, specializing in brand storytelling, digital transformation, and ethical media growth.",
       "sameAs": [
         "https://www.wikidata.org/wiki/Q137724229",
-        "https://www.crunchbase.com/person/syed-asif-ali",
         "https://www.imdb.com/name/nm18099961/",
+        "https://www.crunchbase.com/person/syed-asif-ali",
         "https://www.linkedin.com/in/pointmedia",
         "https://www.instagram.com/boxer_01101/",
-        "https://www.tiktok.com/@pointika.media",
-        "https://youtube.com/@asifali-digital"
+        "https://youtube.com/@asifali-digital",
+        "https://www.tiktok.com/@pointika.media"
       ],
       "worksFor": [
         { "@id": "https://point-media.link/#organization" },
         { "@id": "https://pointika.link/#organization" }
       ],
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://asif693411-netizen.github.io/"
+      },
       "subjectOf": [
         {
           "@type": "NewsArticle",
-          "headline": "Syed Asif Ali Redefining Brand Storytelling in Digital Transformation",
+          "headline": "Brand Storytelling in Digital Transformation",
+          "url": "https://www.streetinsider.com/Press+Releases/Brand+Storytelling+in+Digital+Transformation%3A+How+Strategic+Media+Shapes+Trust+in+the+Modern+Economy/25815791.html",
+          "publisher": { "@type": "Organization", "name": "Street Insider" }
+        },
+        {
+          "@type": "NewsArticle",
+          "headline": "Redefining Brand Storytelling in Digital Transformation",
           "url": "https://ipsnews.net/business/2026/01/06/syed-asif-ali-redefining-brand-storytelling-in-digital-transformation/",
           "publisher": { "@type": "Organization", "name": "IPS News" }
         },
@@ -64,49 +74,54 @@
       "@id": "https://point-media.link/#organization",
       "name": "Point Media",
       "url": "https://point-media.link",
-      "founder": { "@id": "https://asif693411-netizen.github.io/#person" }
+      "founder": { "@id": "https://asif693411-netizen.github.io/#person" },
+      "sameAs": [
+        "https://www.wikidata.org/wiki/Q137724014",
+        "https://www.linkedin.com/in/pointmedia",
+        "https://www.tiktok.com/@pointika.media"
+      ]
     },
     {
       "@type": "Organization",
       "@id": "https://pointika.link/#organization",
       "name": "Pointika",
       "url": "https://pointika.link",
-      "founder": { "@id": "https://asif693411-netizen.github.io/#person" }
+      "founder": { "@id": "https://asif693411-netizen.github.io/#person" },
+      "parentOrganization": { "@id": "https://point-media.link/#organization" }
     }
   ]
 }
 </script>
 
 <style>
-:root { --neon:#00f2fe; --pink:#f100ff; --bg:#000; }
+:root { --neon:#00f2fe; --bg:#000; --pink:#f100ff; }
 *{margin:0;padding:0;box-sizing:border-box;}
 body{background:var(--bg);color:#fff;font-family:'Space Grotesk',sans-serif;overflow-x:hidden;}
 
-#particles-js{position:fixed;inset:0;z-index:1}
+#particles-js{position:fixed;top:0;left:0;width:100%;height:100%;z-index:1;}
 
-.header-nav{position:fixed;top:0;width:100%;z-index:10;background:rgba(0,0,0,.9);border-bottom:1px solid var(--neon)}
-.nav-container{max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:20px}
-.logo-text{font-family:'Orbitron';color:var(--neon);letter-spacing:2px;text-decoration:none;font-weight:900}
+.header-nav{position:fixed;top:0;width:100%;z-index:5000;background:rgba(0,0,0,0.9);border-bottom:1px solid var(--neon);backdrop-filter:blur(20px);height:70px;display:flex;align-items:center;}
+.nav-container{max-width:1200px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;padding:0 20px;}
+.logo-text{font-family:'Orbitron',sans-serif;font-size:1rem;font-weight:900;color:var(--neon);letter-spacing:2px;text-decoration:none;}
+.menu{display:flex;gap:20px;}
+.menu a{color:#fff;text-decoration:none;font-family:'Orbitron',sans-serif;font-size:10px;letter-spacing:1px;opacity:0.6;transition:0.3s;}
+.menu a:hover{color:var(--neon);opacity:1;text-shadow:0 0 10px var(--neon);}
 
-.menu{display:flex;gap:20px}
-.menu a{color:#fff;text-decoration:none;font-size:11px;opacity:.6}
-.menu a:hover{opacity:1;color:var(--neon)}
+.ui-layer{position:relative;z-index:10;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:120px 20px 60px;text-align:center;}
 
-.ui-layer{position:relative;z-index:5;min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:140px 20px 60px;text-align:center}
+.profile-portal{position:relative;width:220px;height:220px;margin-bottom:30px;}
+.portal-ring{position:absolute;width:100%;height:100%;border:3px solid transparent;border-top-color:var(--neon);border-bottom-color:var(--pink);border-radius:50%;animation:rotatePortal 4s linear infinite;filter:drop-shadow(0 0 15px var(--neon));}
+@keyframes rotatePortal{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+.profile-img{width:85%;height:85%;border-radius:50%;object-fit:cover;position:absolute;top:7.5%;left:7.5%;border:2px solid rgba(255,255,255,0.1);}
 
-.profile-portal{position:relative;width:220px;height:220px;margin-bottom:30px}
-.portal-ring{position:absolute;width:100%;height:100%;border:3px solid transparent;border-top-color:var(--neon);border-bottom-color:var(--pink);border-radius:50%;animation:spin 4s linear infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
+.glitch{font-family:'Syncopate',sans-serif;font-size:clamp(2rem,8vw,4.5rem);text-transform:uppercase;margin-bottom:10px;color:#fff;text-shadow:2px 2px var(--pink);}
+.sub-heading{letter-spacing:5px;color:var(--neon);font-family:'Orbitron';font-size:0.8rem;font-weight:900;margin-bottom:30px;}
 
-.profile-img{width:85%;height:85%;border-radius:50%;object-fit:cover;position:absolute;top:7.5%;left:7.5%}
+.glass-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:40px;max-width:800px;backdrop-filter:blur(10px);}
+.glass-card h4{color:var(--pink);text-transform:uppercase;letter-spacing:3px;font-size:0.9rem;margin-bottom:20px;font-family:'Orbitron';}
+.glass-card p{line-height:1.8;font-size:1.1rem;color:#ddd;}
 
-h1{font-family:'Syncopate';font-size:clamp(2rem,8vw,4rem);margin-bottom:10px}
-.sub{letter-spacing:5px;color:var(--pink);font-family:'Orbitron';font-size:.75rem}
-
-.card{border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:30px;max-width:720px;margin-top:30px}
-.card p{color:#ccc;line-height:1.8}
-
-footer{margin-top:40px;font-size:9px;color:#555;letter-spacing:4px;font-family:'Orbitron'}
+footer{margin-top:50px;font-size:10px;color:#555;letter-spacing:5px;font-family:'Orbitron';}
 </style>
 </head>
 
@@ -115,40 +130,48 @@ footer{margin-top:40px;font-size:9px;color:#555;letter-spacing:4px;font-family:'
 <div id="particles-js"></div>
 
 <nav class="header-nav">
-  <div class="nav-container">
-    <a class="logo-text" href="/">SYED ASIF ALI</a>
-    <div class="menu">
-      <a href="/">Home</a>
-      <a href="press.html">Press</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </div>
+<div class="nav-container">
+<a href="index.html" class="logo-text">SYED ASIF ALI</a>
+<div class="menu">
+<a href="index.html">HOME</a>
+<a href="https://point-media.link">POINT MEDIA</a>
+<a href="https://pointika.link">POINTIKA</a>
+</div>
+</div>
 </nav>
 
-<section class="ui-layer">
-  <div class="profile-portal">
-    <div class="portal-ring"></div>
-    <img src="profile.jpg" alt="Syed Asif Ali" class="profile-img">
-  </div>
+<div class="ui-layer">
+<div class="profile-portal">
+<div class="portal-ring"></div>
+<img src="profile.jpg" alt="Syed Asif Ali" class="profile-img">
+</div>
 
-  <h1>Syed Asif Ali</h1>
-  <div class="sub">DIGITAL ENTREPRENEUR & STRATEGIC STORYTELLER</div>
+<h1 class="glitch">Syed Asif Ali</h1>
+<p class="sub-heading">DIGITAL ENTREPRENEUR & STRATEGIC STORYTELLER</p>
 
-  <div class="card">
-    <p>
-      Founder of Point Media and Pointika, Syed Asif Ali is a digital media entrepreneur
-      based in the UAE, recognized for ethical brand storytelling, digital authority
-      building, and global media strategy.
-    </p>
-  </div>
+<div class="glass-card">
+<h4>Verified Authority</h4>
+<p>
+Founder of Point Media and Pointika, Syed Asif Ali is a globally recognized media executive based in the UAE.
+With features in Street Insider, TechBullion, IPS News, and Digital Journal, he specializes in building
+high-authority digital footprints and ethical brand storytelling for the modern economy.
+</p>
+</div>
 
-  <footer>© 2026 SYED ASIF ALI · ALL RIGHTS RESERVED</footer>
-</section>
+<footer>© 2026 SYED ASIF ALI · ALL RIGHTS RESERVED</footer>
+</div>
 
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
-particlesJS('particles-js',{
-particles:{number:{value:60},color:{value:"#00f2fe"},size:{value:2},line_linked:{enable:true,color:"#00f2fe"},move:{speed:2}}
+particlesJS('particles-js', {
+  particles: {
+    number:{value:80},
+    color:{value:"#00f2fe"},
+    opacity:{value:0.5},
+    size:{value:3},
+    line_linked:{enable:true,distance:150,color:"#00f2fe",opacity:0.4,width:1},
+    move:{enable:true,speed:2}
+  }
 });
 </script>
 
