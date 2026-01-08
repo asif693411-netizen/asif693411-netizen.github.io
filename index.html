@@ -12,35 +12,89 @@
 <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Grotesk:wght@300;500;700&family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<!-- Updated Person Schema for SEO & Knowledge Panel -->
+<!-- Full Person & Organization JSON-LD -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Syed Asif Ali",
-  "url": "https://asif693411-netizen.github.io/",
-  "image": "https://asif693411-netizen.github.io/profile.jpg",
-  "jobTitle": "Digital Media Entrepreneur & Founder",
-  "description": "Syed Asif Ali is a globally recognized digital media entrepreneur, founder of Point Media and Pointika, specializing in brand storytelling, digital transformation, and ethical media growth.",
-  "sameAs": [
-    "https://www.wikidata.org/wiki/Q137724229",
-    "https://www.imdb.com/name/nm18099961/",
-    "https://www.crunchbase.com/person/syed-asif-ali",
-    "https://www.linkedin.com/in/pointmedia",
-    "https://www.instagram.com/boxer_01101/",
-    "https://youtube.com/@asifali-digital",
-    "https://www.tiktok.com/@pointika.media"
-  ],
-  "worksFor": [
+  "@graph": [
     {
-      "@type": "Organization",
-      "name": "Point Media",
-      "url": "https://point-media.link"
+      "@type": "Person",
+      "@id": "https://asif693411-netizen.github.io/#person",
+      "name": "Syed Asif Ali",
+      "url": "https://asif693411-netizen.github.io/",
+      "image": "https://asif693411-netizen.github.io/profile.jpg",
+      "jobTitle": "Digital Media Entrepreneur & Founder",
+      "description": "Syed Asif Ali is a globally recognized digital media entrepreneur, founder of Point Media and Pointika, specializing in brand storytelling, digital transformation, and ethical media growth.",
+      "sameAs": [
+        "https://www.wikidata.org/wiki/Q137724229",
+        "https://www.imdb.com/name/nm18099961/",
+        "https://www.crunchbase.com/person/syed-asif-ali",
+        "https://www.linkedin.com/in/pointmedia",
+        "https://www.instagram.com/boxer_01101/",
+        "https://youtube.com/@asifali-digital",
+        "https://www.tiktok.com/@pointika.media"
+      ],
+      "worksFor": [
+        { "@id": "https://point-media.link/#organization" },
+        { "@id": "https://pointika.link/#organization" }
+      ],
+      "mainEntityOfPage": [
+        "https://www.streetinsider.com/Press+Releases/Brand+Storytelling+in+Digital+Transformation%3A+How+Strategic+Media+Shapes+Trust+in+the+Modern+Economy/25815791.html",
+        "https://ipsnews.net/business/2026/01/06/syed-asif-ali-redefining-brand-storytelling-in-digital-transformation/",
+        "https://techbullion.com/syed-asif-ali-from-techbullion-feature-to-global-digital-media-growth/",
+        "https://www.digitaljournal.com/pr/news/vehement-media/redefining-entrepreneurial-credibility-why-independent-1171880913.html"
+      ],
+      "subjectOf": [
+        {
+          "@type": "NewsArticle",
+          "headline": "Brand Storytelling in Digital Transformation",
+          "url": "https://www.streetinsider.com/Press+Releases/Brand+Storytelling+in+Digital+Transformation%3A+How+Strategic+Media+Shapes+Trust+in+the+Modern+Economy/25815791.html",
+          "publisher": { "@type": "Organization", "name": "Street Insider" }
+        },
+        {
+          "@type": "NewsArticle",
+          "headline": "Redefining Brand Storytelling in Digital Transformation",
+          "url": "https://ipsnews.net/business/2026/01/06/syed-asif-ali-redefining-brand-storytelling-in-digital-transformation/",
+          "publisher": { "@type": "Organization", "name": "IPS News" }
+        },
+        {
+          "@type": "NewsArticle",
+          "headline": "From TechBullion Feature to Global Digital Media Growth",
+          "url": "https://techbullion.com/syed-asif-ali-from-techbullion-feature-to-global-digital-media-growth/",
+          "publisher": { "@type": "Organization", "name": "TechBullion" }
+        },
+        {
+          "@type": "NewsArticle",
+          "headline": "Redefining Entrepreneurial Credibility",
+          "url": "https://www.digitaljournal.com/pr/news/vehement-media/redefining-entrepreneurial-credibility-why-independent-1171880913.html",
+          "publisher": { "@type": "Organization", "name": "Digital Journal" }
+        }
+      ],
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.google.com/search?q=Syed+Asif+Ali",
+        "query-input": "required name=search_term_string"
+      }
     },
     {
       "@type": "Organization",
+      "@id": "https://point-media.link/#organization",
+      "name": "Point Media",
+      "url": "https://point-media.link",
+      "founder": { "@id": "https://asif693411-netizen.github.io/#person" },
+      "sameAs": [
+        "https://www.wikidata.org/wiki/Q137724014",
+        "https://www.linkedin.com/in/pointmedia",
+        "https://www.tiktok.com/@pointika.media"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://pointika.link/#organization",
       "name": "Pointika",
-      "url": "https://pointika.link"
+      "url": "https://pointika.link",
+      "founder": { "@id": "https://asif693411-netizen.github.io/#person" },
+      "parentOrganization": { "@id": "https://point-media.link/#organization" }
     }
   ]
 }
@@ -48,49 +102,46 @@
 
 <style>
 :root { --neon: #00f2fe; --bg: #000; --pink: #f100ff; }
-* { margin: 0; padding: 0; box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent; }
+* { margin:0; padding:0; box-sizing:border-box; -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; -webkit-tap-highlight-color:transparent; }
+body { background:var(--bg); color:#fff; font-family:'Space Grotesk',sans-serif; overflow-x:hidden; width:100%; }
+.glass-card, .glass-card p, .glass-card h4, h1, p { user-select:text; }
 
-body { background: var(--bg); color: #fff; font-family: 'Space Grotesk', sans-serif; overflow-x: hidden; width: 100%; }
+#particles-js { position:fixed; top:0; left:0; width:100%; height:100%; z-index:1; }
 
-/* Google Bot-friendly text selection */
-.glass-card, .glass-card p, .glass-card h4, h1, p { user-select: text; }
+.header-nav { position:fixed; top:0; width:100%; z-index:5000; background:rgba(0,0,0,0.9); border-bottom:1px solid var(--neon); backdrop-filter:blur(20px); height:70px; display:flex; align-items:center; }
+.nav-container { max-width:1200px; margin:0 auto; width:100%; display:flex; align-items:center; justify-content:space-between; padding:0 20px; }
+.logo-text { font-family:'Orbitron',sans-serif; font-size:1rem; font-weight:900; color:var(--neon); letter-spacing:2px; text-decoration:none; }
+.menu { display:flex; gap:20px; }
+.menu a { text-decoration:none; color:#fff; font-family:'Orbitron',sans-serif; font-size:10px; letter-spacing:1px; transition:0.3s; opacity:0.6; }
+.menu a span { display:inline-block; transition:all 0.3s ease; }
+.menu a:hover span { color:var(--neon); text-shadow:0 0 10px var(--neon); transform:translateY(-2px); opacity:1; }
+.menu a.active { opacity:1; color:var(--neon); }
+.menu-btn { display:none; font-size:24px; color:var(--neon); cursor:pointer; }
+#overlay { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); display:none; z-index:4500; }
 
-#particles-js { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+.ui-layer { position:relative; z-index:10; min-height:100vh; width:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:120px 20px 60px; }
+.glitch { font-family:'Syncopate',sans-serif; font-size:clamp(1.8rem,8vw,4rem); font-weight:700; text-transform:uppercase; text-align:center; line-height:1.1; margin-bottom:10px; animation:glitch-anim 0.2s infinite linear alternate-reverse; }
+@keyframes glitch-anim {0%{text-shadow:3px 2px 0 red,-3px -2px 0 blue; transform:translate(1px,1px);} 100%{text-shadow:-3px 0 0 red,3px 0 0 blue; transform:translate(-1px,-2px);} }
 
-.header-nav { position: fixed; top: 0; width: 100%; z-index: 5000; background: rgba(0,0,0,0.9); border-bottom: 1px solid var(--neon); backdrop-filter: blur(20px); height: 70px; display: flex; align-items: center; }
-.nav-container { max-width: 1200px; margin: 0 auto; width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; }
-.logo-text { font-family: 'Orbitron', sans-serif; font-size: 1rem; font-weight: 900; color: var(--neon); letter-spacing: 2px; text-decoration: none; }
-.menu { display: flex; gap: 20px; }
-.menu a { text-decoration: none; color: #fff; font-family: 'Orbitron', sans-serif; font-size: 10px; letter-spacing: 1px; transition: 0.3s; opacity: 0.6; }
-.menu a span { display: inline-block; transition: all 0.3s ease; }
-.menu a:hover span { color: var(--neon); text-shadow: 0 0 10px var(--neon); transform: translateY(-2px); opacity: 1; }
-.menu a.active { opacity: 1; color: var(--neon); }
-.menu-btn { display: none; font-size: 24px; color: var(--neon); cursor: pointer; }
-#overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); display: none; z-index: 4500; }
+.profile-portal { position:relative; width:clamp(180px,45vw,210px); height:clamp(180px,45vw,210px); margin-bottom:30px; display:flex; align-items:center; justify-content:center; }
+.portal-ring { position:absolute; width:100%; height:100%; border:3px solid transparent; border-top-color:var(--neon); border-bottom-color:var(--pink); border-radius:50%; animation:rotatePortal 4s linear infinite; filter:drop-shadow(0 0 15px var(--neon)); z-index:1; }
+@keyframes rotatePortal { from{transform:rotate(0deg);} to{transform:rotate(360deg);} }
+.profile-img-container { width:85%; height:85%; border-radius:50%; overflow:hidden; border:1px solid rgba(0,242,254,0.3); position:relative; z-index:2; display:flex; align-items:center; justify-content:center; }
+.profile-img-container img { width:100%; height:100%; object-fit:cover; border-radius:50%; }
 
-.ui-layer { position: relative; z-index: 10; min-height: 100vh; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 120px 20px 60px; }
-.glitch { font-family: 'Syncopate', sans-serif; font-size: clamp(1.8rem, 8vw, 4rem); font-weight: 700; text-transform: uppercase; text-align: center; line-height: 1.1; margin-bottom: 10px; animation: glitch-anim 0.2s infinite linear alternate-reverse; }
-@keyframes glitch-anim { 0% { text-shadow: 3px 2px 0 red, -3px -2px 0 blue; transform: translate(1px, 1px); } 100% { text-shadow: -3px 0px 0 red, 3px 0px 0 blue; transform: translate(-1px, -2px); } }
+.glass-card { background:transparent; border:1px solid rgba(255,255,255,0.1); border-radius:20px; padding:30px; max-width:700px; width:100%; margin-top:30px; }
+.glass-card h4 { color:var(--neon); text-transform:uppercase; letter-spacing:3px; font-size:0.8rem; margin-bottom:15px; font-family:'Orbitron'; }
+.glass-card p { color:#ccc; line-height:1.8; font-size:1.1rem; font-weight:300; margin-bottom:20px; }
 
-.profile-portal { position: relative; width: clamp(180px, 45vw, 210px); height: clamp(180px, 45vw, 210px); margin-bottom: 30px; display: flex; align-items: center; justify-content: center; }
-.portal-ring { position: absolute; width: 100%; height: 100%; border: 3px solid transparent; border-top-color: var(--neon); border-bottom-color: var(--pink); border-radius: 50%; animation: rotatePortal 4s linear infinite; filter: drop-shadow(0 0 15px var(--neon)); z-index: 1; }
-@keyframes rotatePortal { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-.profile-img-container { width: 85%; height: 85%; border-radius: 50%; overflow: hidden; border: 1px solid rgba(0, 242, 254, 0.3); position: relative; z-index: 2; display: flex; align-items: center; justify-content: center; }
-.profile-img-container img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+.highlight-text span { display:inline-block; transition:0.3s ease; cursor:default; margin-right:5px; }
+.highlight-text span:hover { color:var(--neon); text-shadow:0 0 15px var(--neon); transform:scale(1.1) translateY(-2px); }
 
-.glass-card { background: transparent; border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 30px; max-width: 700px; width: 100%; margin-top: 30px; }
-.glass-card h4 { color: var(--neon); text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; margin-bottom: 15px; font-family: 'Orbitron'; }
-.glass-card p { color: #ccc; line-height: 1.8; font-size: 1.1rem; font-weight: 300; margin-bottom: 20px; }
+footer { margin-top:40px; font-size:9px; color:#444; letter-spacing:4px; text-align:center; font-family:'Orbitron'; }
 
-.highlight-text span { display: inline-block; transition: 0.3s ease; cursor: default; margin-right: 5px; }
-.highlight-text span:hover { color: var(--neon); text-shadow: 0 0 15px var(--neon); transform: scale(1.1) translateY(-2px); }
-
-footer { margin-top: 40px; font-size: 9px; color: #444; letter-spacing: 4px; text-align: center; font-family: 'Orbitron'; }
-
-@media (max-width: 768px) {
-.menu-btn { display: block; }
-.menu { position: fixed; top: 70px; right: -100%; background: rgba(0,0,0,0.95); flex-direction: column; width: 260px; padding: 40px; height: 100vh; transition: 0.4s; border-left: 1px solid var(--neon); }
-.menu.show { right: 0; }
+@media (max-width:768px) {
+.menu-btn { display:block; }
+.menu { position:fixed; top:70px; right:-100%; background:rgba(0,0,0,0.95); flex-direction:column; width:260px; padding:40px; height:100vh; transition:0.4s; border-left:1px solid var(--neon); }
+.menu.show { right:0; }
 }
 </style>
 </head>
