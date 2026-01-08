@@ -6,6 +6,7 @@
 
 <title>About - Syed Asif Ali | Entrepreneur & Founder</title>
 <meta name="description" content="Discover the journey of Syed Asif Ali, founder of Point Media and Pointika. Expert digital creator and strategist based in UAE and Pakistan.">
+<link rel="canonical" href="https://syedasifali.link/about.html" />
 
 <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Grotesk:wght@300;500;700&family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -156,14 +157,41 @@ footer { margin-top: 40px; font-size: 9px; color: #444; letter-spacing: 4px; tex
       "@type": "Person",
       "@id": "https://syedasifali.link/#person",
       "name": "Syed Asif Ali",
+      "birthDate": "1997-01-23",
+      "jobTitle": "Founder & Digital Media Entrepreneur",
       "url": "https://syedasifali.link",
-      "worksFor": {"@id": "https://point-media.link/#organization"},
+      "image": "https://syedasifali.link/profile.jpg",
+      "logo": "https://point-media.link/logo.png",
+      "email": "info@syedasifali.link",
+      "address": [
+        { "@type": "PostalAddress", "addressLocality": "Dubai", "addressCountry": "AE" },
+        { "@type": "PostalAddress", "addressLocality": "Ajman", "addressCountry": "AE" }
+      ],
+      "founderOf": [
+        { "@type": "Organization", "name": "Point Media", "url": "https://point-media.link", "logo": "https://point-media.link/logo.png" },
+        { "@type": "Organization", "name": "Pointika", "url": "https://pointika.link", "logo": "https://pointika.link/logo.png" }
+      ],
       "sameAs": [
         "https://www.instagram.com/boxer_01101",
         "https://www.tiktok.com/@pointika.media",
         "https://www.youtube.com/@AsifAli-Digital",
         "https://www.linkedin.com/in/pointmedia",
-        "https://x.com/Boxer_01101"
+        "https://x.com/Boxer_01101",
+        "https://www.wikidata.org/wiki/Q137724229",
+        "https://www.imdb.com/name/nm18099961/",
+        "https://www.crunchbase.com/person/syed-asif-ali"
+      ],
+      "subjectOf": [
+        { "@type": "NewsArticle", "headline": "Brand Storytelling in Digital Transformation", "url": "https://www.streetinsider.com/dr/news.php?id=25815791" },
+        { "@type": "NewsArticle", "headline": "Redefining Brand Storytelling", "url": "https://ipsnews.net/business/2026/01/06/syed-asif-ali-redefining-brand-storytelling-in-digital-transformation/" },
+        { "@type": "NewsArticle", "headline": "Syed Asif Ali Featured on MEXC News", "url": "https://www.mexc.co/en-IN/news/387587" },
+        { "@type": "NewsArticle", "headline": "Redefining Entrepreneurial Credibility", "url": "https://www.digitaljournal.com/pr/news/vehement-media/redefining-entrepreneurial-credibility-why-independent-1171880913.html" },
+        { "@type": "NewsArticle", "headline": "Building Credible Online Brands", "url": "https://www.coinprwire.com/newsroom/syed-asif-ali-digital-media-entrepreneur-digital-creator-and-strategic-storyteller-on-building-credible-online-brands-18442" },
+        { "@type": "NewsArticle", "headline": "From TechBullion Feature to Global Growth", "url": "https://techbullion.com/syed-asif-ali-from-techbullion-feature-to-global-digital-media-growth/" },
+        { "@type": "NewsArticle", "headline": "Syed Asif Ali Digital Media Profile", "url": "https://www.digitaljournal.com/pr/news/vehement-media/syed-asif-ali-digital-media-148099701.html" },
+        { "@type": "NewsArticle", "headline": "Building Credible Digital Media Vision", "url": "https://ipsnews.net/business/2026/01/01/syed-asif-ali-on-building-credible-digital-media-through-vision-strategy-and-ethical-storytelling/" },
+        { "@type": "NewsArticle", "headline": "Ethical Storytelling & Strategy", "url": "https://entrepreneursbreak.com/syed-asif-ali-building-credible-digital-media-through-vision-strategy-and-ethical-storytelling.html" },
+        { "@type": "NewsArticle", "headline": "Founder of Fastest Growing Digital Media", "url": "https://techbullion.com/syed-asif-ali-founder-of-fastest-growing-digital-media-company-point-media/" }
       ]
     },
     {
@@ -201,7 +229,7 @@ footer { margin-top: 40px; font-size: 9px; color: #444; letter-spacing: 4px; tex
 </nav>
 
 <div class="ui-layer">
-    <div class="profile-img-container"><img src="profile.jpg" alt="Syed Asif Ali"></div>
+    <div class="profile-img-container"><img src="profile.jpg" alt="Syed Asif Ali Official Profile"></div>
     <h1 class="glitch highlight-text">About Syed Asif Ali</h1>
     <p class="highlight-text" style="letter-spacing: 4px; color: var(--pink); font-size: 0.7rem; font-family: 'Orbitron'; font-weight: 900; text-align: center;">FOUNDER OF POINT MEDIA & POINTIKA | STRATEGIST</p>
 
@@ -246,35 +274,4 @@ footer { margin-top: 40px; font-size: 9px; color: #444; letter-spacing: 4px; tex
         });
     }
 
-    splitText('.highlight-text');
-    document.querySelectorAll('.menu a').forEach(link => { link.innerHTML = `<span>${link.innerText}</span>`; });
-
-    window.oncontextmenu = function(e) { e.preventDefault(); return false; };
-
-    const menuTrigger = document.getElementById('menu-trigger');
-    const mainMenu = document.getElementById('main-menu');
-    const overlay = document.getElementById('overlay');
-    const menuIcon = menuTrigger.querySelector('i');
-
-    function toggleMenu() {
-        mainMenu.classList.toggle('show');
-        const isOpen = mainMenu.classList.contains('show');
-        overlay.style.display = isOpen ? 'block' : 'none';
-        menuIcon.className = isOpen ? 'fas fa-times' : 'fas fa-bars';
-    }
-
-    menuTrigger.addEventListener('click', toggleMenu);
-    overlay.addEventListener('click', toggleMenu);
-
-    document.querySelectorAll('#main-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-            if(mainMenu.classList.contains('show')) toggleMenu();
-        });
-    });
-
-    particlesJS('particles-js', {
-        "particles": { "number": { "value": 60 }, "color": { "value": "#00f2fe" }, "size": { "value": 2 }, "line_linked": { "enable": true, "distance": 150, "color": "#00f2fe", "opacity": 0.2 }, "move": { "enable": true, "speed": 2 } }
-    });
-</script>
-</body>
-</html>
+    splitText('.highlight-text
