@@ -2,14 +2,13 @@ User-agent: *
 Allow: /
 Allow: /profile.jpg
 Allow: /logo.png
-Allow: /logo1.png
 
-# Block deleted files to prevent crawl errors
-Disallow: /index.css
-Disallow: /style.css
-Disallow: /css.html
-Disallow: /techbullion.html
+# SEO Best Practice: Allow Google to see your assets for better Knowledge Panel indexing
+Allow: /assets/
+
+# Sitemap Fix: Points to the actual hosting path to ensure discovery
+Sitemap: https://asif693411-netizen.github.io/sitemap.xml
+
+# Clean path for Googlebot
 Disallow: /CNAME
 Disallow: /googled6bd60c49596eaa5.html
-
-Sitemap: https://syedasifali.link/sitemap.xml
