@@ -5,38 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <title>About - Syed Asif Ali | Entrepreneur & Founder</title>
-<meta name="description" content="Discover the journey of Syed Asif Ali, founder of Point Media and Pointika. Expert digital creator and strategist based in UAE and Pakistan.">
-<link rel="canonical" href="https://syedasifali.link/about.html" />
+<meta name="description" content="Discover the journey of Syed Asif Ali, founder of Point Media and Pointika. Expert digital creator and strategist based in UAE.">
+
+<link rel="canonical" href="https://asif693411-netizen.github.io/about.html" />
 
 <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Grotesk:wght@300;500;700&family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
 :root { --neon: #00f2fe; --bg: #000; --pink: #f100ff; }
-
-/* SELECTION PREVENTION */
 * { 
     margin: 0; padding: 0; box-sizing: border-box; 
-    -webkit-touch-callout: none; 
-    -webkit-user-select: none; 
-    -khtml-user-select: none; 
-    -moz-user-select: none; 
-    -ms-user-select: none; 
-    user-select: none; 
-    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none; user-select: none; 
 }
-
-body { 
-    background: var(--bg); 
-    color: #fff; 
-    font-family: 'Space Grotesk', sans-serif; 
-    overflow-x: hidden;
-    width: 100%;
-}
-
+body { background: var(--bg); color: #fff; font-family: 'Space Grotesk', sans-serif; overflow-x: hidden; width: 100%; }
 #particles-js { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
 
-/* NAVIGATION */
 .header-nav {
     position: fixed; top: 0; width: 100%; z-index: 5000;
     background: rgba(0, 0, 0, 0.9); border-bottom: 1px solid var(--neon);
@@ -47,231 +31,94 @@ body {
     display: flex; align-items: center; justify-content: space-between; padding: 0 20px;
 }
 .logo-text { font-family: 'Orbitron', sans-serif; font-size: 1rem; font-weight: 900; color: var(--neon); letter-spacing: 2px; text-decoration: none; }
-
 .menu { display: flex; gap: 20px; }
-.menu a { 
-    text-decoration: none; color: #fff; font-family: 'Orbitron', sans-serif; 
-    font-size: 10px; letter-spacing: 1px; transition: 0.3s; opacity: 0.6;
-}
-.menu a span { display: inline-block; transition: all 0.3s ease; pointer-events: none; }
-.menu a:hover span { color: var(--neon); text-shadow: 0 0 10px var(--neon); transform: translateY(-2px); opacity: 1; }
-.menu a.active { opacity: 1; color: var(--neon); }
+.menu a { text-decoration: none; color: #fff; font-family: 'Orbitron', sans-serif; font-size: 10px; opacity: 0.6; transition: 0.3s; }
+.menu a:hover, .menu a.active { opacity: 1; color: var(--neon); }
 
-.menu-btn { display: none; font-size: 24px; color: var(--neon); cursor: pointer; }
-#overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); display: none; z-index: 4500; }
-
-/* UI LAYER */
 .ui-layer {
     position: relative; z-index: 10; min-height: 100vh; width: 100%;
     display: flex; flex-direction: column; align-items: center; justify-content: center;
     padding: 120px 20px 60px;
 }
-
-/* WORDS HIGHLIGHT EFFECT */
-.highlight-text span { display: inline-block; transition: all 0.3s ease; cursor: default; margin-right: 5px; pointer-events: auto; }
-.highlight-text span:hover { color: var(--neon); text-shadow: 0 0 15px var(--neon); transform: scale(1.1) translateY(-2px); }
-
 .glitch {
     font-family: 'Syncopate', sans-serif; font-size: clamp(1.8rem, 8vw, 3.5rem);
-    font-weight: 700; text-transform: uppercase; text-align: center;
-    line-height: 1.1; margin-bottom: 10px;
-    animation: glitch-anim 0.2s infinite linear alternate-reverse;
+    animation: glitch-anim 0.2s infinite linear alternate-reverse; text-align: center;
 }
-
 @keyframes glitch-anim {
   0% { text-shadow: 3px 2px 0 red, -3px -2px 0 blue; transform: translate(1px, 1px); }
   100% { text-shadow: -3px 0px 0 red, 3px 0px 0 blue; transform: translate(-1px, -2px); }
 }
 
-/* PROFILE IMAGE CIRCLE FIX WITH GLITCH */
 .profile-img-container { 
-    width: clamp(150px, 40vw, 180px); 
-    height: clamp(150px, 40vw, 180px); 
-    border-radius: 50%; 
-    overflow: hidden; 
-    border: 3px solid var(--neon); 
-    box-shadow: 0 0 25px var(--neon); 
-    margin-bottom: 30px; 
-    position: relative;
-    padding: 5px; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: profile-glitch 3.5s infinite ease-in-out;
+    width: clamp(150px, 40vw, 180px); height: clamp(150px, 40vw, 180px); 
+    border-radius: 50%; border: 3px solid var(--neon); box-shadow: 0 0 25px var(--neon); 
+    margin-bottom: 30px; overflow: hidden; display: flex; align-items: center; justify-content: center;
 }
+.profile-img-container img { width: 100%; height: 100%; object-fit: cover; }
 
-@keyframes profile-glitch {
-    0% { border-color: var(--neon); box-shadow: 0 0 20px var(--neon); transform: translate(0); }
-    2% { border-color: var(--pink); box-shadow: 2px 0 10px var(--pink); transform: translate(-2px, 1px); }
-    4% { border-color: var(--neon); box-shadow: -2px 0 10px var(--neon); transform: translate(2px, -1px); }
-    6% { transform: translate(0); }
-    100% { transform: translate(0); }
-}
+.glass-card { background: transparent; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 30px; max-width: 800px; width: 100%; margin-top: 30px; }
+.glass-card h2 { color: var(--neon); font-family: 'Orbitron'; margin-bottom: 15px; }
+.glass-card p { color: #ccc; line-height: 1.8; margin-bottom: 20px; }
 
-.profile-img-container img { 
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
-    border-radius: 50%;
-    transition: transform 0.3s ease;
-}
-
-/* 100% TRANSPARENT BOX */
-.glass-card {
-    background: transparent;
-    backdrop-filter: none;
-    border: 1px solid rgba(255, 255, 255, 0.1); 
-    border-radius: 20px;
-    padding: 30px; 
-    max-width: 800px; 
-    width: 100%; 
-    margin-top: 30px;
-}
-.glass-card h2, .glass-card h3 { color: var(--neon); text-transform: uppercase; letter-spacing: 2px; font-size: 1.2rem; margin-bottom: 15px; font-family: 'Orbitron'; }
-.glass-card p { color: #ccc; line-height: 1.8; font-size: 1rem; font-weight: 300; margin-bottom: 20px; }
-
-.brand-btns { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 20px; justify-content: center; }
-.btn { padding: 12px 25px; border-radius: 30px; text-decoration: none; font-family: 'Orbitron'; font-size: 11px; font-weight: 900; transition: 0.3s; }
-.btn-pm { border: 1px solid var(--neon); color: var(--neon); }
-.btn-pk { border: 1px solid var(--pink); color: var(--pink); }
-.btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,242,254,0.3); }
-
-.social-links { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; justify-content: center; }
-.social-links a { padding: 8px 15px; border-radius: 20px; border: 1px solid rgba(0,242,254,0.3); color: var(--neon); text-decoration: none; font-size: 12px; transition: 0.3s; }
-.social-links a:hover { background: var(--neon); color: #000; }
+.social-links { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 20px; }
+.social-links a { padding: 8px 15px; border-radius: 20px; border: 1px solid var(--neon); color: var(--neon); text-decoration: none; font-size: 12px; }
 
 footer { margin-top: 40px; font-size: 9px; color: #444; letter-spacing: 4px; text-align: center; font-family: 'Orbitron'; }
-
-@media (max-width: 768px) {
-    .menu-btn { display: block; }
-    .menu { position: fixed; top: 70px; right: -100%; background: rgba(0,0,0,0.95); flex-direction: column; width: 260px; padding: 40px; height: 100vh; transition: 0.4s; border-left: 1px solid var(--neon); }
-    .menu.show { right: 0; }
-}
 </style>
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Person",
-      "@id": "https://syedasifali.link/#person",
-      "name": "Syed Asif Ali",
-      "birthDate": "1997-01-23",
-      "jobTitle": "Founder & Digital Media Entrepreneur",
-      "url": "https://syedasifali.link",
-      "image": "https://syedasifali.link/profile.jpg",
-      "logo": "https://point-media.link/logo.png",
-      "email": "info@syedasifali.link",
-      "address": [
-        { "@type": "PostalAddress", "addressLocality": "Dubai", "addressCountry": "AE" },
-        { "@type": "PostalAddress", "addressLocality": "Ajman", "addressCountry": "AE" }
-      ],
-      "founderOf": [
-        { "@type": "Organization", "name": "Point Media", "url": "https://point-media.link", "logo": "https://point-media.link/logo.png" },
-        { "@type": "Organization", "name": "Pointika", "url": "https://pointika.link", "logo": "https://pointika.link/logo.png" }
-      ],
-      "sameAs": [
-        "https://www.instagram.com/syedasifaliofficial",
-        "https://www.tiktok.com/@pointika.media",
-        "https://www.youtube.com/@AsifAli-Digital",
-        "https://www.linkedin.com/in/pointmedia",
-        "https://x.com/Boxer_01101",
-        "https://www.wikidata.org/wiki/Q137724229",
-        "https://www.imdb.com/name/nm18099961/",
-        "https://www.crunchbase.com/person/syed-asif-ali"
-      ],
-      "subjectOf": [
-        { "@type": "NewsArticle", "headline": "Brand Storytelling in Digital Transformation", "url": "https://www.streetinsider.com/dr/news.php?id=25815791" },
-        { "@type": "NewsArticle", "headline": "Redefining Brand Storytelling", "url": "https://ipsnews.net/business/2026/01/06/syed-asif-ali-redefining-brand-storytelling-in-digital-transformation/" },
-        { "@type": "NewsArticle", "headline": "Syed Asif Ali Featured on MEXC News", "url": "https://www.mexc.co/en-IN/news/387587" },
-        { "@type": "NewsArticle", "headline": "Redefining Entrepreneurial Credibility", "url": "https://www.digitaljournal.com/pr/news/vehement-media/redefining-entrepreneurial-credibility-why-independent-1171880913.html" },
-        { "@type": "NewsArticle", "headline": "Building Credible Online Brands", "url": "https://www.coinprwire.com/newsroom/syed-asif-ali-digital-media-entrepreneur-digital-creator-and-strategic-storyteller-on-building-credible-online-brands-18442" },
-        { "@type": "NewsArticle", "headline": "From TechBullion Feature to Global Growth", "url": "https://techbullion.com/syed-asif-ali-from-techbullion-feature-to-global-digital-media-growth/" },
-        { "@type": "NewsArticle", "headline": "Syed Asif Ali Digital Media Profile", "url": "https://www.digitaljournal.com/pr/news/vehement-media/syed-asif-ali-digital-media-148099701.html" },
-        { "@type": "NewsArticle", "headline": "Building Credible Digital Media Vision", "url": "https://ipsnews.net/business/2026/01/01/syed-asif-ali-on-building-credible-digital-media-through-vision-strategy-and-ethical-storytelling/" },
-        { "@type": "NewsArticle", "headline": "Ethical Storytelling & Strategy", "url": "https://entrepreneursbreak.com/syed-asif-ali-building-credible-digital-media-through-vision-strategy-and-ethical-storytelling.html" },
-        { "@type": "NewsArticle", "headline": "Founder of Fastest Growing Digital Media", "url": "https://techbullion.com/syed-asif-ali-founder-of-fastest-growing-digital-media-company-point-media/" }
-      ]
-    },
-    {
-      "@type": "Organization",
-      "@id": "https://point-media.link/#organization",
-      "name": "Point Media",
-      "url": "https://point-media.link",
-      "logo": "https://point-media.link/logo.png",
-      "founder": {"@id": "https://syedasifali.link/#person"}
-    }
-  ]
+  "@type": "AboutPage",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Syed Asif Ali",
+    "sameAs": [
+      "https://www.wikidata.org/wiki/Q137724229",
+      "https://www.imdb.com/name/nm18099961/",
+      "https://www.crunchbase.com/person/syed-asif-ali"
+    ]
+  }
 }
 </script>
 </head>
 <body>
-
 <div id="particles-js"></div>
-<div id="overlay"></div>
-
 <nav class="header-nav">
   <div class="nav-container">
     <a href="index.html" class="logo-text">SYED ASIF ALI</a>
-    <div class="menu-btn" id="menu-trigger"><i class="fas fa-bars"></i></div>
-    <div class="menu" id="main-menu">
+    <div class="menu">
       <a href="index.html">Home</a>
       <a href="about.html" class="active">About</a>
-      <a href="pointmedia.html">Point Media</a>
-      <a href="pointika.html">Pointika</a>
-      <a href="press.html">Press</a>
-      <a href="techbullion.html">TechBullion</a>
-      <a href="socials.html">Social</a>
+      <a href="https://point-media.link">Point Media</a>
+      <a href="https://pointika.link">Pointika</a>
       <a href="contact.html">Contact</a>
     </div>
   </div>
 </nav>
 
 <div class="ui-layer">
-    <div class="profile-img-container"><img src="profile.jpg" alt="Syed Asif Ali Official Profile"></div>
-    <h1 class="glitch highlight-text">About Syed Asif Ali</h1>
-    <p class="highlight-text" style="letter-spacing: 4px; color: var(--pink); font-size: 0.7rem; font-family: 'Orbitron'; font-weight: 900; text-align: center;">FOUNDER OF POINT MEDIA & POINTIKA | STRATEGIST</p>
-
-    <div class="brand-btns">
-        <a href="https://point-media.link" class="btn btn-pm" target="_blank">Point Media Official ↗</a>
-        <a href="https://pointika.link" class="btn btn-pk" target="_blank">Pointika Official ↗</a>
-    </div>
+    <div class="profile-img-container"><img src="profile.jpg" alt="Syed Asif Ali"></div>
+    <h1 class="glitch">About Syed Asif Ali</h1>
+    <p style="letter-spacing: 4px; color: var(--pink); font-size: 0.7rem; font-family: 'Orbitron'; text-align: center; font-weight: 900;">FOUNDER OF POINT MEDIA & POINTIKA</p>
 
     <div class="glass-card">
-        <h2 class="highlight-text">Biography</h2>
-        <p class="highlight-text">
-            Born in South Waziristan, Pakistan, and currently based in the UAE, Syed Asif Ali is a visionary entrepreneur who has spent years perfecting the art of digital influence. He is the founder of Point Media, a premier communications brand, and Pointika, a creative sub-brand dedicated to the future of storytelling.
-        </p>
-
-        <h2 class="highlight-text">Ecosystem Overview</h2>
-        <h3 class="highlight-text">Point Media</h3>
-        <p class="highlight-text">The core agency focused on strategic communications, reputation management, and building high-authority digital entities for public figures and global businesses.</p>
-
-        <h3 class="highlight-text">Pointika</h3>
-        <p class="highlight-text">A specialized sub-brand under Point Media that handles creative storytelling, influencer collaborations, and engaging social media content ecosystems.</p>
-
-        <h2 class="highlight-text" style="text-align: center;">Connect</h2>
+        <h2>Biography</h2>
+        <p>Syed Asif Ali (born January 23, 1997) is a visionary digital entrepreneur based in the UAE. As the founder of Point Media and Pointika, he focuses on high-authority digital ecosystems and creative storytelling.</p>
+        
+        <h2>Official Links</h2>
         <div class="social-links">
             <a href="https://www.instagram.com/syedasifaliofficial" target="_blank">Instagram</a>
-            <a href="https://www.tiktok.com/@pointika.media" target="_blank">TikTok</a>
-            <a href="https://www.youtube.com/@AsifAli-Digital" target="_blank">YouTube</a>
-            <a href="https://www.linkedin.com/in/pointmedia" target="_blank">LinkedIn</a>
-            <a href="https://x.com/Boxer_01101" target="_blank">X / Twitter</a>
+            <a href="https://www.wikidata.org/wiki/Q137724229" target="_blank">Wikidata</a>
+            <a href="https://www.imdb.com/name/nm18099961/" target="_blank">IMDb</a>
         </div>
     </div>
-
-    <footer>© 2026 SYED ASIF ALI · ALL RIGHTS RESERVED</footer>
+    <footer>© 2026 SYED ASIF ALI · GLOBALLY VERIFIED</footer>
 </div>
 
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
-    function splitText(selector) {
-        const els = document.querySelectorAll(selector);
-        els.forEach(el => {
-            const words = el.innerText.split(' ');
-            el.innerHTML = words.map(w => `<span>${w}</span>`).join(' ');
-        });
-    }
-
-    splitText('.highlight-text
+    particlesJS('particles-js', { "particles": { "number": { "value": 50 }, "color": { "value": "#00f2fe" }, "line_linked": { "enable": true, "color": "#00f2fe", "opacity": 0.2 }, "move": { "enable": true, "speed": 2 } } });
+</script>
+</body>
+</html>
