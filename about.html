@@ -13,42 +13,58 @@
 <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Grotesk:wght@300;500;700&family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+<!-- Strong Updated Schema for About Page -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "AboutPage",
-  "mainEntity": {
-    "@type": "Person",
-    "@id": "https://syedasifali.link/#person",
-    "name": "Syed Asif Ali",
-    "birthDate": "1997-01-23",
-    "jobTitle": "Founder of Point Media & Pointika",
-    "url": "https://syedasifali.link/",
-    "image": "https://syedasifali.link/profile.jpg",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Dubai",
-      "addressCountry": "AE"
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://syedasifali.link/#person",
+      "name": "Syed Asif Ali",
+      "birthDate": "1997-01-23",
+      "jobTitle": "Founder & Digital Media Entrepreneur",
+      "url": "https://syedasifali.link/",
+      "image": "https://syedasifali.link/profile.jpg",
+      "email": "info@syedasifali.link",
+      "address": [
+        { "@type": "PostalAddress", "addressLocality": "Dubai", "addressCountry": "AE" },
+        { "@type": "PostalAddress", "addressLocality": "Ajman", "addressCountry": "AE" }
+      ],
+      "founderOf": [
+        { "@type": "Organization", "name": "Point Media", "url": "https://point-media.link", "logo": "https://point-media.link/logo.png" },
+        { "@type": "Organization", "name": "Pointika", "url": "https://pointika.link", "logo": "https://pointika.link/logo.png" }
+      ],
+      "sameAs": [
+        "https://www.wikidata.org/wiki/Q137724229",
+        "https://www.imdb.com/name/nm18099961/",
+        "https://www.crunchbase.com/person/syed-asif-ali",
+        "https://www.instagram.com/syedasifaliofficial/",
+        "https://www.linkedin.com/in/syed-asif-ali-36b5623a0",
+        "https://x.com/Boxer_01101",
+        "https://www.mexc.com/en-GB/news/387586",
+        "https://www.mexc.com/en-GB/news/387587",
+        "https://www.manilatimes.net/2026/01/09/tmt-newswire/plentisoft/syed-asif-ali-scales-digital-media-operations-in-the-united-arab-emirates-through-point-media-and-pointika/2255897",
+        "https://techbullion.com/syed-asif-ali-founder-of-fastest-growing-digital-media-company-point-media/",
+        "https://www.outlookindia.com/hub4business/how-syed-asif-ali-is-redefining-digital-authority-and-identity-engineering-in-the-uae",
+        "https://ipsnews.net/business/2026/01/06/syed-asif-ali-redefining-brand-storytelling-in-digital-transformation/",
+        "https://www.bbntimes.com/society/why-digital-trust-has-become-a-social-issue-a-conversation-with-syed-asif-ali",
+        "https://www.bignewsnetwork.com/news/278783898/syed-asif-ali-entrepreneur-digital-creator-and-strategic-storyteller",
+        "https://www.digitaljournal.com/pr/news/vehement-media/syed-asif-ali-digital-media-148099701.html",
+        "https://www.streetinsider.com/dr/news.php?id=25815791"
+      ],
+      "subjectOf": [
+        { "@type": "NewsArticle", "headline": "Syed Asif Ali scales digital media operations in the UAE", "url": "https://www.manilatimes.net/2026/01/09/tmt-newswire/plentisoft/syed-asif-ali-scales-digital-media-operations-in-the-united-arab-emirates-through-point-media-and-pointika/2255897" },
+        { "@type": "NewsArticle", "headline": "Redefining Entrepreneurial Credibility", "url": "https://www.mexc.com/en-GB/news/387587" },
+        { "@type": "NewsArticle", "headline": "How Syed Asif Ali is Redefining Digital Authority", "url": "https://www.outlookindia.com/hub4business/how-syed-asif-ali-is-redefining-digital-authority-and-identity-engineering-in-the-uae" }
+      ]
     },
-    "sameAs": [
-      "https://www.wikidata.org/wiki/Q137724229",
-      "https://www.imdb.com/name/nm18099961/",
-      "https://www.crunchbase.com/person/syed-asif-ali",
-      "https://www.instagram.com/syedasifaliofficial/",
-      "https://www.linkedin.com/in/syed-asif-ali-36b5623a0",
-      "https://x.com/Boxer_01101",
-      "https://www.mexc.com/en-GB/news/387586",
-      "https://www.mexc.com/en-GB/news/387587",
-      "https://www.manilatimes.net/2026/01/09/tmt-newswire/plentisoft/syed-asif-ali-scales-digital-media-operations-in-the-united-arab-emirates-through-point-media-and-pointika/2255897",
-      "https://techbullion.com/syed-asif-ali-founder-of-fastest-growing-digital-media-company-point-media/",
-      "https://www.outlookindia.com/hub4business/how-syed-asif-ali-is-redefining-digital-authority-and-identity-engineering-in-the-uae",
-      "https://ipsnews.net/business/2026/01/06/syed-asif-ali-redefining-brand-storytelling-in-digital-transformation/",
-      "https://www.bbntimes.com/society/why-digital-trust-has-become-a-social-issue-a-conversation-with-syed-asif-ali",
-      "https://www.bignewsnetwork.com/news/278783898/syed-asif-ali-entrepreneur-digital-creator-and-strategic-storyteller",
-      "https://www.digitaljournal.com/pr/news/vehement-media/syed-asif-ali-digital-media-148099701.html",
-      "https://www.streetinsider.com/dr/news.php?id=25815791"
-    ]
-  }
+    {
+      "@type": "AboutPage",
+      "url": "https://syedasifali.link/about.html",
+      "mainEntity": { "@id": "https://syedasifali.link/#person" }
+    }
+  ]
 }
 </script>
 
