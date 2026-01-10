@@ -6,11 +6,9 @@
 
 <title>Pointika | Creative Media & Storytelling by Syed Asif Ali</title>
 <meta name="description" content="Pointika is the creative media arm of Point Media, founded by Syed Asif Ali. Discover how we reshape digital storytelling and influencer impact in Dubai & UAE.">
+<meta name="robots" content="index, follow">
 
 <link rel="canonical" href="https://syedasifali.link/pointika.html">
-
-<link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Grotesk:wght@300;500;700&family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <script type="application/ld+json">
 {
@@ -25,26 +23,38 @@
     },
     {
       "@type": "Organization",
+      "@id": "https://pointika.link/#organization",
       "name": "Pointika",
       "url": "https://pointika.link",
+      "logo": "https://pointika.link/logo.png",
       "parentOrganization": {
         "@type": "Organization",
         "name": "Point Media",
-        "url": "https://point-media.link"
+        "url": "https://point-media.link",
+        "logo": "https://point-media.link/logo.png"
       },
       "founder": {
         "@type": "Person",
+        "@id": "https://syedasifali.link/#person",
         "name": "Syed Asif Ali",
-        "url": "https://syedasifali.link/"
+        "url": "https://syedasifali.link/",
+        "sameAs": [
+          "https://www.wikidata.org/wiki/Q137724229",
+          "https://www.imdb.com/name/nm18099961/",
+          "https://www.manilatimes.net/2026/01/09/tmt-newswire/plentisoft/syed-asif-ali-scales-digital-media-operations-in-the-united-arab-emirates-through-point-media-and-pointika/2255897"
+        ]
       }
     }
   ]
 }
 </script>
 
+<link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Grotesk:wght@300;500;700&family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 <style>
 :root { --neon: #00f2fe; --bg: #000; --pink: #f100ff; --brand-blue: #60a5fa; }
-* { margin:0; padding:0; box-sizing:border-box; -webkit-touch-callout:none; -webkit-user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none; -webkit-tap-highlight-color:transparent; }
+* { margin:0; padding:0; box-sizing:border-box; -webkit-touch-callout:none; user-select:none; }
 body { background: var(--bg); color:#fff; font-family:'Space Grotesk',sans-serif; overflow-x:hidden; width:100%; }
 #particles-js { position: fixed; top:0; left:0; width:100%; height:100%; z-index:1; }
 
@@ -56,36 +66,27 @@ body { background: var(--bg); color:#fff; font-family:'Space Grotesk',sans-serif
 
 .menu { display:flex; gap:15px; }
 .menu a { text-decoration:none; color:#fff; font-family:'Orbitron',sans-serif; font-size:9px; letter-spacing:1px; transition:0.3s; opacity:0.6; }
-.menu a span { display:inline-block; transition:all 0.3s ease; pointer-events:none; }
-.menu a:hover span { color:var(--neon); text-shadow:0 0 10px var(--neon); transform:translateY(-2px); opacity:1; }
 .menu a.active { opacity:1; color:var(--neon); }
 
-.menu-btn { display:none; font-size:24px; color:var(--neon); cursor:pointer; }
-#overlay { position:fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.8); display:none; z-index:4500; }
-
 .ui-layer { position:relative; z-index:10; min-height:100vh; width:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:120px 20px 60px; }
-.highlight-text span { display:inline-block; transition:all 0.3s ease; cursor:default; margin-right:5px; pointer-events:auto; }
-.highlight-text span:hover { color:var(--neon); text-shadow:0 0 15px var(--neon); transform:scale(1.1) translateY(-2px); }
-.glitch { font-family:'Syncopate',sans-serif; font-size:clamp(2.2rem,8vw,4.5rem); font-weight:700; text-transform:uppercase; text-align:center; line-height:1.1; margin-bottom:10px; animation:glitch-anim 0.2s infinite linear alternate-reverse; }
+
+.glitch { font-family:'Syncopate',sans-serif; font-size:clamp(2.2rem, 8vw, 4.5rem); font-weight:700; text-transform:uppercase; text-align:center; animation:glitch-anim 0.2s infinite linear alternate-reverse; }
 @keyframes glitch-anim { 0%{text-shadow:3px 2px 0 red,-3px -2px 0 blue; transform:translate(1px,1px);} 100%{text-shadow:-3px 0 0 red,3px 0 0 blue; transform:translate(-1px,-2px);} }
+
 .brand-header-img { height:100px; margin-bottom:25px; filter:drop-shadow(0 0 15px var(--neon)); }
 
-.glass-card { background:transparent; backdrop-filter:none; border: 1px solid rgba(255,255,255,0.1); border-radius:20px; padding:35px; max-width:900px; width:100%; margin-top:30px; }
-.glass-card h2,.glass-card h3{color:var(--neon); text-transform:uppercase; letter-spacing:2px; font-size:1.2rem; margin-bottom:20px; font-family:'Orbitron'; }
-.glass-card p{color:#ccc; line-height:1.8; font-size:1.1rem; font-weight:300; margin-bottom:20px; }
+.glass-card { background:rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.1); border-radius:20px; padding:35px; max-width:900px; width:100%; margin-top:30px; backdrop-filter: blur(15px); }
+.glass-card h2 { color:var(--neon); font-family:'Orbitron'; font-size:1.2rem; margin-bottom:20px; }
 
-.btn-main { display:inline-flex; align-items:center; gap:12px; padding:15px 35px; background:var(--brand-blue); border:none; border-radius:40px; color:#000; text-decoration:none; font-family:'Orbitron'; font-size:13px; font-weight:900; transition:0.3s; margin-top:10px; }
-.btn-main:hover { background:var(--neon); transform:translateY(-3px); box-shadow:0 10px 20px rgba(0,255,255,0.3); }
+.btn-main { display:inline-flex; align-items:center; gap:12px; padding:15px 35px; background:var(--brand-blue); border-radius:40px; color:#000; text-decoration:none; font-family:'Orbitron'; font-size:13px; font-weight:900; transition:0.3s; }
+.btn-main:hover { background:var(--neon); box-shadow:0 0 20px var(--neon); transform:translateY(-3px); }
 
 footer { margin-top:40px; font-size:9px; color:#444; letter-spacing:4px; text-align:center; font-family:'Orbitron'; }
-
-@media(max-width:768px){.menu-btn{display:block;}.menu{position:fixed;top:70px;right:-100%;background:rgba(0,0,0,0.95);flex-direction:column;width:260px;padding:40px;height:100vh;transition:0.4s;border-left:1px solid var(--neon);}.menu.show{right:0;}}
 </style>
 </head>
 <body>
 
 <div id="particles-js"></div>
-<div id="overlay"></div>
 
 <nav class="header-nav">
   <div class="nav-container">
@@ -93,8 +94,7 @@ footer { margin-top:40px; font-size:9px; color:#444; letter-spacing:4px; text-al
       <img src="logo1.png" alt="Pointika Logo">
       <div class="logo-text">POINTIKA</div>
     </div>
-    <div class="menu-btn" id="menu-trigger"><i class="fas fa-bars"></i></div>
-    <div class="menu" id="main-menu">
+    <div class="menu">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="press.html">Press</a>
@@ -107,61 +107,30 @@ footer { margin-top:40px; font-size:9px; color:#444; letter-spacing:4px; text-al
 
 <div class="ui-layer">
     <img src="logo1.png" alt="Pointika Logo" class="brand-header-img">
-    <h1 class="glitch highlight-text">Pointika</h1>
-    <p class="highlight-text" style="letter-spacing:4px;color:var(--pink);font-size:0.8rem;font-family:'Orbitron';font-weight:900;text-align:center;">THE CREATIVE PULSE OF POINT MEDIA ECOSYSTEM</p>
+    <h1 class="glitch">Pointika</h1>
+    <p style="letter-spacing:4px;color:var(--pink);font-size:0.8rem;font-family:'Orbitron';font-weight:900;text-align:center;">CREATIVE PULSE OF POINT MEDIA</p>
 
     <div class="glass-card">
-        <h2 class="highlight-text">Creative Storytelling</h2>
-        <p class="highlight-text">
-            Pointika is a specialized creative brand founded by <strong>Syed Asif Ali</strong>. While Point Media handles the strategic and corporate side of communications, <strong>Pointika</strong> is where creativity meets content.
+        <h2>Creative Storytelling</h2>
+        <p style="color:#ccc; line-height:1.8; font-size:1.1rem; margin-bottom:20px;">
+            Pointika is the specialized creative arm of the <strong>Point Media</strong> ecosystem, founded by <strong>Syed Asif Ali</strong>. While Point Media drives strategic authority, Pointika is where high-end creative storytelling meets digital impact.
         </p>
-        <p class="highlight-text">
-            From influencer collaborations to high-end digital storytelling, Pointika ensures that every brand has a soul and every story has a voice. It operates as the core creative hub for our MENA and global clients.
+        <p style="color:#ccc; line-height:1.8; font-size:1.1rem; margin-bottom:30px;">
+            We bridge the gap between brands and audiences through influencer management, creative production, and digital identity engineering.
         </p>
 
-        <div style="text-align:center;margin:30px 0;">
-            <a class="btn-main" href="https://pointika.link" target="_blank">Visit Official Pointika Website ↗</a>
-        </div>
-
-        <div style="padding:20px;border-radius:15px;background:transparent;border:1px dashed var(--brand-blue);">
-            <h3 class="highlight-text" style="font-size:1rem;color:var(--brand-blue);">Network Integration</h3>
-            <p class="highlight-text" style="font-size:1rem;margin-bottom:0;">Pointika works in seamless integration with <strong>Point Media</strong> to provide a 360-degree digital presence for modern brands.</p>
+        <div style="text-align:center;">
+            <a class="btn-main" href="https://pointika.link" target="_blank">OFFICIAL WEBSITE ↗</a>
         </div>
     </div>
 
-    <footer>© 2026 POINTIKA · OFFICIAL SUB-BRAND OF POINT MEDIA</footer>
+    <footer>© 2026 POINTIKA · POWERED BY POINT MEDIA · DUBAI · AJMAN</footer>
 </div>
 
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
-function splitText(selector){document.querySelectorAll(selector).forEach(el=>{el.innerHTML=el.innerText.split(' ').map(w=>`<span>${w}</span>`).join(' ');});}
-splitText('.highlight-text');
-document.querySelectorAll('.menu a').forEach(link=>{link.innerHTML=`<span>${link.innerText}</span>`;});
-
-window.oncontextmenu = e => { e.preventDefault(); return false; };
-
-const menuTrigger = document.getElementById('menu-trigger');
-const mainMenu = document.getElementById('main-menu');
-const menuIcon = menuTrigger.querySelector('i');
-const overlay = document.getElementById('overlay');
-
-function closeMenu(){
-    mainMenu.classList.remove('show');
-    overlay.style.display = 'none';
-    menuIcon.className = 'fas fa-bars';
-}
-
-menuTrigger.addEventListener('click', ()=>{
-    mainMenu.classList.toggle('show');
-    overlay.style.display = mainMenu.classList.contains('show') ? 'block' : 'none';
-    menuIcon.className = mainMenu.classList.contains('show') ? 'fas fa-times' : 'fas fa-bars';
-});
-
-overlay.addEventListener('click', closeMenu);
-document.querySelector('.ui-layer').addEventListener('click', ()=>{ if(mainMenu.classList.contains('show')) closeMenu(); });
-
 particlesJS('particles-js', {
-    "particles": { "number": {"value":60}, "color":{"value":"#00f2fe"}, "size":{"value":2}, "line_linked":{"enable":true,"distance":150,"color":"#00f2fe","opacity":0.2}, "move":{"enable":true,"speed":2} }
+    "particles": { "number": {"value":60}, "color":{"value":"#00f2fe"}, "line_linked":{"enable":true,"opacity":0.2}, "move":{"enable":true,"speed":1.5} }
 });
 </script>
 </body>
