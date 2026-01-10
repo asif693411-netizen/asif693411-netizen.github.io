@@ -22,6 +22,7 @@
     "jobTitle": "Founder & Digital Media Entrepreneur",
     "url": "https://syedasifali.link/",
     "email": "info@syedasifali.link",
+    "image": "https://syedasifali.link/profile.jpg",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Dubai",
@@ -35,12 +36,14 @@
       "https://www.linkedin.com/in/syed-asif-ali-36b5623a0",
       "https://x.com/Boxer_01101",
       "https://www.mexc.com/en-GB/news/387586",
-      "https://www.mexc.com/en-GB/news/387587",
       "https://www.manilatimes.net/2026/01/09/tmt-newswire/plentisoft/syed-asif-ali-scales-digital-media-operations-in-the-united-arab-emirates-through-point-media-and-pointika/2255897",
-      "https://techbullion.com/the-architect-of-digital-trust-an-in-depth-conversation-with-syed-asif-ali-on-the-future-of-global-media/",
+      "https://techbullion.com/syed-asif-ali-founder-of-fastest-growing-digital-media-company-point-media/",
       "https://www.outlookindia.com/hub4business/how-syed-asif-ali-is-redefining-digital-authority-and-identity-engineering-in-the-uae",
+      "https://ipsnews.net/business/2026/01/06/syed-asif-ali-redefining-brand-storytelling-in-digital-transformation/",
+      "https://www.bbntimes.com/society/why-digital-trust-has-become-a-social-issue-a-conversation-with-syed-asif-ali",
       "https://www.bignewsnetwork.com/news/278783898/syed-asif-ali-entrepreneur-digital-creator-and-strategic-storyteller",
-      "https://www.bbntimes.com/society/why-digital-trust-has-become-a-social-issue-a-conversation-with-syed-asif-ali"
+      "https://www.digitaljournal.com/pr/news/vehement-media/syed-asif-ali-digital-media-148099701.html",
+      "https://www.streetinsider.com/dr/news.php?id=25815791"
     ]
   }
 }
@@ -55,17 +58,19 @@
 body { background: var(--bg); color:#fff; font-family:'Space Grotesk',sans-serif; overflow-x:hidden; width:100%; }
 #particles-js { position: fixed; top:0; left:0; width:100%; height:100%; z-index:1; }
 
-/* NAVIGATION */
+/* NAVIGATION WITH LOGO */
 .header-nav { position: fixed; top:0; width:100%; z-index:5000; background:rgba(0,0,0,0.9); border-bottom:1px solid var(--neon); backdrop-filter: blur(20px); height:70px; display:flex; align-items:center; }
 .nav-container { max-width:1200px; margin:0 auto; width:100%; display:flex; align-items:center; justify-content:space-between; padding:0 20px; }
-.logo-text { font-family:'Orbitron',sans-serif; font-size:1rem; font-weight:900; color:var(--neon); letter-spacing:2px; text-decoration:none; }
+.logo-box { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.logo-img { height: 35px; }
+.logo-text { font-family:'Orbitron',sans-serif; font-size:1rem; font-weight:900; color:var(--neon); letter-spacing:2px; }
+
 .menu { display:flex; gap:15px; }
 .menu a { text-decoration:none; color:#fff; font-family:'Orbitron',sans-serif; font-size:9px; letter-spacing:1px; transition:0.3s; opacity:0.6; }
 .menu a.active { opacity:1; color:var(--neon); }
 
 /* UI LAYER */
 .ui-layer { position:relative; z-index:10; min-height:100vh; width:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:120px 20px 80px; }
-
 .glitch { font-family:'Syncopate',sans-serif; font-size:clamp(1.8rem,8vw,3.5rem); text-transform:uppercase; text-align:center; animation:glitch-anim 0.2s infinite linear alternate-reverse; }
 @keyframes glitch-anim { 0% { text-shadow:3px 2px 0 red,-3px -2px 0 blue; transform:translate(1px,1px); } 100% { text-shadow:-3px 0 0 red,3px 0 0 blue; transform:translate(-1px,-2px); } }
 
@@ -96,13 +101,16 @@ footer { padding:40px 10px 120px; font-size:9px; color:#444; letter-spacing:4px;
 
 <nav class="header-nav">
   <div class="nav-container">
-    <a href="index.html" class="logo-text">SYED ASIF ALI</a>
+    <a href="index.html" class="logo-box">
+        <img src="https://point-media.link/logo.png" alt="Point Media Logo" class="logo-img">
+        <span class="logo-text">SYED ASIF ALI</span>
+    </a>
     <div class="menu">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>  
       <a href="press.html">Press</a>
-      <a href="https://point-media.link">Point Media</a>
-      <a href="https://pointika.link">Pointika</a>
+      <a href="pointmedia.html">Point Media</a>
+      <a href="pointika.html">Pointika</a>
       <a href="contact.html" class="active">Contact</a>
     </div>
   </div>
@@ -128,17 +136,17 @@ footer { padding:40px 10px 120px; font-size:9px; color:#444; letter-spacing:4px;
     <div class="glass-card">
         <h3>Digital Authority Hubs</h3>
         <div class="eco-links">
-            <a href="https://point-media.link" target="_blank">
+            <a href="pointmedia.html">
                 <strong>Point Media</strong>
-                <span>Official Business</span>
+                <span>Brand Operations</span>
             </a>
-            <a href="https://pointika.link" target="_blank">
+            <a href="pointika.html">
                 <strong>Pointika</strong>
-                <span>Creative Studio</span>
+                <span>Content Strategy</span>
             </a>
             <a href="press.html">
-                <strong>Media Room</strong>
-                <span>Verified Press</span>
+                <strong>Press Room</strong>
+                <span>Verified News Articles</span>
             </a>
         </div>
     </div>
@@ -147,7 +155,7 @@ footer { padding:40px 10px 120px; font-size:9px; color:#444; letter-spacing:4px;
 </div>
 
 <div class="moving-text">
-    <span>🔥 Verified Public Figure · Digital Architect · Founder of Point Media & Pointika · visit POINT-MEDIA.LINK 🔥</span>
+    <span>🚀 FOUNDER OF POINT MEDIA · POINTIKA · UAE · SYED ASIF ALI 🚀</span>
 </div>
 
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
