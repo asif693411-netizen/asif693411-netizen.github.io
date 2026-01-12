@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://asif693411-netizen.github.io/sitemap.xml
+Sitemap: https://syedasifali.link/sitemap.xml
