@@ -8,28 +8,18 @@
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://syedasifali.link/profile.jpg</image:loc>
-      <image:caption>Syed Asif Ali - Founder of Point Media & Digital Architect</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://syedasifali.link/point-media-logo.png</image:loc>
-      <image:caption>Point Media Official Logo</image:caption>
+      <image:caption>Syed Asif Ali - Founder &amp; Digital Architect</image:caption>
     </image:image>
   </url>
 
   <url>
     <loc>https://syedasifali.link/about.html</loc>
     <lastmod>2026-01-12</lastmod>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://syedasifali.link/pointmedia.html</loc>
-    <lastmod>2026-01-12</lastmod>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://syedasifali.link/press.html</loc>
     <lastmod>2026-01-12</lastmod>
     <priority>0.8</priority>
   </url>
@@ -37,7 +27,13 @@
   <url>
     <loc>https://syedasifali.link/pointika.html</loc>
     <lastmod>2026-01-12</lastmod>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://syedasifali.link/press.html</loc>
+    <lastmod>2026-01-12</lastmod>
+    <priority>0.7</priority>
   </url>
 
   <url>
@@ -49,7 +45,7 @@
   <url>
     <loc>https://syedasifali.link/contact.html</loc>
     <lastmod>2026-01-12</lastmod>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
   </url>
 
 </urlset>
