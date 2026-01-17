@@ -4,48 +4,41 @@
 
   <url>
     <loc>https://syedasifali.link/</loc>
-    <lastmod>2026-01-12</lastmod>
-    <priority>1.0</priority>
+    <lastmod>2026-01-17</lastmod> <priority>1.0</priority>
     <image:image>
       <image:loc>https://syedasifali.link/profile.jpg</image:loc>
-      <image:caption>Syed Asif Ali - Founder &amp; Digital Architect</image:caption>
+      <image:caption>Syed Asif Ali - Founder of Point Media &amp; Digital Identity Architect</image:caption>
     </image:image>
   </url>
 
   <url>
     <loc>https://syedasifali.link/about.html</loc>
-    <lastmod>2026-01-12</lastmod>
-    <priority>0.8</priority>
+    <lastmod>2026-01-17</lastmod>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://syedasifali.link/pointmedia.html</loc>
-    <lastmod>2026-01-12</lastmod>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://syedasifali.link/pointika.html</loc>
-    <lastmod>2026-01-12</lastmod>
-    <priority>0.7</priority>
+    <lastmod>2026-01-17</lastmod>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://syedasifali.link/press.html</loc>
-    <lastmod>2026-01-12</lastmod>
-    <priority>0.7</priority>
+    <lastmod>2026-01-17</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://syedasifali.link/pointika.html</loc>
+    <lastmod>2026-01-17</lastmod>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://syedasifali.link/socials.html</loc>
-    <lastmod>2026-01-12</lastmod>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://syedasifali.link/contact.html</loc>
-    <lastmod>2026-01-12</lastmod>
-    <priority>0.6</priority>
+    <lastmod>2026-01-17</lastmod>
+    <priority>0.7</priority>
   </url>
 
 </urlset>
