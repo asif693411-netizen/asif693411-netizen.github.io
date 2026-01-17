@@ -4,29 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Press & Media Coverage - Syed Asif Ali | Official News Room</title>
-<meta name="description" content="Verified media coverage for Syed Asif Ali. Featured in DNA India, MEXC, Manila Times, Outlook India, and TechBullion. Official Digital Media Entrepreneur.">
-
-<link rel="canonical" href="https://syedasifali.link/press.html" />
+<title>Press & Media — Syed Asif Ali | 17 Official Features</title>
+<meta name="description" content="Verified media coverage for Syed Asif Ali across 17+ global platforms including DNA India, Manila Times, and Outlook India.">
 
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 <style>
-:root { --bg:#050505; --accent:#00d2ff; --panel:#0d0d0e; --border:rgba(255,255,255,0.08); --gold: #ffd700; }
+:root { --bg:#050505; --accent:#2563eb; --panel:#0d0d0e; --border:rgba(255,255,255,0.08); --gold: #ffd700; }
 * { margin:0; padding:0; box-sizing:border-box; -webkit-user-select:none; user-select:none; }
 body { background:var(--bg); color:#fff; font-family:'Plus Jakarta Sans',sans-serif; overflow-x:hidden; }
 
-h1:hover, p:hover, span:hover, li:hover { color: var(--accent) !important; transition: 0.3s; }
-
+/* Original Menu CSS */
 header { position:fixed; top:0; width:100%; height:75px; z-index:5000; background:rgba(5,5,5,0.85); backdrop-filter:blur(20px); border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:space-between; padding:0 6%; }
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #fff; }
 .brand img { height:32px; border-radius:4px; }
 .brand span { font-family:'Space Grotesk'; font-size:0.9rem; letter-spacing:1.5px; font-weight:700; text-transform:uppercase; }
 
 .menu-trigger { cursor:pointer; color:var(--accent); font-size:26px; z-index: 7000; }
-
 .side-menu { position:fixed; top:0; right:-50%; width:50%; height:100vh; background:var(--panel); z-index:8000; transition:0.5s cubic-bezier(0.7,0,0.3,1); border-left:1px solid var(--border); display:flex; flex-direction:column; justify-content:center; align-items:center; }
 .side-menu.active { right:0; }
 .close-drawer { position:absolute; top:25px; right:25px; font-size:35px; cursor:pointer; color: var(--accent); }
@@ -35,42 +31,33 @@ header { position:fixed; top:0; width:100%; height:75px; z-index:5000; backgroun
 .nav-links li { margin:25px 0; opacity:0; transform:translateY(20px); transition:0.4s; }
 .side-menu.active .nav-links li { opacity:1; transform:translateY(0); }
 .nav-links a { text-decoration:none; color:#fff; font-family:'Space Grotesk'; font-size:1rem; text-transform:uppercase; letter-spacing: 2px; }
-
 .overlay { position:fixed; inset:0; background:rgba(0,0,0,0.7); z-index:7500; display:none; backdrop-filter:blur(10px); }
 .overlay.active { display:block; }
 
+/* Content Styles */
 .press-hero { padding:140px 8% 40px; text-align:center; }
-.press-hero h1 { font-family:'Space Grotesk'; font-size:clamp(2.5rem, 6vw, 4rem); margin-bottom:15px; }
+.press-hero h1 { font-family:'Space Grotesk'; font-size:clamp(2rem, 5vw, 3.5rem); margin-bottom:10px; }
+.press-container { max-width: 900px; margin: 0 auto; padding: 0 6% 100px; }
 
-.press-container { max-width: 900px; margin: 0 auto; padding: 20px 8% 80px; }
+.cat-heading { color: var(--gold); font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase; margin: 40px 0 20px; display: block; opacity: 0.8; }
+.press-card { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center; transition: 0.3s; }
+.press-card:hover { border-color: var(--accent); transform: translateX(5px); }
 
-.press-card { background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: 15px; padding: 30px; margin-bottom: 25px; backdrop-filter: blur(10px); transition: 0.4s; text-align: left; }
-.press-card.latest { border-left-color: var(--gold); background: rgba(255, 215, 0, 0.03); }
-.press-card:hover { transform: translateX(10px); background: rgba(255,255,255,0.05); }
+.info h2 { font-size: 1rem; margin-bottom: 4px; font-weight: 800; }
+.info p { color: #777; font-size: 0.8rem; }
+.src { color: var(--accent); font-weight: 800; font-size: 0.65rem; text-transform: uppercase; margin-bottom: 5px; display: block; }
+.btn-go { color: #fff; text-decoration: none; font-size: 1.1rem; opacity: 0.4; }
+.btn-go:hover { opacity: 1; color: var(--accent); }
 
-.press-card h2 { font-family: 'Space Grotesk'; font-size: 1.2rem; margin-bottom: 10px; color: #fff; }
-.press-card p { color: #888; line-height: 1.6; margin-bottom: 18px; font-size: 0.95rem; }
-.btn-press { font-family: 'Space Grotesk'; font-size: 10px; font-weight: 800; color: var(--accent); text-decoration: none; text-transform: uppercase; letter-spacing: 2px; display: inline-flex; align-items: center; gap: 8px; }
-
-footer { width:100%; padding:40px 6%; border-top:1px solid var(--border); display:flex; flex-direction:column; align-items:center; gap:15px; background:#050505; }
-.copyright { color:#ffffff; font-size:11px; font-weight:500; letter-spacing:1px; text-transform:uppercase; text-align:center; }
-
-@media(min-width:992px){ 
-    .side-menu{width:350px; right:-350px;} 
-    footer{flex-direction:row; justify-content:space-between;} 
-}
+@media(min-width:992px){ .side-menu{width:350px; right:-350px;} }
 </style>
 </head>
 <body oncontextmenu="return false;">
 
 <header>
-    <a href="index.html" class="brand">
-        <img src="logo.png" alt="Point Media Logo">
-        <span>SYED ASIF ALI</span>
-    </a>
+    <a href="index.html" class="brand"><img src="logo.png" alt="Logo"><span>SYED ASIF ALI</span></a>
     <div class="menu-trigger" onclick="toggleMenu()">☰</div>
 </header>
-
 <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
 
 <nav class="side-menu" id="sideMenu">
@@ -86,129 +73,96 @@ footer { width:100%; padding:40px 6%; border-top:1px solid var(--border); displa
     </ul>
 </nav>
 
-<section class="press-hero" data-aos="fade-up">
-    <p style="color:var(--accent); font-weight:800; letter-spacing:4px; font-size:0.8rem; margin-bottom:15px; text-transform:uppercase;">Verified Global Coverage</p>
+<section class="press-hero" data-aos="fade-down">
     <h1>Media Room</h1>
+    <p style="color:#555;">Verified Global Recognition</p>
 </section>
 
 <div class="press-container">
-    <div class="press-card latest" data-aos="fade-up">
-        <h2>DNA India (Jan 15, 2026)</h2>
-        <p>Crafting Verified Digital Identities in the AI Era: A deep dive into Syed Asif Ali's methodology.</p>
-        <a href="https://www.dnaindia.com/insights/report-syed-asif-ali-crafting-verified-digital-identities-in-the-ai-era-3197154" target="_blank" class="btn-press">Full Report ↗</a>
-    </div>
-
-    <div class="press-card latest" data-aos="fade-up">
-        <h2>MEXC News Global (Jan 12, 2026)</h2>
-        <p>Official news spotlight on Syed Asif Ali's digital transformation initiatives in the UAE.</p>
-        <a href="https://www.mexc.com/en-NG/news/458161" target="_blank" class="btn-press">Official Release ↗</a>
-    </div>
-
-    <div class="press-card latest" data-aos="fade-up">
-        <h2>TechBullion (Jan 12, 2026)</h2>
-        <p>The Digital Renaissance: Bridging creative artistry and strategic media authority.</p>
-        <a href="https://techbullion.com/the-digital-renaissance-of-syed-asif-ali-bridging-creative-artistry-and-strategic-media-authority/" target="_blank" class="btn-press">Read Story ↗</a>
-    </div>
-
-    <div class="press-card latest" data-aos="fade-up">
-        <h2>The Manila Times (Jan 9, 2026)</h2>
-        <p>Syed Asif Ali scales digital media operations in the UAE through Point Media and Pointika.</p>
-        <a href="https://www.manilatimes.net/2026/01/09/tmt-newswire/plentisoft/syed-asif-ali-scales-digital-media-operations-in-the-united-arab-emirates-through-point-media-and-pointika/2255897" target="_blank" class="btn-press">Full Article ↗</a>
-    </div>
-
+    <span class="cat-heading">Top Tier Features</span>
     <div class="press-card" data-aos="fade-up">
-        <h2>TechBullion: Architect of Trust (Jan 9, 2026)</h2>
-        <p>An in-depth conversation on the future of global media and identity engineering.</p>
-        <a href="https://techbullion.com/the-architect-of-digital-trust-an-in-depth-conversation-with-syed-asif-ali-on-the-future-of-global-media/" target="_blank" class="btn-press">Expert Interview ↗</a>
+        <div class="info"><span class="src">DNA India</span><h2>Verified Digital Identities in AI Era</h2><p>Exclusive report on Syed Asif Ali.</p></div>
+        <a href="https://www.dnaindia.com/insights/report-syed-asif-ali-crafting-verified-digital-identities-in-the-ai-era-3197154" target="_blank" class="btn-go">↗</a>
+    </div>
+    <div class="press-card" data-aos="fade-up">
+        <div class="info"><span class="src">The Manila Times</span><h2>Scaling UAE Operations</h2><p>Point Media and Pointika expansion.</p></div>
+        <a href="https://www.manilatimes.net/2026/01/09/tmt-newswire/plentisoft/syed-asif-ali-scales-digital-media-operations-in-the-united-arab-emirates-through-point-media-and-pointika/2255897" target="_blank" class="btn-go">↗</a>
+    </div>
+    <div class="press-card" data-aos="fade-up">
+        <div class="info"><span class="src">TechBullion</span><h2>Digital Renaissance of Syed Asif Ali</h2><p>Bridging artistry and media authority.</p></div>
+        <a href="https://techbullion.com/the-digital-renaissance-of-syed-asif-ali-bridging-creative-artistry-and-strategic-media-authority/" target="_blank" class="btn-go">↗</a>
+    </div>
+    <div class="press-card" data-aos="fade-up">
+        <div class="info"><span class="src">MEXC News</span><h2>Digital Transformation Spotlight</h2><p>Reshaping global storytelling.</p></div>
+        <a href="https://www.mexc.com/en-GB/news/387586" target="_blank" class="btn-go">↗</a>
     </div>
 
+    <span class="cat-heading">Industry Insights</span>
     <div class="press-card" data-aos="fade-up">
-        <h2>BBN Times (Jan 8, 2026)</h2>
-        <p>Why digital trust has become a social issue: Insights from Syed Asif Ali.</p>
-        <a href="https://www.bbntimes.com/society/why-digital-trust-has-become-a-social-issue-a-conversation-with-syed-asif-ali" target="_blank" class="btn-press">Social Impact ↗</a>
+        <div class="info"><span class="src">BBN Times</span><h2>Digital Trust as a Social Issue</h2><p>Conversation on global media trust.</p></div>
+        <a href="https://www.bbntimes.com/society/why-digital-trust-has-become-a-social-issue-a-conversation-with-syed-asif-ali" target="_blank" class="btn-go">↗</a>
+    </div>
+    <div class="press-card" data-aos="fade-up">
+        <div class="info"><span class="src">Outlook India</span><h2>Digital Authority in UAE</h2><p>Redefining identity engineering.</p></div>
+        <a href="https://www.outlookindia.com/hub4business/how-syed-asif-ali-is-redefining-digital-authority-and-identity-engineering-in-the-uae" target="_blank" class="btn-go">↗</a>
+    </div>
+    <div class="press-card" data-aos="fade-up">
+        <div class="info"><span class="src">Big News Network</span><h2>Strategic Storyteller Profile</h2><p>Syed Asif Ali entrepreneur feature.</p></div>
+        <a href="https://www.bignewsnetwork.com/news/278783898/syed-asif-ali-entrepreneur-digital-creator-and-strategic-storyteller" target="_blank" class="btn-go">↗</a>
+    </div>
+    <div class="press-card" data-aos="fade-up">
+        <div class="info"><span class="src">IPS News</span><h2>Redefining Brand Storytelling</h2><p>Digital transformation insights.</p></div>
+        <a href="https://ipsnews.net/business/2026/01/06/syed-asif-ali-redefining-brand-storytelling-in-digital-transformation/" target="_blank" class="btn-go">↗</a>
+    </div>
+    <div class="press-card" data-aos="fade-up">
+        <div class="info"><span class="src">TechBullion</span><h2>The Architect of Digital Trust</h2><p>Expert interview on media future.</p></div>
+        <a href="https://techbullion.com/the-architect-of-digital-trust-an-in-depth-conversation-with-syed-asif-ali-on-the-future-of-global-media/" target="_blank" class="btn-go">↗</a>
+    </div>
+    <div class="press-card" data-aos="fade-up">
+        <div class="info"><span class="src">Street Insider</span><h2>Strategic Media Operations</h2><p>UAE operations scaling report.</p></div>
+        <a href="https://www.streetinsider.com/dr/news.php?id=25815791" target="_blank" class="btn-go">↗</a>
     </div>
 
+    <span class="cat-heading">Global Press Releases</span>
     <div class="press-card" data-aos="fade-up">
-        <h2>Street Insider (Jan 7, 2026)</h2>
-        <p>Strategic media operations and verified identity engineering by Point Media.</p>
-        <a href="https://www.streetinsider.com/dr/news.php?id=25815791&gfv=1" target="_blank" class="btn-press">News Wire ↗</a>
+        <div class="info"><span class="src">Digital Journal</span><h2>Entrepreneurial Credibility</h2><p>Independent media scaling.</p></div>
+        <a href="https://www.digitaljournal.com/pr/news/vehement-media/redefining-entrepreneurial-credibility-why-independent-1171880913.html" target="_blank" class="btn-go">↗</a>
     </div>
-
     <div class="press-card" data-aos="fade-up">
-        <h2>IPS News (Jan 6, 2026)</h2>
-        <p>Redefining brand storytelling in the era of digital transformation.</p>
-        <a href="https://ipsnews.net/business/2026/01/06/syed-asif-ali-redefining-brand-storytelling-in-digital-transformation/" target="_blank" class="btn-press">Press Story ↗</a>
+        <div class="info"><span class="src">MEXC News</span><h2>Influencer Impact & Storytelling</h2><p>Strategic growth spotlight.</p></div>
+        <a href="https://www.mexc.com/en-GB/news/387587" target="_blank" class="btn-go">↗</a>
     </div>
-
     <div class="press-card" data-aos="fade-up">
-        <h2>Digital Journal (Jan 4, 2026)</h2>
-        <p>Vehement Media features Syed Asif Ali's contribution to digital media scaling.</p>
-        <a href="https://www.digitaljournal.com/pr/news/vehement-media/redefining-entrepreneurial-credibility-why-independent-1171880913.html" target="_blank" class="btn-press">View Press ↗</a>
+        <div class="info"><span class="src">MarketersMEDIA</span><h2>UAE Operations Update</h2><p>Point Media growth release.</p></div>
+        <a href="https://news.marketersmedia.com/syed-asif-ali-scales-digital-media-operations-in-the-united-arab-emirates-through-point-media-and-pointika/89180473" target="_blank" class="btn-go">↗</a>
     </div>
-
     <div class="press-card" data-aos="fade-up">
-        <h2>CoinPRWire (Jan 3, 2026)</h2>
-        <p>Syed Asif Ali on building credible online brands and digital creator ecosystems.</p>
-        <a href="https://www.coinprwire.com/newsroom/syed-asif-ali-digital-media-entrepreneur-digital-creator-and-strategic-storyteller-on-building-credible-online-brands-18442" target="_blank" class="btn-press">Read Article ↗</a>
+        <div class="info"><span class="src">Entrepreneurs Break</span><h2>Ethical Storytelling Model</h2><p>Vision and strategy feature.</p></div>
+        <a href="https://entrepreneursbreak.com/syed-asif-ali-building-credible-digital-media-through-vision-strategy-and-ethical-storytelling.html" target="_blank" class="btn-go">↗</a>
     </div>
-
     <div class="press-card" data-aos="fade-up">
-        <h2>MEXC Global (Jan 2, 2026)</h2>
-        <p>Official spotlight on reshaping digital storytelling and influencer impact.</p>
-        <a href="https://www.mexc.com/en-IN/news/387587" target="_blank" class="btn-press">Official Release ↗</a>
+        <div class="info"><span class="src">TechBullion</span><h2>Founder of Point Media</h2><p>Growth of the media powerhouse.</p></div>
+        <a href="https://techbullion.com/syed-asif-ali-founder-of-fastest-growing-digital-media-company-point-media/" target="_blank" class="btn-go">↗</a>
     </div>
-
     <div class="press-card" data-aos="fade-up">
-        <h2>Digital Journal (Jan 2, 2026)</h2>
-        <p>Digital Media Transformation: The Syed Asif Ali Journey.</p>
-        <a href="https://www.digitaljournal.com/pr/news/vehement-media/syed-asif-ali-digital-media-148099701.html" target="_blank" class="btn-press">News Feature ↗</a>
+        <div class="info"><span class="src">Digital Journal</span><h2>Syed Asif Ali Journey</h2><p>Transformation of digital media.</p></div>
+        <a href="https://www.digitaljournal.com/pr/news/vehement-media/syed-asif-ali-digital-media-148099701.html" target="_blank" class="btn-go">↗</a>
     </div>
-
     <div class="press-card" data-aos="fade-up">
-        <h2>IPS News (Jan 1, 2026)</h2>
-        <p>Vision, Strategy, and Ethical Storytelling in the Middle East.</p>
-        <a href="https://ipsnews.net/business/2026/01/01/syed-asif-ali-on-building-credible-digital-media-through-vision-strategy-and-ethical-storytelling/" target="_blank" class="btn-press">Read Story ↗</a>
-    </div>
-
-    <div class="press-card" data-aos="fade-up">
-        <h2>TechBullion (Jan 1, 2026)</h2>
-        <p>From Feature to Global Growth: The Scaling of Point Media.</p>
-        <a href="https://techbullion.com/syed-asif-ali-from-techbullion-feature-to-global-digital-media-growth/" target="_blank" class="btn-press">Full Article ↗</a>
-    </div>
-
-    <div class="press-card" data-aos="fade-up">
-        <h2>Entrepreneurs Break (Dec 2025)</h2>
-        <p>Building credible digital media through vision and strategy.</p>
-        <a href="https://entrepreneursbreak.com/syed-asif-ali-building-credible-digital-media-through-vision-strategy-and-ethical-storytelling.html" target="_blank" class="btn-press">Entrepreneurship ↗</a>
-    </div>
-
-    <div class="press-card" data-aos="fade-up">
-        <h2>Outlook India (Archives)</h2>
-        <p>Redefining Digital Authority and Identity Engineering in the UAE.</p>
-        <a href="https://www.outlookindia.com/hub4business/how-syed-asif-ali-is-redefining-digital-authority-and-identity-engineering-in-the-uae" target="_blank" class="btn-press">Archive Story ↗</a>
-    </div>
-
-    <div class="press-card" data-aos="fade-up">
-        <h2>TechBullion (June 2022)</h2>
-        <p>Syed Asif Ali: Founder of the fastest-growing digital media company, Point Media.</p>
-        <a href="https://techbullion.com/syed-asif-ali-founder-of-fastest-growing-digital-media-company-point-media/" target="_blank" class="btn-press">Agency Spotlight ↗</a>
+        <div class="info"><span class="src">IPS News</span><h2>Vision & Ethical Storytelling</h2><p>Point Media core strategy.</p></div>
+        <a href="https://ipsnews.net/business/2026/01/01/syed-asif-ali-on-building-credible-digital-media-through-vision-strategy-and-ethical-storytelling/" target="_blank" class="btn-go">↗</a>
     </div>
 </div>
 
-<footer>
-    <img src="logo.png" alt="Point Media Logo" style="height:25px; opacity:0.7;">
-    <div class="copyright">&copy; 2026 Syed Asif Ali. All Rights Reserved.</div>
-</footer>
-
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-AOS.init({ duration: 1000, once: true });
-function toggleMenu(){
-    const menu=document.getElementById("sideMenu");
-    const overlay=document.getElementById("overlay");
-    menu.classList.toggle("active");
-    overlay.classList.toggle("active");
-}
+    AOS.init({ duration: 800, once: true });
+    function toggleMenu(){
+        const m = document.getElementById("sideMenu");
+        const o = document.getElementById("overlay");
+        m.classList.toggle("active");
+        o.classList.toggle("active");
+    }
 </script>
 </body>
 </html>
