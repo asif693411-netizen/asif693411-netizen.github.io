@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>About - Syed Asif Ali | Entrepreneur & Founder</title>
-<meta name="description" content="Discover the journey of Syed Asif Ali, founder of Point Media and Pointika. Expert digital creator and strategist based in UAE.">
+<meta name="description" content="Discover the journey of Syed Asif Ali, founder of Point Media and Pointika. From South Waziristan to UAE, building digital trust globally.">
 
 <link rel="canonical" href="https://syedasifali.link/about.html" />
 
@@ -14,22 +14,22 @@
 
 <style>
 :root { --bg:#050505; --accent:#00d2ff; --panel:#0d0d0e; --border:rgba(255,255,255,0.08); }
-* { margin:0; padding:0; box-sizing:border-box; -webkit-user-select:none; user-select:none; }
+* { margin:0; padding:0; box-sizing:border-box; }
 body { background:var(--bg); color:#fff; font-family:'Plus Jakarta Sans',sans-serif; overflow-x:hidden; }
-h1, p, span, li, a { transition: color 0.3s ease; cursor: default; }
-h1:hover, p:hover, span:hover, li:hover { color: var(--accent) !important; }
 
 header { position:fixed; top:0; width:100%; height:75px; z-index:5000; background:rgba(5,5,5,0.85); backdrop-filter:blur(20px); border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:space-between; padding:0 6%; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #fff; }
 .brand img { height:32px; border-radius:4px; }
 .brand span { font-family:'Space Grotesk'; font-size:0.9rem; letter-spacing:1.5px; font-weight:700; text-transform:uppercase; }
 .menu-trigger { cursor:pointer; color:var(--accent); font-size:26px; }
 .side-menu { position:fixed; top:0; right:-50%; width:50%; height:100vh; background:var(--panel); z-index:6000; transition:0.5s cubic-bezier(0.7,0,0.3,1); border-left:1px solid var(--border); display:flex; flex-direction:column; justify-content:center; align-items:center; }
 .side-menu.active { right:0; }
-.close-drawer { position:absolute; top:25px; right:25px; font-size:35px; cursor:pointer; }
+.close-drawer { position:absolute; top:25px; right:25px; font-size:35px; cursor:pointer; color: var(--accent); }
 .nav-links { list-style:none; text-align:center; width:100%; }
 .nav-links li { margin:25px 0; opacity:0; transform:translateY(20px); transition:0.4s; }
 .side-menu.active .nav-links li { opacity:1; transform:translateY(0); }
-.nav-links a { text-decoration:none; color:#fff; font-family:'Space Grotesk'; font-size:1rem; text-transform:uppercase; }
+.nav-links a { text-decoration:none; color:#fff; font-family:'Space Grotesk'; font-size:1rem; text-transform:uppercase; letter-spacing: 2px; }
+.nav-links a:hover { color: var(--accent); }
 .overlay { position:fixed; inset:0; background:rgba(0,0,0,0.7); z-index:5500; display:none; backdrop-filter:blur(10px); }
 .overlay.active { display:block; }
 
@@ -43,16 +43,30 @@ header { position:fixed; top:0; width:100%; height:75px; z-index:5000; backgroun
 .btn-luxury { padding:18px 40px; background:var(--accent); color:#000; text-decoration:none; border-radius:12px; font-weight:800; font-size:13px; text-transform:uppercase; display:inline-block; transition: 0.3s;}
 .btn-luxury:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(0,210,255,0.4); }
 
+.content-section { max-width: 800px; margin: 0 auto; padding: 60px 8%; }
+.glass-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 40px; margin-bottom: 30px; }
+.glass-card h2 { color: var(--accent); font-family: 'Space Grotesk'; margin-bottom: 20px; font-size: 1.5rem; text-transform: uppercase; letter-spacing: 2px; }
+.glass-card p { color: #ccc; line-height: 1.9; margin-bottom: 20px; font-size: 1rem; }
+.glass-card strong { color: #fff; }
+
+.timeline { position: relative; padding-left: 30px; border-left: 2px solid var(--accent); margin: 30px 0; }
+.timeline-item { margin-bottom: 30px; position: relative; }
+.timeline-item::before { content: ''; position: absolute; left: -36px; top: 5px; width: 12px; height: 12px; background: var(--accent); border-radius: 50%; }
+.timeline-item h3 { color: #fff; font-size: 1.1rem; margin-bottom: 5px; }
+.timeline-item p { color: #888; font-size: 0.9rem; margin: 0; }
+
+.press-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px; }
+.press-item { background: rgba(255,255,255,0.05); padding: 15px; border-radius: 10px; border: 1px solid var(--border); }
+.press-item h4 { color: var(--accent); font-size: 0.8rem; margin-bottom: 5px; text-transform: uppercase; }
+.press-item p { color: #fff; font-size: 0.9rem; margin: 0; }
+
+.social-links { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 20px; }
+.social-links a { padding: 10px 20px; border-radius: 25px; border: 1px solid var(--accent); color: var(--accent); text-decoration: none; font-size: 12px; font-family: 'Space Grotesk'; text-transform: uppercase; transition: 0.3s; }
+.social-links a:hover { background: var(--accent); color: #000; box-shadow: 0 0 15px var(--accent); }
+
 footer { width:100%; padding:40px 6%; border-top:1px solid var(--border); display:flex; flex-direction:column; align-items:center; gap:15px; background:#050505; }
 .footer-logo { height:25px; opacity:0.7; }
 .copyright { color:#ffffff; font-size:11px; font-weight:500; letter-spacing:1px; text-transform:uppercase; text-align:center; }
-
-.glass-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 30px; max-width: 800px; width: 100%; margin-top: 30px; backdrop-filter: blur(10px); }
-.glass-card h2 { color: var(--accent); font-family: 'Space Grotesk'; margin-bottom: 15px; font-size: 1.2rem; }
-.glass-card p { color: #ccc; line-height: 1.8; margin-bottom: 20px; }
-.social-links { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 20px; }
-.social-links a { padding: 8px 15px; border-radius: 20px; border: 1px solid var(--accent); color: var(--accent); text-decoration: none; font-size: 11px; font-family: 'Space Grotesk'; transition: 0.3s; }
-.social-links a:hover { background: var(--accent); color: #000; box-shadow: 0 0 10px var(--accent); }
 
 @media(min-width:992px){ 
     .hero{flex-direction:row; text-align:left; gap:80px;} 
@@ -63,11 +77,11 @@ footer { width:100%; padding:40px 6%; border-top:1px solid var(--border); displa
 }
 </style>
 </head>
-<body oncontextmenu="return false;">
+<body>
 
 <header>
     <a href="index.html" class="brand">
-        <img src="logo.png" alt="Point Media Logo">
+        <img src="https://syedasifali.link/logo.png" alt="Point Media Logo">
         <span>SYED ASIF ALI</span>
     </a>
     <div class="menu-trigger" onclick="toggleMenu()">☰</div>
@@ -79,7 +93,7 @@ footer { width:100%; padding:40px 6%; border-top:1px solid var(--border); displa
     <div class="close-drawer" onclick="toggleMenu()">&times;</div>
     <ul class="nav-links">
         <li><a href="index.html">HOME</a></li>
-        <li><a href="about.html" class="active">ABOUT SYED ASIF ALI</a></li>
+        <li><a href="about.html" style="color:var(--accent);">ABOUT SYED</a></li>
         <li><a href="pointmedia.html">POINT MEDIA</a></li>
         <li><a href="pointika.html">POINTIKA</a></li>
         <li><a href="press.html">PRESS WALL</a></li>
@@ -89,25 +103,89 @@ footer { width:100%; padding:40px 6%; border-top:1px solid var(--border); displa
 </nav>
 
 <section class="hero">
-    <div class="img-wrapper" data-aos="zoom-in">
-        <img src="profile.jpg" alt="Syed Asif Ali Official Portrait">
+    <div class="img-wrapper">
+        <img src="https://syedasifali.link/profile.jpg" alt="Syed Asif Ali Official Portrait">
     </div>
-    <div class="hero-text" data-aos="fade-up">
-        <p style="color:var(--accent); font-weight:800; letter-spacing:3px; font-size:0.8rem; margin-bottom:12px;">ESTABLISHED FOUNDER</p>
-        <h1>About Syed Asif Ali</h1>
-        <p>Syed Asif Ali (born Jan 23, 1997) is the founder of <strong>Point Media</strong> and <strong>Pointika</strong>. A strategic digital entrepreneur shaping media operations in UAE. Recognized globally for redefining digital authority.</p>
-        <a href="press.html" class="btn-luxury">VIEW PRESS WALL ↗</a>
+    <div class="hero-text">
+        <p style="color:var(--accent); font-weight:800; letter-spacing:3px; font-size:0.8rem; margin-bottom:12px;">THE ARCHITECT OF TRUST</p>
+        <h1>About Syed<br>Asif Ali</h1>
+        <p>From the rugged terrains of South Waziristan to the global digital frontier. Building verified digital identities and ethical media ecosystems.</p>
+        <a href="press.html" class="btn-luxury">VIEW PRESS COVERAGE ↗</a>
     </div>
 </section>
 
-<div class="hero" style="flex-direction:column; text-align:center; padding:40px 8%;">
+<div class="content-section">
     <div class="glass-card">
-        <h2>Biography</h2>
-        <p>Syed Asif Ali, born January 23, 1997, is a visionary digital media entrepreneur based in Dubai and Ajman. As the founder of Point Media and Pointika, he specializes in building high-authority digital ecosystems and identity engineering.</p>
-        <p>Known as the "Architect of Digital Trust," his work has been featured on MEXC, Manila Times, Outlook India, and other global platforms.</p>
+        <h2>Origin Story</h2>
+        <p>Every successful story begins with struggle. For <strong>Syed Asif Ali</strong>, the journey from <strong>South Waziristan</strong> to becoming a digital entrepreneur in the <strong>UAE</strong> was shaped by resilience, discipline, and an unwavering belief in self-growth.</p>
+        <p>Born on <strong>January 23, 1997</strong>, in one of Pakistan's most underdeveloped regions, his early life was marked by limited resources but unlimited determination. From working as a waiter to managing regional sales operations, his story reflects how persistence can transform hardship into opportunity.</p>
+    </div>
 
-        <h2>Official Verification</h2>
+    <div class="glass-card">
+        <h2>Journey Timeline</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>1997 - Born in South Waziristan</h3>
+                <p>Early life in tribal region, learning survival and responsibility</p>
+            </div>
+            <div class="timeline-item">
+                <h3>2010s - Education & Early Work</h3>
+                <p>Moved to Peshawar, worked as waiter, Pakistan Red Crescent volunteer</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Corporate Career - OPPO</h3>
+                <p>Activity promoter to Area Sales Manager, rebuilding regional presence</p>
+            </div>
+            <div class="timeline-item">
+                <h3>UAE Chapter - Sharjah Taxi</h3>
+                <p>Multicultural work environment, studied global media trends</p>
+            </div>
+            <div class="timeline-item">
+                <h3>2020 - Founded Point Media</h3>
+                <p>Digital identity verification and reputation management</p>
+            </div>
+            <div class="timeline-item">
+                <h3>2026 - Global Recognition</h3>
+                <p>Featured in Deccan Chronicle, DNA India, Daily Trust, Mid-day</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="glass-card">
+        <h2>Media Recognition</h2>
+        <div class="press-grid">
+            <div class="press-item">
+                <h4>Deccan Chronicle</h4>
+                <p>Engineering Resilience at Gap Inc.</p>
+            </div>
+            <div class="press-item">
+                <h4>Daily Trust</h4>
+                <p>Architect of Digital Trust</p>
+            </div>
+            <div class="press-item">
+                <h4>DNA India</h4>
+                <p>Verified Digital Identities</p>
+            </div>
+            <div class="press-item">
+                <h4>Mid-day</h4>
+                <p>Building Digital Trust</p>
+            </div>
+            <div class="press-item">
+                <h4>BBN Times</h4>
+                <p>Digital Trust as Social Issue</p>
+            </div>
+            <div class="press-item">
+                <h4>MSN</h4>
+                <p>Future of Identity Engineering</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="glass-card">
+        <h2>Official Profiles</h2>
+        <p>Verified across multiple platforms for authenticity and authority:</p>
         <div class="social-links">
+            <a href="https://www.wikidata.org/wiki/Q137990666" target="_blank"><i class="fas fa-database"></i> Wikidata</a>
             <a href="https://www.imdb.com/name/nm18099961/" target="_blank"><i class="fas fa-film"></i> IMDb</a>
             <a href="https://www.crunchbase.com/person/syed-asif-ali" target="_blank"><i class="fas fa-briefcase"></i> Crunchbase</a>
             <a href="https://www.linkedin.com/in/syed-asif-ali-36b5623a0" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
@@ -116,24 +194,17 @@ footer { width:100%; padding:40px 6%; border-top:1px solid var(--border); displa
 </div>
 
 <footer>
-    <img src="logo.png" alt="Point Media Logo" class="footer-logo">
+    <img src="https://syedasifali.link/logo.png" alt="Point Media Logo" class="footer-logo">
     <div class="copyright">&copy; 2026 Syed Asif Ali. All Rights Reserved.</div>
 </footer>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-AOS.init({ duration: 1000, once: true });
-
 function toggleMenu(){
     const menu=document.getElementById("sideMenu");
     const overlay=document.getElementById("overlay");
     menu.classList.toggle("active");
     overlay.classList.toggle("active");
     document.body.style.overflow=menu.classList.contains("active")?"hidden":"auto";
-}
-
-document.onkeydown=function(e){
-    if(event.keyCode==123||(e.ctrlKey&&e.shiftKey&&(e.keyCode=='I'.charCodeAt(0)||e.keyCode=='C'.charCodeAt(0)||e.keyCode=='J'.charCodeAt(0)))||(e.ctrlKey&&e.keyCode=='U'.charCodeAt(0)))return false;
 }
 </script>
 </body>
