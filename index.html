@@ -12,10 +12,22 @@
      "@context": "https://schema.org",
      "@graph": [
        {
+         "@type": "ProfilePage",
+         "@id": "https://syedasifali.link/#profilepage",
+         "url": "https://syedasifali.link/",
+         "name": "Syed Asif Ali — Official Website",
+         "inLanguage": "en",
+         "mainEntity": {
+           "@id": "https://syedasifali.link/#person"
+         },
+         "isPartOf": {
+           "@id": "https://syedasifali.link/#website"
+         }
+       },
+       {
          "@type": "Person",
          "@id": "https://syedasifali.link/#person",
          "name": "Syed Asif Ali",
-         "alternateName": "Syed Asif Ali (Digital Entrepreneur)",
          "url": "https://syedasifali.link/",
          "image": "https://syedasifali.link/profile.jpg",
          "birthDate": "1997-01-23",
@@ -33,20 +45,14 @@
            }
          },
          "worksFor": {
-           "@type": "Organization",
-           "name": "Point Media",
-           "url": "https://point-media.link/"
+           "@id": "https://syedasifali.link/#pointmedia"
          },
          "founderOf": [
            {
-             "@type": "Organization",
-             "name": "Point Media",
-             "url": "https://point-media.link/"
+             "@id": "https://syedasifali.link/#pointmedia"
            },
            {
-             "@type": "Organization",
-             "name": "Pointika",
-             "url": "https://pointika.link/"
+             "@id": "https://syedasifali.link/#pointika"
            }
          ],
          "knowsAbout": [
@@ -57,8 +63,7 @@
            "Global Digital Media"
          ],
          "mainEntityOfPage": {
-           "@type": "WebPage",
-           "@id": "https://syedasifali.link/"
+           "@id": "https://syedasifali.link/#profilepage"
          },
          "sameAs": [
            "https://www.wikidata.org/wiki/Q137990666",
@@ -67,13 +72,10 @@
            "https://www.instagram.com/syedasifaliofficial/",
            "https://www.imdb.com/name/nm18099961/",
            "https://www.crunchbase.com/person/syed-asif-ali",
-           "https://www.threads.com/@syedasifaliofficial",
            "https://x.com/Boxer_01101",
            "https://www.youtube.com/@AsifAli-Digital",
            "https://www.tiktok.com/@syedasifaliz",
-           "https://www.pinterest.com/syedasifali0132/",
-           "https://gravatar.com/asif693411",
-           "https://www.patreon.com/cw/SyedAsifAli"
+           "https://www.threads.com/@syedasifaliofficial"
          ],
          "subjectOf": [
            {
@@ -119,21 +121,47 @@
            },
            {
              "@type": "NewsArticle",
-             "url": "https://thekhybertimes.com/maj-2/",
+             "url": "https://www.techtarget.com/searchcio/feature/Middle-East-AWS-attack-highlights-data-center-vulnerabilities",
+             "headline": "Middle East AWS attack highlights data center vulnerabilities",
              "publisher": {
                "@type": "Organization",
-               "name": "Khyber Times"
+               "name": "TechTarget"
+             }
+           },
+           {
+             "@type": "NewsArticle",
+             "url": "https://techround.co.uk/business/should-businesses-in-the-usa-freeze-credit-in-light-of-iran-cyber-threat/",
+             "headline": "Should businesses in the USA freeze credit in light of Iran cyber threat?",
+             "publisher": {
+               "@type": "Organization",
+               "name": "TechRound"
              }
            }
          ]
+       },
+       {
+         "@type": "Organization",
+         "@id": "https://syedasifali.link/#pointmedia",
+         "name": "Point Media",
+         "url": "https://point-media.link/"
+       },
+       {
+         "@type": "Organization",
+         "@id": "https://syedasifali.link/#pointika",
+         "name": "Pointika",
+         "url": "https://pointika.link/"
        },
        {
          "@type": "WebSite",
          "@id": "https://syedasifali.link/#website",
          "url": "https://syedasifali.link/",
          "name": "Syed Asif Ali — Official Website",
-         "publisher": { "@id": "https://syedasifali.link/#person" },
-         "about": { "@id": "https://syedasifali.link/#person" },
+         "publisher": {
+           "@id": "https://syedasifali.link/#person"
+         },
+         "about": {
+           "@id": "https://syedasifali.link/#person"
+         },
          "inLanguage": "en"
        }
      ]
