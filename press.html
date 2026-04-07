@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Press & Media — Syed Asif Ali | Official Features</title>
-<meta name="description" content="Verified media coverage for Syed Asif Ali across global platforms including Deccan Chronicle, Daily Trust, DNA India, Mid-day, TechTarget, TechRound, and BBN Times.">
+<meta name="description" content="Verified media coverage for Syed Asif Ali across global platforms including Deccan Chronicle, Daily Trust, DNA India, Mid-day, TechTarget, TechRound, The CEO Magazine, BBN Times, and Khyber Times.">
 
 <link rel="canonical" href="https://syedasifali.link/press.html">
 
@@ -14,44 +14,337 @@
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 <style>
-:root { --bg:#050505; --accent:#00d2ff; --panel:#0d0d0e; --border:rgba(255,255,255,0.08); --gold: #ffd700; }
-* { margin:0; padding:0; box-sizing:border-box; -webkit-user-select:none; user-select:none; }
-body { background:var(--bg); color:#fff; font-family:'Plus Jakarta Sans',sans-serif; overflow-x:hidden; }
+:root {
+  --bg:#050505;
+  --accent:#00d2ff;
+  --panel:#0d0d0e;
+  --border:rgba(255,255,255,0.08);
+  --gold:#ffd700;
+  --soft:#8d8d98;
+  --glass:rgba(255,255,255,0.03);
+  --glass-2:rgba(255,255,255,0.02);
+  --cyan-glow:rgba(0,210,255,0.18);
+  --gold-glow:rgba(255,215,0,0.16);
+}
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  -webkit-user-select:none;
+  user-select:none;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(0,210,255,0.06), transparent 26%),
+    radial-gradient(circle at top right, rgba(255,215,0,0.05), transparent 20%),
+    linear-gradient(180deg, #050505 0%, #090909 100%);
+  color:#fff;
+  font-family:'Plus Jakarta Sans',sans-serif;
+  overflow-x:hidden;
+}
 
 /* Menu CSS */
-header { position:fixed; top:0; width:100%; height:75px; z-index:5000; background:rgba(5,5,5,0.85); backdrop-filter:blur(20px); border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:space-between; padding:0 6%; }
-.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #fff; }
-.brand img { height:32px; border-radius:4px; }
-.brand span { font-family:'Space Grotesk'; font-size:0.9rem; letter-spacing:1.5px; font-weight:700; text-transform:uppercase; }
+header {
+  position:fixed;
+  top:0;
+  width:100%;
+  height:75px;
+  z-index:5000;
+  background:rgba(5,5,5,0.85);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 6%;
+}
 
-.menu-trigger { cursor:pointer; color:var(--accent); font-size:26px; z-index:7000; }
-.side-menu { position:fixed; top:0; right:-50%; width:50%; height:100vh; background:var(--panel); z-index:8000; transition:0.5s cubic-bezier(0.7,0,0.3,1); border-left:1px solid var(--border); display:flex; flex-direction:column; justify-content:center; align-items:center; }
-.side-menu.active { right:0; }
-.close-drawer { position:absolute; top:25px; right:25px; font-size:35px; cursor:pointer; color: var(--accent); }
+.brand {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+  color:#fff;
+}
 
-.nav-links { list-style:none; text-align:center; width:100%; }
-.nav-links li { margin:25px 0; opacity:0; transform:translateY(20px); transition:0.4s; }
-.side-menu.active .nav-links li { opacity:1; transform:translateY(0); }
-.nav-links a { text-decoration:none; color:#fff; font-family:'Space Grotesk'; font-size:1rem; text-transform:uppercase; letter-spacing:2px; }
-.overlay { position:fixed; inset:0; background:rgba(0,0,0,0.7); z-index:7500; display:none; backdrop-filter:blur(10px); }
-.overlay.active { display:block; }
+.brand img {
+  height:32px;
+  border-radius:4px;
+}
+
+.brand span {
+  font-family:'Space Grotesk';
+  font-size:0.9rem;
+  letter-spacing:1.5px;
+  font-weight:700;
+  text-transform:uppercase;
+}
+
+.menu-trigger {
+  cursor:pointer;
+  color:var(--accent);
+  font-size:26px;
+  z-index:7000;
+}
+
+.side-menu {
+  position:fixed;
+  top:0;
+  right:-50%;
+  width:50%;
+  height:100vh;
+  background:var(--panel);
+  z-index:8000;
+  transition:0.5s cubic-bezier(0.7,0,0.3,1);
+  border-left:1px solid var(--border);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.side-menu.active {
+  right:0;
+}
+
+.close-drawer {
+  position:absolute;
+  top:25px;
+  right:25px;
+  font-size:35px;
+  cursor:pointer;
+  color: var(--accent);
+}
+
+.nav-links {
+  list-style:none;
+  text-align:center;
+  width:100%;
+}
+
+.nav-links li {
+  margin:25px 0;
+  opacity:0;
+  transform:translateY(20px);
+  transition:0.4s;
+}
+
+.side-menu.active .nav-links li {
+  opacity:1;
+  transform:translateY(0);
+}
+
+.nav-links a {
+  text-decoration:none;
+  color:#fff;
+  font-family:'Space Grotesk';
+  font-size:1rem;
+  text-transform:uppercase;
+  letter-spacing:2px;
+}
+
+.overlay {
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.7);
+  z-index:7500;
+  display:none;
+  backdrop-filter:blur(10px);
+}
+
+.overlay.active {
+  display:block;
+}
 
 /* Content Styles */
-.press-hero { padding:140px 8% 40px; text-align:center; }
-.press-hero h1 { font-family:'Space Grotesk'; font-size:clamp(2rem, 5vw, 3.5rem); margin-bottom:10px; }
-.press-container { max-width:900px; margin:0 auto; padding:0 6% 100px; }
+.press-hero {
+  padding:140px 8% 40px;
+  text-align:center;
+}
 
-.cat-heading { color:var(--gold); font-size:0.7rem; letter-spacing:3px; text-transform:uppercase; margin:40px 0 20px; display:block; opacity:0.8; }
-.press-card { background:var(--panel); border:1px solid var(--border); border-radius:12px; padding:20px; margin-bottom:15px; display:flex; justify-content:space-between; align-items:center; transition:0.3s; }
-.press-card:hover { border-color:var(--accent); transform:translateX(5px); }
+.press-hero h1 {
+  font-family:'Space Grotesk';
+  font-size:clamp(2rem, 5vw, 3.5rem);
+  margin-bottom:10px;
+}
 
-.info h2 { font-size:1rem; margin-bottom:4px; font-weight:800; }
-.info p { color:#777; font-size:0.8rem; }
-.src { color:var(--accent); font-weight:800; font-size:0.65rem; text-transform:uppercase; margin-bottom:5px; display:block; }
-.btn-go { color:#fff; text-decoration:none; font-size:1.1rem; opacity:0.4; }
-.btn-go:hover { opacity:1; color:var(--accent); }
+.press-container {
+  max-width:900px;
+  margin:0 auto;
+  padding:0 6% 100px;
+}
 
-@media(min-width:992px){ .side-menu{width:350px; right:-350px;} }
+.cat-heading {
+  color:var(--gold);
+  font-size:0.7rem;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  margin:40px 0 20px;
+  display:block;
+  opacity:0.85;
+}
+
+/* ULTRA PREMIUM BOXES */
+.press-card {
+  position:relative;
+  background:
+    linear-gradient(145deg, rgba(18,18,20,0.96), rgba(8,8,10,0.98)),
+    linear-gradient(145deg, rgba(255,255,255,0.02), rgba(255,255,255,0));
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:24px;
+  padding:26px 24px;
+  margin-bottom:20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:18px;
+  transition:0.45s cubic-bezier(0.16,1,0.3,1);
+  cursor:pointer;
+  overflow:hidden;
+  backdrop-filter:blur(18px);
+  box-shadow:
+    0 10px 35px rgba(0,0,0,0.30),
+    inset 0 1px 0 rgba(255,255,255,0.03);
+}
+
+.press-card::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at top right, var(--cyan-glow), transparent 32%),
+    radial-gradient(circle at bottom left, var(--gold-glow), transparent 28%);
+  opacity:0.9;
+  pointer-events:none;
+}
+
+.press-card::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:24px;
+  padding:1px;
+  background:linear-gradient(135deg, rgba(255,255,255,0.10), rgba(255,255,255,0.02), rgba(0,210,255,0.18));
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+  pointer-events:none;
+}
+
+.press-card:hover {
+  transform:translateY(-7px) scale(1.012);
+  border-color:rgba(0,210,255,0.22);
+  box-shadow:
+    0 18px 50px rgba(0,0,0,0.45),
+    0 0 28px rgba(0,210,255,0.12);
+}
+
+.press-card:hover .btn-go {
+  color:var(--accent);
+  background:rgba(0,210,255,0.08);
+  border-color:rgba(0,210,255,0.18);
+  transform:translateX(3px);
+}
+
+.press-card:hover .info h2 {
+  color:#fff;
+}
+
+.info {
+  position:relative;
+  z-index:2;
+  min-width:0;
+  flex:1;
+}
+
+.src {
+  color:var(--accent);
+  font-weight:800;
+  font-size:0.64rem;
+  text-transform:uppercase;
+  margin-bottom:9px;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  letter-spacing:1.8px;
+  padding:7px 11px;
+  border-radius:999px;
+  background:rgba(0,210,255,0.08);
+  border:1px solid rgba(0,210,255,0.14);
+}
+
+.src::before {
+  content:"";
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--accent);
+  box-shadow:0 0 12px rgba(0,210,255,0.6);
+  flex-shrink:0;
+}
+
+.info h2 {
+  font-size:1.04rem;
+  margin-bottom:8px;
+  font-weight:800;
+  line-height:1.5;
+  color:#fff;
+  letter-spacing:0.15px;
+}
+
+.info p {
+  color:var(--soft);
+  font-size:0.82rem;
+  line-height:1.8;
+  max-width:94%;
+}
+
+.btn-go {
+  position:relative;
+  z-index:2;
+  color:#fff;
+  text-decoration:none;
+  font-size:1rem;
+  opacity:0.95;
+  pointer-events:none;
+  width:54px;
+  height:54px;
+  border-radius:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.08);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.04);
+  transition:0.35s ease;
+}
+
+/* slightly more elite card look for top feature */
+.press-card.featured {
+  border-color:rgba(255,215,0,0.14);
+  box-shadow:
+    0 12px 38px rgba(0,0,0,0.32),
+    0 0 18px rgba(255,215,0,0.06);
+}
+
+.press-card.featured .src {
+  color:#ffdf6b;
+  background:rgba(255,215,0,0.08);
+  border-color:rgba(255,215,0,0.14);
+}
+
+.press-card.featured .src::before {
+  background:#ffd700;
+  box-shadow:0 0 12px rgba(255,215,0,0.6);
+}
+
+@media(min-width:992px){
+  .side-menu{width:350px; right:-350px;}
+}
 </style>
 </head>
 <body>
@@ -83,48 +376,78 @@ header { position:fixed; top:0; width:100%; height:75px; z-index:5000; backgroun
 <div class="press-container">
   <span class="cat-heading">Editorial Features</span>
 
-  <div class="press-card" data-aos="fade-up">
+  <div class="press-card featured" data-aos="fade-up" onclick="window.open('https://www.deccanchronicle.com/technology/from-mainframes-to-hybrid-cloud-syed-asif-ali-on-engineering-resilience-at-gap-inc-1938675','_blank')">
       <div class="info"><span class="src">Deccan Chronicle</span><h2>Engineering Resilience at Gap Inc.</h2><p>Exclusive interview on enterprise infrastructure, resilience engineering, and hybrid cloud transformation.</p></div>
-      <a href="https://www.deccanchronicle.com/technology/from-mainframes-to-hybrid-cloud-syed-asif-ali-on-engineering-resilience-at-gap-inc-1938675" target="_blank" class="btn-go">↗</a>
+      <span class="btn-go">↗</span>
   </div>
 
-  <div class="press-card" data-aos="fade-up">
+  <div class="press-card featured" data-aos="fade-up" onclick="window.open('https://dailytrust.com/the-architect-of-digital-trust-how-syed-asif-ali-is-redefining-identity-media-and-authority-in-the-ai-era/','_blank')">
       <div class="info"><span class="src">Daily Trust</span><h2>The Architect of Digital Trust</h2><p>Comprehensive feature on digital identity, authority, and media positioning in the AI era.</p></div>
-      <a href="https://dailytrust.com/the-architect-of-digital-trust-how-syed-asif-ali-is-redefining-identity-media-and-authority-in-the-ai-era/" target="_blank" class="btn-go">↗</a>
+      <span class="btn-go">↗</span>
   </div>
 
-  <div class="press-card" data-aos="fade-up">
+  <div class="press-card" data-aos="fade-up" onclick="window.open('https://www.dnaindia.com/insights/report-syed-asif-ali-crafting-verified-digital-identities-in-the-ai-era-3197154','_blank')">
       <div class="info"><span class="src">DNA India</span><h2>Crafting Verified Digital Identities</h2><p>Feature focused on structured online identity, authority building, and verified digital presence.</p></div>
-      <a href="https://www.dnaindia.com/insights/report-syed-asif-ali-crafting-verified-digital-identities-in-the-ai-era-3197154" target="_blank" class="btn-go">↗</a>
+      <span class="btn-go">↗</span>
   </div>
 
-  <div class="press-card" data-aos="fade-up">
+  <div class="press-card" data-aos="fade-up" onclick="window.open('https://www.mid-day.com/buzz/article/syed-asif-ali-entrepreneur-building-digital-trust-in-the-age-of-identity-engineering-8795','_blank')">
       <div class="info"><span class="src">Mid-day</span><h2>Building Digital Trust</h2><p>Entrepreneur profile covering identity engineering, media credibility, and long-term digital trust.</p></div>
-      <a href="https://www.mid-day.com/buzz/article/syed-asif-ali-entrepreneur-building-digital-trust-in-the-age-of-identity-engineering-8795" target="_blank" class="btn-go">↗</a>
+      <span class="btn-go">↗</span>
+  </div>
+
+  <div class="press-card featured" data-aos="fade-up" onclick="window.open('https://the-ceo-magazine.com/when-speed-creates-noise-a-decision-i-got-wrong-about-digital-authority/','_blank')">
+      <div class="info"><span class="src">The CEO Magazine</span><h2>When Speed Creates Noise</h2><p>A feature exploring digital authority, decision-making, and how speed without clarity can weaken brand trust.</p></div>
+      <span class="btn-go">↗</span>
   </div>
 
   <span class="cat-heading">International Editorial Coverage</span>
 
-  <div class="press-card" data-aos="fade-up">
+  <div class="press-card" data-aos="fade-up" onclick="window.open('https://www.techtarget.com/searchcio/feature/Middle-East-AWS-attack-highlights-data-center-vulnerabilities','_blank')">
       <div class="info"><span class="src">TechTarget</span><h2>Data Center Vulnerabilities</h2><p>Quoted in editorial coverage on AWS attack fallout, cloud infrastructure exposure, and data center risk in the Middle East.</p></div>
-      <a href="https://www.techtarget.com/searchcio/feature/Middle-East-AWS-attack-highlights-data-center-vulnerabilities" target="_blank" class="btn-go">↗</a>
+      <span class="btn-go">↗</span>
   </div>
 
-  <div class="press-card" data-aos="fade-up">
+  <div class="press-card" data-aos="fade-up" onclick="window.open('https://techround.co.uk/news/new-generation-social-apps-2026/','_blank')">
+      <div class="info"><span class="src">TechRound</span><h2>New Generation of Social Apps</h2><p>Expert commentary on the next wave of social platforms, user behavior shifts, and what defines relevance in 2026.</p></div>
+      <span class="btn-go">↗</span>
+  </div>
+
+  <div class="press-card" data-aos="fade-up" onclick="window.open('https://techround.co.uk/artificial-intelligence/oracle-shrinks-to-scale-is-this-a-strategic-reset-or-a-frantic-scramble-to-stay-in-the-ai-race/','_blank')">
+      <div class="info"><span class="src">TechRound</span><h2>Oracle Shrinks To Scale</h2><p>Quoted on AI competition, strategic downsizing, and whether infrastructure shifts reflect focus or pressure in the AI race.</p></div>
+      <span class="btn-go">↗</span>
+  </div>
+
+  <div class="press-card" data-aos="fade-up" onclick="window.open('https://techround.co.uk/artificial-intelligence/oral-exams-solution-%e2%81%a0ai-cheating-education-leaders/','_blank')">
+      <div class="info"><span class="src">TechRound</span><h2>Are Oral Exams the Solution to AI Cheating?</h2><p>Insight on education, AI misuse, and how institutions may rethink assessment in response to changing technology.</p></div>
+      <span class="btn-go">↗</span>
+  </div>
+
+  <div class="press-card" data-aos="fade-up" onclick="window.open('https://techround.co.uk/news/tech-experts-future-agentic-ai-crypto/','_blank')">
+      <div class="info"><span class="src">TechRound</span><h2>The Future of Agentic AI</h2><p>Perspective on agentic systems, AI autonomy, and how emerging models could affect products, trust, and adoption.</p></div>
+      <span class="btn-go">↗</span>
+  </div>
+
+  <div class="press-card" data-aos="fade-up" onclick="window.open('https://techround.co.uk/business/should-businesses-in-the-usa-freeze-credit-in-light-of-iran-cyber-threat/','_blank')">
       <div class="info"><span class="src">TechRound</span><h2>Cyber Threat & Business Risk</h2><p>Featured in a business and cybersecurity discussion on Iran-linked cyber threats, risk response, and market uncertainty.</p></div>
-      <a href="https://techround.co.uk/business/should-businesses-in-the-usa-freeze-credit-in-light-of-iran-cyber-threat/" target="_blank" class="btn-go">↗</a>
+      <span class="btn-go">↗</span>
   </div>
 
-  <div class="press-card" data-aos="fade-up">
+  <div class="press-card" data-aos="fade-up" onclick="window.open('https://techround.co.uk/news/experts-cyber-warfare-new-battlefield-modern-conflict/','_blank')">
+      <div class="info"><span class="src">TechRound</span><h2>Cyber Warfare & Modern Conflict</h2><p>Commentary on cyber conflict, digital escalation, and the growing role of technology in modern geopolitical risk.</p></div>
+      <span class="btn-go">↗</span>
+  </div>
+
+  <div class="press-card" data-aos="fade-up" onclick="window.open('https://www.bbntimes.com/society/why-digital-trust-has-become-a-social-issue-a-conversation-with-syed-asif-ali','_blank')">
       <div class="info"><span class="src">BBN Times</span><h2>Digital Trust as a Social Issue</h2><p>Conversation on media credibility, verified identity, and the broader social importance of digital trust.</p></div>
-      <a href="https://www.bbntimes.com/society/why-digital-trust-has-become-a-social-issue-a-conversation-with-syed-asif-ali" target="_blank" class="btn-go">↗</a>
+      <span class="btn-go">↗</span>
   </div>
 
   <span class="cat-heading">Regional Coverage</span>
 
-  <div class="press-card" data-aos="fade-up">
+  <div class="press-card" data-aos="fade-up" onclick="window.open('https://thekhybertimes.com/maj-2/','_blank')">
       <div class="info"><span class="src">Khyber Times</span><h2>Regional Impact Feature</h2><p>Coverage highlighting digital media entrepreneurship from South Asia to wider international relevance.</p></div>
-      <a href="https://thekhybertimes.com/maj-2/" target="_blank" class="btn-go">↗</a>
+      <span class="btn-go">↗</span>
   </div>
 
 </div>
@@ -132,6 +455,7 @@ header { position:fixed; top:0; width:100%; height:75px; z-index:5000; backgroun
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init({ duration: 800, once: true });
+
   function toggleMenu(){
       const m = document.getElementById("sideMenu");
       const o = document.getElementById("overlay");
