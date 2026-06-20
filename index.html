@@ -29,7 +29,10 @@
          "@id": "https://syedasifali.link/#person",
          "name": "Syed Asif Ali",
          "url": "https://syedasifali.link/",
-         "image": "https://syedasifali.link/profile.jpg",
+         "image": {
+           "@type": "ImageObject",
+           "url": "https://syedasifali.link/profile.jpg"
+         },
          "birthDate": "1997-01-23",
          "description": "Syed Asif Ali is a UAE-based digital entrepreneur and identity architect, founder of Point Media and Pointika, known for verified digital authority engineering and strategic media operations.",
          "jobTitle": [
@@ -43,9 +46,6 @@
              "@type": "Country",
              "name": "United Arab Emirates"
            }
-         },
-         "worksFor": {
-           "@id": "https://syedasifali.link/#pointmedia"
          },
          "founderOf": [
            {
@@ -68,28 +68,38 @@
          "sameAs": [
            "https://www.wikidata.org/wiki/Q137990666",
            "https://www.facebook.com/syedasifZ",
-           "https://www.linkedin.com/in/syed-asif-ali-36b5623a0",
+           "https://www.linkedin.com/in/pointmedia",
            "https://www.instagram.com/syedasifaliofficial/",
            "https://www.imdb.com/name/nm18099961/",
            "https://www.crunchbase.com/person/syed-asif-ali",
            "https://x.com/Boxer_01101",
            "https://www.youtube.com/@AsifAli-Digital",
-           "https://www.tiktok.com/@syedasifaliz",
+           "https://www.tiktok.com/@syedasifaliofficial",
            "https://www.threads.com/@syedasifaliofficial"
          ],
          "subjectOf": [
            {
              "@type": "NewsArticle",
-             "url": "https://www.deccanchronicle.com/technology/from-mainframes-to-hybrid-cloud-syed-asif-ali-on-engineering-resilience-at-gap-inc-1938675",
-             "headline": "From Mainframes to Hybrid Cloud: Syed Asif Ali on Engineering Resilience at Gap Inc.",
-             "datePublished": "2026-02-20",
+             "url": "https://lsj.com.au/articles/ai-reshaping-productivity-inside-australian-law-firms/",
+             "headline": "AI reshaping productivity inside Australian law firms",
+             "datePublished": "2026-04-20",
              "publisher": {
                "@type": "Organization",
-               "name": "Deccan Chronicle"
+               "name": "Law Society Journal"
              },
              "author": {
                "@type": "Person",
-               "name": "Jyoti Sharma"
+               "name": "Sam McKeith"
+             }
+           },
+           {
+             "@type": "NewsArticle",
+             "url": "https://amaphoenix.org/2026/06/11/customer-journey-mapping-identifying-areas-for-innovation/",
+             "headline": "Customer Journey Mapping: Identifying Areas for Innovation",
+             "datePublished": "2026-06-11",
+             "publisher": {
+               "@type": "Organization",
+               "name": "American Marketing Association - Phoenix Chapter"
              }
            },
            {
@@ -143,13 +153,15 @@
          "@type": "Organization",
          "@id": "https://syedasifali.link/#pointmedia",
          "name": "Point Media",
-         "url": "https://point-media.link/"
+         "url": "https://point-media.link/",
+         "description": "Leading Global Strategic Media & Reputation Management. Redefining Digital Authority for the Modern Elite."
        },
        {
          "@type": "Organization",
          "@id": "https://syedasifali.link/#pointika",
          "name": "Pointika",
-         "url": "https://pointika.link/"
+         "url": "https://pointika.link/",
+         "description": "The strategic storytelling arm of Point Media, dedicated to building verified authority for global creators and brands through strategic growth, identity design, and media amplification."
        },
        {
          "@type": "WebSite",
@@ -163,6 +175,44 @@
            "@id": "https://syedasifali.link/#person"
          },
          "inLanguage": "en"
+       },
+       {
+         "@type": "FAQPage",
+         "@id": "https://syedasifali.link/#faqpage",
+         "mainEntity": [
+           {
+             "@type": "Question",
+             "name": "Who is Syed Asif Ali?",
+             "acceptedAnswer": {
+               "@type": "Answer",
+               "text": "Syed Asif Ali is a UAE-based digital entrepreneur and identity architect, founder of Point Media and Pointika. He is known for verified digital authority engineering and strategic media operations, with featured insights in publications including Law Society Journal, Daily Trust, DNA India, Mid-day, and TechTarget."
+             }
+           },
+           {
+             "@type": "Question",
+             "name": "What is Point Media?",
+             "acceptedAnswer": {
+               "@type": "Answer",
+               "text": "Point Media is a global strategic media and reputation management consultancy founded by Syed Asif Ali. It focuses on redefining digital authority for the modern elite through strategic media positioning and structured online presence."
+             }
+           },
+           {
+             "@type": "Question",
+             "name": "What is Pointika?",
+             "acceptedAnswer": {
+               "@type": "Answer",
+               "text": "Pointika is the strategic storytelling arm of Point Media, founded by Syed Asif Ali. It is dedicated to building verified authority for global creators and brands through strategic growth, identity design, and media amplification."
+             }
+           },
+           {
+             "@type": "Question",
+             "name": "What is digital identity architecture?",
+             "acceptedAnswer": {
+               "@type": "Answer",
+               "text": "Digital identity architecture is a structured approach to how individuals and organizations are recognized, verified, and understood across search engines and global platforms. It involves structuring facts, media signals, and technical data so that both humans and algorithms can clearly understand who you are, what you do, and why you are relevant."
+             }
+           }
+         ]
        }
      ]
    }
@@ -249,7 +299,7 @@
        <div class="hero-text" data-aos="fade-up">
            <p style="color:var(--accent); font-weight:800; letter-spacing:3px; font-size:0.8rem; margin-bottom:12px;">OFFICIAL BIOGRAPHY</p>
            <h1>Engineering <br><span>Digital Authority.</span></h1>
-           <p>Syed Asif Ali is a UAE-based digital entrepreneur and the driving force behind Point Media and Pointika. As a recognized Digital Architect, his work focuses on building verified digital authority through strategic media positioning and structured online presence. His work and insights have been featured across multiple international publications including Deccan Chronicle, DNA India, Mid-day, and Daily Trust. He has also been featured in editorial discussions on platforms such as TechTarget and TechRound, where his perspectives were included in conversations around data center vulnerabilities, cloud infrastructure risk, cybersecurity threats, and broader business risk awareness. Through this work, he continues to build a distinct position at the intersection of digital trust, media strategy, and authority engineering.</p>
+           <p>Syed Asif Ali is a UAE-based digital entrepreneur and the driving force behind Point Media and Pointika. As a recognized Digital Architect, his work focuses on building verified digital authority through strategic media positioning and structured online presence. His work and insights have been featured across multiple international publications including Daily Trust, Law Society Journal, DNA India, Mid-day, and TechTarget. He has also been featured in editorial discussions on platforms such as TechRound and AMA Phoenix, where his perspectives were included in conversations around data center vulnerabilities, customer journey innovation, AI in legal workflows, and broader business strategy. Through this work, he continues to build a distinct position at the intersection of digital trust, media strategy, and authority engineering.</p>
            <a href="https://syedasifali.link/press.html" class="btn-luxury">EXPLORE PRESS COVERAGE ↗</a>
        </div>
    </section>
